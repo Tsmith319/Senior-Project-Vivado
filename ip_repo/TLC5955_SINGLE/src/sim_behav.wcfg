@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="179548391666666fs"></ZoomStartTime>
+      <ZoomEndTime time="179550357666667fs"></ZoomEndTime>
+      <Cursor1Time time="179550030000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/top_test/main/SOUT" type="logic">
+      <obj_property name="ElementShortName">SOUT</obj_property>
+      <obj_property name="ObjectShortName">SOUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/LAT" type="logic">
+      <obj_property name="ElementShortName">LAT</obj_property>
+      <obj_property name="ObjectShortName">LAT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/GSCLK" type="logic">
+      <obj_property name="ElementShortName">GSCLK</obj_property>
+      <obj_property name="ObjectShortName">GSCLK</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider14">
+      <obj_property name="label">STATES</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/main/setup" type="array">
+      <obj_property name="ElementShortName">setup[1:0]</obj_property>
+      <obj_property name="ObjectShortName">setup[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/main/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/main/bit_state" type="array">
+      <obj_property name="ElementShortName">bit_state[9:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_state[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/main/gs_state" type="array">
+      <obj_property name="ElementShortName">gs_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gs_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/main/main/gs_counter" type="array">
+      <obj_property name="ElementShortName">gs_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gs_counter[15:0]</obj_property>
+   </wvobject>
+</wave_config>

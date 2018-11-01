@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Thu Oct 11 02:49:33 UTC 2018
+VLNV: xilinx.com:ip:axi_bram_ctrl:4.0
+SynthRuntime: 57

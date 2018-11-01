@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Oct 01 05:47:49 UTC 2018
+VLNV: xilinx.com:user:DisplayDriver_SINGLE:1.0
+SynthRuntime: 30
