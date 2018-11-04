@@ -13161,3 +13161,9 @@ Note: A value of zero (0) is not allowed and causes a DMA internal error to be s
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-11-03 12:47:23.979
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-03 18:01:01.466
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-292
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-03 18:01:01.526
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-292

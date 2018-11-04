@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov  3 18:02:45 2018
+# Process ID: 4700
+# Current directory: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1544 C:\Users\TaySm\OneDrive\Documents\GitHub\Senior-Project-Vivado\Sout_Module\Sout_Module.xpr
+# Log file: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module/vivado.log
+# Journal file: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module/Sout_Module.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new/component.xml
