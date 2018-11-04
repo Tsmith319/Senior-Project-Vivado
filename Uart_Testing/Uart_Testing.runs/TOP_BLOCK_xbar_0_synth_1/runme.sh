@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_xbar_0_synth_1'
+HD_PWD='C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_xbar_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="TOP_BLOCK_processing_system7_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TOP_BLOCK_xbar_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TOP_BLOCK_axis_data_fifo_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_axis_data_fifo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TOP_BLOCK_blk_mem_gen_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TOP_BLOCK_auto_pc_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/TOP_BLOCK_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="TOP_BLOCK_processing_system7_0_0_synth_1"/>
+		<Parent Id="TOP_BLOCK_xbar_0_synth_1"/>
+		<Parent Id="TOP_BLOCK_axis_data_fifo_0_0_synth_1"/>
+		<Parent Id="TOP_BLOCK_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="TOP_BLOCK_auto_pc_0_synth_1"/>
+	</Run>
+</Runs>
+

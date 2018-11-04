@@ -4,29 +4,23 @@
 #  -string -flagsOSRD
 preplace port btns_4bits -pg 1 -y 400 -defaultsOSRD
 preplace port DDR -pg 1 -y 320 -defaultsOSRD
-preplace port out_wire_thing_0 -pg 1 -y 190 -defaultsOSRD
 preplace port leds_4bits -pg 1 -y 440 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 340 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 450 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 160 -defaultsOSRD
-preplace inst DisplayDriver_0 -pg 1 -lvl 3 -y 250 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 210 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 420 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 480J 320 868J 330 1230J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 440 20 878
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 10 430
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 898
-preplace netloc axi_gpio_0_GPIO2 1 3 1 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 490J 340 NJ 340 NJ
-preplace netloc axi_gpio_0_GPIO 1 3 1 NJ
-preplace netloc DisplayDriver_0_out_wire_thing 1 3 1 1230J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 0 460 10 908
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 888
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 450
-levelinfo -pg 1 0 230 716 1068 1260 -top -110 -bot 600
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 370 880J 320 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 470 360 870
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 110 430
+preplace netloc axi_gpio_0_GPIO2 1 3 1 1190J
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 390 900J 340 NJ
+preplace netloc axi_gpio_0_GPIO 1 3 1 1180J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 100 440 450 N
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 890
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 460
+levelinfo -pg 1 0 230 716 1070 1270 -top -110 -bot 600
 ",
 }
 {

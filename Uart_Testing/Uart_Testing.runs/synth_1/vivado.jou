@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Sep 26 17:23:52 2018
-# Process ID: 2940
-# Current directory: C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.runs/synth_1
+# Start of session at: Thu Nov  1 13:15:55 2018
+# Process ID: 2984
+# Current directory: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/synth_1
 # Command line: vivado.exe -log TOP_BLOCK_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_BLOCK_wrapper.tcl
-# Log file: C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.runs/synth_1/TOP_BLOCK_wrapper.vds
-# Journal file: C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.runs/synth_1\vivado.jou
+# Log file: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/synth_1/TOP_BLOCK_wrapper.vds
+# Journal file: C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source TOP_BLOCK_wrapper.tcl -notrace

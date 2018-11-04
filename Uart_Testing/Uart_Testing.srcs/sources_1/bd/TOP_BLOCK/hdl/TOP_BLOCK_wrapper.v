@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Wed Sep 26 17:17:56 2018
-//Host        : MSI970-Station running 64-bit major release  (build 9200)
+//Date        : Thu Nov  1 13:13:41 2018
+//Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target TOP_BLOCK_wrapper.bd
 //Design      : TOP_BLOCK_wrapper
 //Purpose     : IP block netlist
@@ -32,8 +32,7 @@ module TOP_BLOCK_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     btns_4bits_tri_i,
-    leds_4bits_tri_io,
-    out_wire_thing_0);
+    leds_4bits_tri_io);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -57,7 +56,6 @@ module TOP_BLOCK_wrapper
   inout FIXED_IO_ps_srstb;
   input [3:0]btns_4bits_tri_i;
   inout [3:0]leds_4bits_tri_io;
-  output out_wire_thing_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -97,7 +95,6 @@ module TOP_BLOCK_wrapper
   wire [1:1]leds_4bits_tri_t_1;
   wire [2:2]leds_4bits_tri_t_2;
   wire [3:3]leds_4bits_tri_t_3;
-  wire out_wire_thing_0;
 
   TOP_BLOCK TOP_BLOCK_i
        (.DDR_addr(DDR_addr),
@@ -124,8 +121,7 @@ module TOP_BLOCK_wrapper
         .btns_4bits_tri_i(btns_4bits_tri_i),
         .leds_4bits_tri_i({leds_4bits_tri_i_3,leds_4bits_tri_i_2,leds_4bits_tri_i_1,leds_4bits_tri_i_0}),
         .leds_4bits_tri_o({leds_4bits_tri_o_3,leds_4bits_tri_o_2,leds_4bits_tri_o_1,leds_4bits_tri_o_0}),
-        .leds_4bits_tri_t({leds_4bits_tri_t_3,leds_4bits_tri_t_2,leds_4bits_tri_t_1,leds_4bits_tri_t_0}),
-        .out_wire_thing_0(out_wire_thing_0));
+        .leds_4bits_tri_t({leds_4bits_tri_t_3,leds_4bits_tri_t_2,leds_4bits_tri_t_1,leds_4bits_tri_t_0}));
   IOBUF leds_4bits_tri_iobuf_0
        (.I(leds_4bits_tri_o_0),
         .IO(leds_4bits_tri_io[0]),

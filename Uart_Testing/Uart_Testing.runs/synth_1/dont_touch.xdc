@@ -16,9 +16,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TOP_BLOCK_ps7_0
 # IP: bd/TOP_BLOCK/ip/TOP_BLOCK_rst_ps7_0_100M_0/TOP_BLOCK_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TOP_BLOCK_rst_ps7_0_100M_0 || ORIG_REF_NAME==TOP_BLOCK_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/TOP_BLOCK/ip/TOP_BLOCK_DisplayDriver_0_0/TOP_BLOCK_DisplayDriver_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TOP_BLOCK_DisplayDriver_0_0 || ORIG_REF_NAME==TOP_BLOCK_DisplayDriver_0_0} -quiet] -quiet
-
 # IP: bd/TOP_BLOCK/ip/TOP_BLOCK_xbar_0/TOP_BLOCK_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TOP_BLOCK_xbar_0 || ORIG_REF_NAME==TOP_BLOCK_xbar_0} -quiet] -quiet
 

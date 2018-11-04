@@ -60,28 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param board.repoPaths C:/Xilinx/Vivado/vivado-boards-master/new/board_files
   create_project -in_memory -part xc7z020clg400-1
-  set_property board_part_repo_paths C:/Xilinx/Vivado/vivado-boards-master/new/board_files [current_project]
   set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Derek/Desktop/Vivado/ip_repo/DisplayDriver_1.0 [current_project]
-  set_property ip_output_repo C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.cache/wt [current_project]
+  set_property parent.project_path C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.xpr [current_project]
+  set_property ip_repo_paths C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo/DisplayDriver_1.0 [current_project]
+  set_property ip_output_repo C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.runs/synth_1/TOP_BLOCK_wrapper.dcp
+  add_files -quiet C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.runs/synth_1/TOP_BLOCK_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Derek/Desktop/Vivado/Uart_Testing/Uart_Testing.srcs/sources_1/bd/TOP_BLOCK/TOP_BLOCK.bd
+  add_files C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Uart_Testing/Uart_Testing.srcs/sources_1/bd/TOP_BLOCK/TOP_BLOCK.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top TOP_BLOCK_wrapper -part xc7z020clg400-1
@@ -158,6 +155,26 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  catch { write_mem_info -force TOP_BLOCK_wrapper.mmi }
+  write_bitstream -force TOP_BLOCK_wrapper.bit 
+  catch { write_sysdef -hwdef TOP_BLOCK_wrapper.hwdef -bitfile TOP_BLOCK_wrapper.bit -meminfo TOP_BLOCK_wrapper.mmi -file TOP_BLOCK_wrapper.sysdef }
+  catch {write_debug_probes -quiet -force TOP_BLOCK_wrapper}
+  catch {file copy -force TOP_BLOCK_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

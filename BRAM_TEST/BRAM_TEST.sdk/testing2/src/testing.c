@@ -10,7 +10,7 @@
 #define BUFF_LEN 10
 #define PRINT_BUFF_LEN 12
 #define TX_BUFF_ADDR 0x0000FFF8 // some address in OCM
-#define RX_BUFF_ADDR 0xC0000000 // Not 'seen' by the PS
+#define RX_BUFF_ADDR 0x40000000 // Not 'seen' by the PS
 
 int Status;
 XAxiCdma_Config *axi_cdma_cfg;
