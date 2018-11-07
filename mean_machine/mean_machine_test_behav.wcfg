@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mean_machine_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mean_machine_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="122605833333fs"></ZoomStartTime>
+      <ZoomEndTime time="122877833334fs"></ZoomEndTime>
+      <Cursor1Time time="123350000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/mean_machine_test/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/setup" type="logic">
+      <obj_property name="ElementShortName">setup</obj_property>
+      <obj_property name="ObjectShortName">setup</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/next_section" type="logic">
+      <obj_property name="ElementShortName">next_section</obj_property>
+      <obj_property name="ObjectShortName">next_section</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/buf_selected" type="logic">
+      <obj_property name="ElementShortName">buf_selected</obj_property>
+      <obj_property name="ObjectShortName">buf_selected</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/latch_select" type="logic">
+      <obj_property name="ElementShortName">latch_select</obj_property>
+      <obj_property name="ObjectShortName">latch_select</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/bit_num" type="array">
+      <obj_property name="ElementShortName">bit_num[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_num[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/gsclk" type="logic">
+      <obj_property name="ElementShortName">gsclk</obj_property>
+      <obj_property name="ObjectShortName">gsclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/latch" type="logic">
+      <obj_property name="ElementShortName">latch</obj_property>
+      <obj_property name="ObjectShortName">latch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/buf_select" type="array">
+      <obj_property name="ElementShortName">buf_select[1:0]</obj_property>
+      <obj_property name="ObjectShortName">buf_select[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/uut/next_active_data" type="logic">
+      <obj_property name="ElementShortName">next_active_data</obj_property>
+      <obj_property name="ObjectShortName">next_active_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/uut/active_data" type="logic">
+      <obj_property name="ElementShortName">active_data</obj_property>
+      <obj_property name="ObjectShortName">active_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/uut/setup_complete" type="array">
+      <obj_property name="ElementShortName">setup_complete[1:0]</obj_property>
+      <obj_property name="ObjectShortName">setup_complete[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mean_machine_test/uut/next_setup_complete" type="array">
+      <obj_property name="ElementShortName">next_setup_complete[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_setup_complete[1:0]</obj_property>
+   </wvobject>
+</wave_config>
