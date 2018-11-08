@@ -2229,3 +2229,10 @@ con
 
 12:47:24 INFO  : Launch script is exported to file 'C:\Users\TaySm\OneDrive\Documents\GitHub\Senior-Project-Vivado\BRAM_TEST\BRAM_TEST.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_testing2.elf_on_local.tcl'
 18:01:01 INFO  : Disconnected from the channel tcfchan#3.
+13:33:10 INFO  : Registering command handlers for SDK TCF services
+13:33:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\TaySm\OneDrive\Documents\GitHub\Senior-Project-Vivado\BRAM_TEST\BRAM_TEST.sdk\temp_xsdb_launch_script.tcl
+13:33:17 INFO  : XSCT server has started successfully.
+13:33:18 INFO  : Successfully done setting XSCT server connection channel  
+13:33:23 INFO  : Processing command line option -hwspec C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk/design_1_wrapper.hdf.
+13:33:23 INFO  : Successfully done setting SDK workspace  
+13:33:23 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.

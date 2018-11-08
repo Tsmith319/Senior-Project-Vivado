@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:sout_module:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "sout_module,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "driver_block_design_sout_module_0_0,sout_module,{}" *)
-(* CORE_GENERATION_INFO = "driver_block_design_sout_module_0_0,sout_module,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sout_module,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "driver_block_design_sout_module_0_0,sout_module,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sout_module,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module driver_block_design_sout_module_0_0 (

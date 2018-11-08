@@ -280,6 +280,14 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_xlconstant_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">2</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>sout_module_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -293,28 +301,20 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlconstant_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_xlconstant_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">2</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_latch_select</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="latch_select"/>
-        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="latch_select"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="latch_select"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_bit_num</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="bit_num"/>
-        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="bit_num"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sout_module_0_sout</spirit:name>
@@ -325,8 +325,8 @@
         <spirit:name>clk_0_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk_0"/>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>enable_0_1</spirit:name>

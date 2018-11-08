@@ -13167,3 +13167,49 @@ Note: A value of zero (0) is not allowed and causes a DMA internal error to be s
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-11-03 18:01:01.526
 !MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-292
+!SESSION 2018-11-08 13:32:54.382 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk
+
+!ENTRY org.eclipse.ui 2 0 2018-11-08 13:33:00.250
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-08 13:33:00.250
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2018-11-08 13:33:01.868
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-08 13:33:01.868
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:17.957
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:17.967
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:18.049
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:18.073
+!MESSAGE XSCT Command: [setws C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:23.303
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:23.312
+!MESSAGE XSCT command with result: [setws C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk], Result: [null, ]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:23.366
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:30.936
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:30.945
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-11-08 13:33:34.618
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/BRAM_TEST/BRAM_TEST.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main

@@ -43,44 +43,25 @@ module sout_test(
     
     initial begin
         clk = 0;
-        bit_num = 11'd1535;
-        buf_num = 0;
         setup_bit = 0;
         
-        #5
-        
-        clk = 1;
-        
-        #5
-        
-        clk = 0;
-        setup_bit = 1;
-        #5
-        
-        clk = 1;
-        
-        #5
-        clk = 0;
-        buf_num = 1;
-        
-        #5
-        clk = 1;
-        
-        #5
-        clk = 0;
-        bit_num = 0;
-        buf_num = 2;
-        
-        #5
-        clk = 1;
-        #5
-        clk = 0;
-        bit_num = 32;
-        
-                
+        for(integer k=0; k<=1;k=k+1) begin
+            #5
+            buf_num = k+1;
+            for(integer i = 1535;i >= 0; i=i-1) begin
+             #5
+             clk = 1;
+             #5
+             clk = 0;
+             bit_num = i;
+            end 
+        end
+        #5;
+                    
         
     
     end
+    
     
 endmodule
 
