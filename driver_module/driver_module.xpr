@@ -22,6 +22,7 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../INTERRUPT_DRIVER"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../mean_machine/mean_machine.srcs/sources_1/new"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../Sout_Module/Sout_Module.srcs/sources_1/new"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

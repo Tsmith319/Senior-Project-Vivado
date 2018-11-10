@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBFC49112ED16C7FC" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xB8A6506BD02F785F" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -215,30 +215,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>next_section_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>buf_selected_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>setup_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ready_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>gsclk_0</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -260,6 +236,16 @@
           <spirit:name>sout_0</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>GPIO_IN</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -301,6 +287,13 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>interrupt_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interrupt" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_interrupt_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
@@ -327,6 +320,7 @@
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>enable_0_1</spirit:name>
@@ -341,24 +335,9 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>next_section_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="next_section_0"/>
-        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="next_section"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>buf_selected_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="buf_selected_0"/>
-        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="buf_selected"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>setup_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="setup_0"/>
-        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="setup"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_ready</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="ready"/>
-        <spirit:externalPortReference spirit:portRef="ready_0"/>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="ready"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_gsclk</spirit:name>
@@ -390,6 +369,26 @@
         <spirit:name>sout_module_1_sout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="sout"/>
         <spirit:externalPortReference spirit:portRef="sout_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GPIO_IN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="GPIO_IN"/>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="GPIO_IN"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>interrupt_0_buf_select</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="buf_select"/>
+        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="buf_selected"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>interrupt_0_next_section</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="next_section"/>
+        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="next_section"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>interrupt_0_setup</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="setup"/>
+        <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="setup"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

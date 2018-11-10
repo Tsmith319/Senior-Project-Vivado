@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="VISION_processing_system7_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_driver_block_design_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_driver_block_design_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_axi_smc_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_axi_gpio_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_axi_cdma_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_cdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_driver_block_design_0_bram_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_driver_block_design_0_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_xbar_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_axi_bram_ctrl_0_1_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_bram_ctrl_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="VISION_driver_block_design_0_bram_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_driver_block_design_0_bram_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="VISION_driver_block_design_0_bram_0_synth_1"/>
+	</Run>
+	<Run Id="VISION_axi_bram_ctrl_0_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="VISION_axi_bram_ctrl_0_1_synth_1"/>
+	</Run>
+	<Run Id="VISION_auto_pc_0_synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="VISION_processing_system7_0_0_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_0_synth_1"/>
+		<Parent Id="VISION_axi_smc_0_synth_1"/>
+		<Parent Id="VISION_axi_gpio_0_0_synth_1"/>
+		<Parent Id="VISION_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="VISION_axi_cdma_0_0_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_bram_0_synth_1"/>
+		<Parent Id="VISION_xbar_0_synth_1"/>
+		<Parent Id="VISION_axi_bram_ctrl_0_1_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_bram_0_0_synth_1"/>
+		<Parent Id="VISION_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="VISION_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="VISION_processing_system7_0_0_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_0_synth_1"/>
+		<Parent Id="VISION_axi_smc_0_synth_1"/>
+		<Parent Id="VISION_axi_gpio_0_0_synth_1"/>
+		<Parent Id="VISION_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="VISION_axi_cdma_0_0_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_bram_0_synth_1"/>
+		<Parent Id="VISION_xbar_0_synth_1"/>
+		<Parent Id="VISION_axi_bram_ctrl_0_1_synth_1"/>
+		<Parent Id="VISION_driver_block_design_0_bram_0_0_synth_1"/>
+		<Parent Id="VISION_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="VISION_auto_pc_0_synth_1"/>
+	</Run>
+</Runs>
+

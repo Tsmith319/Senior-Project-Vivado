@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Nov  8 13:00:09 2018
+//Date        : Sat Nov 10 10:22:59 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target driver_block_design.bd
 //Design      : driver_block_design
@@ -9,9 +9,9 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "driver_block_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=driver_block_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "driver_block_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "driver_block_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=driver_block_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "driver_block_design.hwdef" *) 
 module driver_block_design
-   (buf_selected_0,
+   (GPIO_IN,
     clk_0,
     data_in_0_addr,
     data_in_0_clk,
@@ -26,13 +26,10 @@ module driver_block_design
     enable_0,
     gsclk_0,
     latch_0,
-    next_section_0,
-    ready_0,
     reset_0,
     sclk_0,
-    setup_0,
     sout_0);
-  input buf_selected_0;
+  input [2:0]GPIO_IN;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 100000000, PHASE 0.000" *) input clk_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32" *) output [31:0]data_in_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 CLK" *) output data_in_0_clk;
@@ -47,16 +44,16 @@ module driver_block_design
   input enable_0;
   output gsclk_0;
   output latch_0;
-  input next_section_0;
-  output ready_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_LOW" *) input reset_0;
   output sclk_0;
-  input setup_0;
   output sout_0;
 
-  wire buf_selected_0_1;
+  wire [2:0]GPIO_IN_1;
   wire clk_0_1;
   wire enable_0_1;
+  wire interrupt_0_buf_select;
+  wire interrupt_0_next_section;
+  wire interrupt_0_setup;
   wire [10:0]mean_machine_module_0_bit_num;
   wire [1:0]mean_machine_module_0_buf_select;
   wire mean_machine_module_0_gsclk;
@@ -64,9 +61,7 @@ module driver_block_design
   wire mean_machine_module_0_latch_select;
   wire mean_machine_module_0_ready;
   wire mean_machine_module_0_sclk;
-  wire next_section_0_1;
   wire reset_0_1;
-  wire setup_0_1;
   wire [31:0]sout_module_0_data_in_ADDR;
   wire sout_module_0_data_in_CLK;
   wire [31:0]sout_module_0_data_in_DOUT;
@@ -81,7 +76,7 @@ module driver_block_design
   wire sout_module_1_sout;
   wire [1:0]xlconstant_0_dout;
 
-  assign buf_selected_0_1 = buf_selected_0;
+  assign GPIO_IN_1 = GPIO_IN[2:0];
   assign clk_0_1 = clk_0;
   assign data_in_0_addr[31:0] = sout_module_0_data_in_ADDR;
   assign data_in_0_clk = sout_module_0_data_in_CLK;
@@ -94,28 +89,32 @@ module driver_block_design
   assign enable_0_1 = enable_0;
   assign gsclk_0 = mean_machine_module_0_gsclk;
   assign latch_0 = mean_machine_module_0_latch;
-  assign next_section_0_1 = next_section_0;
-  assign ready_0 = mean_machine_module_0_ready;
   assign reset_0_1 = reset_0;
   assign sclk_0 = mean_machine_module_0_sclk;
-  assign setup_0_1 = setup_0;
   assign sout_0 = sout_module_1_sout;
   assign sout_module_0_data_in_DOUT = data_in_0_dout[31:0];
   assign sout_module_1_data_in_DOUT = data_in_1_dout[31:0];
+  driver_block_design_interrupt_0_0 interrupt_0
+       (.GPIO_IN(GPIO_IN_1),
+        .buf_select(interrupt_0_buf_select),
+        .clk(clk_0_1),
+        .next_section(interrupt_0_next_section),
+        .ready(mean_machine_module_0_ready),
+        .setup(interrupt_0_setup));
   driver_block_design_mean_machine_module_0_0 mean_machine_module_0
        (.bit_num(mean_machine_module_0_bit_num),
         .buf_select(mean_machine_module_0_buf_select),
-        .buf_selected(buf_selected_0_1),
+        .buf_selected(interrupt_0_buf_select),
         .clk(clk_0_1),
         .enable(enable_0_1),
         .gsclk(mean_machine_module_0_gsclk),
         .latch(mean_machine_module_0_latch),
         .latch_select(mean_machine_module_0_latch_select),
-        .next_section(next_section_0_1),
+        .next_section(interrupt_0_next_section),
         .ready(mean_machine_module_0_ready),
         .reset(reset_0_1),
         .sclk(mean_machine_module_0_sclk),
-        .setup(setup_0_1));
+        .setup(interrupt_0_setup));
   driver_block_design_sout_module_0_0 sout_module_0
        (.b_addr(sout_module_0_data_in_ADDR),
         .b_clk(sout_module_0_data_in_CLK),

@@ -1,0 +1,6 @@
+11:49:13 INFO  : Registering command handlers for SDK TCF services
+11:49:14 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\TaySm\OneDrive\Documents\GitHub\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\temp_xsdb_launch_script.tcl
+11:49:19 INFO  : XSCT server has started successfully.
+11:49:23 INFO  : Processing command line option -hwspec C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf.
+11:49:23 INFO  : Successfully done setting XSCT server connection channel  
+11:49:24 INFO  : Successfully done setting SDK workspace  

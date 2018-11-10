@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  8 13:00:10 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 10 10:22:59 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:arty-z7-20:part0:1.0" DEVICE="7z020" NAME="driver_block_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -19,6 +19,7 @@
         <CONNECTION INSTANCE="mean_machine_module_0" PORT="clk"/>
         <CONNECTION INSTANCE="sout_module_0" PORT="clk"/>
         <CONNECTION INSTANCE="sout_module_1" PORT="clk"/>
+        <CONNECTION INSTANCE="interrupt_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="External_Ports_enable_0">
@@ -31,26 +32,6 @@
         <CONNECTION INSTANCE="mean_machine_module_0" PORT="reset"/>
         <CONNECTION INSTANCE="sout_module_0" PORT="reset"/>
         <CONNECTION INSTANCE="sout_module_1" PORT="reset"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="next_section_0" SIGIS="undef" SIGNAME="External_Ports_next_section_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mean_machine_module_0" PORT="next_section"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="buf_selected_0" SIGIS="undef" SIGNAME="External_Ports_buf_selected_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mean_machine_module_0" PORT="buf_selected"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="setup_0" SIGIS="undef" SIGNAME="External_Ports_setup_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mean_machine_module_0" PORT="setup"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="ready_0" SIGIS="undef" SIGNAME="mean_machine_module_0_ready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mean_machine_module_0" PORT="ready"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="gsclk_0" SIGIS="undef" SIGNAME="mean_machine_module_0_gsclk">
@@ -71,6 +52,11 @@
     <PORT DIR="O" NAME="sout_0" SIGIS="undef" SIGNAME="sout_module_1_sout">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sout_module_1" PORT="sout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="GPIO_IN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPIO_IN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="interrupt_0" PORT="GPIO_IN"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -107,6 +93,46 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE FULLNAME="/interrupt_0" HWVERSION="1.0" INSTANCE="interrupt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interrupt" VLNV="xilinx.com:user:interrupt:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="driver_block_design_interrupt_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="GPIO_IN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPIO_IN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ready" SIGIS="undef" SIGNAME="mean_machine_module_0_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="setup" SIGIS="undef" SIGNAME="interrupt_0_setup">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="setup"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="next_section" SIGIS="undef" SIGNAME="interrupt_0_next_section">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="next_section"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="buf_select" SIGIS="undef" SIGNAME="interrupt_0_buf_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="buf_selected"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/mean_machine_module_0" HWVERSION="1.0" INSTANCE="mean_machine_module_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mean_machine_module" VLNV="xilinx.com:user:mean_machine_module:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -129,14 +155,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="next_section" SIGIS="undef" SIGNAME="External_Ports_next_section_0">
+        <PORT DIR="I" NAME="next_section" SIGIS="undef" SIGNAME="interrupt_0_next_section">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="next_section_0"/>
+            <CONNECTION INSTANCE="interrupt_0" PORT="next_section"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="buf_selected" SIGIS="undef" SIGNAME="External_Ports_buf_selected_0">
+        <PORT DIR="I" NAME="buf_selected" SIGIS="undef" SIGNAME="interrupt_0_buf_select">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="buf_selected_0"/>
+            <CONNECTION INSTANCE="interrupt_0" PORT="buf_select"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="latch_select" SIGIS="undef" SIGNAME="mean_machine_module_0_latch_select">
@@ -173,12 +199,12 @@
         </PORT>
         <PORT DIR="O" NAME="ready" SIGIS="undef" SIGNAME="mean_machine_module_0_ready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ready_0"/>
+            <CONNECTION INSTANCE="interrupt_0" PORT="ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="setup" SIGIS="undef" SIGNAME="External_Ports_setup_0">
+        <PORT DIR="I" NAME="setup" SIGIS="undef" SIGNAME="interrupt_0_setup">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="setup_0"/>
+            <CONNECTION INSTANCE="interrupt_0" PORT="setup"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

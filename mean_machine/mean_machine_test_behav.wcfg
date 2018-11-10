@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="122605833333fs"></ZoomStartTime>
-      <ZoomEndTime time="122877833334fs"></ZoomEndTime>
-      <Cursor1Time time="123350000000fs"></Cursor1Time>
+      <ZoomStartTime time="184976975000fs"></ZoomStartTime>
+      <ZoomEndTime time="185775125003fs"></ZoomEndTime>
+      <Cursor1Time time="185110000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
    <wvobject fp_name="/mean_machine_test/enable" type="logic">
@@ -72,6 +72,8 @@
    <wvobject fp_name="/mean_machine_test/ready" type="logic">
       <obj_property name="ElementShortName">ready</obj_property>
       <obj_property name="ObjectShortName">ready</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/mean_machine_test/uut/next_active_data" type="logic">
       <obj_property name="ElementShortName">next_active_data</obj_property>
