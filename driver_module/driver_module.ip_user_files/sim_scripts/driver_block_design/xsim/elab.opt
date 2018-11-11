@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L xlconstant_v1_1_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot driver_block_design xil_defaultlib.driver_block_design xil_defaultlib.glbl -log elaborate.log

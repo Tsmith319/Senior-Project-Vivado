@@ -1,0 +1,22 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a5d5b98a0f9d4cb6b48017b5231fd76b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot driver_block_design_test_behav xil_defaultlib.driver_block_design_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.interrupt
+Compiling module xil_defaultlib.driver_block_design_interrupt_0_...
+Compiling module xil_defaultlib.mean_machine_module
+Compiling module xil_defaultlib.driver_block_design_mean_machine...
+Compiling module xil_defaultlib.sout_module
+Compiling module xil_defaultlib.driver_block_design_sout_module_...
+Compiling module xil_defaultlib.driver_block_design_sout_module_...
+Compiling module xlconstant_v1_1_5.xlconstant_v1_1_5_xlconstant(CON...
+Compiling module xil_defaultlib.driver_block_design_xlconstant_0...
+Compiling module xil_defaultlib.driver_block_design
+Compiling module xil_defaultlib.driver_block_design_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot driver_block_design_test_behav

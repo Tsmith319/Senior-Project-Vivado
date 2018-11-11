@@ -1,0 +1,52 @@
+/*
+ * pixel_data.h
+ *
+ *  Created on: Nov 10, 2018
+ *      Author: TaySm
+ */
+
+#ifndef SRC_PIXEL_DATA_H_
+#define SRC_PIXEL_DATA_H_
+
+#define SETUP_COMMAND 0x96;
+
+
+
+typedef struct {
+	uint16_t blue, green, red;
+} Pixel;
+
+typedef struct {
+	Pixel pixels[96];
+} Layer;
+
+typedef struct {
+	Layer layers[24];
+} Frame;
+
+
+typedef struct {
+	uint8_t data[96];
+} TLC_Setup;
+
+typedef struct {
+	TLC_Setup data[2];
+} Setup_Layer;
+
+void setBit(uint8_t *array, int bit_num, int bit_val) {
+	int base = bit_num / 8;
+	int position = bit_num % 8;
+	if(bit_val)
+	{
+		array[bit_num/8] |= 1 << (bit_num % 32);
+	}
+	else
+	{
+		array[bit_num/8] &= ~(1 << (bit_num % 8));
+	}
+}
+
+void TLC_setup() {
+
+}
+#endif /* SRC_PIXEL_DATA_H_ */

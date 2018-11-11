@@ -24,19 +24,39 @@ module driver_block_design_test(
 
     );
     
+    reg enable;
+    reg reset;
+    reg clk;
+    reg [2:0] GPIO;
+    
+    wire gsclk;
+    wire sclk;
+    wire latch;
+    wire sout;
+    
     driver_block_design uut(
-        .enable_0(),
-        .reset_0(),
-        .clk_0(),
-        .next_section_0(),
-        .buf_selected_0(),
-        .setup_0(),
-        .gsclk_0(),
-        .sclk_0(),
-        .data_in_1(),
-        .sout_0(),
-        .latch_0(),
-        .ready_0(),
-        .data_in_0()
+        .enable_0(enable),
+        .reset_0(reset),
+        .clk_0(clk),
+        .GPIO_IN(GPIO),
+        .gsclk_0(gsclk),
+        .sclk_0(sclk),
+        .sout_0(sout),
+        .latch_0(latch)
         );
+        
+    initial begin
+    GPIO = 3'b000;
+    clk = 0;
+    enable = 1;
+    reset = 0;
+    #10
+    GPIO = 3'b100;
+    #50
+    GPIO = 3'b110;
+    
+    
+    end
+    
+    always #5 clk = ~clk;
 endmodule

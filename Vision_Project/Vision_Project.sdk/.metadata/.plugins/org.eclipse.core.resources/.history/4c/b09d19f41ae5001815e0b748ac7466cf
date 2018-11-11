@@ -1,0 +1,19 @@
+/*
+ * pixel_data.h
+ *
+ *  Created on: Nov 10, 2018
+ *      Author: TaySm
+ */
+
+#ifndef SRC_PIXEL_DATA_H_
+#define SRC_PIXEL_DATA_H_
+
+typedef struct {
+	uint16_t blue, green, red;
+} Pixel;
+
+typedef struct {
+	Pixel pixels[96];
+} Layer;
+
+#endif /* SRC_PIXEL_DATA_H_ */
