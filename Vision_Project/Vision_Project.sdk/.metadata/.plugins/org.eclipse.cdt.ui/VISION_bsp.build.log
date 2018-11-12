@@ -1,4 +1,4 @@
-20:25:57 **** Build of project VISION_bsp ****
+11:43:47 **** Build of project VISION_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_4/src"
 make -C ps7_cortexa9_0/libsrc/axicdma_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -93,5 +93,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-20:26:42 Build Finished (took 44s.397ms)
+11:44:03 Build Finished (took 16s.96ms)
 

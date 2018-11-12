@@ -11,15 +11,10 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="93190833333fs"></ZoomStartTime>
-      <ZoomEndTime time="93351833334fs"></ZoomEndTime>
-      <Cursor1Time time="93325000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="297"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
    <wvobject fp_name="/driver_block_design_test/enable" type="logic">
       <obj_property name="ElementShortName">enable</obj_property>
       <obj_property name="ObjectShortName">enable</obj_property>
@@ -52,8 +47,5 @@
       <obj_property name="ElementShortName">sout</obj_property>
       <obj_property name="ObjectShortName">sout</obj_property>
    </wvobject>
-   <wvobject fp_name="/driver_block_design_test/uut/mean_machine_module_0_ready" type="logic">
-      <obj_property name="ElementShortName">mean_machine_module_0_ready</obj_property>
-      <obj_property name="ObjectShortName">mean_machine_module_0_ready</obj_property>
    </wvobject>
 </wave_config>

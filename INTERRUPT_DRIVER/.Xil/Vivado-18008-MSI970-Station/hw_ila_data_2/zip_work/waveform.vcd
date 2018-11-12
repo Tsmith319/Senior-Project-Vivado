@@ -1,0 +1,59 @@
+$date
+        2018-Nov-11 13:34:36
+$end
+$version
+        Vivado v2018.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " VISION_i/system_ila_1/inst/SLOT_0_BRAM_en_1 $end
+$var reg 1 # VISION_i/system_ila_1/inst/SLOT_0_BRAM_rst_1 $end
+$var reg 32 $ VISION_i/system_ila_1/inst/SLOT_0_BRAM_dout_1 [31:0] $end
+$var reg 32 D VISION_i/system_ila_1/inst/SLOT_0_BRAM_addr_1 [31:0] $end
+$var reg 1 d VISION_i/system_ila_1/inst/SLOT_1_BRAM_en_1 $end
+$var reg 1 e VISION_i/system_ila_1/inst/SLOT_1_BRAM_rst_1 $end
+$var reg 32 f VISION_i/system_ila_1/inst/SLOT_1_BRAM_dout_1 [31:0] $end
+$var reg 32 (" VISION_i/system_ila_1/inst/SLOT_1_BRAM_addr_1 [31:0] $end
+$var reg 1 H" _TRIGGER $end
+$var reg 1 I" _WINDOW $end
+$var reg 1 J" _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0#
+b0 $
+b111111111111111111111110001 D
+1d
+0e
+b11111111111111111111111111111111 f
+b0 ("
+0H"
+1I"
+0J"
+$end
+#512
+1H"
+#517
+b0 D
+#518
+b10010110 $
+#581
+b1 D
+#645
+b10 D
+#709
+b11 D
+#773
+b100 D
+#774
+b0 $
+#837
+b101 D
+#901
+b110 D
+#965
+b111 D

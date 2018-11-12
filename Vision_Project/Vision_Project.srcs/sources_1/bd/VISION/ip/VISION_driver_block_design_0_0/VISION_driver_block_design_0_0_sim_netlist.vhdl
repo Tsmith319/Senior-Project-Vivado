@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Nov 10 11:24:23 2018
--- Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+-- Date        : Sun Nov 11 14:52:08 2018
+-- Host        : MSI970-Station running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0_sim_netlist.vhdl
+--               C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0_sim_netlist.vhdl
 -- Design      : VISION_driver_block_design_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -53,7 +53,8 @@ entity VISION_driver_block_design_0_0_interrupt is
     next_section_queued_reg_1 : out STD_LOGIC;
     GPIO_IN : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ready : in STD_LOGIC;
-    clk : in STD_LOGIC
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of VISION_driver_block_design_0_0_interrupt : entity is "interrupt";
@@ -79,26 +80,26 @@ begin
   next_section_queued_reg_1 <= \^next_section_queued_reg_1\;
 next_section_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F0F00020"
+      INIT => X"C0D0C0C0"
     )
         port map (
-      I0 => next_section_queued,
-      I1 => setup_queued,
+      I0 => \^next_section_queued_reg_0\,
+      I1 => \^next_section_queued_reg_1\,
       I2 => ready,
-      I3 => \^next_section_queued_reg_0\,
-      I4 => \^next_section_queued_reg_1\,
+      I3 => setup_queued,
+      I4 => next_section_queued,
       O => next_section_i_1_n_0
     );
-next_section_last_reg: unisim.vcomponents.FDRE
+next_section_last_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => GPIO_IN(0),
-      Q => next_section_last,
-      R => '0'
+      Q => next_section_last
     );
 next_section_queued_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -122,49 +123,49 @@ next_section_queued_i_2: unisim.vcomponents.LUT2
       I1 => GPIO_IN(0),
       O => next_section_queued0
     );
-next_section_queued_reg: unisim.vcomponents.FDRE
+next_section_queued_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => next_section_queued_i_1_n_0,
-      Q => next_section_queued,
-      R => '0'
+      Q => next_section_queued
     );
-next_section_reg: unisim.vcomponents.FDRE
+next_section_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => next_section_i_1_n_0,
-      Q => \^next_section_queued_reg_1\,
-      R => '0'
+      Q => \^next_section_queued_reg_1\
     );
 setup_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"C0C8"
+      INIT => X"B0A0"
     )
         port map (
-      I0 => setup_queued,
-      I1 => ready,
-      I2 => \^next_section_queued_reg_0\,
-      I3 => \^next_section_queued_reg_1\,
+      I0 => \^next_section_queued_reg_0\,
+      I1 => \^next_section_queued_reg_1\,
+      I2 => ready,
+      I3 => setup_queued,
       O => setup_i_1_n_0
     );
-setup_last_reg: unisim.vcomponents.FDRE
+setup_last_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => GPIO_IN(1),
-      Q => setup_last,
-      R => '0'
+      Q => setup_last
     );
 setup_queued_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -179,27 +180,27 @@ setup_queued_i_1: unisim.vcomponents.LUT6
       I5 => GPIO_IN(1),
       O => setup_queued_i_1_n_0
     );
-setup_queued_reg: unisim.vcomponents.FDRE
+setup_queued_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => setup_queued_i_1_n_0,
-      Q => setup_queued,
-      R => '0'
+      Q => setup_queued
     );
-setup_reg: unisim.vcomponents.FDRE
+setup_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => setup_i_1_n_0,
-      Q => \^next_section_queued_reg_0\,
-      R => '0'
+      Q => \^next_section_queued_reg_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -215,8 +216,8 @@ entity VISION_driver_block_design_0_0_mean_machine_module is
     sclk : out STD_LOGIC;
     gsclk : out STD_LOGIC;
     latch_select : out STD_LOGIC;
-    reset : in STD_LOGIC;
     clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
     next_section : in STD_LOGIC;
     setup : in STD_LOGIC;
     buf_selected : in STD_LOGIC;
@@ -300,16 +301,16 @@ active_data_i_1: unisim.vcomponents.LUT6
       I5 => active_data,
       O => active_data_i_1_n_0
     );
-active_data_reg: unisim.vcomponents.FDRE
+active_data_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => active_data_i_1_n_0,
-      Q => active_data,
-      R => reset
+      Q => active_data
     );
 \buf_select[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
@@ -351,16 +352,16 @@ clock_state_i_1: unisim.vcomponents.LUT1
       I0 => clock_state,
       O => clock_state0
     );
-clock_state_reg: unisim.vcomponents.FDRE
+clock_state_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => clock_state0,
-      Q => clock_state,
-      R => reset
+      Q => clock_state
     );
 \curr_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -721,18 +722,18 @@ clock_state_reg: unisim.vcomponents.FDRE
       I4 => \^q\(3),
       O => \curr_state[9]_i_3_n_0\
     );
-\curr_state_reg[0]\: unisim.vcomponents.FDRE
+\curr_state_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(0),
-      Q => \^q\(0),
-      R => reset
+      Q => \^q\(0)
     );
-\curr_state_reg[10]\: unisim.vcomponents.FDSE
+\curr_state_reg[10]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -740,21 +741,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(10),
-      Q => \^q\(10),
-      S => reset
+      PRE => reset,
+      Q => \^q\(10)
     );
-\curr_state_reg[1]\: unisim.vcomponents.FDRE
+\curr_state_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(1),
-      Q => \^q\(1),
-      R => reset
+      Q => \^q\(1)
     );
-\curr_state_reg[2]\: unisim.vcomponents.FDSE
+\curr_state_reg[2]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -762,21 +763,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(2),
-      Q => \^q\(2),
-      S => reset
+      PRE => reset,
+      Q => \^q\(2)
     );
-\curr_state_reg[3]\: unisim.vcomponents.FDRE
+\curr_state_reg[3]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(3),
-      Q => \^q\(3),
-      R => reset
+      Q => \^q\(3)
     );
-\curr_state_reg[4]\: unisim.vcomponents.FDSE
+\curr_state_reg[4]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -784,21 +785,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(4),
-      Q => \^q\(4),
-      S => reset
+      PRE => reset,
+      Q => \^q\(4)
     );
-\curr_state_reg[5]\: unisim.vcomponents.FDRE
+\curr_state_reg[5]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(5),
-      Q => \^q\(5),
-      R => reset
+      Q => \^q\(5)
     );
-\curr_state_reg[6]\: unisim.vcomponents.FDSE
+\curr_state_reg[6]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -806,10 +807,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(6),
-      Q => \^q\(6),
-      S => reset
+      PRE => reset,
+      Q => \^q\(6)
     );
-\curr_state_reg[7]\: unisim.vcomponents.FDSE
+\curr_state_reg[7]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -817,10 +818,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(7),
-      Q => \^q\(7),
-      S => reset
+      PRE => reset,
+      Q => \^q\(7)
     );
-\curr_state_reg[8]\: unisim.vcomponents.FDSE
+\curr_state_reg[8]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -828,10 +829,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(8),
-      Q => \^q\(8),
-      S => reset
+      PRE => reset,
+      Q => \^q\(8)
     );
-\curr_state_reg[9]\: unisim.vcomponents.FDSE
+\curr_state_reg[9]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -839,8 +840,8 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(9),
-      Q => \^q\(9),
-      S => reset
+      PRE => reset,
+      Q => \^q\(9)
     );
 gsclk_INST_0: unisim.vcomponents.LUT5
     generic map(
@@ -880,27 +881,27 @@ gsclk_INST_0: unisim.vcomponents.LUT5
       I5 => \curr_state[10]_i_3_n_0\,
       O => \gsclk_padding[1]_i_1_n_0\
     );
-\gsclk_padding_reg[0]\: unisim.vcomponents.FDRE
+\gsclk_padding_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \gsclk_padding[0]_i_1_n_0\,
-      Q => gsclk_padding(0),
-      R => reset
+      Q => gsclk_padding(0)
     );
-\gsclk_padding_reg[1]\: unisim.vcomponents.FDRE
+\gsclk_padding_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \gsclk_padding[1]_i_1_n_0\,
-      Q => gsclk_padding(1),
-      R => reset
+      Q => gsclk_padding(1)
     );
 latch_INST_0: unisim.vcomponents.LUT4
     generic map(
@@ -1027,27 +1028,27 @@ sclk_INST_0_i_3: unisim.vcomponents.LUT2
       I4 => setup_complete(1),
       O => \setup_complete[1]_i_1_n_0\
     );
-\setup_complete_reg[0]\: unisim.vcomponents.FDRE
+\setup_complete_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \setup_complete[0]_i_1_n_0\,
-      Q => setup_complete(0),
-      R => reset
+      Q => setup_complete(0)
     );
-\setup_complete_reg[1]\: unisim.vcomponents.FDRE
+\setup_complete_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \setup_complete[1]_i_1_n_0\,
-      Q => setup_complete(1),
-      R => reset
+      Q => setup_complete(1)
     );
 end STRUCTURE;
 library IEEE;
@@ -1057,7 +1058,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity VISION_driver_block_design_0_0_sout_module is
   port (
     O : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \data_in_1_addr[8]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \data_in_1_addr[10]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     b_addr : out STD_LOGIC_VECTOR ( 4 downto 0 );
     buf_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
     bit_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1084,22 +1085,22 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_sout_module is
   signal b_addr1_carry_n_3 : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 12 downto 10 );
   signal b_addr3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \b_addr[4]_INST_0_i_1_n_1\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_2\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_3\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_5_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_6_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_1\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_2\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_3\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_6_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_7_n_0\ : STD_LOGIC;
   signal NLW_b_addr1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_b_addr1_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_b_addr1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \b_addr[5]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \b_addr[6]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \b_addr[11]_INST_0\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \b_addr[7]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \b_addr[8]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair17";
 begin
   O(0) <= \^o\(0);
 b_addr1_carry: unisim.vcomponents.CARRY4
@@ -1199,107 +1200,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I1 => bit_num(0),
       O => b_addr1_carry_i_6_n_0
     );
-\b_addr[4]_INST_0_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \data_in_1_addr[8]\(0),
-      CO(2) => \b_addr[4]_INST_0_i_1_n_1\,
-      CO(1) => \b_addr[4]_INST_0_i_1_n_2\,
-      CO(0) => \b_addr[4]_INST_0_i_1_n_3\,
-      CYINIT => '0',
-      DI(3) => \b_addr[4]_INST_0_i_2_n_0\,
-      DI(2) => b_addr3(0),
-      DI(1 downto 0) => B"01",
-      O(3 downto 1) => b_addr2(12 downto 10),
-      O(0) => \^o\(0),
-      S(3) => \b_addr[4]_INST_0_i_4_n_0\,
-      S(2) => \b_addr[4]_INST_0_i_5_n_0\,
-      S(1) => \b_addr[4]_INST_0_i_6_n_0\,
-      S(0) => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[4]_INST_0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_2_n_0\
-    );
-\b_addr[4]_INST_0_i_3\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => b_addr3(0)
-    );
-\b_addr[4]_INST_0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_4_n_0\
-    );
-\b_addr[4]_INST_0_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"D"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_5_n_0\
-    );
-\b_addr[4]_INST_0_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => buf_num(0),
-      I1 => buf_num(1),
-      O => \b_addr[4]_INST_0_i_6_n_0\
-    );
-\b_addr[4]_INST_0_i_7\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(10),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(0)
-    );
-\b_addr[6]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(11),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(1)
-    );
-\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(12),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(2)
-    );
-\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[10]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"28"
     )
@@ -1309,7 +1210,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I2 => buf_num(1),
       O => b_addr(3)
     );
-\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[11]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"14"
     )
@@ -1319,6 +1220,106 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I2 => buf_num(1),
       O => b_addr(4)
     );
+\b_addr[6]_INST_0_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \data_in_1_addr[10]\(0),
+      CO(2) => \b_addr[6]_INST_0_i_1_n_1\,
+      CO(1) => \b_addr[6]_INST_0_i_1_n_2\,
+      CO(0) => \b_addr[6]_INST_0_i_1_n_3\,
+      CYINIT => '0',
+      DI(3) => \b_addr[6]_INST_0_i_2_n_0\,
+      DI(2) => b_addr3(0),
+      DI(1 downto 0) => B"01",
+      O(3 downto 1) => b_addr2(12 downto 10),
+      O(0) => \^o\(0),
+      S(3) => \b_addr[6]_INST_0_i_4_n_0\,
+      S(2) => \b_addr[6]_INST_0_i_5_n_0\,
+      S(1) => \b_addr[6]_INST_0_i_6_n_0\,
+      S(0) => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[6]_INST_0_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_2_n_0\
+    );
+\b_addr[6]_INST_0_i_3\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => b_addr3(0)
+    );
+\b_addr[6]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_4_n_0\
+    );
+\b_addr[6]_INST_0_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"D"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_5_n_0\
+    );
+\b_addr[6]_INST_0_i_6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => buf_num(0),
+      I1 => buf_num(1),
+      O => \b_addr[6]_INST_0_i_6_n_0\
+    );
+\b_addr[6]_INST_0_i_7\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(10),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(0)
+    );
+\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(11),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(1)
+    );
+\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(12),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(2)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -1327,7 +1328,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity VISION_driver_block_design_0_0_sout_module_0 is
   port (
     O : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \data_in_0_addr[8]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \data_in_0_addr[10]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     b_addr : out STD_LOGIC_VECTOR ( 4 downto 0 );
     buf_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
     bit_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1354,22 +1355,22 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_sout_module_0 is
   signal b_addr1_carry_n_3 : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 12 downto 10 );
   signal b_addr3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \b_addr[4]_INST_0_i_1_n_1\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_2\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_3\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_5_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_6_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_1\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_2\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_3\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_6_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_7_n_0\ : STD_LOGIC;
   signal NLW_b_addr1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_b_addr1_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_b_addr1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \b_addr[5]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \b_addr[6]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \b_addr[7]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \b_addr[11]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \b_addr[7]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \b_addr[8]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair12";
 begin
   O(0) <= \^o\(0);
 b_addr1_carry: unisim.vcomponents.CARRY4
@@ -1469,107 +1470,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I1 => bit_num(0),
       O => b_addr1_carry_i_6_n_0
     );
-\b_addr[4]_INST_0_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \data_in_0_addr[8]\(0),
-      CO(2) => \b_addr[4]_INST_0_i_1_n_1\,
-      CO(1) => \b_addr[4]_INST_0_i_1_n_2\,
-      CO(0) => \b_addr[4]_INST_0_i_1_n_3\,
-      CYINIT => '0',
-      DI(3) => \b_addr[4]_INST_0_i_2_n_0\,
-      DI(2) => b_addr3(0),
-      DI(1 downto 0) => B"01",
-      O(3 downto 1) => b_addr2(12 downto 10),
-      O(0) => \^o\(0),
-      S(3) => \b_addr[4]_INST_0_i_4_n_0\,
-      S(2) => \b_addr[4]_INST_0_i_5_n_0\,
-      S(1) => \b_addr[4]_INST_0_i_6_n_0\,
-      S(0) => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[4]_INST_0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_2_n_0\
-    );
-\b_addr[4]_INST_0_i_3\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => b_addr3(0)
-    );
-\b_addr[4]_INST_0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_4_n_0\
-    );
-\b_addr[4]_INST_0_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"D"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_5_n_0\
-    );
-\b_addr[4]_INST_0_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => buf_num(0),
-      I1 => buf_num(1),
-      O => \b_addr[4]_INST_0_i_6_n_0\
-    );
-\b_addr[4]_INST_0_i_7\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(10),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(0)
-    );
-\b_addr[6]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(11),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(1)
-    );
-\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(12),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(2)
-    );
-\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[10]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"28"
     )
@@ -1579,7 +1480,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I2 => buf_num(1),
       O => b_addr(3)
     );
-\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[11]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"14"
     )
@@ -1589,6 +1490,106 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I2 => buf_num(1),
       O => b_addr(4)
     );
+\b_addr[6]_INST_0_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \data_in_0_addr[10]\(0),
+      CO(2) => \b_addr[6]_INST_0_i_1_n_1\,
+      CO(1) => \b_addr[6]_INST_0_i_1_n_2\,
+      CO(0) => \b_addr[6]_INST_0_i_1_n_3\,
+      CYINIT => '0',
+      DI(3) => \b_addr[6]_INST_0_i_2_n_0\,
+      DI(2) => b_addr3(0),
+      DI(1 downto 0) => B"01",
+      O(3 downto 1) => b_addr2(12 downto 10),
+      O(0) => \^o\(0),
+      S(3) => \b_addr[6]_INST_0_i_4_n_0\,
+      S(2) => \b_addr[6]_INST_0_i_5_n_0\,
+      S(1) => \b_addr[6]_INST_0_i_6_n_0\,
+      S(0) => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[6]_INST_0_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_2_n_0\
+    );
+\b_addr[6]_INST_0_i_3\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => b_addr3(0)
+    );
+\b_addr[6]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_4_n_0\
+    );
+\b_addr[6]_INST_0_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"D"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_5_n_0\
+    );
+\b_addr[6]_INST_0_i_6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => buf_num(0),
+      I1 => buf_num(1),
+      O => \b_addr[6]_INST_0_i_6_n_0\
+    );
+\b_addr[6]_INST_0_i_7\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(10),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(0)
+    );
+\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(11),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(1)
+    );
+\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(12),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(2)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -1597,6 +1598,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity VISION_driver_block_design_0_0_driver_block_design_interrupt_0_0 is
   port (
     clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
     GPIO_IN : in STD_LOGIC_VECTOR ( 2 downto 0 );
     ready : in STD_LOGIC;
     setup : out STD_LOGIC;
@@ -1620,7 +1622,9 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_int
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
 begin
   \^gpio_in\(2 downto 0) <= GPIO_IN(2 downto 0);
   buf_select <= \^gpio_in\(0);
@@ -1630,7 +1634,8 @@ inst: entity work.VISION_driver_block_design_0_0_interrupt
       clk => clk,
       next_section_queued_reg_0 => setup,
       next_section_queued_reg_1 => next_section,
-      ready => ready
+      ready => ready,
+      reset => reset
     );
 end STRUCTURE;
 library IEEE;
@@ -1669,9 +1674,9 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_mea
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
 begin
 inst: entity work.VISION_driver_block_design_0_0_mean_machine_module
      port map (
@@ -1724,7 +1729,7 @@ end VISION_driver_block_design_0_0_driver_block_design_sout_module_0_0;
 architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sout_module_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
-  signal \^b_addr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \^b_addr\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \b_addr1_carry__0_i_2_n_3\ : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 9 to 9 );
   signal \^clk\ : STD_LOGIC;
@@ -1752,7 +1757,9 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sou
   attribute SOFT_HLUTNM of \b_addr[0]_INST_0\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \b_addr[1]_INST_0\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \b_addr[2]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \b_addr[4]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \b_addr[3]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \b_addr[4]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \b_addr[6]_INST_0\ : label is "soft_lutpair13";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of b_clk : signal is "xilinx.com:interface:bram:1.0 data_in CLK, xilinx.com:signal:clock:1.0 b_clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -1761,9 +1768,9 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sou
   attribute X_INTERFACE_INFO of b_rst : signal is "xilinx.com:interface:bram:1.0 data_in RST, xilinx.com:signal:reset:1.0 b_rst RST";
   attribute X_INTERFACE_PARAMETER of b_rst : signal is "XIL_INTERFACENAME data_in, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, XIL_INTERFACENAME b_rst, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of b_addr : signal is "xilinx.com:interface:bram:1.0 data_in ADDR";
   attribute X_INTERFACE_INFO of b_d_out : signal is "xilinx.com:interface:bram:1.0 data_in DOUT";
 begin
@@ -1772,26 +1779,24 @@ begin
   b_addr(31) <= \<const0>\;
   b_addr(30) <= \<const0>\;
   b_addr(29) <= \<const0>\;
-  b_addr(28) <= \<const0>\;
-  b_addr(27) <= \<const0>\;
-  b_addr(26) <= \^b_addr\(9);
-  b_addr(25) <= \^b_addr\(9);
-  b_addr(24) <= \^b_addr\(9);
-  b_addr(23) <= \^b_addr\(9);
-  b_addr(22) <= \^b_addr\(9);
-  b_addr(21) <= \^b_addr\(9);
-  b_addr(20) <= \^b_addr\(9);
-  b_addr(19) <= \^b_addr\(9);
-  b_addr(18) <= \^b_addr\(9);
-  b_addr(17) <= \^b_addr\(9);
-  b_addr(16) <= \^b_addr\(9);
-  b_addr(15) <= \^b_addr\(9);
-  b_addr(14) <= \^b_addr\(9);
-  b_addr(13) <= \^b_addr\(9);
-  b_addr(12) <= \^b_addr\(9);
-  b_addr(11) <= \^b_addr\(9);
-  b_addr(10) <= \^b_addr\(9);
-  b_addr(9 downto 0) <= \^b_addr\(9 downto 0);
+  b_addr(28) <= \^b_addr\(11);
+  b_addr(27) <= \^b_addr\(11);
+  b_addr(26) <= \^b_addr\(11);
+  b_addr(25) <= \^b_addr\(11);
+  b_addr(24) <= \^b_addr\(11);
+  b_addr(23) <= \^b_addr\(11);
+  b_addr(22) <= \^b_addr\(11);
+  b_addr(21) <= \^b_addr\(11);
+  b_addr(20) <= \^b_addr\(11);
+  b_addr(19) <= \^b_addr\(11);
+  b_addr(18) <= \^b_addr\(11);
+  b_addr(17) <= \^b_addr\(11);
+  b_addr(16) <= \^b_addr\(11);
+  b_addr(15) <= \^b_addr\(11);
+  b_addr(14) <= \^b_addr\(11);
+  b_addr(13) <= \^b_addr\(11);
+  b_addr(12) <= \^b_addr\(11);
+  b_addr(11 downto 0) <= \^b_addr\(11 downto 0);
   b_clk <= \^clk\;
   b_en <= \<const1>\;
   b_rst <= \^reset\;
@@ -1818,7 +1823,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(5),
+      I0 => bit_num(3),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(0)
@@ -1828,7 +1833,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(6),
+      I0 => bit_num(4),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(1)
@@ -1838,7 +1843,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(7),
+      I0 => bit_num(5),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(2)
@@ -1848,12 +1853,32 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(8),
+      I0 => bit_num(6),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(3)
     );
-\b_addr[4]_INST_0\: unisim.vcomponents.LUT4
+\b_addr[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(7),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(4)
+    );
+\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(8),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(5)
+    );
+\b_addr[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0660"
     )
@@ -1862,16 +1887,16 @@ VCC: unisim.vcomponents.VCC
       I1 => b_addr2(9),
       I2 => buf_num(0),
       I3 => buf_num(1),
-      O => \^b_addr\(4)
+      O => \^b_addr\(6)
     );
 inst: entity work.VISION_driver_block_design_0_0_sout_module_0
      port map (
       CO(0) => \b_addr1_carry__0_i_2_n_3\,
       O(0) => b_addr2(9),
-      b_addr(4 downto 0) => \^b_addr\(9 downto 5),
+      b_addr(4 downto 0) => \^b_addr\(11 downto 7),
       bit_num(1 downto 0) => bit_num(10 downto 9),
       buf_num(1 downto 0) => buf_num(1 downto 0),
-      \data_in_0_addr[8]\(0) => inst_n_1
+      \data_in_0_addr[10]\(0) => inst_n_1
     );
 sout_INST_0: unisim.vcomponents.MUXF7
      port map (
@@ -2087,7 +2112,7 @@ end VISION_driver_block_design_0_0_driver_block_design_sout_module_1_0;
 architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sout_module_1_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
-  signal \^b_addr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \^b_addr\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \b_addr1_carry__0_i_2_n_3\ : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 9 to 9 );
   signal \^clk\ : STD_LOGIC;
@@ -2112,10 +2137,12 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sou
   signal \NLW_b_addr1_carry__0_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_b_addr1_carry__0_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \b_addr[0]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \b_addr[1]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \b_addr[2]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \b_addr[4]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \b_addr[0]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \b_addr[1]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \b_addr[2]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \b_addr[3]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \b_addr[4]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \b_addr[6]_INST_0\ : label is "soft_lutpair18";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of b_clk : signal is "xilinx.com:interface:bram:1.0 data_in CLK, xilinx.com:signal:clock:1.0 b_clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -2124,9 +2151,9 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design_sou
   attribute X_INTERFACE_INFO of b_rst : signal is "xilinx.com:interface:bram:1.0 data_in RST, xilinx.com:signal:reset:1.0 b_rst RST";
   attribute X_INTERFACE_PARAMETER of b_rst : signal is "XIL_INTERFACENAME data_in, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, XIL_INTERFACENAME b_rst, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of b_addr : signal is "xilinx.com:interface:bram:1.0 data_in ADDR";
   attribute X_INTERFACE_INFO of b_d_out : signal is "xilinx.com:interface:bram:1.0 data_in DOUT";
 begin
@@ -2135,26 +2162,24 @@ begin
   b_addr(31) <= \<const0>\;
   b_addr(30) <= \<const0>\;
   b_addr(29) <= \<const0>\;
-  b_addr(28) <= \<const0>\;
-  b_addr(27) <= \<const0>\;
-  b_addr(26) <= \^b_addr\(9);
-  b_addr(25) <= \^b_addr\(9);
-  b_addr(24) <= \^b_addr\(9);
-  b_addr(23) <= \^b_addr\(9);
-  b_addr(22) <= \^b_addr\(9);
-  b_addr(21) <= \^b_addr\(9);
-  b_addr(20) <= \^b_addr\(9);
-  b_addr(19) <= \^b_addr\(9);
-  b_addr(18) <= \^b_addr\(9);
-  b_addr(17) <= \^b_addr\(9);
-  b_addr(16) <= \^b_addr\(9);
-  b_addr(15) <= \^b_addr\(9);
-  b_addr(14) <= \^b_addr\(9);
-  b_addr(13) <= \^b_addr\(9);
-  b_addr(12) <= \^b_addr\(9);
-  b_addr(11) <= \^b_addr\(9);
-  b_addr(10) <= \^b_addr\(9);
-  b_addr(9 downto 0) <= \^b_addr\(9 downto 0);
+  b_addr(28) <= \^b_addr\(11);
+  b_addr(27) <= \^b_addr\(11);
+  b_addr(26) <= \^b_addr\(11);
+  b_addr(25) <= \^b_addr\(11);
+  b_addr(24) <= \^b_addr\(11);
+  b_addr(23) <= \^b_addr\(11);
+  b_addr(22) <= \^b_addr\(11);
+  b_addr(21) <= \^b_addr\(11);
+  b_addr(20) <= \^b_addr\(11);
+  b_addr(19) <= \^b_addr\(11);
+  b_addr(18) <= \^b_addr\(11);
+  b_addr(17) <= \^b_addr\(11);
+  b_addr(16) <= \^b_addr\(11);
+  b_addr(15) <= \^b_addr\(11);
+  b_addr(14) <= \^b_addr\(11);
+  b_addr(13) <= \^b_addr\(11);
+  b_addr(12) <= \^b_addr\(11);
+  b_addr(11 downto 0) <= \^b_addr\(11 downto 0);
   b_clk <= \^clk\;
   b_en <= \<const1>\;
   b_rst <= \^reset\;
@@ -2181,7 +2206,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(5),
+      I0 => bit_num(3),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(0)
@@ -2191,7 +2216,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(6),
+      I0 => bit_num(4),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(1)
@@ -2201,7 +2226,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(7),
+      I0 => bit_num(5),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(2)
@@ -2211,12 +2236,32 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(8),
+      I0 => bit_num(6),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(3)
     );
-\b_addr[4]_INST_0\: unisim.vcomponents.LUT4
+\b_addr[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(7),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(4)
+    );
+\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(8),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(5)
+    );
+\b_addr[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0660"
     )
@@ -2225,16 +2270,16 @@ VCC: unisim.vcomponents.VCC
       I1 => b_addr2(9),
       I2 => buf_num(0),
       I3 => buf_num(1),
-      O => \^b_addr\(4)
+      O => \^b_addr\(6)
     );
 inst: entity work.VISION_driver_block_design_0_0_sout_module
      port map (
       CO(0) => \b_addr1_carry__0_i_2_n_3\,
       O(0) => b_addr2(9),
-      b_addr(4 downto 0) => \^b_addr\(9 downto 5),
+      b_addr(4 downto 0) => \^b_addr\(11 downto 7),
       bit_num(1 downto 0) => bit_num(10 downto 9),
       buf_num(1 downto 0) => buf_num(1 downto 0),
-      \data_in_1_addr[8]\(0) => inst_n_1
+      \data_in_1_addr[10]\(0) => inst_n_1
     );
 sout_INST_0: unisim.vcomponents.MUXF7
      port map (
@@ -2423,6 +2468,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity VISION_driver_block_design_0_0_driver_block_design is
   port (
     GPIO_IN : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    bitnum_0 : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clk_0 : in STD_LOGIC;
     data_in_0_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     data_in_0_clk : out STD_LOGIC;
@@ -2452,6 +2498,10 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design is
   signal interrupt_0_next_section : STD_LOGIC;
   signal interrupt_0_setup : STD_LOGIC;
   signal mean_machine_module_0_bit_num : STD_LOGIC_VECTOR ( 10 downto 0 );
+  attribute DEBUG : string;
+  attribute DEBUG of mean_machine_module_0_bit_num : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of mean_machine_module_0_bit_num : signal is std.standard.true;
   signal mean_machine_module_0_buf_select : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal mean_machine_module_0_latch_select : STD_LOGIC;
   signal mean_machine_module_0_ready : STD_LOGIC;
@@ -2483,7 +2533,7 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk_0 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk_0 : signal is "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 100000000, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of clk_0 : signal is "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 50000000, PHASE 0.000";
   attribute X_INTERFACE_INFO of data_in_0_clk : signal is "xilinx.com:interface:bram:1.0 data_in_0 CLK";
   attribute X_INTERFACE_INFO of data_in_0_en : signal is "xilinx.com:interface:bram:1.0 data_in_0 EN";
   attribute X_INTERFACE_INFO of data_in_0_rst : signal is "xilinx.com:interface:bram:1.0 data_in_0 RST";
@@ -2491,7 +2541,7 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design is
   attribute X_INTERFACE_INFO of data_in_1_en : signal is "xilinx.com:interface:bram:1.0 data_in_1 EN";
   attribute X_INTERFACE_INFO of data_in_1_rst : signal is "xilinx.com:interface:bram:1.0 data_in_1 RST";
   attribute X_INTERFACE_INFO of reset_0 : signal is "xilinx.com:signal:reset:1.0 RST.RESET_0 RST";
-  attribute X_INTERFACE_PARAMETER of reset_0 : signal is "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset_0 : signal is "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of data_in_0_addr : signal is "xilinx.com:interface:bram:1.0 data_in_0 ADDR";
   attribute X_INTERFACE_PARAMETER of data_in_0_addr : signal is "XIL_INTERFACENAME data_in_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32";
   attribute X_INTERFACE_INFO of data_in_0_dout : signal is "xilinx.com:interface:bram:1.0 data_in_0 DOUT";
@@ -2499,6 +2549,7 @@ architecture STRUCTURE of VISION_driver_block_design_0_0_driver_block_design is
   attribute X_INTERFACE_PARAMETER of data_in_1_addr : signal is "XIL_INTERFACENAME data_in_1, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32";
   attribute X_INTERFACE_INFO of data_in_1_dout : signal is "xilinx.com:interface:bram:1.0 data_in_1 DOUT";
 begin
+  bitnum_0(10 downto 0) <= mean_machine_module_0_bit_num(10 downto 0);
 interrupt_0: entity work.VISION_driver_block_design_0_0_driver_block_design_interrupt_0_0
      port map (
       GPIO_IN(2 downto 0) => GPIO_IN(2 downto 0),
@@ -2506,6 +2557,7 @@ interrupt_0: entity work.VISION_driver_block_design_0_0_driver_block_design_inte
       clk => clk_0,
       next_section => interrupt_0_next_section,
       ready => mean_machine_module_0_ready,
+      reset => reset_0,
       setup => interrupt_0_setup
     );
 mean_machine_module_0: entity work.VISION_driver_block_design_0_0_driver_block_design_mean_machine_module_0_0
@@ -2566,6 +2618,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity VISION_driver_block_design_0_0 is
   port (
     GPIO_IN : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    bitnum_0 : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clk_0 : in STD_LOGIC;
     data_in_0_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     data_in_0_clk : out STD_LOGIC;
@@ -2602,7 +2655,7 @@ architecture STRUCTURE of VISION_driver_block_design_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk_0 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk_0 : signal is "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK0";
+  attribute X_INTERFACE_PARAMETER of clk_0 : signal is "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 50000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK1";
   attribute X_INTERFACE_INFO of data_in_0_clk : signal is "xilinx.com:interface:bram:1.0 data_in_0 CLK";
   attribute X_INTERFACE_INFO of data_in_0_en : signal is "xilinx.com:interface:bram:1.0 data_in_0 EN";
   attribute X_INTERFACE_INFO of data_in_0_rst : signal is "xilinx.com:interface:bram:1.0 data_in_0 RST";
@@ -2612,7 +2665,7 @@ architecture STRUCTURE of VISION_driver_block_design_0_0 is
   attribute X_INTERFACE_INFO of data_in_1_rst : signal is "xilinx.com:interface:bram:1.0 data_in_1 RST";
   attribute X_INTERFACE_PARAMETER of data_in_1_rst : signal is "XIL_INTERFACENAME data_in_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER";
   attribute X_INTERFACE_INFO of reset_0 : signal is "xilinx.com:signal:reset:1.0 RST.RESET_0 RST";
-  attribute X_INTERFACE_PARAMETER of reset_0 : signal is "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset_0 : signal is "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of data_in_0_addr : signal is "xilinx.com:interface:bram:1.0 data_in_0 ADDR";
   attribute X_INTERFACE_INFO of data_in_0_dout : signal is "xilinx.com:interface:bram:1.0 data_in_0 DOUT";
   attribute X_INTERFACE_INFO of data_in_1_addr : signal is "xilinx.com:interface:bram:1.0 data_in_1 ADDR";
@@ -2621,6 +2674,7 @@ begin
 inst: entity work.VISION_driver_block_design_0_0_driver_block_design
      port map (
       GPIO_IN(2 downto 0) => GPIO_IN(2 downto 0),
+      bitnum_0(10 downto 0) => bitnum_0(10 downto 0),
       clk_0 => clk_0,
       data_in_0_addr(31 downto 0) => data_in_0_addr(31 downto 0),
       data_in_0_clk => data_in_0_clk,
