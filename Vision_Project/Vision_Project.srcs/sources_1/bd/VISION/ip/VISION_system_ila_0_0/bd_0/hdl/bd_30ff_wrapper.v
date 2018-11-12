@@ -12,11 +12,8 @@ module bd_30ff_wrapper
     SLOT_0_BRAM_dout,
     SLOT_0_BRAM_en,
     SLOT_0_BRAM_rst,
-    SLOT_1_BRAM_addr,
-    SLOT_1_BRAM_clk,
-    SLOT_1_BRAM_dout,
-    SLOT_1_BRAM_en,
-    SLOT_1_BRAM_rst,
+    TRIG_IN_ack,
+    TRIG_IN_trig,
     clk,
     probe0,
     probe1,
@@ -24,17 +21,16 @@ module bd_30ff_wrapper
     probe3,
     probe4,
     probe5,
-    probe6);
+    probe6,
+    probe7,
+    probe8);
   input [31:0]SLOT_0_BRAM_addr;
   input SLOT_0_BRAM_clk;
   input [31:0]SLOT_0_BRAM_dout;
   input SLOT_0_BRAM_en;
   input SLOT_0_BRAM_rst;
-  input [31:0]SLOT_1_BRAM_addr;
-  input SLOT_1_BRAM_clk;
-  input [31:0]SLOT_1_BRAM_dout;
-  input SLOT_1_BRAM_en;
-  input SLOT_1_BRAM_rst;
+  output [0:0]TRIG_IN_ack;
+  input [0:0]TRIG_IN_trig;
   input clk;
   input [2:0]probe0;
   input [0:0]probe1;
@@ -43,17 +39,16 @@ module bd_30ff_wrapper
   input [0:0]probe4;
   input [0:0]probe5;
   input [0:0]probe6;
+  input [0:0]probe7;
+  input [10:0]probe8;
 
   wire [31:0]SLOT_0_BRAM_addr;
   wire SLOT_0_BRAM_clk;
   wire [31:0]SLOT_0_BRAM_dout;
   wire SLOT_0_BRAM_en;
   wire SLOT_0_BRAM_rst;
-  wire [31:0]SLOT_1_BRAM_addr;
-  wire SLOT_1_BRAM_clk;
-  wire [31:0]SLOT_1_BRAM_dout;
-  wire SLOT_1_BRAM_en;
-  wire SLOT_1_BRAM_rst;
+  wire [0:0]TRIG_IN_ack;
+  wire [0:0]TRIG_IN_trig;
   wire clk;
   wire [2:0]probe0;
   wire [0:0]probe1;
@@ -62,6 +57,8 @@ module bd_30ff_wrapper
   wire [0:0]probe4;
   wire [0:0]probe5;
   wire [0:0]probe6;
+  wire [0:0]probe7;
+  wire [10:0]probe8;
 
   bd_30ff bd_30ff_i
        (.SLOT_0_BRAM_addr(SLOT_0_BRAM_addr),
@@ -69,11 +66,8 @@ module bd_30ff_wrapper
         .SLOT_0_BRAM_dout(SLOT_0_BRAM_dout),
         .SLOT_0_BRAM_en(SLOT_0_BRAM_en),
         .SLOT_0_BRAM_rst(SLOT_0_BRAM_rst),
-        .SLOT_1_BRAM_addr(SLOT_1_BRAM_addr),
-        .SLOT_1_BRAM_clk(SLOT_1_BRAM_clk),
-        .SLOT_1_BRAM_dout(SLOT_1_BRAM_dout),
-        .SLOT_1_BRAM_en(SLOT_1_BRAM_en),
-        .SLOT_1_BRAM_rst(SLOT_1_BRAM_rst),
+        .TRIG_IN_ack(TRIG_IN_ack),
+        .TRIG_IN_trig(TRIG_IN_trig),
         .clk(clk),
         .probe0(probe0),
         .probe1(probe1),
@@ -81,5 +75,7 @@ module bd_30ff_wrapper
         .probe3(probe3),
         .probe4(probe4),
         .probe5(probe5),
-        .probe6(probe6));
+        .probe6(probe6),
+        .probe7(probe7),
+        .probe8(probe8));
 endmodule

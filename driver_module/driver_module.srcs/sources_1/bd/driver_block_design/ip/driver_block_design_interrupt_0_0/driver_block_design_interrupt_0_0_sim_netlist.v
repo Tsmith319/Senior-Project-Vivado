@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Nov 10 21:09:50 2018
-// Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+// Date        : Sun Nov 11 12:33:45 2018
+// Host        : MSI970-Station running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0_sim_netlist.v
+//               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0_sim_netlist.v
 // Design      : driver_block_design_interrupt_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,12 +17,14 @@
 (* NotValidForBitStream *)
 module driver_block_design_interrupt_0_0
    (clk,
+    reset,
     GPIO_IN,
     ready,
     setup,
     next_section,
     buf_select);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *) input reset;
   input [2:0]GPIO_IN;
   input ready;
   output setup;
@@ -33,6 +35,7 @@ module driver_block_design_interrupt_0_0
   wire clk;
   wire next_section;
   wire ready;
+  wire reset;
   wire setup;
 
   assign buf_select = GPIO_IN[0];
@@ -41,6 +44,7 @@ module driver_block_design_interrupt_0_0
         .clk(clk),
         .next_section(next_section),
         .ready(ready),
+        .reset(reset),
         .setup(setup));
 endmodule
 
@@ -50,12 +54,14 @@ module driver_block_design_interrupt_0_0_interrupt
     next_section,
     GPIO_IN,
     ready,
-    clk);
+    clk,
+    reset);
   output setup;
   output next_section;
   input [1:0]GPIO_IN;
   input ready;
   input clk;
+  input reset;
 
   wire [1:0]GPIO_IN;
   wire clk;
@@ -66,6 +72,7 @@ module driver_block_design_interrupt_0_0_interrupt
   wire next_section_queued0;
   wire next_section_queued_i_1_n_0;
   wire ready;
+  wire reset;
   wire setup;
   wire setup_i_1_n_0;
   wire setup_last;
@@ -74,22 +81,22 @@ module driver_block_design_interrupt_0_0_interrupt
 
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hF0F00020)) 
+    .INIT(32'hC0D0C0C0)) 
     next_section_i_1
-       (.I0(next_section_queued),
-        .I1(setup_queued),
+       (.I0(setup),
+        .I1(next_section),
         .I2(ready),
-        .I3(setup),
-        .I4(next_section),
+        .I3(setup_queued),
+        .I4(next_section_queued),
         .O(next_section_i_1_n_0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     next_section_last_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(GPIO_IN[0]),
-        .Q(next_section_last),
-        .R(1'b0));
+        .Q(next_section_last));
   LUT6 #(
     .INIT(64'hFEFFFFFFFE00FF00)) 
     next_section_queued_i_1
@@ -106,39 +113,39 @@ module driver_block_design_interrupt_0_0_interrupt
        (.I0(next_section_last),
         .I1(GPIO_IN[0]),
         .O(next_section_queued0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     next_section_queued_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(next_section_queued_i_1_n_0),
-        .Q(next_section_queued),
-        .R(1'b0));
-  FDRE #(
+        .Q(next_section_queued));
+  FDCE #(
     .INIT(1'b0)) 
     next_section_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(next_section_i_1_n_0),
-        .Q(next_section),
-        .R(1'b0));
+        .Q(next_section));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'hC0C8)) 
+    .INIT(16'hB0A0)) 
     setup_i_1
-       (.I0(setup_queued),
-        .I1(ready),
-        .I2(setup),
-        .I3(next_section),
+       (.I0(setup),
+        .I1(next_section),
+        .I2(ready),
+        .I3(setup_queued),
         .O(setup_i_1_n_0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     setup_last_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(GPIO_IN[1]),
-        .Q(setup_last),
-        .R(1'b0));
+        .Q(setup_last));
   LUT6 #(
     .INIT(64'hE0F0EFFFEFFFE0F0)) 
     setup_queued_i_1
@@ -149,22 +156,22 @@ module driver_block_design_interrupt_0_0_interrupt
         .I4(setup_last),
         .I5(GPIO_IN[1]),
         .O(setup_queued_i_1_n_0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     setup_queued_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(setup_queued_i_1_n_0),
-        .Q(setup_queued),
-        .R(1'b0));
-  FDRE #(
+        .Q(setup_queued));
+  FDCE #(
     .INIT(1'b0)) 
     setup_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(setup_i_1_n_0),
-        .Q(setup),
-        .R(1'b0));
+        .Q(setup));
 endmodule
 `ifndef GLBL
 `define GLBL

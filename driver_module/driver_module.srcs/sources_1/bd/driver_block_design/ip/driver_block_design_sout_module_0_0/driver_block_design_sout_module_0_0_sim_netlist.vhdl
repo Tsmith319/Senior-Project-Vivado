@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Nov 10 21:09:51 2018
--- Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+-- Date        : Sun Nov 11 13:55:18 2018
+-- Host        : MSI970-Station running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_sout_module_0_0/driver_block_design_sout_module_0_0_sim_netlist.vhdl
+--               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_sout_module_0_0/driver_block_design_sout_module_0_0_sim_netlist.vhdl
 -- Design      : driver_block_design_sout_module_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity driver_block_design_sout_module_0_0_sout_module is
   port (
     O : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \b_addr[8]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \b_addr[10]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     b_addr : out STD_LOGIC_VECTOR ( 4 downto 0 );
     buf_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
     bit_num : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -44,22 +44,22 @@ architecture STRUCTURE of driver_block_design_sout_module_0_0_sout_module is
   signal b_addr1_carry_n_3 : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 12 downto 10 );
   signal b_addr3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \b_addr[4]_INST_0_i_1_n_1\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_2\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_1_n_3\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_5_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_6_n_0\ : STD_LOGIC;
-  signal \b_addr[4]_INST_0_i_7_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_1\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_2\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_1_n_3\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_6_n_0\ : STD_LOGIC;
+  signal \b_addr[6]_INST_0_i_7_n_0\ : STD_LOGIC;
   signal NLW_b_addr1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_b_addr1_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_b_addr1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \b_addr[5]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \b_addr[6]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \b_addr[7]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \b_addr[11]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \b_addr[7]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \b_addr[8]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \b_addr[9]_INST_0\ : label is "soft_lutpair1";
 begin
   O(0) <= \^o\(0);
 b_addr1_carry: unisim.vcomponents.CARRY4
@@ -159,107 +159,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I1 => bit_num(0),
       O => b_addr1_carry_i_6_n_0
     );
-\b_addr[4]_INST_0_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \b_addr[8]\(0),
-      CO(2) => \b_addr[4]_INST_0_i_1_n_1\,
-      CO(1) => \b_addr[4]_INST_0_i_1_n_2\,
-      CO(0) => \b_addr[4]_INST_0_i_1_n_3\,
-      CYINIT => '0',
-      DI(3) => \b_addr[4]_INST_0_i_2_n_0\,
-      DI(2) => b_addr3(0),
-      DI(1 downto 0) => B"01",
-      O(3 downto 1) => b_addr2(12 downto 10),
-      O(0) => \^o\(0),
-      S(3) => \b_addr[4]_INST_0_i_4_n_0\,
-      S(2) => \b_addr[4]_INST_0_i_5_n_0\,
-      S(1) => \b_addr[4]_INST_0_i_6_n_0\,
-      S(0) => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[4]_INST_0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_2_n_0\
-    );
-\b_addr[4]_INST_0_i_3\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => b_addr3(0)
-    );
-\b_addr[4]_INST_0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_4_n_0\
-    );
-\b_addr[4]_INST_0_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"D"
-    )
-        port map (
-      I0 => buf_num(1),
-      I1 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_5_n_0\
-    );
-\b_addr[4]_INST_0_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => buf_num(0),
-      I1 => buf_num(1),
-      O => \b_addr[4]_INST_0_i_6_n_0\
-    );
-\b_addr[4]_INST_0_i_7\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => buf_num(0),
-      O => \b_addr[4]_INST_0_i_7_n_0\
-    );
-\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(10),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(0)
-    );
-\b_addr[6]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(11),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(1)
-    );
-\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => b_addr1(12),
-      I1 => buf_num(0),
-      I2 => buf_num(1),
-      O => b_addr(2)
-    );
-\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[10]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"28"
     )
@@ -269,7 +169,7 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I2 => buf_num(1),
       O => b_addr(3)
     );
-\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+\b_addr[11]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"14"
     )
@@ -278,6 +178,106 @@ b_addr1_carry_i_6: unisim.vcomponents.LUT2
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => b_addr(4)
+    );
+\b_addr[6]_INST_0_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \b_addr[10]\(0),
+      CO(2) => \b_addr[6]_INST_0_i_1_n_1\,
+      CO(1) => \b_addr[6]_INST_0_i_1_n_2\,
+      CO(0) => \b_addr[6]_INST_0_i_1_n_3\,
+      CYINIT => '0',
+      DI(3) => \b_addr[6]_INST_0_i_2_n_0\,
+      DI(2) => b_addr3(0),
+      DI(1 downto 0) => B"01",
+      O(3 downto 1) => b_addr2(12 downto 10),
+      O(0) => \^o\(0),
+      S(3) => \b_addr[6]_INST_0_i_4_n_0\,
+      S(2) => \b_addr[6]_INST_0_i_5_n_0\,
+      S(1) => \b_addr[6]_INST_0_i_6_n_0\,
+      S(0) => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[6]_INST_0_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_2_n_0\
+    );
+\b_addr[6]_INST_0_i_3\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => b_addr3(0)
+    );
+\b_addr[6]_INST_0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_4_n_0\
+    );
+\b_addr[6]_INST_0_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"D"
+    )
+        port map (
+      I0 => buf_num(1),
+      I1 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_5_n_0\
+    );
+\b_addr[6]_INST_0_i_6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => buf_num(0),
+      I1 => buf_num(1),
+      O => \b_addr[6]_INST_0_i_6_n_0\
+    );
+\b_addr[6]_INST_0_i_7\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => buf_num(0),
+      O => \b_addr[6]_INST_0_i_7_n_0\
+    );
+\b_addr[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(10),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(0)
+    );
+\b_addr[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(11),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(1)
+    );
+\b_addr[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => b_addr1(12),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => b_addr(2)
     );
 end STRUCTURE;
 library IEEE;
@@ -314,7 +314,7 @@ end driver_block_design_sout_module_0_0;
 architecture STRUCTURE of driver_block_design_sout_module_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
-  signal \^b_addr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \^b_addr\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \b_addr1_carry__0_i_2_n_3\ : STD_LOGIC;
   signal b_addr2 : STD_LOGIC_VECTOR ( 9 to 9 );
   signal \^clk\ : STD_LOGIC;
@@ -346,9 +346,9 @@ architecture STRUCTURE of driver_block_design_sout_module_0_0 is
   attribute X_INTERFACE_INFO of b_rst : signal is "xilinx.com:interface:bram:1.0 data_in RST, xilinx.com:signal:reset:1.0 b_rst RST";
   attribute X_INTERFACE_PARAMETER of b_rst : signal is "XIL_INTERFACENAME data_in, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, XIL_INTERFACENAME b_rst, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of b_addr : signal is "xilinx.com:interface:bram:1.0 data_in ADDR";
   attribute X_INTERFACE_INFO of b_d_out : signal is "xilinx.com:interface:bram:1.0 data_in DOUT";
 begin
@@ -357,26 +357,24 @@ begin
   b_addr(31) <= \<const0>\;
   b_addr(30) <= \<const0>\;
   b_addr(29) <= \<const0>\;
-  b_addr(28) <= \<const0>\;
-  b_addr(27) <= \<const0>\;
-  b_addr(26) <= \^b_addr\(9);
-  b_addr(25) <= \^b_addr\(9);
-  b_addr(24) <= \^b_addr\(9);
-  b_addr(23) <= \^b_addr\(9);
-  b_addr(22) <= \^b_addr\(9);
-  b_addr(21) <= \^b_addr\(9);
-  b_addr(20) <= \^b_addr\(9);
-  b_addr(19) <= \^b_addr\(9);
-  b_addr(18) <= \^b_addr\(9);
-  b_addr(17) <= \^b_addr\(9);
-  b_addr(16) <= \^b_addr\(9);
-  b_addr(15) <= \^b_addr\(9);
-  b_addr(14) <= \^b_addr\(9);
-  b_addr(13) <= \^b_addr\(9);
-  b_addr(12) <= \^b_addr\(9);
-  b_addr(11) <= \^b_addr\(9);
-  b_addr(10) <= \^b_addr\(9);
-  b_addr(9 downto 0) <= \^b_addr\(9 downto 0);
+  b_addr(28) <= \^b_addr\(11);
+  b_addr(27) <= \^b_addr\(11);
+  b_addr(26) <= \^b_addr\(11);
+  b_addr(25) <= \^b_addr\(11);
+  b_addr(24) <= \^b_addr\(11);
+  b_addr(23) <= \^b_addr\(11);
+  b_addr(22) <= \^b_addr\(11);
+  b_addr(21) <= \^b_addr\(11);
+  b_addr(20) <= \^b_addr\(11);
+  b_addr(19) <= \^b_addr\(11);
+  b_addr(18) <= \^b_addr\(11);
+  b_addr(17) <= \^b_addr\(11);
+  b_addr(16) <= \^b_addr\(11);
+  b_addr(15) <= \^b_addr\(11);
+  b_addr(14) <= \^b_addr\(11);
+  b_addr(13) <= \^b_addr\(11);
+  b_addr(12) <= \^b_addr\(11);
+  b_addr(11 downto 0) <= \^b_addr\(11 downto 0);
   b_clk <= \^clk\;
   b_en <= \<const1>\;
   b_rst <= \^reset\;
@@ -403,7 +401,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(5),
+      I0 => bit_num(3),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(0)
@@ -413,7 +411,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(6),
+      I0 => bit_num(4),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(1)
@@ -423,7 +421,7 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(7),
+      I0 => bit_num(5),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(2)
@@ -433,12 +431,32 @@ VCC: unisim.vcomponents.VCC
       INIT => X"14"
     )
         port map (
-      I0 => bit_num(8),
+      I0 => bit_num(6),
       I1 => buf_num(0),
       I2 => buf_num(1),
       O => \^b_addr\(3)
     );
-\b_addr[4]_INST_0\: unisim.vcomponents.LUT4
+\b_addr[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(7),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(4)
+    );
+\b_addr[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => bit_num(8),
+      I1 => buf_num(0),
+      I2 => buf_num(1),
+      O => \^b_addr\(5)
+    );
+\b_addr[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0660"
     )
@@ -447,14 +465,14 @@ VCC: unisim.vcomponents.VCC
       I1 => b_addr2(9),
       I2 => buf_num(0),
       I3 => buf_num(1),
-      O => \^b_addr\(4)
+      O => \^b_addr\(6)
     );
 inst: entity work.driver_block_design_sout_module_0_0_sout_module
      port map (
       CO(0) => \b_addr1_carry__0_i_2_n_3\,
       O(0) => b_addr2(9),
-      b_addr(4 downto 0) => \^b_addr\(9 downto 5),
-      \b_addr[8]\(0) => inst_n_1,
+      b_addr(4 downto 0) => \^b_addr\(11 downto 7),
+      \b_addr[10]\(0) => inst_n_1,
       bit_num(1 downto 0) => bit_num(10 downto 9),
       buf_num(1 downto 0) => buf_num(1 downto 0)
     );

@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 com.xilinx.sdk.preference.invokecount=3
+=======
+<<<<<<< HEAD
+com.xilinx.sdk.preference.invokecount=3
+=======
+com.xilinx.sdk.preference.invokecount=1
+>>>>>>> acb99d8e558c78c588cd9fb402bb639be1981b2d
+>>>>>>> af16fd152843a8267f509b02dca1d148bb66553a
 eclipse.preferences.version=1

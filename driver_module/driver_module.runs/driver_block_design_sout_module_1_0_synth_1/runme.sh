@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/driver_module/driver_module.runs/driver_block_design_sout_module_1_0_synth_1'
+HD_PWD='C:/github/Senior-Project-Vivado/driver_module/driver_module.runs/driver_block_design_sout_module_1_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

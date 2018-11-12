@@ -45,6 +45,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_xbar_0 |
 # IP: bd/VISION/ip/VISION_system_ila_0_0/VISION_system_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_system_ila_0_0 || ORIG_REF_NAME==VISION_system_ila_0_0} -quiet] -quiet
 
+# IP: bd/VISION/ip/VISION_xlslice_0_0/VISION_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_xlslice_0_0 || ORIG_REF_NAME==VISION_xlslice_0_0} -quiet] -quiet
+
 # IP: bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_auto_pc_0 || ORIG_REF_NAME==VISION_auto_pc_0} -quiet] -quiet
 

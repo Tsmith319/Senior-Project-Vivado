@@ -57,6 +57,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module VISION_driver_block_design_0_0 (
   GPIO_IN,
+  bitnum_0,
   clk_0,
   data_in_0_addr,
   data_in_0_clk,
@@ -77,7 +78,8 @@ module VISION_driver_block_design_0_0 (
 );
 
 input wire [2 : 0] GPIO_IN;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK0" *)
+output wire [10 : 0] bitnum_0;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 50000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *)
 input wire clk_0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *)
@@ -105,7 +107,7 @@ output wire data_in_1_rst;
 input wire enable_0;
 output wire gsclk_0;
 output wire latch_0;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *)
 input wire reset_0;
 output wire sclk_0;
@@ -113,6 +115,7 @@ output wire sout_0;
 
   driver_block_design inst (
     .GPIO_IN(GPIO_IN),
+    .bitnum_0(bitnum_0),
     .clk_0(clk_0),
     .data_in_0_addr(data_in_0_addr),
     .data_in_0_clk(data_in_0_clk),

@@ -8,6 +8,7 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
+Sourcing tcl script 'C:/Users/Derek/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source driver_block_design_sout_module_1_0.tcl -notrace
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP driver_block_design_sout_module_1_0, cache-ID = c3f8c24bfd61fd64.
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 10 21:10:26 2018...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP driver_block_design_sout_module_1_0, cache-ID = 052fe541a2de3998.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 11 13:55:25 2018...
