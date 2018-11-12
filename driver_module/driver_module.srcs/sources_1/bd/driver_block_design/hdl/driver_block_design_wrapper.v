@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 10 10:22:59 2018
-//Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+//Date        : Sun Nov 11 14:50:07 2018
+//Host        : MSI970-Station running 64-bit major release  (build 9200)
 //Command     : generate_target driver_block_design_wrapper.bd
 //Design      : driver_block_design_wrapper
 //Purpose     : IP block netlist
@@ -11,6 +11,7 @@
 
 module driver_block_design_wrapper
    (GPIO_IN,
+    bitnum_0,
     clk_0,
     data_in_0_addr,
     data_in_0_clk,
@@ -29,6 +30,7 @@ module driver_block_design_wrapper
     sclk_0,
     sout_0);
   input [2:0]GPIO_IN;
+  output [10:0]bitnum_0;
   input clk_0;
   output [31:0]data_in_0_addr;
   output data_in_0_clk;
@@ -48,6 +50,7 @@ module driver_block_design_wrapper
   output sout_0;
 
   wire [2:0]GPIO_IN;
+  wire [10:0]bitnum_0;
   wire clk_0;
   wire [31:0]data_in_0_addr;
   wire data_in_0_clk;
@@ -68,6 +71,7 @@ module driver_block_design_wrapper
 
   driver_block_design driver_block_design_i
        (.GPIO_IN(GPIO_IN),
+        .bitnum_0(bitnum_0),
         .clk_0(clk_0),
         .data_in_0_addr(data_in_0_addr),
         .data_in_0_clk(data_in_0_clk),

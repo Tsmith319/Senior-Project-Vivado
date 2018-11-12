@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:interrupt:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
@@ -56,6 +56,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module driver_block_design_interrupt_0_0 (
   clk,
+  reset,
   GPIO_IN,
   ready,
   setup,
@@ -63,9 +64,12 @@ module driver_block_design_interrupt_0_0 (
   buf_select
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
+input wire reset;
 input wire [2 : 0] GPIO_IN;
 input wire ready;
 output wire setup;
@@ -74,6 +78,7 @@ output wire buf_select;
 
   interrupt inst (
     .clk(clk),
+    .reset(reset),
     .GPIO_IN(GPIO_IN),
     .ready(ready),
     .setup(setup),

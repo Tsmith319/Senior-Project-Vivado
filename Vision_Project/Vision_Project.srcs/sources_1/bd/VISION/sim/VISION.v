@@ -1,15 +1,15 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 10 19:54:08 2018
-//Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+//Date        : Sun Nov 11 17:06:27 2018
+//Host        : MSI970-Station running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
+(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
 module VISION
    (DDR_addr,
     DDR_ba,
@@ -202,16 +202,17 @@ module VISION
   wire axi_smc_M02_AXI_WREADY;
   wire [3:0]axi_smc_M02_AXI_WSTRB;
   wire axi_smc_M02_AXI_WVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [10:0]bitnum_0;
   (* CONN_BUS_INFO = "driver_block_design_0_data_in_0 xilinx.com:interface:bram:1.0 None ADDR" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_0_ADDR;
   (* CONN_BUS_INFO = "driver_block_design_0_data_in_0 xilinx.com:interface:bram:1.0 None CLK" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_0_CLK;
   (* CONN_BUS_INFO = "driver_block_design_0_data_in_0 xilinx.com:interface:bram:1.0 None DOUT" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_0_DOUT;
   (* CONN_BUS_INFO = "driver_block_design_0_data_in_0 xilinx.com:interface:bram:1.0 None EN" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_0_EN;
   (* CONN_BUS_INFO = "driver_block_design_0_data_in_0 xilinx.com:interface:bram:1.0 None RST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_0_RST;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None ADDR" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_1_ADDR;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None CLK" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_CLK;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None DOUT" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_1_DOUT;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None EN" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_EN;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None RST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_RST;
+  wire [31:0]driver_block_design_0_data_in_1_ADDR;
+  wire driver_block_design_0_data_in_1_CLK;
+  wire [31:0]driver_block_design_0_data_in_1_DOUT;
+  wire driver_block_design_0_data_in_1_EN;
+  wire driver_block_design_0_data_in_1_RST;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_gsclk_0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_latch_0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_sclk_0;
@@ -231,7 +232,7 @@ module VISION
   wire processing_system7_0_DDR_RAS_N;
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire processing_system7_0_FCLK_CLK0;
+  wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_CLK1;
   wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
@@ -312,7 +313,9 @@ module VISION
   wire [3:0]ps7_0_axi_periph_M01_AXI_WSTRB;
   wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
-  wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]rst_ps7_0_100M_peripheral_reset;
+  wire [0:0]xlslice_0_Dout;
 
   assign gsclk_0_0 = driver_block_design_0_gsclk_0;
   assign latch_0_0 = driver_block_design_0_latch_0;
@@ -604,7 +607,8 @@ module VISION
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   VISION_driver_block_design_0_0 driver_block_design_0
        (.GPIO_IN(axi_gpio_0_gpio_io_o),
-        .clk_0(processing_system7_0_FCLK_CLK0),
+        .bitnum_0(bitnum_0),
+        .clk_0(processing_system7_0_FCLK_CLK1),
         .data_in_0_addr(driver_block_design_0_data_in_0_ADDR),
         .data_in_0_clk(driver_block_design_0_data_in_0_CLK),
         .data_in_0_dout(driver_block_design_0_data_in_0_DOUT),
@@ -618,7 +622,7 @@ module VISION
         .enable_0(axi_gpio_0_gpio2_io_o),
         .gsclk_0(driver_block_design_0_gsclk_0),
         .latch_0(driver_block_design_0_latch_0),
-        .reset_0(rst_ps7_0_100M_peripheral_aresetn),
+        .reset_0(rst_ps7_0_100M_peripheral_reset),
         .sclk_0(driver_block_design_0_sclk_0),
         .sout_0(driver_block_design_0_sout_0));
   VISION_driver_block_design_0_bram_0 driver_block_design_0_bram
@@ -842,6 +846,7 @@ module VISION
         .interconnect_aresetn(rst_ps7_0_100M_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   VISION_system_ila_0_0 system_ila_0
        (.SLOT_0_BRAM_addr(driver_block_design_0_data_in_0_ADDR),
@@ -849,19 +854,20 @@ module VISION
         .SLOT_0_BRAM_dout(driver_block_design_0_data_in_0_DOUT),
         .SLOT_0_BRAM_en(driver_block_design_0_data_in_0_EN),
         .SLOT_0_BRAM_rst(driver_block_design_0_data_in_0_RST),
-        .SLOT_1_BRAM_addr(driver_block_design_0_data_in_1_ADDR),
-        .SLOT_1_BRAM_clk(driver_block_design_0_data_in_1_CLK),
-        .SLOT_1_BRAM_dout(driver_block_design_0_data_in_1_DOUT),
-        .SLOT_1_BRAM_en(driver_block_design_0_data_in_1_EN),
-        .SLOT_1_BRAM_rst(driver_block_design_0_data_in_1_RST),
-        .clk(processing_system7_0_FCLK_CLK1),
+        .TRIG_IN_trig(xlslice_0_Dout),
+        .clk(processing_system7_0_FCLK_CLK0),
         .probe0(axi_gpio_0_gpio_io_o),
         .probe1(axi_gpio_0_gpio2_io_o),
         .probe2(driver_block_design_0_sclk_0),
         .probe3(driver_block_design_0_latch_0),
         .probe4(driver_block_design_0_gsclk_0),
         .probe5(driver_block_design_0_sout_0),
-        .probe6(processing_system7_0_FCLK_CLK0));
+        .probe6(rst_ps7_0_100M_peripheral_aresetn),
+        .probe7(rst_ps7_0_100M_peripheral_reset),
+        .probe8(bitnum_0));
+  VISION_xlslice_0_0 xlslice_0
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_0_Dout));
 endmodule
 
 module VISION_ps7_0_axi_periph_0

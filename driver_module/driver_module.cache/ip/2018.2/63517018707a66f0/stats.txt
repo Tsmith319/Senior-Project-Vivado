@@ -1,4 +1,4 @@
-NumberHits:0
-Timestamp: Sun Nov 11 04:09:49 UTC 2018
+NumberHits:1
+Timestamp: Sun Nov 11 19:33:08 UTC 2018
 VLNV: xilinx.com:ip:xlconstant:1.1
 SynthRuntime: 123

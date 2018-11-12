@@ -26,22 +26,22 @@ typedef struct {
 
 
 typedef struct {
-	uint8_t data[96];
+	uint32_t data[24];
 } TLC_Setup;
 
 typedef struct {
 	TLC_Setup data[2];
 } Setup_Layer;
 
-void setBit(uint8_t *array, int bit_num, int bit_val) {
+void setBit(uint32_t *array, int bit_num, int bit_val) {
 
 	if(bit_val)
 	{
-		array[(767 - bit_num)/8] |= 1 << (bit_num % 8);
+		array[(767 - bit_num)/32] |= 1 << (bit_num % 32);
 	}
 	else
 	{
-		array[(768 - bit_num)/8] &= ~(1 << (bit_num % 8));
+		array[(768 - bit_num)/32] &= ~(1 << (bit_num % 32));
 	}
 }
 

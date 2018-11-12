@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Nov 10 21:09:50 2018
-// Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+// Date        : Sun Nov 11 12:33:45 2018
+// Host        : MSI970-Station running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/driver_block_design_mean_machine_module_0_0_sim_netlist.v
+//               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/driver_block_design_mean_machine_module_0_0_sim_netlist.v
 // Design      : driver_block_design_mean_machine_module_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -30,8 +30,8 @@ module driver_block_design_mean_machine_module_0_0
     ready,
     setup);
   input enable;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *) input reset;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   input next_section;
   input buf_selected;
   output latch_select;
@@ -82,8 +82,8 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
     latch,
     latch_select,
     gsclk,
-    reset,
     clk,
+    reset,
     next_section,
     setup,
     enable,
@@ -95,8 +95,8 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
   output latch;
   output latch_select;
   output gsclk;
-  input reset;
   input clk;
+  input reset;
   input next_section;
   input setup;
   input enable;
@@ -165,14 +165,14 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
         .I4(latch_INST_0_i_1_n_0),
         .I5(active_data),
         .O(active_data_i_1_n_0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     active_data_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(active_data_i_1_n_0),
-        .Q(active_data),
-        .R(reset));
+        .Q(active_data));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hF4)) 
@@ -205,14 +205,14 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
     clock_state_i_1
        (.I0(clock_state),
         .O(clock_state0));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     clock_state_reg
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(clock_state0),
-        .Q(clock_state),
-        .R(reset));
+        .Q(clock_state));
   LUT6 #(
     .INIT(64'h00FF00FF00FF5557)) 
     \curr_state[0]_i_1 
@@ -523,94 +523,94 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
         .I1(Q[0]),
         .I2(Q[2]),
         .O(\curr_state[9]_i_4_n_0 ));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \curr_state_reg[0] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
+        .CLR(reset),
         .D(next_state[0]),
-        .Q(Q[0]),
-        .R(reset));
-  FDSE #(
+        .Q(Q[0]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[10] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[10]),
-        .Q(Q[10]),
-        .S(reset));
-  FDRE #(
+        .PRE(reset),
+        .Q(Q[10]));
+  FDCE #(
     .INIT(1'b0)) 
     \curr_state_reg[1] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
+        .CLR(reset),
         .D(next_state[1]),
-        .Q(Q[1]),
-        .R(reset));
-  FDSE #(
+        .Q(Q[1]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[2] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[2]),
-        .Q(Q[2]),
-        .S(reset));
-  FDRE #(
+        .PRE(reset),
+        .Q(Q[2]));
+  FDCE #(
     .INIT(1'b0)) 
     \curr_state_reg[3] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
+        .CLR(reset),
         .D(next_state[3]),
-        .Q(Q[3]),
-        .R(reset));
-  FDSE #(
+        .Q(Q[3]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[4] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[4]),
-        .Q(Q[4]),
-        .S(reset));
-  FDRE #(
+        .PRE(reset),
+        .Q(Q[4]));
+  FDCE #(
     .INIT(1'b0)) 
     \curr_state_reg[5] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
+        .CLR(reset),
         .D(next_state[5]),
-        .Q(Q[5]),
-        .R(reset));
-  FDSE #(
+        .Q(Q[5]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[6] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[6]),
-        .Q(Q[6]),
-        .S(reset));
-  FDSE #(
+        .PRE(reset),
+        .Q(Q[6]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[7] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[7]),
-        .Q(Q[7]),
-        .S(reset));
-  FDSE #(
+        .PRE(reset),
+        .Q(Q[7]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[8] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[8]),
-        .Q(Q[8]),
-        .S(reset));
-  FDSE #(
+        .PRE(reset),
+        .Q(Q[8]));
+  FDPE #(
     .INIT(1'b1)) 
     \curr_state_reg[9] 
        (.C(clk),
         .CE(\curr_state[10]_i_1_n_0 ),
         .D(next_state[9]),
-        .Q(Q[9]),
-        .S(reset));
+        .PRE(reset),
+        .Q(Q[9]));
   LUT5 #(
     .INIT(32'h00800000)) 
     gsclk_INST_0
@@ -640,22 +640,22 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
         .I4(Q[1]),
         .I5(\curr_state[10]_i_3_n_0 ),
         .O(\gsclk_padding[1]_i_1_n_0 ));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \gsclk_padding_reg[0] 
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(\gsclk_padding[0]_i_1_n_0 ),
-        .Q(gsclk_padding[0]),
-        .R(reset));
-  FDRE #(
+        .Q(gsclk_padding[0]));
+  FDCE #(
     .INIT(1'b0)) 
     \gsclk_padding_reg[1] 
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(\gsclk_padding[1]_i_1_n_0 ),
-        .Q(gsclk_padding[1]),
-        .R(reset));
+        .Q(gsclk_padding[1]));
   LUT4 #(
     .INIT(16'h0800)) 
     latch_INST_0
@@ -745,22 +745,22 @@ module driver_block_design_mean_machine_module_0_0_mean_machine_module
         .I3(setup_complete[1]),
         .I4(latch_INST_0_i_1_n_0),
         .O(\setup_complete[1]_i_1_n_0 ));
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \setup_complete_reg[0] 
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(\setup_complete[0]_i_1_n_0 ),
-        .Q(setup_complete[0]),
-        .R(reset));
-  FDRE #(
+        .Q(setup_complete[0]));
+  FDCE #(
     .INIT(1'b0)) 
     \setup_complete_reg[1] 
        (.C(clk),
         .CE(1'b1),
+        .CLR(reset),
         .D(\setup_complete[1]_i_1_n_0 ),
-        .Q(setup_complete[1]),
-        .R(reset));
+        .Q(setup_complete[1]));
 endmodule
 `ifndef GLBL
 `define GLBL

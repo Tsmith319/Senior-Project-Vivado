@@ -25,6 +25,7 @@ module interrupt_sim(
     );
     
     reg clk;
+    reg reset;
     reg [2:0] GPIO;
     reg ready;
     wire setup;
@@ -36,6 +37,7 @@ module interrupt_sim(
     
     interrupt uut(
             .clk(clk),
+            .reset(reset),
             .GPIO_IN(GPIO),
             .ready(ready),
             .setup(setup),
@@ -47,6 +49,7 @@ module interrupt_sim(
         clk = 1'b0;
         GPIO = 3'b000;
         state = 0;
+        reset = 0;
         
         #20
         GPIO = 3'b001;
@@ -62,7 +65,11 @@ module interrupt_sim(
         GPIO = 3'b000;
         #60
         GPIO = 3'b100;
-        #100;
+        #100
+        GPIO = 3'b000;
+        reset = 1'b1;
+        #5
+        reset = 1'b0;
  
     end
     

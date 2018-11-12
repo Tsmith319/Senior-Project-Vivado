@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Nov 10 21:09:49 2018
-// Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+// Date        : Sun Nov 11 13:55:17 2018
+// Host        : MSI970-Station running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top driver_block_design_sout_module_1_0 -prefix
 //               driver_block_design_sout_module_1_0_ driver_block_design_sout_module_0_0_sim_netlist.v
 // Design      : driver_block_design_sout_module_0_0
@@ -28,11 +28,11 @@ module driver_block_design_sout_module_1_0
     b_d_out,
     b_en,
     b_rst);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   input [10:0]bit_num;
   input [1:0]buf_num;
   input pass_through_bit;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW" *) input reset;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *) input reset;
   input latch_select;
   output sout;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in CLK, xilinx.com:signal:clock:1.0 b_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME b_clk, ASSOCIATED_RESET b_rst, FREQ_HZ 100000000, PHASE 0.000" *) output b_clk;
@@ -43,7 +43,7 @@ module driver_block_design_sout_module_1_0
 
   wire \<const0> ;
   wire \<const1> ;
-  wire [9:0]\^b_addr ;
+  wire [11:0]\^b_addr ;
   wire b_addr1_carry__0_i_2_n_3;
   wire [9:9]b_addr2;
   wire [31:0]b_d_out;
@@ -77,26 +77,24 @@ module driver_block_design_sout_module_1_0
   assign b_addr[31] = \<const0> ;
   assign b_addr[30] = \<const0> ;
   assign b_addr[29] = \<const0> ;
-  assign b_addr[28] = \<const0> ;
-  assign b_addr[27] = \<const0> ;
-  assign b_addr[26] = \^b_addr [9];
-  assign b_addr[25] = \^b_addr [9];
-  assign b_addr[24] = \^b_addr [9];
-  assign b_addr[23] = \^b_addr [9];
-  assign b_addr[22] = \^b_addr [9];
-  assign b_addr[21] = \^b_addr [9];
-  assign b_addr[20] = \^b_addr [9];
-  assign b_addr[19] = \^b_addr [9];
-  assign b_addr[18] = \^b_addr [9];
-  assign b_addr[17] = \^b_addr [9];
-  assign b_addr[16] = \^b_addr [9];
-  assign b_addr[15] = \^b_addr [9];
-  assign b_addr[14] = \^b_addr [9];
-  assign b_addr[13] = \^b_addr [9];
-  assign b_addr[12] = \^b_addr [9];
-  assign b_addr[11] = \^b_addr [9];
-  assign b_addr[10] = \^b_addr [9];
-  assign b_addr[9:0] = \^b_addr [9:0];
+  assign b_addr[28] = \^b_addr [11];
+  assign b_addr[27] = \^b_addr [11];
+  assign b_addr[26] = \^b_addr [11];
+  assign b_addr[25] = \^b_addr [11];
+  assign b_addr[24] = \^b_addr [11];
+  assign b_addr[23] = \^b_addr [11];
+  assign b_addr[22] = \^b_addr [11];
+  assign b_addr[21] = \^b_addr [11];
+  assign b_addr[20] = \^b_addr [11];
+  assign b_addr[19] = \^b_addr [11];
+  assign b_addr[18] = \^b_addr [11];
+  assign b_addr[17] = \^b_addr [11];
+  assign b_addr[16] = \^b_addr [11];
+  assign b_addr[15] = \^b_addr [11];
+  assign b_addr[14] = \^b_addr [11];
+  assign b_addr[13] = \^b_addr [11];
+  assign b_addr[12] = \^b_addr [11];
+  assign b_addr[11:0] = \^b_addr [11:0];
   assign b_clk = clk;
   assign b_en = \<const1> ;
   assign b_rst = reset;
@@ -114,44 +112,58 @@ module driver_block_design_sout_module_1_0
   LUT3 #(
     .INIT(8'h14)) 
     \b_addr[0]_INST_0 
-       (.I0(bit_num[5]),
+       (.I0(bit_num[3]),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
         .O(\^b_addr [0]));
   LUT3 #(
     .INIT(8'h14)) 
     \b_addr[1]_INST_0 
-       (.I0(bit_num[6]),
+       (.I0(bit_num[4]),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
         .O(\^b_addr [1]));
   LUT3 #(
     .INIT(8'h14)) 
     \b_addr[2]_INST_0 
-       (.I0(bit_num[7]),
+       (.I0(bit_num[5]),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
         .O(\^b_addr [2]));
   LUT3 #(
     .INIT(8'h14)) 
     \b_addr[3]_INST_0 
-       (.I0(bit_num[8]),
+       (.I0(bit_num[6]),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
         .O(\^b_addr [3]));
+  LUT3 #(
+    .INIT(8'h14)) 
+    \b_addr[4]_INST_0 
+       (.I0(bit_num[7]),
+        .I1(buf_num[0]),
+        .I2(buf_num[1]),
+        .O(\^b_addr [4]));
+  LUT3 #(
+    .INIT(8'h14)) 
+    \b_addr[5]_INST_0 
+       (.I0(bit_num[8]),
+        .I1(buf_num[0]),
+        .I2(buf_num[1]),
+        .O(\^b_addr [5]));
   LUT4 #(
     .INIT(16'h0660)) 
-    \b_addr[4]_INST_0 
+    \b_addr[6]_INST_0 
        (.I0(bit_num[9]),
         .I1(b_addr2),
         .I2(buf_num[0]),
         .I3(buf_num[1]),
-        .O(\^b_addr [4]));
+        .O(\^b_addr [6]));
   driver_block_design_sout_module_1_0_sout_module inst
        (.CO(b_addr1_carry__0_i_2_n_3),
         .O(b_addr2),
-        .b_addr(\^b_addr [9:5]),
-        .\b_addr[8] (inst_n_1),
+        .b_addr(\^b_addr [11:7]),
+        .\b_addr[10] (inst_n_1),
         .bit_num(bit_num[10:9]),
         .buf_num(buf_num));
   MUXF7 sout_INST_0
@@ -293,13 +305,13 @@ endmodule
 
 module driver_block_design_sout_module_1_0_sout_module
    (O,
-    \b_addr[8] ,
+    \b_addr[10] ,
     b_addr,
     buf_num,
     bit_num,
     CO);
   output [0:0]O;
-  output [0:0]\b_addr[8] ;
+  output [0:0]\b_addr[10] ;
   output [4:0]b_addr;
   input [1:0]buf_num;
   input [1:0]bit_num;
@@ -323,15 +335,15 @@ module driver_block_design_sout_module_1_0_sout_module
   wire b_addr1_carry_n_3;
   wire [12:10]b_addr2;
   wire [0:0]b_addr3;
-  wire \b_addr[4]_INST_0_i_1_n_1 ;
-  wire \b_addr[4]_INST_0_i_1_n_2 ;
-  wire \b_addr[4]_INST_0_i_1_n_3 ;
-  wire \b_addr[4]_INST_0_i_2_n_0 ;
-  wire \b_addr[4]_INST_0_i_4_n_0 ;
-  wire \b_addr[4]_INST_0_i_5_n_0 ;
-  wire \b_addr[4]_INST_0_i_6_n_0 ;
-  wire \b_addr[4]_INST_0_i_7_n_0 ;
-  wire [0:0]\b_addr[8] ;
+  wire [0:0]\b_addr[10] ;
+  wire \b_addr[6]_INST_0_i_1_n_1 ;
+  wire \b_addr[6]_INST_0_i_1_n_2 ;
+  wire \b_addr[6]_INST_0_i_1_n_3 ;
+  wire \b_addr[6]_INST_0_i_2_n_0 ;
+  wire \b_addr[6]_INST_0_i_4_n_0 ;
+  wire \b_addr[6]_INST_0_i_5_n_0 ;
+  wire \b_addr[6]_INST_0_i_6_n_0 ;
+  wire \b_addr[6]_INST_0_i_7_n_0 ;
   wire [1:0]bit_num;
   wire [1:0]buf_num;
   wire [0:0]NLW_b_addr1_carry_O_UNCONNECTED;
@@ -395,74 +407,9 @@ module driver_block_design_sout_module_1_0_sout_module
        (.I0(O),
         .I1(bit_num[0]),
         .O(b_addr1_carry_i_6_n_0));
-  CARRY4 \b_addr[4]_INST_0_i_1 
-       (.CI(1'b0),
-        .CO({\b_addr[8] ,\b_addr[4]_INST_0_i_1_n_1 ,\b_addr[4]_INST_0_i_1_n_2 ,\b_addr[4]_INST_0_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\b_addr[4]_INST_0_i_2_n_0 ,b_addr3,1'b0,1'b1}),
-        .O({b_addr2,O}),
-        .S({\b_addr[4]_INST_0_i_4_n_0 ,\b_addr[4]_INST_0_i_5_n_0 ,\b_addr[4]_INST_0_i_6_n_0 ,\b_addr[4]_INST_0_i_7_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \b_addr[4]_INST_0_i_2 
-       (.I0(buf_num[1]),
-        .I1(buf_num[0]),
-        .O(\b_addr[4]_INST_0_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \b_addr[4]_INST_0_i_3 
-       (.I0(buf_num[0]),
-        .O(b_addr3));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \b_addr[4]_INST_0_i_4 
-       (.I0(buf_num[1]),
-        .I1(buf_num[0]),
-        .O(\b_addr[4]_INST_0_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'hD)) 
-    \b_addr[4]_INST_0_i_5 
-       (.I0(buf_num[1]),
-        .I1(buf_num[0]),
-        .O(\b_addr[4]_INST_0_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \b_addr[4]_INST_0_i_6 
-       (.I0(buf_num[0]),
-        .I1(buf_num[1]),
-        .O(\b_addr[4]_INST_0_i_6_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \b_addr[4]_INST_0_i_7 
-       (.I0(buf_num[0]),
-        .O(\b_addr[4]_INST_0_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h28)) 
-    \b_addr[5]_INST_0 
-       (.I0(b_addr1[10]),
-        .I1(buf_num[0]),
-        .I2(buf_num[1]),
-        .O(b_addr[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h28)) 
-    \b_addr[6]_INST_0 
-       (.I0(b_addr1[11]),
-        .I1(buf_num[0]),
-        .I2(buf_num[1]),
-        .O(b_addr[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h28)) 
-    \b_addr[7]_INST_0 
-       (.I0(b_addr1[12]),
-        .I1(buf_num[0]),
-        .I2(buf_num[1]),
-        .O(b_addr[2]));
-  LUT3 #(
-    .INIT(8'h28)) 
-    \b_addr[8]_INST_0 
+    \b_addr[10]_INST_0 
        (.I0(b_addr1[13]),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
@@ -470,11 +417,76 @@ module driver_block_design_sout_module_1_0_sout_module
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h14)) 
-    \b_addr[9]_INST_0 
+    \b_addr[11]_INST_0 
        (.I0(b_addr1_carry__0_n_2),
         .I1(buf_num[0]),
         .I2(buf_num[1]),
         .O(b_addr[4]));
+  CARRY4 \b_addr[6]_INST_0_i_1 
+       (.CI(1'b0),
+        .CO({\b_addr[10] ,\b_addr[6]_INST_0_i_1_n_1 ,\b_addr[6]_INST_0_i_1_n_2 ,\b_addr[6]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\b_addr[6]_INST_0_i_2_n_0 ,b_addr3,1'b0,1'b1}),
+        .O({b_addr2,O}),
+        .S({\b_addr[6]_INST_0_i_4_n_0 ,\b_addr[6]_INST_0_i_5_n_0 ,\b_addr[6]_INST_0_i_6_n_0 ,\b_addr[6]_INST_0_i_7_n_0 }));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \b_addr[6]_INST_0_i_2 
+       (.I0(buf_num[1]),
+        .I1(buf_num[0]),
+        .O(\b_addr[6]_INST_0_i_2_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \b_addr[6]_INST_0_i_3 
+       (.I0(buf_num[0]),
+        .O(b_addr3));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \b_addr[6]_INST_0_i_4 
+       (.I0(buf_num[1]),
+        .I1(buf_num[0]),
+        .O(\b_addr[6]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'hD)) 
+    \b_addr[6]_INST_0_i_5 
+       (.I0(buf_num[1]),
+        .I1(buf_num[0]),
+        .O(\b_addr[6]_INST_0_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \b_addr[6]_INST_0_i_6 
+       (.I0(buf_num[0]),
+        .I1(buf_num[1]),
+        .O(\b_addr[6]_INST_0_i_6_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \b_addr[6]_INST_0_i_7 
+       (.I0(buf_num[0]),
+        .O(\b_addr[6]_INST_0_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h28)) 
+    \b_addr[7]_INST_0 
+       (.I0(b_addr1[10]),
+        .I1(buf_num[0]),
+        .I2(buf_num[1]),
+        .O(b_addr[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h28)) 
+    \b_addr[8]_INST_0 
+       (.I0(b_addr1[11]),
+        .I1(buf_num[0]),
+        .I2(buf_num[1]),
+        .O(b_addr[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h28)) 
+    \b_addr[9]_INST_0 
+       (.I0(b_addr1[12]),
+        .I1(buf_num[0]),
+        .I2(buf_num[1]),
+        .O(b_addr[2]));
 endmodule
 `ifndef GLBL
 `define GLBL

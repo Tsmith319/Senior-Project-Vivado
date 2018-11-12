@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/VISION/ip/VISION_axi_cdma_0_0/sim/VISION_axi_cdma_0_0.vhd" \
+"../../../bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/sim/bd_a547_psr_aclk_0.vhd" \
+"../../../bd/VISION/ip/VISION_rst_ps7_0_100M_0/sim/VISION_rst_ps7_0_100M_0.vhd" \
+"../../../bd/VISION/ip/VISION_axi_gpio_0_0/sim/VISION_axi_gpio_0_0.vhd" \
+"../../../bd/VISION/ip/VISION_axi_bram_ctrl_0_0/sim/VISION_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/VISION/ip/VISION_axi_bram_ctrl_0_1/sim/VISION_axi_bram_ctrl_0_1.vhd" \
+
+nosort

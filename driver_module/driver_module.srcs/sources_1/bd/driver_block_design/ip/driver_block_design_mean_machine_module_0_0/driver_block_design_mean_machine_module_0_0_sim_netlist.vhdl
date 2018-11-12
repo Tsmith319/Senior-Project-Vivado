@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Nov 10 21:09:51 2018
--- Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+-- Date        : Sun Nov 11 12:33:45 2018
+-- Host        : MSI970-Station running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/driver_block_design_mean_machine_module_0_0_sim_netlist.vhdl
+--               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/driver_block_design_mean_machine_module_0_0_sim_netlist.vhdl
 -- Design      : driver_block_design_mean_machine_module_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,8 @@ entity driver_block_design_mean_machine_module_0_0_mean_machine_module is
     latch : out STD_LOGIC;
     latch_select : out STD_LOGIC;
     gsclk : out STD_LOGIC;
-    reset : in STD_LOGIC;
     clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
     next_section : in STD_LOGIC;
     setup : in STD_LOGIC;
     enable : in STD_LOGIC;
@@ -121,16 +121,16 @@ active_data_i_1: unisim.vcomponents.LUT6
       I5 => active_data,
       O => active_data_i_1_n_0
     );
-active_data_reg: unisim.vcomponents.FDRE
+active_data_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => active_data_i_1_n_0,
-      Q => active_data,
-      R => reset
+      Q => active_data
     );
 \buf_select[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
@@ -172,16 +172,16 @@ clock_state_i_1: unisim.vcomponents.LUT1
       I0 => clock_state,
       O => clock_state0
     );
-clock_state_reg: unisim.vcomponents.FDRE
+clock_state_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => clock_state0,
-      Q => clock_state,
-      R => reset
+      Q => clock_state
     );
 \curr_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -577,18 +577,18 @@ clock_state_reg: unisim.vcomponents.FDRE
       I2 => \^q\(2),
       O => \curr_state[9]_i_4_n_0\
     );
-\curr_state_reg[0]\: unisim.vcomponents.FDRE
+\curr_state_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(0),
-      Q => \^q\(0),
-      R => reset
+      Q => \^q\(0)
     );
-\curr_state_reg[10]\: unisim.vcomponents.FDSE
+\curr_state_reg[10]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -596,21 +596,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(10),
-      Q => \^q\(10),
-      S => reset
+      PRE => reset,
+      Q => \^q\(10)
     );
-\curr_state_reg[1]\: unisim.vcomponents.FDRE
+\curr_state_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(1),
-      Q => \^q\(1),
-      R => reset
+      Q => \^q\(1)
     );
-\curr_state_reg[2]\: unisim.vcomponents.FDSE
+\curr_state_reg[2]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -618,21 +618,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(2),
-      Q => \^q\(2),
-      S => reset
+      PRE => reset,
+      Q => \^q\(2)
     );
-\curr_state_reg[3]\: unisim.vcomponents.FDRE
+\curr_state_reg[3]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(3),
-      Q => \^q\(3),
-      R => reset
+      Q => \^q\(3)
     );
-\curr_state_reg[4]\: unisim.vcomponents.FDSE
+\curr_state_reg[4]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -640,21 +640,21 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(4),
-      Q => \^q\(4),
-      S => reset
+      PRE => reset,
+      Q => \^q\(4)
     );
-\curr_state_reg[5]\: unisim.vcomponents.FDRE
+\curr_state_reg[5]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
+      CLR => reset,
       D => next_state(5),
-      Q => \^q\(5),
-      R => reset
+      Q => \^q\(5)
     );
-\curr_state_reg[6]\: unisim.vcomponents.FDSE
+\curr_state_reg[6]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -662,10 +662,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(6),
-      Q => \^q\(6),
-      S => reset
+      PRE => reset,
+      Q => \^q\(6)
     );
-\curr_state_reg[7]\: unisim.vcomponents.FDSE
+\curr_state_reg[7]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -673,10 +673,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(7),
-      Q => \^q\(7),
-      S => reset
+      PRE => reset,
+      Q => \^q\(7)
     );
-\curr_state_reg[8]\: unisim.vcomponents.FDSE
+\curr_state_reg[8]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -684,10 +684,10 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(8),
-      Q => \^q\(8),
-      S => reset
+      PRE => reset,
+      Q => \^q\(8)
     );
-\curr_state_reg[9]\: unisim.vcomponents.FDSE
+\curr_state_reg[9]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '1'
     )
@@ -695,8 +695,8 @@ clock_state_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \curr_state[10]_i_1_n_0\,
       D => next_state(9),
-      Q => \^q\(9),
-      S => reset
+      PRE => reset,
+      Q => \^q\(9)
     );
 gsclk_INST_0: unisim.vcomponents.LUT5
     generic map(
@@ -736,27 +736,27 @@ gsclk_INST_0: unisim.vcomponents.LUT5
       I5 => \curr_state[10]_i_3_n_0\,
       O => \gsclk_padding[1]_i_1_n_0\
     );
-\gsclk_padding_reg[0]\: unisim.vcomponents.FDRE
+\gsclk_padding_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \gsclk_padding[0]_i_1_n_0\,
-      Q => gsclk_padding(0),
-      R => reset
+      Q => gsclk_padding(0)
     );
-\gsclk_padding_reg[1]\: unisim.vcomponents.FDRE
+\gsclk_padding_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \gsclk_padding[1]_i_1_n_0\,
-      Q => gsclk_padding(1),
-      R => reset
+      Q => gsclk_padding(1)
     );
 latch_INST_0: unisim.vcomponents.LUT4
     generic map(
@@ -869,27 +869,27 @@ sclk_INST_0_i_2: unisim.vcomponents.LUT2
       I4 => latch_INST_0_i_1_n_0,
       O => \setup_complete[1]_i_1_n_0\
     );
-\setup_complete_reg[0]\: unisim.vcomponents.FDRE
+\setup_complete_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \setup_complete[0]_i_1_n_0\,
-      Q => setup_complete(0),
-      R => reset
+      Q => setup_complete(0)
     );
-\setup_complete_reg[1]\: unisim.vcomponents.FDRE
+\setup_complete_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => '1',
+      CLR => reset,
       D => \setup_complete[1]_i_1_n_0\,
-      Q => setup_complete(1),
-      R => reset
+      Q => setup_complete(1)
     );
 end STRUCTURE;
 library IEEE;
@@ -928,9 +928,9 @@ architecture STRUCTURE of driver_block_design_mean_machine_module_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH";
 begin
 inst: entity work.driver_block_design_mean_machine_module_0_0_mean_machine_module
      port map (

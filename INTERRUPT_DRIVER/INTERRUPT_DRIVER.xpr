@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/INTERRUPT_DRIVER/INTERRUPT_DRIVER.xpr">
+<Project Version="7" Minor="38" Path="C:/github/Senior-Project-Vivado/INTERRUPT_DRIVER/INTERRUPT_DRIVER.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fe2a9ccaf4ee4f8f9c98fd4f15bc26a5"/>
@@ -21,7 +21,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../users/taysm/onedrive/documents/github/senior-project-vivado/interrupt_driver"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/."/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../AppData/Roaming/Xilinx/Vivado/users/taysm/onedrive/documents/github/senior-project-vivado/interrupt_driver"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -33,7 +34,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="arty-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="50"/>
+    <Option Name="WTXSimLaunchSim" Val="56"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -68,7 +69,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../users/taysm/onedrive/documents/github/senior-project-vivado/interrupt_driver/component.xml">
+      <File Path="$PPRDIR/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>

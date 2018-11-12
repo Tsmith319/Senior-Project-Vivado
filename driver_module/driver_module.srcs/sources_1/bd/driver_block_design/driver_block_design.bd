@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xB8A6506BD02F785F" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xAB6EA8774B9DD76F" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -121,10 +121,10 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>100000000</spirit:value>
+            <spirit:value>50000000</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
+                <bd:configElementInfo bd:valueSource="user"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -177,10 +177,10 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>POLARITY</spirit:name>
-            <spirit:value>ACTIVE_LOW</spirit:value>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
+                <bd:configElementInfo bd:valueSource="user"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -248,6 +248,16 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>bitnum_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>10</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -259,18 +269,25 @@
     <spirit:version>1.00.a</spirit:version>
     <spirit:componentInstances>
       <spirit:componentInstance>
-        <spirit:instanceName>mean_machine_module_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="mean_machine_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_mean_machine_module_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>xlconstant_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_xlconstant_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">2</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>interrupt_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interrupt" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_interrupt_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>mean_machine_module_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="mean_machine_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_mean_machine_module_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -287,13 +304,6 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>interrupt_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="interrupt" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_interrupt_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
@@ -308,6 +318,11 @@
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="bit_num"/>
+        <spirit:externalPortReference spirit:portRef="bitnum_0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sout_module_0_sout</spirit:name>
@@ -317,10 +332,10 @@
       <spirit:adHocConnection>
         <spirit:name>clk_0_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk_0"/>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>enable_0_1</spirit:name>
@@ -331,6 +346,7 @@
         <spirit:name>reset_0_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="reset_0"/>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="interrupt_0" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="reset"/>
       </spirit:adHocConnection>
