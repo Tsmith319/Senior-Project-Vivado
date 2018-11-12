@@ -11,10 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
+      <ZoomStartTime time="15319880000fs"></ZoomStartTime>
+      <ZoomEndTime time="15427803078fs"></ZoomEndTime>
+      <Cursor1Time time="15510000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="297"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
+   <WVObjectSize size="11" />
    <wvobject fp_name="/driver_block_design_test/enable" type="logic">
       <obj_property name="ElementShortName">enable</obj_property>
       <obj_property name="ObjectShortName">enable</obj_property>
@@ -30,6 +35,10 @@
    <wvobject fp_name="/driver_block_design_test/GPIO" type="array">
       <obj_property name="ElementShortName">GPIO[2:0]</obj_property>
       <obj_property name="ObjectShortName">GPIO[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/driver_block_design_test/uut/mean_machine_module_0_ready" type="logic">
+      <obj_property name="ElementShortName">mean_machine_module_0_ready</obj_property>
+      <obj_property name="ObjectShortName">mean_machine_module_0_ready</obj_property>
    </wvobject>
    <wvobject fp_name="/driver_block_design_test/gsclk" type="logic">
       <obj_property name="ElementShortName">gsclk</obj_property>
@@ -47,5 +56,13 @@
       <obj_property name="ElementShortName">sout</obj_property>
       <obj_property name="ObjectShortName">sout</obj_property>
    </wvobject>
+   <wvobject fp_name="/driver_block_design_test/uut/mean_machine_module_0/bit_num" type="array">
+      <obj_property name="ElementShortName">bit_num[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_num[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/driver_block_design_test/uut/sout_module_0/b_addr" type="array">
+      <obj_property name="ElementShortName">b_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_addr[31:0]</obj_property>
    </wvobject>
 </wave_config>
