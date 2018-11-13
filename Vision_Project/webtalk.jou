@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 12 21:10:34 2018
+# Process ID: 25660
+# Current directory: c:/github/Senior-Project-Vivado/Vision_Project
+# Command line: wbtcv.exe -mode batch -source c:/github/senior-project-vivado/tlc_project/tlc_project.tmp/top_v1_0_project/top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: c:/github/Senior-Project-Vivado/Vision_Project/webtalk.log
+# Journal file: c:/github/Senior-Project-Vivado/Vision_Project\webtalk.jou
+#-----------------------------------------------------------
+source c:/github/senior-project-vivado/tlc_project/tlc_project.tmp/top_v1_0_project/top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

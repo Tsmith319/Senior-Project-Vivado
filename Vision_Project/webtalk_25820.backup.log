@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 12 21:07:31 2018
+# Process ID: 25820
+# Current directory: c:/github/Senior-Project-Vivado/Vision_Project
+# Command line: wbtcv.exe -mode batch -source C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: c:/github/Senior-Project-Vivado/Vision_Project/webtalk.log
+# Journal file: c:/github/Senior-Project-Vivado/Vision_Project\webtalk.jou
+#-----------------------------------------------------------
+source C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Mon Nov 12 21:07:33 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 12 21:07:33 2018...

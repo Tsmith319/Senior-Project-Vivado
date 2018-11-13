@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="VISION_wrapper.bit" key="VISION_wrapper_hw_platform_1-bitFile"/>
+	<item value="C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\VISION_wrapper_hw_platform_1\VISION_wrapper.bit" key="VISION_wrapper_hw_platform_1-bitFile"/>
 	<item value="VISION_wrapper.bit" key="VISION_wrapper_hw_platform_0-bitFile"/>
+	<item value="" key="VISION_wrapper_hw_platform_2-bmmFile"/>
+	<item value="Local" key="VISION_wrapper_hw_platform_2-target"/>
 	<item value="false" key="VISION_wrapper_hw_platform_0-partial_bit"/>
 	<item value="Local" key="VISION_wrapper_hw_platform_0-target"/>
-	<item value="VISION_wrapper_hw_platform_1" key="programfpga.hwplatform"/>
+	<item value="VISION_wrapper_hw_platform_2" key="programfpga.hwplatform"/>
 	<item value="Local" key="VISION_wrapper_hw_platform_1-target"/>
 	<item value="Auto Detect" key="VISION_wrapper_hw_platform_0-device"/>
 	<item value="Auto Detect" key="VISION_wrapper_hw_platform_1-device"/>
+	<item value="Auto Detect" key="VISION_wrapper_hw_platform_2-device"/>
 	<item value="" key="VISION_wrapper_hw_platform_0-bmmFile"/>
+	<item value="false" key="VISION_wrapper_hw_platform_2-partial_bit"/>
 	<item value="" key="VISION_wrapper_hw_platform_1-bmmFile"/>
+	<item value="C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\VISION_wrapper_hw_platform_2\VISION_wrapper.bit" key="VISION_wrapper_hw_platform_2-bitFile"/>
 	<item value="false" key="VISION_wrapper_hw_platform_1-partial_bit"/>
 </section>

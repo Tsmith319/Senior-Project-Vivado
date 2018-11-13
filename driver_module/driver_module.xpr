@@ -36,7 +36,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="arty-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="20"/>
+    <Option Name="WTXSimLaunchSim" Val="21"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -70,17 +70,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_sout_module_0_0/driver_block_design_sout_module_0_0.xci">
-          <Proxy FileSetName="driver_block_design_sout_module_0_0"/>
+        <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0.xci">
+          <Proxy FileSetName="driver_block_design_interrupt_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_sout_module_1_0/driver_block_design_sout_module_1_0.xci">
           <Proxy FileSetName="driver_block_design_sout_module_1_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_sout_module_0_0/driver_block_design_sout_module_0_0.xci">
+          <Proxy FileSetName="driver_block_design_sout_module_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_mean_machine_module_0_0/driver_block_design_mean_machine_module_0_0.xci">
           <Proxy FileSetName="driver_block_design_mean_machine_module_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="driver_block_design.bd" FileRelPathName="ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0.xci">
-          <Proxy FileSetName="driver_block_design_interrupt_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>

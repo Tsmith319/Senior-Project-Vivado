@@ -1028,8 +1028,8 @@ proc create_root_design { parentCell } {
   # Create instance: xlslice_0, and set properties
   set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {2} \
-   CONFIG.DIN_TO {2} \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
    CONFIG.DIN_WIDTH {3} \
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_0
@@ -1042,11 +1042,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_smc_M01_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_smc/M01_AXI]
   connect_bd_intf_net -intf_net axi_smc_M02_AXI [get_bd_intf_pins axi_bram_ctrl_1/S_AXI] [get_bd_intf_pins axi_smc/M02_AXI]
   connect_bd_intf_net -intf_net driver_block_design_0_data_in_0 [get_bd_intf_pins driver_block_design_0/data_in_0] [get_bd_intf_pins driver_block_design_0_bram/BRAM_PORTA]
-connect_bd_intf_net -intf_net [get_bd_intf_nets driver_block_design_0_data_in_0] [get_bd_intf_pins driver_block_design_0_bram/BRAM_PORTA] [get_bd_intf_pins system_ila_0/SLOT_0_BRAM]
+  connect_bd_intf_net -intf_net driver_block_design_0_data_in_1 [get_bd_intf_pins driver_block_design_0/data_in_1] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTA]
+connect_bd_intf_net -intf_net [get_bd_intf_nets driver_block_design_0_data_in_1] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTA] [get_bd_intf_pins system_ila_0/SLOT_0_BRAM]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets driver_block_design_0_data_in_0]
-  connect_bd_intf_net -intf_net driver_block_design_0_data_in_1 [get_bd_intf_pins driver_block_design_0/data_in_1] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTA]
+ ] [get_bd_intf_nets driver_block_design_0_data_in_1]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]

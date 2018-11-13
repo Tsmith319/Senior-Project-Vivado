@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sun Nov 11 13:17:56 2018
--- Host        : MSI970-Station running 64-bit major release  (build 9200)
+-- Date        : Mon Nov 12 20:31:49 2018
+-- Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_xlslice_0_0/VISION_xlslice_0_0_sim_netlist.vhdl
+--               C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_xlslice_0_0/VISION_xlslice_0_0_sim_netlist.vhdl
 -- Design      : VISION_xlslice_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -32,6 +32,6 @@ end VISION_xlslice_0_0;
 architecture STRUCTURE of VISION_xlslice_0_0 is
   signal \^din\ : STD_LOGIC_VECTOR ( 2 downto 0 );
 begin
-  Dout(0) <= \^din\(2);
-  \^din\(2) <= Din(2);
+  Dout(0) <= \^din\(1);
+  \^din\(1) <= Din(1);
 end STRUCTURE;

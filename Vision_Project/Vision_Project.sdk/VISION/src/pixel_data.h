@@ -10,14 +10,14 @@
 
 #define SETUP_COMMAND 0x96;
 
-
+int LedValue[16] = {8,12,9,13,14,10,15,11,7,3,6,2,1,5,0,4};
 
 typedef struct {
 	uint16_t blue, green, red;
 } Pixel;
 
 typedef struct {
-	Pixel pixels[96];
+	Pixel pixels[32];
 } Layer;
 
 typedef struct {
@@ -82,5 +82,16 @@ Setup_Layer* Setup_Layer_init() {
 	memcpy(setup->data[1].data, setup->data[0].data, sizeof(TLC_Setup));
 
 	return setup;
+}
+
+int getPixelOffset(int ledNum)
+{
+	int ledVal = 15 - LedValue[ledNum % 16];
+
+	if(ledNum <= 15)
+		return 16 + ledVal;
+	else
+		return ledVal;
+
 }
 #endif /* SRC_PIXEL_DATA_H_ */

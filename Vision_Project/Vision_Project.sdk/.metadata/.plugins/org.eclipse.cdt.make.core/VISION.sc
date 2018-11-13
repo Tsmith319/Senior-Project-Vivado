@@ -870,6 +870,9 @@
 <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_QBIT" removed="true"/>
 <includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+<includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
+<includePath path="#undef __ARM_FP16_ARGS" removed="true"/>
+<includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
 <includePath path="#undef __ARM_FP16_FORMAT_IEEE" removed="true"/>
 <includePath path="#undef __ARM_FP" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_SIMD32" removed="true"/>

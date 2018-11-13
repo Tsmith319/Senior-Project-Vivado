@@ -70,44 +70,44 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0.xci">
-          <Proxy FileSetName="VISION_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_smc_0/VISION_axi_smc_0.xci">
-          <Proxy FileSetName="VISION_axi_smc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="VISION_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0.xci">
-          <Proxy FileSetName="VISION_driver_block_design_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_gpio_0_0/VISION_axi_gpio_0_0.xci">
-          <Proxy FileSetName="VISION_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0/VISION_driver_block_design_0_bram_0.xci">
-          <Proxy FileSetName="VISION_driver_block_design_0_bram_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_cdma_0_0/VISION_axi_cdma_0_0.xci">
           <Proxy FileSetName="VISION_axi_cdma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_system_ila_0_0/VISION_system_ila_0_0.xci">
-          <Proxy FileSetName="VISION_system_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0_0/VISION_driver_block_design_0_bram_0_0.xci">
+          <Proxy FileSetName="VISION_driver_block_design_0_bram_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_smc_0/VISION_axi_smc_0.xci">
+          <Proxy FileSetName="VISION_axi_smc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0.xci">
+          <Proxy FileSetName="VISION_driver_block_design_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_0/VISION_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="VISION_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0/VISION_driver_block_design_0_bram_0.xci">
+          <Proxy FileSetName="VISION_driver_block_design_0_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_gpio_0_0/VISION_axi_gpio_0_0.xci">
+          <Proxy FileSetName="VISION_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0.xci">
+          <Proxy FileSetName="VISION_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_1/VISION_axi_bram_ctrl_0_1.xci">
           <Proxy FileSetName="VISION_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xbar_0/VISION_xbar_0.xci">
-          <Proxy FileSetName="VISION_xbar_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xlslice_0_0/VISION_xlslice_0_0.xci">
           <Proxy FileSetName="VISION_xlslice_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0_0/VISION_driver_block_design_0_bram_0_0.xci">
-          <Proxy FileSetName="VISION_driver_block_design_0_bram_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_system_ila_0_0/VISION_system_ila_0_0.xci">
+          <Proxy FileSetName="VISION_system_ila_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_0/VISION_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="VISION_axi_bram_ctrl_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xbar_0/VISION_xbar_0.xci">
+          <Proxy FileSetName="VISION_xbar_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/VISION/hdl/VISION_wrapper.v">

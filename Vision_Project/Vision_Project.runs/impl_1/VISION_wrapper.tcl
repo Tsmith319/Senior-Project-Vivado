@@ -61,114 +61,14 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
-set rc [catch {
-  create_msg_db init_design.pb
-  set_param board.repoPaths C:/Xilinx/Vivado/vivado-boards-master/new/board_files
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/wt [current_project]
-  set_property parent.project_path C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.xpr [current_project]
-  set_property ip_repo_paths {
-  C:/github/Senior-Project-Vivado/ip_repo
-  C:/github/Senior-Project-Vivado/INTERRUPT_DRIVER
-  C:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new
-  C:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new
-} [current_project]
-  set_property ip_output_repo C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/VISION_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd
-  set_param project.isImplRun false
-  read_xdc C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/constrs_1/new/arty_z7_constraints.xdc
-  set_param project.isImplRun true
-  link_design -top VISION_wrapper -part xc7z020clg400-1
-  set_param project.isImplRun false
-  write_hwdef -force -file VISION_wrapper.hwdef
-  close_msg_db -file init_design.pb
-} RESULT]
-if {$rc} {
-  step_failed init_design
-  return -code error $RESULT
-} else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force VISION_wrapper_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file VISION_wrapper_drc_opted.rpt -pb VISION_wrapper_drc_opted.pb -rpx VISION_wrapper_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force VISION_wrapper_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file VISION_wrapper_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file VISION_wrapper_utilization_placed.rpt -pb VISION_wrapper_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file VISION_wrapper_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force VISION_wrapper_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file VISION_wrapper_drc_routed.rpt -pb VISION_wrapper_drc_routed.pb -rpx VISION_wrapper_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file VISION_wrapper_methodology_drc_routed.rpt -pb VISION_wrapper_methodology_drc_routed.pb -rpx VISION_wrapper_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file VISION_wrapper_power_routed.rpt -pb VISION_wrapper_power_summary_routed.pb -rpx VISION_wrapper_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file VISION_wrapper_route_status.rpt -pb VISION_wrapper_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file VISION_wrapper_timing_summary_routed.rpt -pb VISION_wrapper_timing_summary_routed.pb -rpx VISION_wrapper_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file VISION_wrapper_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file VISION_wrapper_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file VISION_wrapper_bus_skew_routed.rpt -pb VISION_wrapper_bus_skew_routed.pb -rpx VISION_wrapper_bus_skew_routed.rpx"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force VISION_wrapper_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
-  unset ACTIVE_STEP 
-}
-
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param xicom.use_bs_reader 1
+  open_checkpoint VISION_wrapper_routed.dcp
+  set_property webtalk.parent_dir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force VISION_wrapper.mmi }
   write_bitstream -force VISION_wrapper.bit 

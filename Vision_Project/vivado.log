@@ -2,22 +2,26 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Nov 12 16:46:14 2018
-# Process ID: 22628
+# Start of session at: Mon Nov 12 17:09:52 2018
+# Process ID: 24784
 # Current directory: C:/github/Senior-Project-Vivado/Vision_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13508 C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19568 C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.xpr
 # Log file: C:/github/Senior-Project-Vivado/Vision_Project/vivado.log
 # Journal file: C:/github/Senior-Project-Vivado/Vision_Project\vivado.jou
-#-----------------------------------------------------------sstart_guiopen_project C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.xpr
-IINFO: [Project 1-313] Project file moved from 'C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project' since last save.Scanning sources...
-FFinished scanning sourcesINFO: [IP_Flow 19-234] Refreshing IP repositories
-IINFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/INTERRUPT_DRIVER'.
-IINFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new'.INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new'.
-IINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.open_project: Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 940.879 ; gain = 204.180
+#-----------------------------------------------------------
+start_gui
+open_project C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/INTERRUPT_DRIVER'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 915.227 ; gain = 205.668
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 12 16:51:55 2018...
-oject.srcs/sources_1/bd/VISION/VISION.bd}
+open_bd_design {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd}
 Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding cell -- xilinx.com:ip:axi_cdma:4.1 - axi_cdma_0
 Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
@@ -27,11 +31,578 @@ Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - driver_block_design_0_bram
 Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - driver_block_design_0_bram_0
 Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
 Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_1
-Adding cell -- xilinx.com:user:driver_block_design:1.0 - driver_block_design_0
 Adding cell -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding cell -- xilinx.com:user:driver_block_design:1.0 - driver_block_design_0
 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Successfully read diagram <VISION> from BD file <C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd>
-open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1031.527 ; gain = 113.148
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 12 16:51:56 2018...
+open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1030.305 ; gain = 89.957
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Nov 12 17:12:42 2018] Launched synth_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/runme.log
+[Mon Nov 12 17:12:43 2018] Launched impl_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 653 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2164.543 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2164.543 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 306 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 112 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 194 instances
+
+open_run: Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 2182.070 ; gain = 1117.332
+open_report: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2281.094 ; gain = 89.090
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+close_design
+file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.sysdef C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+
+launch_sdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A703B2A
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2737.574 ; gain = 310.918
+set_property PROGRAM.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 17:29:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 17:29:49
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_project C:/github/Senior-Project-Vivado/driver_module/driver_module.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/INTERRUPT_DRIVER'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2785.906 ; gain = 8.648
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'driver_block_design_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj driver_block_design_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ipshared/65d9/mean_machine_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mean_machine_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/sim/driver_block_design_mean_machine_module_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_mean_machine_module_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ipshared/9a03/sout_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sout_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ip/driver_block_design_sout_module_0_0/sim/driver_block_design_sout_module_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_sout_module_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ip/driver_block_design_sout_module_1_0/sim/driver_block_design_sout_module_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_sout_module_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ip/driver_block_design_xlconstant_0_0/sim/driver_block_design_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ipshared/445d/INTERRUPT_DRIVER.srcs/sources_1/new/interrupt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module interrupt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/ip/driver_block_design_interrupt_0_0/sim/driver_block_design_interrupt_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_interrupt_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.ip_user_files/bd/driver_block_design/sim/driver_block_design.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sim_1/new/driver_block_design_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module driver_block_design_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a5d5b98a0f9d4cb6b48017b5231fd76b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot driver_block_design_test_behav xil_defaultlib.driver_block_design_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.interrupt
+Compiling module xil_defaultlib.driver_block_design_interrupt_0_...
+Compiling module xil_defaultlib.mean_machine_module
+Compiling module xil_defaultlib.driver_block_design_mean_machine...
+Compiling module xil_defaultlib.sout_module
+Compiling module xil_defaultlib.driver_block_design_sout_module_...
+Compiling module xil_defaultlib.driver_block_design_sout_module_...
+Compiling module xlconstant_v1_1_5.xlconstant_v1_1_5_xlconstant(CON...
+Compiling module xil_defaultlib.driver_block_design_xlconstant_0...
+Compiling module xil_defaultlib.driver_block_design
+Compiling module xil_defaultlib.driver_block_design_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot driver_block_design_test_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim/xsim.dir/driver_block_design_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim/xsim.dir/driver_block_design_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Nov 12 17:42:34 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 12 17:42:34 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2787.277 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "driver_block_design_test_behav -key {Behavioral:sim_1:Functional:driver_block_design_test} -tclbatch {driver_block_design_test.tcl} -view {C:/github/Senior-Project-Vivado/driver_module/driver_block_design_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/github/Senior-Project-Vivado/driver_module/driver_block_design_test_behav.wcfg
+source driver_block_design_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'driver_block_design_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2805.754 ; gain = 19.848
+run all
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2806.980 ; gain = 0.754
+current_project Vision_Project
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 17:55:01
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 17:55:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 17:56:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 17:57:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 17:57:12
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 17:58:48
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 17:58:57
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+open_project C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/../../Xilinx/Vivado/vivado-boards-master/new/board_files', nor could it be found using path 'C:/Users/TaySm/Xilinx/Vivado/vivado-boards-master/new/board_files'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/../../users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE', nor could it be found using path 'C:/Users/TaySm/users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/github/Senior-Project-Vivado/ip_repo/myip_1.0', nor could it be found using path 'C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/github/Senior-Project-Vivado/Vision_Project/users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/DisplayDriver_SINGLE_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/myip_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2840.832 ; gain = 16.914
+update_compile_order -fileset sources_1
+open_bd_design {C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:user:DisplayDriver_SINGLE:1.0 - DisplayDriver_SINGLE_0
+Adding cell -- xilinx.com:user:top:1.0 - top_0
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2905.961 ; gain = 65.129
+ipx::edit_ip_in_project -upgrade true -name top_v1_0_project -directory C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.tmp/top_v1_0_project c:/github/Senior-Project-Vivado/ip_repo/TLC5955_SINGLE/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2914.645 ; gain = 8.684
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/github/Senior-Project-Vivado/Vision_Project/users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/DisplayDriver_SINGLE_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/myip_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2921.426 ; gain = 15.465
+update_compile_order -fileset sources_1
+close_project
+launch_sdk -workspace C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk -hwspec C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk -hwspec C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk -hwspec C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk -hwspec C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+current_project Vision_Project
+current_project TLC_Project
+ipx::edit_ip_in_project -upgrade true -name top_v1_0_project -directory C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.tmp/top_v1_0_project c:/github/Senior-Project-Vivado/ip_repo/TLC5955_SINGLE/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2940.258 ; gain = 3.836
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/github/Senior-Project-Vivado/Vision_Project/users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/ip_repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/DisplayDriver_SINGLE_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/github/Senior-Project-Vivado/ip_repo/myip_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2940.258 ; gain = 3.836
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+current_project Vision_Project
+file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.sysdef C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_bd_design [get_bd_designs VISION]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Mon Nov 12 18:53:01 2018] Launched synth_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Nov 12 19:11:36 2018] Launched impl_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/runme.log
+file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.sysdef C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+
+launch_sdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_cdma:4.1 - axi_cdma_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - driver_block_design_0_bram
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - driver_block_design_0_bram_0
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_1
+Adding cell -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding cell -- xilinx.com:user:driver_block_design:1.0 - driver_block_design_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <VISION> from BD file <C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd>
+startgroup
+set_property -dict [list CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1} CONFIG.DIN_WIDTH {2} CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1}] [get_bd_cells xlslice_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_WIDTH {3} CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1}] [get_bd_cells xlslice_0]
+endgroup
+disconnect_bd_intf_net [get_bd_intf_net driver_block_design_0_data_in_0] [get_bd_intf_pins system_ila_0/SLOT_0_BRAM]
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_intf_net [get_bd_intf_net driver_block_design_0_data_in_0] [get_bd_intf_pins system_ila_0/SLOT_0_BRAM]'
+disconnect_bd_intf_net [get_bd_intf_net driver_block_design_0_data_in_0] [get_bd_intf_pins system_ila_0/SLOT_0_BRAM]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { driver_block_design_0_data_in_0 } ]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {driver_block_design_0_data_in_1 }]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets driver_block_design_0_data_in_1] {NON_AXI_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_1' with mode INTERFACE, 1 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK1 to the following sink clock pins :
+/system_ila_1/clk
+Debug Automation : Connecting interface connection /driver_block_design_0_data_in_1, to System ILA slot interface pin /system_ila_1/SLOT_0_BRAM for debug.
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets driver_block_design_0_data_in_1] {NON_AXI_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                         ]'
+INFO: [Common 17-17] undo 'startgroup'
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_0_BRAM] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTA]
+save_bd_design
+Wrote  : <C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd> 
+Wrote  : <C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ui/bd_eb2c87a8.ui> 
+reset_run VISION_xlslice_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_xlslice_0_0_synth_1
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3104.680 ; gain = 53.664
+CRITICAL WARNING: [BD 41-1343] Reset pin /driver_block_design_0/reset_0 (associated clock /driver_block_design_0/clk_0) is connected to reset source /rst_ps7_0_100M/peripheral_reset (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK1.
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /driver_block_design_0_bram/BRAM_PORTA(BRAM_CTRL) and /driver_block_design_0/data_in_0(OTHER)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /driver_block_design_0_bram_0/BRAM_PORTA(BRAM_CTRL) and /driver_block_design_0/data_in_1(OTHER)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /system_ila_0/SLOT_0_BRAM(BRAM_CTRL) and /driver_block_design_0/data_in_1(OTHER)
+WARNING: [BD 41-927] Following properties on pin /driver_block_design_0/clk_0 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=VISION_processing_system7_0_0_FCLK_CLK1 
+Wrote  : <C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/driver_block_design_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/driver_block_design_0_bram_0/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/driver_block_design_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/driver_block_design_0_bram_0/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/sim/VISION.v
+VHDL Output written to : C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hdl/VISION_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cdma_0 .
+Exporting to file c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/hw_handoff/VISION_axi_smc_0.hwh
+Generated Block Design Tcl file c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/hw_handoff/VISION_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/synth/VISION_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_block_design_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_block_design_0_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_block_design_0_bram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/hw_handoff/VISION_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/hw_handoff/VISION_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/synth/VISION_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hw_handoff/VISION.hwh
+Generated Block Design Tcl file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hw_handoff/VISION_bd.tcl
+Generated Hardware Definition File C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP VISION_auto_pc_0, cache-ID = 3eefd1cce6b2fda1; cache size = 148.075 MB.
+[Mon Nov 12 20:30:54 2018] Launched VISION_xlslice_0_0_synth_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_xlslice_0_0_synth_1/runme.log
+[Mon Nov 12 20:30:54 2018] Launched synth_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:43 ; elapsed = 00:00:56 . Memory (MB): peak = 3355.984 ; gain = 324.512
+launch_runs impl_1 -jobs 4
+[Mon Nov 12 20:33:14 2018] Launched impl_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Nov 12 20:39:39 2018] Launched impl_1...
+Run output will be captured here: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/runme.log
+file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.sysdef C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A703B2A
+set_property PROGRAM.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/impl_1/VISION_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 20:43:33
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 20:43:33
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 20:47:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 20:47:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/003017A703B2A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A703B2A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 20:52:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 20:52:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+launch_sdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk -hwspec C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:01:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 21:01:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:02:59
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 21:02:59
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+current_project TLC_Project
+close_project
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Mon Nov 12 21:07:33 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 12 21:07:33 2018...
+close_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3372.461 ; gain = 0.000
+current_project driver_module
+open_bd_design {C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/driver_block_design.bd}
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:user:interrupt:1.0 - interrupt_0
+Adding cell -- xilinx.com:user:mean_machine_module:1.0 - mean_machine_module_0
+Adding cell -- xilinx.com:user:sout_module:1.0 - sout_module_0
+Adding cell -- xilinx.com:user:sout_module:1.0 - sout_module_1
+Successfully read diagram <driver_block_design> from BD file <C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/driver_block_design.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3372.461 ; gain = 0.000
+ipx::package_project -root_dir C:/github/Senior-Project-Vivado/ip_repo/DRIVER -vendor xilinx.com -library user -taxonomy /UserIP -module driver_block_design -import_files -force
+INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'driver_block_design' - hence not re-generating.
+WARNING: [IP_Flow 19-4963] driver_block_design_mean_machine_module_0_0 has board value specified. The packaged IP will be restricted to usage with board 'digilentinc.com:arty-z7-20:part0:1.0'
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK.CLK_0': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+current_project top_v1_0_project
+close_project
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source c:/github/senior-project-vivado/tlc_project/tlc_project.tmp/top_v1_0_project/top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'c:/github/senior-project-vivado/tlc_project/tlc_project.tmp/top_v1_0_project/top_v1_0_project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Mon Nov 12 21:10:36 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 12 21:10:36 2018...
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:20:59
+current_project Vision_Project
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 21:21:00
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:21:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 21:21:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:26:11
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 21:27:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 21:27:08
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 22:12:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 22:12:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Nov-12 22:16:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 22:16:50
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.

@@ -18,3 +18,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/dri
 INFO: [VRFC 10-311] analyzing module driver_block_design
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sim_1/new/driver_block_design_test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module driver_block_design_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/driver_module/driver_module.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

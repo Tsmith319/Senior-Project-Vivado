@@ -844,8 +844,8 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">VISION_xlslice_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">3</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -883,21 +883,21 @@
         <spirit:name>driver_block_design_0_data_in_0</spirit:name>
         <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="driver_block_design_0_bram"/>
         <spirit:activeInterface spirit:busRef="data_in_0" spirit:componentRef="driver_block_design_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>driver_block_design_0_data_in_1</spirit:name>
+        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="driver_block_design_0_bram_0"/>
+        <spirit:activeInterface spirit:busRef="data_in_1" spirit:componentRef="driver_block_design_0"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
         </bd:hdl_attributes>
       </spirit:interconnection>
       <spirit:monitorInterconnection>
-        <spirit:name>driver_block_design_0_data_in_0</spirit:name>
-        <spirit:monitoredActiveInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="driver_block_design_0_bram"/>
+        <spirit:name>driver_block_design_0_data_in_1</spirit:name>
+        <spirit:monitoredActiveInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="driver_block_design_0_bram_0"/>
         <spirit:monitorInterface spirit:busRef="SLOT_0_BRAM" spirit:componentRef="system_ila_0"/>
       </spirit:monitorInterconnection>
-      <spirit:interconnection>
-        <spirit:name>driver_block_design_0_data_in_1</spirit:name>
-        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="driver_block_design_0_bram_0"/>
-        <spirit:activeInterface spirit:busRef="data_in_1" spirit:componentRef="driver_block_design_0"/>
-      </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_M01_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="ps7_0_axi_periph"/>
@@ -937,11 +937,11 @@
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_1" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>

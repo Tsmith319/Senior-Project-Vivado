@@ -1,125 +1,9 @@
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling usbps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-11:44:03 **** Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: VISION.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: VISION.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  83236	   2624	  23712	 109572	  1ac04	VISION.elf
-'Finished building: VISION.elf.size'
-' '
-11:47:09 **** Incremental Build of configuration Debug for project VISION ****
+17:27:05 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-11:47:26 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-11:54:53 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-12:14:30 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-12:53:58 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-12:54:21 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:05:24 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:08:58 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:25:52 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:31:26 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-14:16:00 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-14:21:16 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-14:26:15 **** Incremental Build of configuration Debug for project VISION ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-14:34:08 **** Auto Build of configuration Debug for project VISION ****
+17:27:42 **** Auto Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -139,37 +23,871 @@ arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
   83236	   2624	  23712	 109572	  1ac04	VISION.elf
 'Finished building: VISION.elf.size'
 ' '
-14:34:15 **** Incremental Build of configuration Debug for project VISION ****
+17:28:35 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-15:03:22 **** Incremental Build of configuration Debug for project VISION ****
+17:54:49 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83236	   2624	  23712	 109572	  1ac04	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+17:54:53 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-15:31:24 **** Incremental Build of configuration Debug for project VISION ****
+17:55:07 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-15:47:23 **** Incremental Build of configuration Debug for project VISION ****
+17:55:11 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-15:48:41 **** Incremental Build of configuration Debug for project VISION ****
+17:55:55 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-16:02:25 **** Incremental Build of configuration Debug for project VISION ****
+17:56:47 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83236	   2624	  23712	 109572	  1ac04	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+17:57:07 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-16:39:38 **** Incremental Build of configuration Debug for project VISION ****
+17:58:28 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83236	   2624	  23712	 109572	  1ac04	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+17:58:52 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:12:44 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:54:23 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:56:22 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+19:57:26 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+19:57:39 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:58:38 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:11: warning: variable 'pixel_white' set but not used [-Wunused-but-set-variable]
+     Pixel pixel_white;
+           ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83156	   2624	  23712	 109492	  1abb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+19:58:52 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:42 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+19:59:46 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:00:27 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:11: warning: variable 'pixel_white' set but not used [-Wunused-but-set-variable]
+     Pixel pixel_white;
+           ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83156	   2624	  23712	 109492	  1abb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:00:38 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:00:51 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:00:57 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:01:29 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:02:17 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:02:20 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:03:07 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:04:46 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:04:49 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:21:42 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:22:29 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:43:19 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:47:01 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:47:19 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:49:04 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:51:23 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83156	   2624	  23712	 109492	  1abb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+20:51:46 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:55:55 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:56:30 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:59:16 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:02:33 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83284	   2624	  23712	 109620	  1ac34	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:02:36 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:20:37 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83156	   2624	  23712	 109492	  1abb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:20:40 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:21:37 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83156	   2624	  23712	 109492	  1abb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:21:42 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:25:51 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:26:01 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:26:50 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:34:09 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:50:52 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83220	   2624	  23712	 109556	  1abf4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:51:05 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:6: warning: unused variable 'LedValue' [-Wunused-variable]
+  int LedValue[16] = {8,12,9,13,14,10,15,11,7,3,6,2,1,5,0,4};
+      ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2624	  23712	 109684	  1ac74	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:51:57 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2624	  23712	 109684	  1ac74	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:52:03 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:54:15 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83412	   2624	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:54:25 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:54:58 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:55:12 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:97:9: warning: unused variable 'led2' [-Wunused-variable]
+     int led2 = LedValue[15];
+         ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2624	  23712	 109684	  1ac74	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:55:17 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:57:10 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:95:15: error: 'LedValue' undeclared (first use in this function)
+     int led = LedValue[0];
+               ^~~~~~~~
+../src/helloworld.c:95:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:96:9: warning: unused variable 'led2' [-Wunused-variable]
+     int led2 = LedValue[15];
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+21:57:30 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:9: warning: unused variable 'led2' [-Wunused-variable]
+     int led2 = LedValue[15];
+         ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83284	   2688	  23712	 109684	  1ac74	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+21:59:50 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:59:0:
+../src/pixel_data.h: In function 'getPixelOffset':
+../src/pixel_data.h:89:6: warning: unused variable 'ledVal' [-Wunused-variable]
+  int ledVal = LedValue[ledNum % 16];
+      ^~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:9: warning: unused variable 'led2' [-Wunused-variable]
+     int led2 = LedValue[15];
+         ^~~~
+In file included from ../src/helloworld.c:59:0:
+../src/pixel_data.h: In function 'getPixelOffset':
+../src/pixel_data.h:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:10:37 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:9: warning: unused variable 'led2' [-Wunused-variable]
+     int led2 = LedValue[15];
+         ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:11:38 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:11:54 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:13:50 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:13:52 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:14:12 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:14:18 **** Incremental Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:14:32 **** Auto Build of configuration Debug for project VISION ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VISION_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VISION.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VISION_bsp/ps7_cortexa9_0/lib -o "VISION.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VISION.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VISION.elf  |tee "VISION.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83348	   2688	  23712	 109748	  1acb4	VISION.elf
+'Finished building: VISION.elf.size'
+' '
+22:14:34 **** Incremental Build of configuration Debug for project VISION ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

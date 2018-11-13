@@ -80,19 +80,21 @@ int main()
 
 	XGpio_Initialize(&gpio, 0);
 
-	//XGpio_SetDataDirection(&gpio, 1, 0x00000000); // set GPIO channel tristates to All Output
 	printf("Layer Setup\n\r");
     Setup_Layer *setup = Setup_Layer_init();
     Layer *data = calloc(1, sizeof(Layer));
     Pixel pixel_white;
 
-    pixel_white.red = 0xFFFF;
-    pixel_white.green = 0xFFFF;
+    pixel_white.red = 0x0;
+    pixel_white.green = 0x0;
     pixel_white.blue = 0xFFFF;
 
-    for(int i = 0; i < 96; i++) {
+    /*for(int i = 0; i < 96; i++) {
     	data->pixels[i] = pixel_white;
-    }
+    }*/
+
+    data->pixels[getPixelOffset(0)] = pixel_white;
+    data->pixels[getPixelOffset(15)] = pixel_white;
 
     //Flush Buffer
     Xil_DCacheFlushRange((UINTPTR)data, sizeof(Layer));
@@ -117,10 +119,17 @@ int main()
 	XGpio_DiscreteWrite(&gpio, 1, control);
 
 	control |= 1 << 1;
-
-	usleep(10);
-	printf("Writing pixel data......\n\r");
 	XGpio_DiscreteWrite(&gpio, 1, control);
+	printf("Writing pixel data......\n\r");
+
+
+	while(1)
+	{
+		sleep(1);
+
+		control ^= 1 << 1;
+		XGpio_DiscreteWrite(&gpio, 1, control);
+	}
 
 
 	//Do something to trigger setup
