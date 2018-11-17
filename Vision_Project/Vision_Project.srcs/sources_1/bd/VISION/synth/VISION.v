@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Mon Nov 12 20:30:28 2018
+//Date        : Fri Nov 16 19:46:19 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
@@ -208,11 +208,11 @@ module VISION
   wire [31:0]driver_block_design_0_data_in_0_DOUT;
   wire driver_block_design_0_data_in_0_EN;
   wire driver_block_design_0_data_in_0_RST;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None ADDR" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_1_ADDR;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None CLK" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_CLK;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None DOUT" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]driver_block_design_0_data_in_1_DOUT;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None EN" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_EN;
-  (* CONN_BUS_INFO = "driver_block_design_0_data_in_1 xilinx.com:interface:bram:1.0 None RST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_data_in_1_RST;
+  wire [31:0]driver_block_design_0_data_in_1_ADDR;
+  wire driver_block_design_0_data_in_1_CLK;
+  wire [31:0]driver_block_design_0_data_in_1_DOUT;
+  wire driver_block_design_0_data_in_1_EN;
+  wire driver_block_design_0_data_in_1_RST;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_gsclk_0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_latch_0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_sclk_0;
@@ -849,12 +849,7 @@ module VISION
         .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   VISION_system_ila_0_0 system_ila_0
-       (.SLOT_0_BRAM_addr(driver_block_design_0_data_in_1_ADDR),
-        .SLOT_0_BRAM_clk(driver_block_design_0_data_in_1_CLK),
-        .SLOT_0_BRAM_dout(driver_block_design_0_data_in_1_DOUT),
-        .SLOT_0_BRAM_en(driver_block_design_0_data_in_1_EN),
-        .SLOT_0_BRAM_rst(driver_block_design_0_data_in_1_RST),
-        .TRIG_IN_trig(xlslice_0_Dout),
+       (.TRIG_IN_trig(xlslice_0_Dout),
         .clk(processing_system7_0_FCLK_CLK0),
         .probe0(axi_gpio_0_gpio_io_o),
         .probe1(axi_gpio_0_gpio2_io_o),

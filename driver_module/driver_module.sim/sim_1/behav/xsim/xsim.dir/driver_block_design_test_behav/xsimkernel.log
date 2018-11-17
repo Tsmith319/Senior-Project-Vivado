@@ -2,3 +2,6 @@ Running: xsim.dir/driver_block_design_test_behav/xsimk.exe -simmode gui -wdb dri
 Design successfully loaded
 Design Loading Memory Usage: 5364 KB (Peak: 5364 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 14024 KB (Peak: 14024 KB)
+Simulation CPU Usage: 4655 ms

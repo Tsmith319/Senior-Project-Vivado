@@ -10,7 +10,7 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
 rst -processor
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
-dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION/Debug/VISION.elf
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
 configparams force-mem-access 0
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
 con

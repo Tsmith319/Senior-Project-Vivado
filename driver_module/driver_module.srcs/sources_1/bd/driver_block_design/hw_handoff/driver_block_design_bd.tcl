@@ -164,7 +164,7 @@ proc create_root_design { parentCell } {
   set bitnum_0 [ create_bd_port -dir O -from 10 -to 0 bitnum_0 ]
   set clk_0 [ create_bd_port -dir I -type clk clk_0 ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {50000000} \
+   CONFIG.FREQ_HZ {25000000} \
  ] $clk_0
   set enable_0 [ create_bd_port -dir I enable_0 ]
   set gsclk_0 [ create_bd_port -dir O gsclk_0 ]

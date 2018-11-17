@@ -606,3 +606,10 @@ wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL
 display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"VISION_i/system_ila_0/inst/ila_lib"}]]
 INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Nov-12 22:16:50
 INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_project
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3376.691 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 12 22:24:18 2018...

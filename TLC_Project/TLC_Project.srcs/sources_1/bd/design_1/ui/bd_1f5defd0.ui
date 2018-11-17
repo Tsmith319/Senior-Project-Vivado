@@ -9,27 +9,28 @@ preplace port SCLK_0 -pg 1 -y 150 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 290 -defaultsOSRD
 preplace port SOUT_0 -pg 1 -y 110 -defaultsOSRD
 preplace inst DisplayDriver_SINGLE_0 -pg 1 -lvl 3 -y 150 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -y 90 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 130 -defaultsOSRD
 preplace inst top_0 -pg 1 -lvl 4 -y 140 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 560 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 330 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 4 NJ 270 NJ 270 NJ 270 NJ
+preplace netloc processing_system7_0_DDR 1 1 5 NJ 270 NJ 270 NJ 270 NJ 270 N
 preplace netloc DisplayDriver_SINGLE_0_red 1 3 1 N
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 470 250 790J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 470 250 900J
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 460 430
-preplace netloc top_0_LAT 1 4 1 N
+preplace netloc top_0_LAT 1 4 2 1410 200 1610
 preplace netloc DisplayDriver_SINGLE_0_blue 1 3 1 N
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 290 NJ 290 NJ 290 NJ
-preplace netloc top_0_SCLK 1 4 1 NJ
-preplace netloc top_0_SOUT 1 4 1 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 NJ 290 NJ 290 NJ 290 NJ 290 N
+preplace netloc top_0_SCLK 1 4 2 1420J 210 1640
+preplace netloc top_0_SOUT 1 4 2 1400 220 1620
 preplace netloc DisplayDriver_SINGLE_0_green 1 3 1 N
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 450 440 10 770
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 450 440 10 880
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N
-preplace netloc top_0_GSCLK 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 460J 260 780J 70 1050
+preplace netloc top_0_GSCLK 1 4 2 1430J 190 1630
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 4 460J 260 890J 70 1190 50 N
 preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 450
-levelinfo -pg 1 0 230 620 920 1160 1280 -top 0 -bot 660
+levelinfo -pg 1 0 230 730 1058 1290 1520 1660 -top -10 -bot 660
 ",
 }
 {

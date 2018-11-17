@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xAB6EA8774B9DD76F" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xAB6EA877930EB392" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -121,7 +121,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>50000000</spirit:value>
+            <spirit:value>25000000</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
                 <bd:configElementInfo bd:valueSource="user"/>
@@ -197,6 +197,16 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
+          <spirit:name>bitnum_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>10</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>clk_0</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -244,16 +254,6 @@
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
               <spirit:left>2</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>bitnum_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>10</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -316,9 +316,9 @@
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_bit_num</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="bit_num"/>
+        <spirit:externalPortReference spirit:portRef="bitnum_0"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="bit_num"/>
-        <spirit:externalPortReference spirit:portRef="bitnum_0"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>

@@ -23,29 +23,35 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.cache/wt [current_project]
-set_property parent.project_path C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.xpr [current_project]
+set_property webtalk.parent_dir C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.cache/wt [current_project]
+set_property parent.project_path C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  c:/Users/TaySm/users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo/DisplayDriver_SINGLE_1.0
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo/myip_1.0
+  users/derek/desktop/vivado/ip_repo/TLC5955_SINGLE
+  c:/github/Senior-Project-Vivado/ip_repo
+  c:/github/Senior-Project-Vivado/ip_repo/DisplayDriver_SINGLE_1.0
+  c:/github/Senior-Project-Vivado/ip_repo/myip_1.0
 } [current_project]
-set_property ip_output_repo c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.cache/ip [current_project]
+set_property ip_output_repo c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/src/Arty-Z7-20-Master.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/src/Arty-Z7-20-Master.xdc]
+set_property used_in_synthesis false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/bd_f60c_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -55,8 +61,8 @@ set_property used_in_implementation false [get_files -all C:/Users/TaySm/OneDriv
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc]
+read_xdc C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc
+set_property used_in_implementation false [get_files C:/github/Senior-Project-Vivado/TLC_Project/TLC_Project.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

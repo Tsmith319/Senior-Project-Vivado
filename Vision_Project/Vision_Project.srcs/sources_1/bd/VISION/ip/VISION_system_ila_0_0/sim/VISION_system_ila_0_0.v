@@ -64,11 +64,6 @@ module VISION_system_ila_0_0 (
   probe6,
   probe7,
   probe8,
-  SLOT_0_BRAM_en,
-  SLOT_0_BRAM_dout,
-  SLOT_0_BRAM_addr,
-  SLOT_0_BRAM_clk,
-  SLOT_0_BRAM_rst,
   TRIG_IN_trig,
   TRIG_IN_ack
 );
@@ -85,17 +80,6 @@ input wire [0 : 0] probe5;
 input wire [0 : 0] probe6;
 input wire [0 : 0] probe7;
 input wire [10 : 0] probe8;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SLOT_0_BRAM EN" *)
-input wire SLOT_0_BRAM_en;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SLOT_0_BRAM DOUT" *)
-input wire [31 : 0] SLOT_0_BRAM_dout;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SLOT_0_BRAM ADDR" *)
-input wire [31 : 0] SLOT_0_BRAM_addr;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SLOT_0_BRAM CLK" *)
-input wire SLOT_0_BRAM_clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_0_BRAM, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE BRAM_CTRL" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SLOT_0_BRAM RST" *)
-input wire SLOT_0_BRAM_rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *)
 input wire [0 : 0] TRIG_IN_trig;
 (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *)
@@ -112,11 +96,6 @@ output wire [0 : 0] TRIG_IN_ack;
     .probe6(probe6),
     .probe7(probe7),
     .probe8(probe8),
-    .SLOT_0_BRAM_en(SLOT_0_BRAM_en),
-    .SLOT_0_BRAM_dout(SLOT_0_BRAM_dout),
-    .SLOT_0_BRAM_addr(SLOT_0_BRAM_addr),
-    .SLOT_0_BRAM_clk(SLOT_0_BRAM_clk),
-    .SLOT_0_BRAM_rst(SLOT_0_BRAM_rst),
     .TRIG_IN_trig(TRIG_IN_trig),
     .TRIG_IN_ack(TRIG_IN_ack)
   );

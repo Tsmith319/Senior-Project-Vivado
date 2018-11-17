@@ -1,15 +1,15 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Oct 14 11:48:24 2018
-//Host        : MSI970-Station running 64-bit major release  (build 9200)
+//Date        : Fri Nov 16 18:22:14 2018
+//Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -148,10 +148,10 @@ module design_1
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
-  wire top_0_GSCLK;
-  wire top_0_LAT;
-  wire top_0_SCLK;
-  wire top_0_SOUT;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire top_0_GSCLK;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire top_0_LAT;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire top_0_SCLK;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire top_0_SOUT;
 
   assign GSCLK_0 = top_0_GSCLK;
   assign LAT_0 = top_0_LAT;
@@ -319,6 +319,12 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  design_1_system_ila_0_0 system_ila_0
+       (.clk(processing_system7_0_FCLK_CLK1),
+        .probe0(top_0_SOUT),
+        .probe1(top_0_LAT),
+        .probe2(top_0_GSCLK),
+        .probe3(top_0_SCLK));
   design_1_top_0_1 top_0
        (.GSCLK(top_0_GSCLK),
         .LAT(top_0_LAT),

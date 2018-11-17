@@ -7,6 +7,5 @@
 # of Vivado)
 ################################################################################
 create_clock -name clk -period 10 [get_ports clk]
-create_clock -name SLOT_0_BRAM_clk -period 10 [get_ports SLOT_0_BRAM_clk]
 
 ################################################################################

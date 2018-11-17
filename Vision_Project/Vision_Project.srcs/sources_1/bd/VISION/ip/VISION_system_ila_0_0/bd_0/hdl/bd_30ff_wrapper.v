@@ -7,12 +7,7 @@
 `timescale 1 ps / 1 ps
 
 module bd_30ff_wrapper
-   (SLOT_0_BRAM_addr,
-    SLOT_0_BRAM_clk,
-    SLOT_0_BRAM_dout,
-    SLOT_0_BRAM_en,
-    SLOT_0_BRAM_rst,
-    TRIG_IN_ack,
+   (TRIG_IN_ack,
     TRIG_IN_trig,
     clk,
     probe0,
@@ -24,11 +19,6 @@ module bd_30ff_wrapper
     probe6,
     probe7,
     probe8);
-  input [31:0]SLOT_0_BRAM_addr;
-  input SLOT_0_BRAM_clk;
-  input [31:0]SLOT_0_BRAM_dout;
-  input SLOT_0_BRAM_en;
-  input SLOT_0_BRAM_rst;
   output [0:0]TRIG_IN_ack;
   input [0:0]TRIG_IN_trig;
   input clk;
@@ -42,11 +32,6 @@ module bd_30ff_wrapper
   input [0:0]probe7;
   input [10:0]probe8;
 
-  wire [31:0]SLOT_0_BRAM_addr;
-  wire SLOT_0_BRAM_clk;
-  wire [31:0]SLOT_0_BRAM_dout;
-  wire SLOT_0_BRAM_en;
-  wire SLOT_0_BRAM_rst;
   wire [0:0]TRIG_IN_ack;
   wire [0:0]TRIG_IN_trig;
   wire clk;
@@ -61,12 +46,7 @@ module bd_30ff_wrapper
   wire [10:0]probe8;
 
   bd_30ff bd_30ff_i
-       (.SLOT_0_BRAM_addr(SLOT_0_BRAM_addr),
-        .SLOT_0_BRAM_clk(SLOT_0_BRAM_clk),
-        .SLOT_0_BRAM_dout(SLOT_0_BRAM_dout),
-        .SLOT_0_BRAM_en(SLOT_0_BRAM_en),
-        .SLOT_0_BRAM_rst(SLOT_0_BRAM_rst),
-        .TRIG_IN_ack(TRIG_IN_ack),
+       (.TRIG_IN_ack(TRIG_IN_ack),
         .TRIG_IN_trig(TRIG_IN_trig),
         .clk(clk),
         .probe0(probe0),
