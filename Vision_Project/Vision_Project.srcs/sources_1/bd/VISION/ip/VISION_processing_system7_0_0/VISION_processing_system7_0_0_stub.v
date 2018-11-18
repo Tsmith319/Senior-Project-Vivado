@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Nov 16 17:54:28 2018
-// Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0_stub.v
+// Date        : Sun Nov 11 16:22:07 2018
+// Host        : MSI970-Station running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub -rename_top VISION_processing_system7_0_0 -prefix
+//               VISION_processing_system7_0_0_ VISION_processing_system7_0_0_stub.v
 // Design      : VISION_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

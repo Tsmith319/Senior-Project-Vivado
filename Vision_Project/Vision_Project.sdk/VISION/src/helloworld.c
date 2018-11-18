@@ -49,6 +49,7 @@
 #include <stdlib.h>
 #include "platform.h"
 #include "xgpio.h"
+#include "xuartps.h"
 #include "xparameters.h"
 
 #include "xaxicdma.h"
@@ -62,103 +63,86 @@
 XAxiCdma_Config *axi_cdma_cfg;
 XAxiCdma axi_cdma;
 
+XUartPs_Config *Config;
+XUartPs Uart_PS;
+
+XGpio gpio;
+
+int driverControl;
+
 #define BRAM_SETUP 0xC0000000
 #define BRAM_LAYER_1 0xC2000000
 
 long setup_bram();
+long setup_uart();
 void transfer(UINTPTR source, UINTPTR dest, int length);
+void next_section();
+void init_control();
 
 int main()
 {
 	init_platform();
-
-
-    printf("Welcome to the test!\n\r");
-
-    printf("Initialize GPIO\n\r");
-    XGpio gpio;
-
+	setup_uart();
+	printf("--------------Initializing-----------------\n\r");
+	printf("\t-GPIO\n\r");
 	XGpio_Initialize(&gpio, 0);
-
-	printf("Layer Setup\n\r");
-    Setup_Layer *setup = Setup_Layer_init();
-    Layer *data = calloc(1, sizeof(Layer));
-    Layer *data2 = calloc(1, sizeof(Layer));
-    Pixel pixel_white;
-    Pixel pixel_green;
-    Pixel pixel_red;
-    Pixel pixel_blue;
-
-    pixel_white.red = 0xFFFF;
-    pixel_white.green = 0xFFFF;
-    pixel_white.blue = 0x7FFF;
-
-    pixel_green.red = 0x0;
-    pixel_green.green = 0xFFFF;
-    pixel_green.blue = 0x0;
-
-    pixel_red.red = 0xFFFF;
-    pixel_red.green = 0x0;
-    pixel_red.blue = 0x0;
-
-    pixel_blue.red = 0x0;
-    pixel_blue.green = 0x0;
-    pixel_blue.blue = 0x7FFF;
-
-    for(int i = 0; i <= 31; i++)
-    {
-    	write_PixelData(getPixelOffset(i), pixel_white, data);
-    }
-//    write_PixelData(getPixelOffset(20), pixel_red, data);
-    for(int i = 0; i <= 31; i++)
-    {
-    	write_PixelData(getPixelOffset(i), pixel_blue, data2);
-    }
-//    write_PixelData(getPixelOffset(20), pixel_blue, data2);
-
-
-    //Flush Buffer
-    Xil_DCacheFlushRange((UINTPTR)data, sizeof(Layer));
-    Xil_DCacheFlushRange((UINTPTR)data2, sizeof(Layer));
-    Xil_DCacheFlushRange((UINTPTR)setup, sizeof(Setup_Layer));
-
+	printf("\t-BRAM\n\r");
     if(setup_bram() == XST_FAILURE)
     {
     	return XST_FAILURE;
     }
 
-    transfer((UINTPTR)setup, (UINTPTR)BRAM_SETUP, sizeof(Setup_Layer));
+	printf("\t-DRIVER\n\r");
+	init_control();
+	printf("--------------DONE------------------------\n\r");
+
+
+
+	printf("Layer Setup\n\r");
+
+    Layer *data = calloc(1, sizeof(Layer));
+    Layer *data2 = calloc(1, sizeof(Layer));
+
+
+    for(int i = 0; i <= 31; i++)
+    {
+//    	if(i == 22)
+//    	{
+//    		write_PixelData(getPixelOffset(i), pixel_white2, data);
+//    	}
+//    	else
+//    	{
+    		write_PixelData(getPixelOffset(i), pixel_white, data);
+//    	}
+    }
+
+    for(int i = 0; i <= 31; i++)
+    {
+    	write_PixelData(getPixelOffset(i), pixel_green, data2);
+    }
+
+
 	transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
 	transfer((UINTPTR)data2, (UINTPTR)BRAM_LAYER_1 + sizeof(Layer), sizeof(Layer));
 
-	printf("Writing setup data......\n\r");
-	int control = 0x0;
-	control |= 1 << 2;
-	int enable = 0x1;
 
-	XGpio_DiscreteWrite(&gpio, 2, enable);
-	usleep(10);
-
-	XGpio_DiscreteWrite(&gpio, 1, control);
-
-	control |= 1 << 1;
-	XGpio_DiscreteWrite(&gpio, 1, control);
 	printf("Writing pixel data......\n\r");
+	next_section();
 
+	char buf[20];
+	buf[1] = 0;
 
 	while(1)
 	{
 		sleep(1);
 
-		control ^= 1 << 1;
-		control ^= 1 << 0;
-		XGpio_DiscreteWrite(&gpio, 1, control);
+		//int count = XUartPs_Recv(&Uart_PS, (u8*)buf, 20);
+
+		//printf("Count: %d || \"%s\"\n\r", count, buf);
+		next_section();
 	}
 
 
-	//Do something to trigger setup
-
-	printf("Test over!\n\r");
     cleanup_platform();
     return 0;
 }
@@ -191,6 +175,9 @@ void transfer(UINTPTR source, UINTPTR dest, int length) {
 		while (XAxiCdma_IsBusy(&axi_cdma));
 	}
 
+	printf("Flushing cache...\n\r");
+	Xil_DCacheFlushRange(source, length);
+
 	printf("Starting transfer!\n\r");
 	// Initiate a transfer
 	int Status = XAxiCdma_SimpleTransfer(
@@ -213,4 +200,51 @@ void transfer(UINTPTR source, UINTPTR dest, int length) {
 	printf("Transfer finished!\n\r");
 }
 
+void init_control() {
+	driverControl = 0x0;
+	driverControl |= 1 << 2;
+	int enable = 0x1;
 
+	Setup_Layer *setup = Setup_Layer_init();
+
+	Xil_DCacheFlushRange((UINTPTR)setup, sizeof(Setup_Layer));
+
+	transfer((UINTPTR)setup, (UINTPTR)BRAM_SETUP, sizeof(Setup_Layer));
+
+
+	XGpio_DiscreteWrite(&gpio, 2, enable);
+
+	usleep(10);
+
+	XGpio_DiscreteWrite(&gpio, 1, driverControl);
+
+}
+
+void next_section() {
+	driverControl ^= 1 << 1;
+	driverControl ^= 1 << 0;
+	XGpio_DiscreteWrite(&gpio, 1, driverControl);
+}
+
+long setup_uart() {
+	int Status;
+
+	Config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+
+	if (NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XUartPs_CfgInitialize(&Uart_PS, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/* Check hardware build. */
+	Status = XUartPs_SelfTest(&Uart_PS);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}

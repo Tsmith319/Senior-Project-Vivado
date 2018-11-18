@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Nov 16 17:54:21 2018
+// Date        : Sat Nov 17 14:36:44 2018
 // Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0_sim_netlist.v
@@ -37,7 +37,7 @@ module VISION_driver_block_design_0_0
     sout_0);
   input [2:0]GPIO_IN;
   output [10:0]bitnum_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 25000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK1" *) input clk_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 50000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK1" *) input clk_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *) output [31:0]data_in_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 CLK" *) output data_in_0_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 DOUT" *) input [31:0]data_in_0_dout;
@@ -121,7 +121,7 @@ module VISION_driver_block_design_0_0_driver_block_design
     sout_0);
   input [2:0]GPIO_IN;
   output [10:0]bitnum_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 25000000, PHASE 0.000" *) input clk_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 50000000, PHASE 0.000" *) input clk_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32" *) output [31:0]data_in_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 CLK" *) output data_in_0_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 DOUT" *) input [31:0]data_in_0_dout;
@@ -140,6 +140,7 @@ module VISION_driver_block_design_0_0_driver_block_design
   output sout_0;
 
   wire [2:0]GPIO_IN;
+  wire [10:0]bitnum_0;
   wire clk_0;
   wire [31:0]data_in_0_addr;
   wire data_in_0_clk;
@@ -157,7 +158,6 @@ module VISION_driver_block_design_0_0_driver_block_design
   wire interrupt_0_next_section;
   wire interrupt_0_setup;
   wire latch_0;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [10:0]mean_machine_module_0_bit_num;
   wire [1:0]mean_machine_module_0_buf_select;
   wire mean_machine_module_0_latch_select;
   wire mean_machine_module_0_ready;
@@ -167,7 +167,6 @@ module VISION_driver_block_design_0_0_driver_block_design
   wire sout_module_0_sout;
   wire [1:0]xlconstant_0_dout;
 
-  assign bitnum_0[10:0] = mean_machine_module_0_bit_num;
   (* CHECK_LICENSE_TYPE = "driver_block_design_interrupt_0_0,interrupt,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* IP_DEFINITION_SOURCE = "package_project" *) 
@@ -185,7 +184,7 @@ module VISION_driver_block_design_0_0_driver_block_design
   (* IP_DEFINITION_SOURCE = "package_project" *) 
   (* X_CORE_INFO = "mean_machine_module,Vivado 2018.2" *) 
   VISION_driver_block_design_0_0_driver_block_design_mean_machine_module_0_0 mean_machine_module_0
-       (.bit_num(mean_machine_module_0_bit_num),
+       (.bit_num(bitnum_0),
         .buf_select(mean_machine_module_0_buf_select),
         .buf_selected(interrupt_0_buf_select),
         .clk(clk_0),
@@ -208,7 +207,7 @@ module VISION_driver_block_design_0_0_driver_block_design
         .b_d_out(data_in_0_dout),
         .b_en(data_in_0_en),
         .b_rst(data_in_0_rst),
-        .bit_num(mean_machine_module_0_bit_num),
+        .bit_num(bitnum_0),
         .buf_num(xlconstant_0_dout),
         .clk(clk_0),
         .latch_select(mean_machine_module_0_latch_select),
@@ -225,7 +224,7 @@ module VISION_driver_block_design_0_0_driver_block_design
         .b_d_out(data_in_1_dout),
         .b_en(data_in_1_en),
         .b_rst(data_in_1_rst),
-        .bit_num(mean_machine_module_0_bit_num),
+        .bit_num(bitnum_0),
         .buf_num(mean_machine_module_0_buf_select),
         .clk(clk_0),
         .latch_select(mean_machine_module_0_latch_select),
@@ -249,7 +248,7 @@ module VISION_driver_block_design_0_0_driver_block_design_interrupt_0_0
     setup,
     next_section,
     buf_select);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 25000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *) input reset;
   input [2:0]GPIO_IN;
   input ready;
@@ -292,7 +291,7 @@ module VISION_driver_block_design_0_0_driver_block_design_mean_machine_module_0_
     setup);
   input enable;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 25000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   input next_section;
   input buf_selected;
   output latch_select;
@@ -349,7 +348,7 @@ module VISION_driver_block_design_0_0_driver_block_design_sout_module_0_0
     b_d_out,
     b_en,
     b_rst);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 25000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   input [10:0]bit_num;
   input [1:0]buf_num;
   input pass_through_bit;
@@ -645,7 +644,7 @@ module VISION_driver_block_design_0_0_driver_block_design_sout_module_1_0
     b_d_out,
     b_en,
     b_rst);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 25000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *) input clk;
   input [10:0]bit_num;
   input [1:0]buf_num;
   input pass_through_bit;

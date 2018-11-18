@@ -173,7 +173,7 @@
   "../../../bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_xlconstant_0_0/sim/driver_block_design_xlconstant_0_0.v" \
   "../../../../Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/ipshared/445d/INTERRUPT_DRIVER.srcs/sources_1/new/interrupt.v" \
   "../../../bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_interrupt_0_0/sim/driver_block_design_interrupt_0_0.v" \
-  "../../../bd/VISION/ipshared/e0eb/sim/driver_block_design.v" \
+  "../../../bd/VISION/ipshared/8687/sim/driver_block_design.v" \
   "../../../bd/VISION/ip/VISION_driver_block_design_0_0/sim/VISION_driver_block_design_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
@@ -220,15 +220,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/VISION/ip/VISION_xbar_0/sim/VISION_xbar_0.v" \
   "../../../bd/VISION/sim/VISION.v" \
-  "../../../bd/VISION/ip/VISION_system_ila_0_0/bd_0/sim/bd_30ff.v" \
-  "../../../bd/VISION/ip/VISION_system_ila_0_0/bd_0/ip/ip_0/sim/bd_30ff_ila_lib_0.v" \
-  "../../../bd/VISION/ip/VISION_system_ila_0_0/sim/VISION_system_ila_0_0.v" \
--endlib
--makelib xcelium_lib/xlslice_v1_0_1 \
-  "../../../../Vision_Project.srcs/sources_1/bd/VISION/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/VISION/ip/VISION_xlslice_0_0/sim/VISION_xlslice_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_17 \
   "../../../../Vision_Project.srcs/sources_1/bd/VISION/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

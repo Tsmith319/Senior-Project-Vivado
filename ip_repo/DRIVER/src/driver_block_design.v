@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Nov 16 17:49:46 2018
+//Date        : Sat Nov 17 14:33:30 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target driver_block_design.bd
 //Design      : driver_block_design
@@ -32,7 +32,7 @@ module driver_block_design
     sout_0);
   input [2:0]GPIO_IN;
   output [10:0]bitnum_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 25000000, PHASE 0.000" *) input clk_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 50000000, PHASE 0.000" *) input clk_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32" *) output [31:0]data_in_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 CLK" *) output data_in_0_clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 DOUT" *) input [31:0]data_in_0_dout;
@@ -56,7 +56,7 @@ module driver_block_design
   wire interrupt_0_buf_select;
   wire interrupt_0_next_section;
   wire interrupt_0_setup;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [10:0]mean_machine_module_0_bit_num;
+  wire [10:0]mean_machine_module_0_bit_num;
   wire [1:0]mean_machine_module_0_buf_select;
   wire mean_machine_module_0_gsclk;
   wire mean_machine_module_0_latch;
