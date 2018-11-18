@@ -48,15 +48,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "platform.h"
-#include "xgpio.h"
+
 #include "xuartps.h"
 #include "xparameters.h"
 
 #include "xaxicdma.h"
 #include "sleep.h"
-
-
 #include "xil_printf.h"
+
+
+#include "command.h"
 #include "pixel_data.h"
 
 
@@ -64,7 +65,7 @@ XAxiCdma_Config *axi_cdma_cfg;
 XAxiCdma axi_cdma;
 
 XUartPs_Config *Config;
-XUartPs Uart_PS;
+XUartPs USB_uart;
 
 XGpio gpio;
 
@@ -94,58 +95,107 @@ int main()
 
 	printf("\t-DRIVER\n\r");
 	init_control();
+
+	printf("\t-BUFFER\n\r");
+
+	for(int i = 0; i < 10; i++)
+	{
+		frame_buffer[i] = (Frame*)calloc(1, sizeof(Frame));
+		if(frame_buffer[i] == NULL)
+			print("Dude wtf\n\r");
+	}
 	printf("--------------DONE------------------------\n\r");
 
 
 
-	printf("Layer Setup\n\r");
+//	printf("Layer Setup\n\r");
 
-    Layer *data = calloc(1, sizeof(Layer));
-    Layer *data2 = calloc(1, sizeof(Layer));
-
-
-    for(int i = 0; i <= 31; i++)
-    {
-//    	if(i == 22)
-//    	{
-//    		write_PixelData(getPixelOffset(i), pixel_white2, data);
-//    	}
-//    	else
-//    	{
-    		write_PixelData(getPixelOffset(i), pixel_white, data);
-//    	}
-    }
-
-    for(int i = 0; i <= 31; i++)
-    {
-    	write_PixelData(getPixelOffset(i), pixel_green, data2);
-    }
+    //Layer *data = calloc(1, sizeof(Layer));
 
 
-	transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
-	transfer((UINTPTR)data2, (UINTPTR)BRAM_LAYER_1 + sizeof(Layer), sizeof(Layer));
+
+//    for(int i = 0; i <= 31; i++)
+//    {
+//		write_PixelData(getPixelOffset(i), pixel_white, data);
+//    }
 
 
-	printf("Writing pixel data......\n\r");
-	next_section();
 
-	char buf[20];
-	buf[1] = 0;
+
+//	transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
+
+
+//	printf("Writing pixel data......\n\r");
+//	next_section();
+
+
+//	Pixel colors[4] = {pixel_white, pixel_red, pixel_green, pixel_blue};
+//
+//	int color = 0;
 
 	while(1)
 	{
-		sleep(1);
+//		sleep(1);
+//
+//		for(int i = 0; i <= 31; i++)
+//		{
+//		    	write_PixelData(getPixelOffset(i), colors[color % 4], data);
+//		}
 
+
+//		transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
 		//int count = XUartPs_Recv(&Uart_PS, (u8*)buf, 20);
 
 		//printf("Count: %d || \"%s\"\n\r", count, buf);
-		next_section();
+//		next_section();
+//		color++;
+
+		int count = XUartPs_Recv(&USB_uart, (u8*)buffer, 1);
+
+		if(count == 1)
+		{
+			SerialFrame frame;
+
+			switch(buffer[0])
+			{
+				case CLEAR_FRAME :
+
+					break;
+				default:
+				case DRAW_FRAME :
+					frame = receive_frame(&USB_uart);
+					package_frame(frame);
+					free(frame.pixels);
+					break;
+			}
+		}
+
+		render();
 	}
 
 
     cleanup_platform();
     return 0;
 }
+
+
+void render()
+{
+	int current_theta = 0;
+	int current_layer = 0;
+
+	//Change this for proper animations
+	// TODO:
+	//		-Selecting proper buffer of BRAM
+	//		-Rotation timing??
+	transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+	next_section();
+
+	//In future, only increment this on the full revolution
+	if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
+		currentFrame++;
+}
+
 
 long setup_bram() {
 	// Set up the AXI CDMA
@@ -207,7 +257,7 @@ void init_control() {
 
 	Setup_Layer *setup = Setup_Layer_init();
 
-	Xil_DCacheFlushRange((UINTPTR)setup, sizeof(Setup_Layer));
+	//Xil_DCacheFlushRange((UINTPTR)setup, sizeof(Setup_Layer));
 
 	transfer((UINTPTR)setup, (UINTPTR)BRAM_SETUP, sizeof(Setup_Layer));
 
@@ -222,7 +272,7 @@ void init_control() {
 
 void next_section() {
 	driverControl ^= 1 << 1;
-	driverControl ^= 1 << 0;
+	//driverControl ^= 1 << 0;
 	XGpio_DiscreteWrite(&gpio, 1, driverControl);
 }
 
@@ -235,13 +285,13 @@ long setup_uart() {
 		return XST_FAILURE;
 	}
 
-	Status = XUartPs_CfgInitialize(&Uart_PS, Config, Config->BaseAddress);
+	Status = XUartPs_CfgInitialize(&USB_uart, Config, Config->BaseAddress);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
 	/* Check hardware build. */
-	Status = XUartPs_SelfTest(&Uart_PS);
+	Status = XUartPs_SelfTest(&USB_uart);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}

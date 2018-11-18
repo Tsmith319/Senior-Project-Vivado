@@ -1,0 +1,28 @@
+/*
+ * command.h
+ *
+ *  Created on: Nov 17, 2018
+ *      Author: TaySm
+ */
+
+#ifndef SRC_COMMAND_H_
+#define SRC_COMMAND_H_
+
+#include "pixel_data.h"
+
+#define CLEAR_FRAME 0x00
+#define DRAW_FRAME 0x01
+
+
+char buffer[100];
+
+typedef struct {
+	uint8_t z;
+	uint8_t r;
+	uint16_t theta;
+	Pixel color;
+} SerialPixel;
+
+
+
+#endif /* SRC_COMMAND_H_ */

@@ -13,7 +13,7 @@
 int LedValue[16] = {8,12,9,13,14,10,15,11,7,3,6,2,1,5,0,4};
 
 typedef struct {
-	uint16_t red, green, blue;
+	uint16_t blue, green, red;
 } Pixel;
 
 typedef struct {
@@ -22,9 +22,12 @@ typedef struct {
 } Layer;
 
 typedef struct {
-	Layer layers[24];
-} Frame;
+	Layer layers[17];
+} Section;
 
+typedef struct {
+	Section sections[360];
+} Frame;
 
 typedef struct {
 	uint32_t data[24];
@@ -34,6 +37,11 @@ typedef struct {
 	TLC_Setup data[2];
 } Setup_Layer;
 
+
+Frame* frame_buffer[10];
+
+int nextFrameToWrite = 0;
+int currentFrame = 9;
 
 static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
 static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
