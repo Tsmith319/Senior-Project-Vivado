@@ -14,9 +14,8 @@
 #define CLEAR_FRAME 0x00
 #define DRAW_FRAME 0x01
 
-#define BUFFER_SIZE 100
 
-uint8_t buffer[BUFFER_SIZE];
+uint8_t buffer[100];
 
 typedef struct {
 	uint8_t z;
@@ -30,59 +29,6 @@ typedef struct {
 	SerialPixel *pixels;
 } SerialFrame;
 
-
-
-uint32_t package32(int index)
-{
-	uint32_t value = 0;
-
-	value |= buffer[index] << 0;
-	value |= buffer[index + 1] << 1;
-	value |= buffer[index + 2] << 2;
-	value |= buffer[index + 3] << 3;
-
-	return value;
-}
-
-uint16_t package16(int index)
-{
-	uint16_t value = 0;
-
-	value |= buffer[index] << 0;
-	value |= buffer[index + 1] << 1;
-
-	return value;
-}
-
-uint8_t package8(int index)
-{
-	return buffer[index];
-}
-
-SerialPixel packagePixel(int index) {
-	SerialPixel pixel;
-
-	pixel.z = package8(index);
-	index += sizeof(char);
-
-	pixel.r = package8(index);
-	index += sizeof(char);
-
-	pixel.theta = package16(index);
-	index += sizeof(uint16_t);
-
-	pixel.color.red = package16(index);
-	index += sizeof(uint16_t);
-
-	pixel.color.green = package16(index);
-	index += sizeof(uint16_t);
-
-	pixel.color.blue = package16(index);
-
-	return pixel;
-}
-
-
 SerialFrame receive_frame(XUartPs *port) {
 	SerialFrame frame;
 	int byteCount = 0;
@@ -92,7 +38,7 @@ SerialFrame receive_frame(XUartPs *port) {
 		byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, 4 - byteCount);
 	}
 
-	frame.count = package32(0);
+	frame.count = ((uint32_t*)buffer)[0];
 
 	frame.pixels = calloc(frame.count, sizeof(SerialPixel));
 
@@ -105,7 +51,7 @@ SerialFrame receive_frame(XUartPs *port) {
 			byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, sizeof(SerialPixel) - byteCount);
 		}
 
-		frame.pixels[i] = packagePixel(0);
+		frame.pixels[i] = ((SerialPixel*) buffer)[0];
 	}
 
 	printf("Received frame!\n\r");
@@ -129,7 +75,5 @@ void package_frame(SerialFrame frame)
 	else
 		nextFrameToWrite++;
 }
-
-
 
 #endif /* SRC_COMMAND_H_ */

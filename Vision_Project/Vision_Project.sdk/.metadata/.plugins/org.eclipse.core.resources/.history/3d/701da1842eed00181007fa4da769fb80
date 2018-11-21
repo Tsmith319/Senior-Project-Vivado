@@ -56,9 +56,6 @@
 #include "sleep.h"
 #include "xil_printf.h"
 
-#include "xscutimer.h"
-#include "xscugic.h"
-
 
 #include "command.h"
 #include "pixel_data.h"
@@ -72,9 +69,6 @@ XUartPs USB_uart;
 
 XGpio gpio;
 
-XScuTimer TimerInstance;	/* Cortex A9 Scu Private Timer Instance */
-XScuGic IntcInstance;		/* Interrupt Controller Instance */
-
 int driverControl;
 
 #define BRAM_SETUP 0xC0000000
@@ -82,8 +76,6 @@ int driverControl;
 
 long setup_bram();
 long setup_uart();
-long setup_interrupts();
-
 void transfer(UINTPTR source, UINTPTR dest, int length);
 void next_section();
 void init_control();
@@ -112,10 +104,6 @@ int main()
 		if(frame_buffer[i] == NULL)
 			print("Dude wtf\n\r");
 	}
-
-	printf("\t-INTERRUPTS\n\r");
-	setup_interrupts();
-
 	printf("--------------DONE------------------------\n\r");
 
 
@@ -182,7 +170,7 @@ int main()
 			}
 		}
 
-		//render();
+		render();
 	}
 
 
@@ -191,9 +179,9 @@ int main()
 }
 
 
-void render(void *CallBackRef)
+void render()
 {
-	/*int current_theta = 0;
+	int current_theta = 0;
 	int current_layer = 0;
 
 	//Change this for proper animations
@@ -206,11 +194,8 @@ void render(void *CallBackRef)
 	//In future, only increment this on the full revolution
 	if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
 		currentFrame++;
-	*/
-	printf("INTERRUPT!\n\r");
-
-	XScuTimer_ClearInterruptStatus(&TimerInstance);
 }
+
 
 long setup_bram() {
 	// Set up the AXI CDMA
@@ -313,106 +298,3 @@ long setup_uart() {
 
 	return XST_SUCCESS;
 }
-
-long setup_interrupts() {
-	int Status;
-	XScuTimer_Config *ConfigPtr;
-	XScuGic_Config *IntcConfig;
-
-
-	/*
-	 * Initialize the Scu Private Timer driver.
-	 */
-	ConfigPtr = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
-	Status = XScuTimer_CfgInitialize(&TimerInstance, ConfigPtr,
-						ConfigPtr->BaseAddr);
-	if (Status != XST_SUCCESS) {
-			return XST_FAILURE;
-		}
-
-	/*
-	 * Perform a self-test to ensure that the hardware was built correctly.
-	 */
-	Status = XScuTimer_SelfTest(&TimerInstance);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-
-	/*
-	 * Initialize the interrupt controller driver so that it is ready to
-	 * use.
-	 */
-	IntcConfig = XScuGic_LookupConfig(XPAR_SCUGIC_SINGLE_DEVICE_ID);
-	if (NULL == IntcConfig) {
-		return XST_FAILURE;
-	}
-
-	Status = XScuGic_CfgInitialize(&IntcInstance, IntcConfig,
-					IntcConfig->CpuBaseAddress);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	Xil_ExceptionInit();
-
-
-
-	/*
-	 * Connect the interrupt controller interrupt handler to the hardware
-	 * interrupt handling logic in the processor.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
-				(Xil_ExceptionHandler)XScuGic_InterruptHandler,
-				&IntcInstance);
-
-	/*
-	 * Connect the device driver handler that will be called when an
-	 * interrupt for the device occurs, the handler defined above performs
-	 * the specific interrupt processing for the device.
-	 */
-	Status = XScuGic_Connect(&IntcInstance, XPAR_SCUTIMER_INTR,
-				(Xil_ExceptionHandler)render,
-				(void *)&TimerInstance);
-	if (Status != XST_SUCCESS) {
-		return Status;
-	}
-
-	/*
-	 * Enable the interrupt for the device.
-	 */
-	XScuGic_Enable(&IntcInstance, XPAR_SCUTIMER_INTR);
-
-	/*
-	 * Enable the timer interrupts for timer mode.
-	 */
-	XScuTimer_EnableInterrupt(&TimerInstance);
-
-	Xil_ExceptionEnable();
-
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	/*
-	 * Enable Auto reload mode.
-	 */
-	XScuTimer_EnableAutoReload(&TimerInstance);
-
-
-	/*
-	 * Load the timer counter register.
-	 */
-	XScuTimer_LoadTimer(&TimerInstance, 0xFFFF);
-
-	/*
-	 * Start the timer counter and then wait for it
-	 * to timeout a number of times.
-	 */
-	XScuTimer_Start(&TimerInstance);
-
-	return XST_SUCCESS;
-}
-
-
-

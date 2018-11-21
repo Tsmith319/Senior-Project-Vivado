@@ -37,11 +37,11 @@ typedef struct {
 	TLC_Setup data[2];
 } Setup_Layer;
 
-#define FRAME_BUFFER_SIZE 10
-Frame* frame_buffer[FRAME_BUFFER_SIZE];
+
+Frame* frame_buffer[10];
 
 int nextFrameToWrite = 0;
-int currentFrame = FRAME_BUFFER_SIZE - 1;
+int currentFrame = 9;
 
 static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
 static Pixel pixel_red = {0xFFFF, 0x0, 0x0};

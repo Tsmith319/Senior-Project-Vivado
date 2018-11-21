@@ -354,17 +354,6 @@ long setup_interrupts() {
 		return XST_FAILURE;
 	}
 
-	Xil_ExceptionInit();
-
-
-
-	/*
-	 * Connect the interrupt controller interrupt handler to the hardware
-	 * interrupt handling logic in the processor.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
-				(Xil_ExceptionHandler)XScuGic_InterruptHandler,
-				&IntcInstance);
 
 	/*
 	 * Connect the device driver handler that will be called when an
@@ -387,8 +376,6 @@ long setup_interrupts() {
 	 * Enable the timer interrupts for timer mode.
 	 */
 	XScuTimer_EnableInterrupt(&TimerInstance);
-
-	Xil_ExceptionEnable();
 
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;

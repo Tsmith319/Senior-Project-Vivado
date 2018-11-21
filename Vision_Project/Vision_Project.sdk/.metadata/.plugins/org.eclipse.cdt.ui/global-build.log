@@ -3144,3 +3144,830 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+17:40:00 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:182:6: warning: conflicting types for 'render'
+ void render()
+      ^~~~~~
+../src/helloworld.c:173:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:191:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:79:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:60:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  86916	   2776	67117472	67207164	4017ffc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+17:42:32 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:182:6: warning: conflicting types for 'render'
+ void render()
+      ^~~~~~
+../src/helloworld.c:173:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:191:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:79:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/helloworld.c:60:0:
+../src/command.h: In function 'package32':
+../src/command.h:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/command.h: In function 'package16':
+../src/command.h:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/command.h: In function 'package8':
+../src/command.h:48:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:60:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87236	   2776	67117472	67207484	401813c	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+17:44:40 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:182:6: warning: conflicting types for 'render'
+ void render()
+      ^~~~~~
+../src/helloworld.c:173:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:191:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:79:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/helloworld.c:60:0:
+../src/command.h: In function 'package32':
+../src/command.h:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/command.h: In function 'package16':
+../src/command.h:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/command.h: In function 'package8':
+../src/command.h:48:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:60:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87236	   2776	67117472	67207484	401813c	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+17:49:01 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:182:6: warning: conflicting types for 'render'
+ void render()
+      ^~~~~~
+../src/helloworld.c:173:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:191:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:79:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:60:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87556	   2776	67117472	67207804	401827c	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+17:52:28 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:182:6: warning: conflicting types for 'render'
+ void render()
+      ^~~~~~
+../src/helloworld.c:173:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:191:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:79:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:60:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87556	   2776	67117472	67207804	401827c	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:41:08 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:74:1: error: unknown type name 'XScuGic'; did you mean 'XScuTimer'?
+ XScuGic IntcInstance;  /* Interrupt Controller Instance */
+ ^~~~~~~
+ XScuTimer
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:177:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:186:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:177:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:195:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:83:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_interrupts':
+../src/helloworld.c:335:11: warning: implicit declaration of function 'XScuGic_Connect' [-Wimplicit-function-declaration]
+  Status = XScuGic_Connect(&IntcInstance, XPAR_SCUTIMER_INTR,
+           ^~~~~~~~~~~~~~~
+../src/helloworld.c:336:6: error: 'Xil_ExceptionHandler' undeclared (first use in this function); did you mean 'XExceptionHandler'?
+     (Xil_ExceptionHandler)render,
+      ^~~~~~~~~~~~~~~~~~~~
+      XExceptionHandler
+../src/helloworld.c:336:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:336:27: error: expected ')' before 'render'
+     (Xil_ExceptionHandler)render,
+                           ^~~~~~
+../src/helloworld.c:345:2: warning: implicit declaration of function 'XScuGic_Enable'; did you mean 'Xil_ICacheEnable'? [-Wimplicit-function-declaration]
+  XScuGic_Enable(&IntcInstance, XPAR_SCUTIMER_INTR);
+  ^~~~~~~~~~~~~~
+  Xil_ICacheEnable
+../src/helloworld.c:375:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:61:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+18:42:26 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:179:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:188:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:179:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:197:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:85:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_interrupts':
+../src/helloworld.c:377:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91892	   2784	67117504	67212180	4019394	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:47:54 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:179:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:188:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:179:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:197:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:85:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_interrupts':
+../src/helloworld.c:374:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91892	   2784	67117504	67212180	4019394	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:58:19 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:179:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:188:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:179:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91636	   2784	67117504	67211924	4019294	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:58:47 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:181:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:190:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:181:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91636	   2784	67117504	67211924	4019294	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:00:52 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:185:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:194:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:185:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91716	   2784	67117504	67212004	40192e4	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:01:16 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:185:3: warning: implicit declaration of function 'render'; did you mean 'rindex'? [-Wimplicit-function-declaration]
+   render();
+   ^~~~~~
+   rindex
+../src/helloworld.c: At top level:
+../src/helloworld.c:194:6: warning: conflicting types for 'render'
+ void render(void *CallBackRef)
+      ^~~~~~
+../src/helloworld.c:185:3: note: previous implicit declaration of 'render' was here
+   render();
+   ^~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91732	   2784	67117504	67212020	40192f4	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:02:45 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91732	   2784	67117504	67212020	40192f4	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:03:45 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:04:56 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:06:16 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:11:54 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:17:23 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91860	   4352	67117504	67213716	4019994	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:17:27 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:56:51 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  92004	   4352	67117504	67213860	4019a24	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:57:25 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  92004	   4352	67117504	67213860	4019a24	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:57:28 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
