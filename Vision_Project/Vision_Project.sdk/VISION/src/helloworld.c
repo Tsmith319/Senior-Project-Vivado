@@ -193,7 +193,7 @@ int main()
 
 void render(void *CallBackRef)
 {
-	/*int current_theta = 0;
+	static int current_theta = 0;
 	int current_layer = 0;
 
 	//Change this for proper animations
@@ -205,9 +205,18 @@ void render(void *CallBackRef)
 
 	//In future, only increment this on the full revolution
 	if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
-		currentFrame++;
-	*/
-	printf("INTERRUPT!\n\r");
+	{
+		if(currentFrame == 9)
+			currentFrame = 0;
+		else
+			currentFrame++;
+	}
+
+//	printf("INTERRUPT!\n\r");
+	if(current_theta == 359)
+		current_theta = 0;
+	else
+		current_theta++;
 
 	XScuTimer_ClearInterruptStatus(&TimerInstance);
 }
@@ -236,14 +245,14 @@ long setup_bram() {
 
 void transfer(UINTPTR source, UINTPTR dest, int length) {
 	if (XAxiCdma_IsBusy(&axi_cdma)) {
-		printf("AXI CDMA is busy...\n\r");
+//		printf("AXI CDMA is busy...\n\r");
 		while (XAxiCdma_IsBusy(&axi_cdma));
 	}
 
-	printf("Flushing cache...\n\r");
+//	printf("Flushing cache...\n\r");
 	Xil_DCacheFlushRange(source, length);
 
-	printf("Starting transfer!\n\r");
+//	printf("Starting transfer!\n\r");
 	// Initiate a transfer
 	int Status = XAxiCdma_SimpleTransfer(
 			&axi_cdma,
@@ -258,11 +267,11 @@ void transfer(UINTPTR source, UINTPTR dest, int length) {
 
 	// Wait until core isn't busy
 	if (XAxiCdma_IsBusy(&axi_cdma)) {
-		printf("AXI CDMA is busy...\n\r");
+//		printf("AXI CDMA is busy...\n\r");
 		while (XAxiCdma_IsBusy(&axi_cdma));
 	}
 
-	printf("Transfer finished!\n\r");
+//	printf("Transfer finished!\n\r");
 }
 
 void init_control() {
@@ -403,7 +412,11 @@ long setup_interrupts() {
 	/*
 	 * Load the timer counter register.
 	 */
-	XScuTimer_LoadTimer(&TimerInstance, 0xFFFF);
+//	XScuTimer_SetPrescaler(&TimerInstance, 0x1);
+	XScuTimer_LoadTimer(&TimerInstance, 4*30093);
+
+	//printf("prescalar value: %d\n", XScuTimer_GetPrescaler(&TimerInstance));
+	//printf("load value: %u\n\r", XScuTimer_GetCounterValue(&TimerInstance));
 
 	/*
 	 * Start the timer counter and then wait for it

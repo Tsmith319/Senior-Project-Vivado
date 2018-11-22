@@ -36,10 +36,10 @@ uint32_t package32(int index)
 {
 	uint32_t value = 0;
 
-	value |= buffer[index] << 0;
-	value |= buffer[index + 1] << 1;
-	value |= buffer[index + 2] << 2;
-	value |= buffer[index + 3] << 3;
+	value |= buffer[index] << 24;
+	value |= buffer[index + 1] << 16;
+	value |= buffer[index + 2] << 8;
+	value |= buffer[index + 3] << 0;
 
 	return value;
 }
@@ -48,8 +48,8 @@ uint16_t package16(int index)
 {
 	uint16_t value = 0;
 
-	value |= buffer[index] << 0;
-	value |= buffer[index + 1] << 1;
+	value |= buffer[index] << 8;
+	value |= buffer[index + 1] << 0;
 
 	return value;
 }
@@ -115,7 +115,7 @@ SerialFrame receive_frame(XUartPs *port) {
 
 void package_frame(SerialFrame frame)
 {
-	memset(&frame_buffer[nextFrameToWrite], 0, sizeof(Frame));
+	memset(frame_buffer[nextFrameToWrite], 0, sizeof(Frame));
 
 	for(int i = 0; i < frame.count; i++)
 	{
