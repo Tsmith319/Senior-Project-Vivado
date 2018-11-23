@@ -160,6 +160,7 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set gpio2_io_i_0 [ create_bd_port -dir I -from 0 -to 0 gpio2_io_i_0 ]
   set gsclk_0_0 [ create_bd_port -dir O gsclk_0_0 ]
   set latch_0_0 [ create_bd_port -dir O latch_0_0 ]
   set sclk_0_0 [ create_bd_port -dir O sclk_0_0 ]
@@ -186,10 +187,12 @@ proc create_root_design { parentCell } {
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS_2 {1} \
    CONFIG.C_ALL_OUTPUTS {1} \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {0} \
    CONFIG.C_GPIO2_WIDTH {1} \
-   CONFIG.C_GPIO_WIDTH {3} \
+   CONFIG.C_GPIO_WIDTH {4} \
+   CONFIG.C_INTERRUPT_PRESENT {1} \
    CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
 
@@ -431,7 +434,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_INCLUDE_TRACE_BUFFER {0} \
    CONFIG.PCW_IOPLL_CTRL_FBDIV {20} \
    CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} \
-   CONFIG.PCW_IRQ_F2P_INTR {0} \
+   CONFIG.PCW_IRQ_F2P_INTR {1} \
    CONFIG.PCW_IRQ_F2P_MODE {DIRECT} \
    CONFIG.PCW_MIO_0_DIRECTION {inout} \
    CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} \
@@ -967,7 +970,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_USE_DMA3 {0} \
    CONFIG.PCW_USE_EXPANDED_IOP {0} \
    CONFIG.PCW_USE_EXPANDED_PS_SLCR_REGISTERS {0} \
-   CONFIG.PCW_USE_FABRIC_INTERRUPT {0} \
+   CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
    CONFIG.PCW_USE_HIGH_OCM {0} \
    CONFIG.PCW_USE_M_AXI_GP0 {1} \
    CONFIG.PCW_USE_M_AXI_GP1 {0} \
@@ -997,6 +1000,24 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {2} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DOUT_WIDTH {3} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {3} \
+   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins driver_block_design_0_bram/BRAM_PORTB]
   connect_bd_intf_net -intf_net axi_bram_ctrl_1_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_1/BRAM_PORTA] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTB]
@@ -1013,18 +1034,21 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins driver_block_design_0/enable_0]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins driver_block_design_0/GPIO_IN]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net driver_block_design_0_gsclk_0 [get_bd_ports gsclk_0_0] [get_bd_pins driver_block_design_0/gsclk_0]
   connect_bd_net -net driver_block_design_0_latch_0 [get_bd_ports latch_0_0] [get_bd_pins driver_block_design_0/latch_0]
   connect_bd_net -net driver_block_design_0_sclk_0 [get_bd_ports sclk_0_0] [get_bd_pins driver_block_design_0/sclk_0]
   connect_bd_net -net driver_block_design_0_sout_0 [get_bd_ports sout_0_0] [get_bd_pins driver_block_design_0/sout_0]
+  connect_bd_net -net gpio2_io_i_0_1 [get_bd_ports gpio2_io_i_0] [get_bd_pins axi_gpio_0/gpio2_io_i]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_cdma_0/m_axi_aclk] [get_bd_pins axi_cdma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins driver_block_design_0/clk_0] [get_bd_pins processing_system7_0/FCLK_CLK1]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn] [get_bd_pins axi_cdma_0/s_axi_lite_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_reset [get_bd_pins driver_block_design_0/reset_0] [get_bd_pins rst_ps7_0_100M/peripheral_reset]
+  connect_bd_net -net xlslice_0_Dout [get_bd_pins driver_block_design_0/GPIO_IN] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_pins driver_block_design_0/enable_0] [get_bd_pins xlslice_1/Dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00002000 -offset 0xC0000000 [get_bd_addr_spaces axi_cdma_0/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0

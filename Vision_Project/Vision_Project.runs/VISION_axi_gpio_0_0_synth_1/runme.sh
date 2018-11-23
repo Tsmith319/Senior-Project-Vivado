@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_gpio_0_0_synth_1'
+HD_PWD='C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_gpio_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

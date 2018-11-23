@@ -768,7 +768,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_INCLUDE_TRACE_BUFFER">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_IOPLL_CTRL_FBDIV">20</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_IO_IO_PLL_FREQMHZ">1000.000</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_IRQ_F2P_INTR">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_IRQ_F2P_INTR">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_IRQ_F2P_MODE">DIRECT</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_MIO_0_DIRECTION">inout</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_MIO_0_IOTYPE">LVCMOS 3.3V</spirit:configurableElementValue>
@@ -1363,7 +1363,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_DMA3">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_EXPANDED_IOP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_EXPANDED_PS_SLCR_REGISTERS">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_HIGH_OCM">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_M_AXI_GP0">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PCW_USE_M_AXI_GP1">0</spirit:configurableElementValue>
@@ -1423,6 +1423,7 @@
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.FCLK_CLK2.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.FCLK_CLK2.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.FCLK_CLK2.PHASE" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.IRQ_F2P.SENSITIVITY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.ADDR_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1968,6 +1969,7 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_NOR_SRAM_CS1_T_WC" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_NOR_SRAM_CS1_T_WP" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_NOR_SRAM_CS1_WE_TIME" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_NUM_F2P_INTR_INPUTS" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_OVERRIDE_BASIC_CLOCK" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_P2F_CAN0_INTR" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_P2F_CAN1_INTR" xilinx:valueSource="user"/>

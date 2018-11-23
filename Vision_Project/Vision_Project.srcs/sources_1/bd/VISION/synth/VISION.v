@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 17 14:34:44 2018
+//Date        : Fri Nov 23 12:07:45 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
+(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
 module VISION
    (DDR_addr,
     DDR_ba,
@@ -32,6 +32,7 @@ module VISION
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    gpio2_io_i_0,
     gsclk_0_0,
     latch_0_0,
     sclk_0_0,
@@ -57,6 +58,7 @@ module VISION
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
   output latch_0_0;
   output sclk_0_0;
@@ -105,8 +107,8 @@ module VISION
   wire axi_cdma_0_M_AXI_WREADY;
   wire [3:0]axi_cdma_0_M_AXI_WSTRB;
   wire axi_cdma_0_M_AXI_WVALID;
-  wire [0:0]axi_gpio_0_gpio2_io_o;
-  wire [2:0]axi_gpio_0_gpio_io_o;
+  wire [3:0]axi_gpio_0_gpio_io_o;
+  wire axi_gpio_0_ip2intc_irpt;
   wire [31:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -216,6 +218,7 @@ module VISION
   wire driver_block_design_0_latch_0;
   wire driver_block_design_0_sclk_0;
   wire driver_block_design_0_sout_0;
+  wire [0:0]gpio2_io_i_0_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -314,7 +317,10 @@ module VISION
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_reset;
+  wire [2:0]xlslice_0_Dout;
+  wire [0:0]xlslice_1_Dout;
 
+  assign gpio2_io_i_0_1 = gpio2_io_i_0[0];
   assign gsclk_0_0 = driver_block_design_0_gsclk_0;
   assign latch_0_0 = driver_block_design_0_latch_0;
   assign sclk_0_0 = driver_block_design_0_sclk_0;
@@ -451,8 +457,9 @@ module VISION
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
   VISION_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+       (.gpio2_io_i(gpio2_io_i_0_1),
         .gpio_io_o(axi_gpio_0_gpio_io_o),
+        .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -604,7 +611,7 @@ module VISION
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   VISION_driver_block_design_0_0 driver_block_design_0
-       (.GPIO_IN(axi_gpio_0_gpio_io_o),
+       (.GPIO_IN(xlslice_0_Dout),
         .clk_0(processing_system7_0_FCLK_CLK1),
         .data_in_0_addr(driver_block_design_0_data_in_0_ADDR),
         .data_in_0_clk(driver_block_design_0_data_in_0_CLK),
@@ -616,7 +623,7 @@ module VISION
         .data_in_1_dout(driver_block_design_0_data_in_1_DOUT),
         .data_in_1_en(driver_block_design_0_data_in_1_EN),
         .data_in_1_rst(driver_block_design_0_data_in_1_RST),
-        .enable_0(axi_gpio_0_gpio2_io_o),
+        .enable_0(xlslice_1_Dout),
         .gsclk_0(driver_block_design_0_gsclk_0),
         .latch_0(driver_block_design_0_latch_0),
         .reset_0(rst_ps7_0_100M_peripheral_reset),
@@ -673,6 +680,7 @@ module VISION
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_CLK1(processing_system7_0_FCLK_CLK1),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
+        .IRQ_F2P(axi_gpio_0_ip2intc_irpt),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -845,6 +853,12 @@ module VISION
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  VISION_xlslice_0_0 xlslice_0
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_0_Dout));
+  VISION_xlslice_1_0 xlslice_1
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_1_Dout));
 endmodule
 
 module VISION_ps7_0_axi_periph_0

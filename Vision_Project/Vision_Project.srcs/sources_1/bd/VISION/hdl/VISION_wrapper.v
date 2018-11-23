@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 17 14:34:44 2018
+//Date        : Fri Nov 23 12:07:46 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION_wrapper.bd
 //Design      : VISION_wrapper
@@ -31,6 +31,7 @@ module VISION_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    gpio2_io_i_0,
     gsclk_0_0,
     latch_0_0,
     sclk_0_0,
@@ -56,6 +57,7 @@ module VISION_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
   output latch_0_0;
   output sclk_0_0;
@@ -82,6 +84,7 @@ module VISION_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [0:0]gpio2_io_i_0;
   wire gsclk_0_0;
   wire latch_0_0;
   wire sclk_0_0;
@@ -109,6 +112,7 @@ module VISION_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .gpio2_io_i_0(gpio2_io_i_0),
         .gsclk_0_0(gsclk_0_0),
         .latch_0_0(latch_0_0),
         .sclk_0_0(sclk_0_0),

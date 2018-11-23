@@ -95,6 +95,8 @@ int main()
 	printf("--------------Initializing-----------------\n\r");
 	printf("\t-GPIO\n\r");
 	XGpio_Initialize(&gpio, 0);
+	XGpio_SetDataDirection(&gpio, 2, 0xFFFFFFFF);
+
 	printf("\t-BRAM\n\r");
     if(setup_bram() == XST_FAILURE)
     {
@@ -190,6 +192,12 @@ int main()
     return 0;
 }
 
+void hallSensor(void *CallBackRef)
+{
+	printf("Hey we did it! :)\n\r");
+
+	XGpio_InterruptClear(&gpio, XGPIO_IR_CH2_MASK);
+}
 
 void render(void *CallBackRef)
 {
@@ -276,8 +284,8 @@ void transfer(UINTPTR source, UINTPTR dest, int length) {
 
 void init_control() {
 	driverControl = 0x0;
-	driverControl |= 1 << 2;
-	int enable = 0x1;
+	int enable = 0x1 << 3;
+	driverControl = enable | (1 << 2);
 
 	Setup_Layer *setup = Setup_Layer_init();
 
@@ -286,7 +294,7 @@ void init_control() {
 	transfer((UINTPTR)setup, (UINTPTR)BRAM_SETUP, sizeof(Setup_Layer));
 
 
-	XGpio_DiscreteWrite(&gpio, 2, enable);
+	XGpio_DiscreteWrite(&gpio, 1, enable);
 
 	usleep(10);
 
@@ -375,6 +383,21 @@ long setup_interrupts() {
 				(Xil_ExceptionHandler)XScuGic_InterruptHandler,
 				&IntcInstance);
 
+	// BUTTON STUFFFF-------------------------
+
+	XGpio_InterruptEnable(&gpio, XGPIO_IR_CH2_MASK);
+	XGpio_InterruptGlobalEnable(&gpio);
+
+	Status = XScuGic_Connect(&IntcInstance, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR,
+							(Xil_ExceptionHandler) hallSensor,
+							(void *) &gpio);
+	if (Status != XST_SUCCESS)
+			return XST_FAILURE;
+
+	XScuGic_Enable(&IntcInstance, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR);
+
+
+	// ---------------------------------------
 	/*
 	 * Connect the device driver handler that will be called when an
 	 * interrupt for the device occurs, the handler defined above performs

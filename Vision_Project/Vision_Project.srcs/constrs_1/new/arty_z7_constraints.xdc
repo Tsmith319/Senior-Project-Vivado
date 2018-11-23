@@ -31,7 +31,7 @@
 
 ##Buttons
 
-#set_property -dict { PACKAGE_PIN D19    IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; #IO_L4P_T0_35 Sch=BTN0
+set_property -dict { PACKAGE_PIN D19    IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_i_0[0] }]; #IO_L4P_T0_35 Sch=BTN0
 #set_property -dict { PACKAGE_PIN D20    IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L4N_T0_35 Sch=BTN1
 #set_property -dict { PACKAGE_PIN L20    IOSTANDARD LVCMOS33 } [get_ports { btn[2] }]; #IO_L9N_T1_DQS_AD3N_35 Sch=BTN2
 #set_property -dict { PACKAGE_PIN L19    IOSTANDARD LVCMOS33 } [get_ports { btn[3] }]; #IO_L9P_T1_DQS_AD3P_35 Sch=BTN3
@@ -123,7 +123,7 @@
 #set_property -dict { PACKAGE_PIN W11   IOSTANDARD LVCMOS33 } [get_ports { ck_a[2] }]; #IO_L18P_T2_13 Sch=CK_A2
 #set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { ck_a[3] }]; #IO_L21P_T3_DQS_13 Sch=CK_A3
 #set_property -dict { PACKAGE_PIN T5    IOSTANDARD LVCMOS33 } [get_ports { ck_a[4] }]; #IO_L19P_T3_13 Sch=CK_A4
-#set_property -dict { PACKAGE_PIN U10   IOSTANDARD LVCMOS33 } [get_ports { ck_a[5] }]; #IO_L12N_T1_MRCC_13 Sch=CK_A5
+#set_property -dict { PACKAGE_PIN U10   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_i_0[0] }]; #IO_L12N_T1_MRCC_13 Sch=CK_A5
 
 ##ChipKit Digital I/O On Inner Analog Header
 ##NOTE: These pins will need to be connected to the XADC core when used as differential analog inputs (Chipkit analog pins A6-A11)
