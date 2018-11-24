@@ -88,6 +88,8 @@ void transfer(UINTPTR source, UINTPTR dest, int length);
 void next_section();
 void init_control();
 
+static int current_theta = 0;
+
 int main()
 {
 	init_platform();
@@ -95,7 +97,7 @@ int main()
 	printf("--------------Initializing-----------------\n\r");
 	printf("\t-GPIO\n\r");
 	XGpio_Initialize(&gpio, 0);
-	XGpio_SetDataDirection(&gpio, 2, 0xFFFFFFFF);
+	XGpio_SetDataDirection(&gpio, 2, 0x1);
 
 	printf("\t-BRAM\n\r");
     if(setup_bram() == XST_FAILURE)
@@ -120,49 +122,8 @@ int main()
 
 	printf("--------------DONE------------------------\n\r");
 
-
-
-//	printf("Layer Setup\n\r");
-
-    //Layer *data = calloc(1, sizeof(Layer));
-
-
-
-//    for(int i = 0; i <= 31; i++)
-//    {
-//		write_PixelData(getPixelOffset(i), pixel_white, data);
-//    }
-
-
-
-
-//	transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
-
-
-//	printf("Writing pixel data......\n\r");
-//	next_section();
-
-
-//	Pixel colors[4] = {pixel_white, pixel_red, pixel_green, pixel_blue};
-//
-//	int color = 0;
-
 	while(1)
 	{
-//		sleep(1);
-//
-//		for(int i = 0; i <= 31; i++)
-//		{
-//		    	write_PixelData(getPixelOffset(i), colors[color % 4], data);
-//		}
-
-
-//		transfer((UINTPTR)data, (UINTPTR)BRAM_LAYER_1, sizeof(Layer));
-		//int count = XUartPs_Recv(&Uart_PS, (u8*)buf, 20);
-
-		//printf("Count: %d || \"%s\"\n\r", count, buf);
-//		next_section();
-//		color++;
 
 		int count = XUartPs_Recv(&USB_uart, (u8*)buffer, 1);
 
@@ -194,22 +155,16 @@ int main()
 
 void hallSensor(void *CallBackRef)
 {
-	printf("Hey we did it! :)\n\r");
+	//XGpio_InterruptDisable(&gpio, XGPIO_IR_CH2_MASK);
+	XScuTimer_Stop(&TimerInstance);
+	current_theta = 0;
+	static int count = 0;
 
-	XGpio_InterruptClear(&gpio, XGPIO_IR_CH2_MASK);
-}
-
-void render(void *CallBackRef)
-{
-	static int current_theta = 0;
-	int current_layer = 0;
-
-	//Change this for proper animations
-	// TODO:
-	//		-Selecting proper buffer of BRAM
-	//		-Rotation timing??
-	transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
-	next_section();
+	if(0x1 & XGpio_DiscreteRead(&gpio, 2))
+	{
+		printf("Magnet Count: %d\n\r", count);
+		count++;
+	}
 
 	//In future, only increment this on the full revolution
 	if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
@@ -220,13 +175,46 @@ void render(void *CallBackRef)
 			currentFrame++;
 	}
 
-//	printf("INTERRUPT!\n\r");
+	XScuTimer_LoadTimer(&TimerInstance, 162500000);
+
+	/*
+	 * Start the timer counter and then wait for it
+	 * to timeout a number of times.
+	 */
+	XScuTimer_Start(&TimerInstance);
+
+
+	XGpio_InterruptClear(&gpio, XGPIO_IR_CH2_MASK);
+}
+
+void render(void *CallBackRef)
+{
+
+	int current_layer = 0;
+
+	//Change this for proper animations
+	// TODO:
+	//		-Selecting proper buffer of BRAM
+	//		-Rotation timing??
+	transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+	next_section();
+
 	if(current_theta == 359)
 		current_theta = 0;
 	else
 		current_theta++;
 
+
 	XScuTimer_ClearInterruptStatus(&TimerInstance);
+
+	XScuTimer_LoadTimer(&TimerInstance, 162500000);
+
+	/*
+	 * Start the timer counter and then wait for it
+	 * to timeout a number of times.
+	 */
+	XScuTimer_Start(&TimerInstance);
+
 }
 
 long setup_bram() {
@@ -371,8 +359,9 @@ long setup_interrupts() {
 		return XST_FAILURE;
 	}
 
-	Xil_ExceptionInit();
-
+	//Xil_ExceptionInit();
+	XGpio_InterruptEnable(&gpio, XGPIO_IR_CH2_MASK);
+	XGpio_InterruptGlobalEnable(&gpio);
 
 
 	/*
@@ -383,16 +372,20 @@ long setup_interrupts() {
 				(Xil_ExceptionHandler)XScuGic_InterruptHandler,
 				&IntcInstance);
 
+	Xil_ExceptionEnable();
+
 	// BUTTON STUFFFF-------------------------
 
-	XGpio_InterruptEnable(&gpio, XGPIO_IR_CH2_MASK);
-	XGpio_InterruptGlobalEnable(&gpio);
 
 	Status = XScuGic_Connect(&IntcInstance, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR,
 							(Xil_ExceptionHandler) hallSensor,
 							(void *) &gpio);
 	if (Status != XST_SUCCESS)
 			return XST_FAILURE;
+
+	XGpio_InterruptEnable(&gpio, XGPIO_IR_CH2_MASK);
+	XGpio_InterruptGlobalEnable(&gpio);
+
 
 	XScuGic_Enable(&IntcInstance, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR);
 
@@ -420,7 +413,7 @@ long setup_interrupts() {
 	 */
 	XScuTimer_EnableInterrupt(&TimerInstance);
 
-	Xil_ExceptionEnable();
+	//Xil_ExceptionEnable();
 
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
@@ -429,14 +422,14 @@ long setup_interrupts() {
 	/*
 	 * Enable Auto reload mode.
 	 */
-	XScuTimer_EnableAutoReload(&TimerInstance);
+//	XScuTimer_EnableAutoReload(&TimerInstance);
 
 
 	/*
 	 * Load the timer counter register.
 	 */
 //	XScuTimer_SetPrescaler(&TimerInstance, 0x1);
-	XScuTimer_LoadTimer(&TimerInstance, 4*30093);
+//	XScuTimer_LoadTimer(&TimerInstance, 162500000);
 
 	//printf("prescalar value: %d\n", XScuTimer_GetPrescaler(&TimerInstance));
 	//printf("load value: %u\n\r", XScuTimer_GetCounterValue(&TimerInstance));
@@ -445,7 +438,7 @@ long setup_interrupts() {
 	 * Start the timer counter and then wait for it
 	 * to timeout a number of times.
 	 */
-	XScuTimer_Start(&TimerInstance);
+//	XScuTimer_Start(&TimerInstance);
 
 	return XST_SUCCESS;
 }
