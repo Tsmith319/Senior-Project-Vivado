@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov 24 11:48:06 2018
+| Date         : Sat Nov 24 18:22:02 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VISION_wrapper_utilization_synth.rpt -pb VISION_wrapper_utilization_synth.pb
 | Design       : VISION_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |       125 |  4.00 |
+| Bonded IOB                  |    7 |     0 |       125 |  5.60 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    4 |                  IO |
-| IBUF     |    1 |                  IO |
+| OBUF     |    5 |                  IO |
+| IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
 

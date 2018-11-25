@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov 24 11:52:26 2018
+| Date             : Sat Nov 24 18:25:45 2018
 | Host             : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command          : report_power -file VISION_wrapper_power_routed.rpt -pb VISION_wrapper_power_summary_routed.pb -rpx VISION_wrapper_power_routed.rpx
 | Design           : VISION_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.472        |
+| Total On-Chip Power (W)  | 1.474        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.332        |
+| Dynamic (W)              | 1.334        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.0         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.026 |        5 |       --- |             --- |
+| Clocks                   |     0.027 |        5 |       --- |             --- |
 | Slice Logic              |     0.016 |    15590 |       --- |             --- |
-|   LUT as Logic           |     0.012 |     4563 |     53200 |            8.58 |
+|   LUT as Logic           |     0.012 |     4556 |     53200 |            8.56 |
 |   LUT as Distributed RAM |     0.002 |      752 |     17400 |            4.32 |
 |   Register               |     0.001 |     7224 |    106400 |            6.79 |
 |   CARRY4                 |    <0.001 |       76 |     13300 |            0.57 |
 |   LUT as Shift Register  |    <0.001 |      204 |     17400 |            1.17 |
 |   F7/F8 Muxes            |    <0.001 |       13 |     53200 |            0.02 |
 |   Others                 |     0.000 |      719 |       --- |             --- |
-| Signals                  |     0.019 |    10113 |       --- |             --- |
+| Signals                  |     0.019 |    10118 |       --- |             --- |
 | Block RAM                |     0.012 |        4 |       140 |            2.86 |
-| I/O                      |     0.003 |        5 |       125 |            4.00 |
+| I/O                      |     0.004 |        7 |       125 |            5.60 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.140 |          |           |                 |
-| Total                    |     1.472 |          |           |                 |
+| Total                    |     1.473 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.086 |       0.072 |      0.014 |
-| Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
+| Vccint    |       1.000 |     0.086 |       0.073 |      0.014 |
+| Vccaux    |       1.800 |     0.015 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -153,12 +153,12 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| VISION_wrapper                                                                                    |     1.332 |
+| VISION_wrapper                                                                                    |     1.334 |
 |   VISION_i                                                                                        |     1.330 |
-|     axi_bram_ctrl_0                                                                               |     0.003 |
-|       U0                                                                                          |     0.003 |
-|         gext_inst.abcv4_0_ext_inst                                                                |     0.003 |
-|           GEN_AXI4.I_FULL_AXI                                                                     |     0.003 |
+|     axi_bram_ctrl_0                                                                               |     0.002 |
+|       U0                                                                                          |     0.002 |
+|         gext_inst.abcv4_0_ext_inst                                                                |     0.002 |
+|           GEN_AXI4.I_FULL_AXI                                                                     |     0.002 |
 |             GEN_ARB.I_SNG_PORT                                                                    |    <0.001 |
 |             I_RD_CHNL                                                                             |     0.001 |
 |               I_WRAP_BRST                                                                         |    <0.001 |
@@ -282,7 +282,7 @@ Table of Contents
 |                 gen_w_cmd_fifo.w_cmd_fifo                                                         |    <0.001 |
 |                   gen_srls[1].srl_nx1                                                             |    <0.001 |
 |               r_reg                                                                               |    <0.001 |
-|               splitter_inst                                                                       |     0.002 |
+|               splitter_inst                                                                       |     0.001 |
 |                 gen_axi3.axi3_conv_inst                                                           |     0.001 |
 |                   USE_READ.USE_SPLIT_R.read_addr_inst                                             |    <0.001 |
 |                     USE_R_CHANNEL.cmd_queue                                                       |    <0.001 |
@@ -637,7 +637,7 @@ Table of Contents
 |                   gen_srls[9].srl_nx1                                                             |    <0.001 |
 |                 gen_w_cmd_fifo.w_cmd_fifo                                                         |    <0.001 |
 |                   gen_srls[1].srl_nx1                                                             |    <0.001 |
-|               r_reg                                                                               |    <0.001 |
+|               r_reg                                                                               |     0.001 |
 |               w_reg                                                                               |    <0.001 |
 |         m02_nodes                                                                                 |     0.005 |
 |           m02_ar_node                                                                             |    <0.001 |

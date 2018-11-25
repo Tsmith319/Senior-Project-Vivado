@@ -7439,3 +7439,2107 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+15:35:52 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:199:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:87:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147152	   4352	67117520	67269024	40271a0	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+15:36:17 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:38:34 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:42:35 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:43:46 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:51:12 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:35:53 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:58:32 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:59:09 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:12:36 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:27:40 **** Auto Build of project Vision_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axicdma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+18:28:14 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:199:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:87:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147152	   4368	67117520	67269040	40271b0	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:32:38 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:200:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_uart':
+../src/helloworld.c:326:11: warning: implicit declaration of function 'XUartPS_CfgInitialize'; did you mean 'XUartPs_CfgInitialize'? [-Wimplicit-function-declaration]
+  Status = XUartPS_CfgInitialize(&WIFI_uart, Config, Config->BaseAddress);
+           ^~~~~~~~~~~~~~~~~~~~~
+           XUartPs_CfgInitialize
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `setup_uart':
+C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\Vision\Debug/../src/helloworld.c:326: undefined reference to `XUartPS_CfgInitialize'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Vision.elf] Error 1
+18:33:17 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:200:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147344	   4368	67117584	67269296	40272b0	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:34:26 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:200:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147344	   4368	67117584	67269296	40272b0	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:34:40 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:35:03 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:35:49 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:36:47 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:38:24 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:199:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147344	   4368	67117584	67269296	40272b0	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:38:27 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:40:01 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:201:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147368	   4368	67117584	67269320	40272c8	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:40:08 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:40:34 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:201:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147532	   4368	67117584	67269484	402736c	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+18:40:49 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:40:50 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:41:55 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:42:38 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:53:13 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:53:29 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:53:46 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:58:13 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:04:16 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:131:28: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+   XUartPs_Send(&WIFI_uart, hello, 6);
+                            ^~~~~
+In file included from ../src/helloworld.c:52:0:
+../../Vision_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147612	   4368	67117584	67269564	40273bc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:04:24 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:30:23 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_uart':
+../src/helloworld.c:340:2: error: unknown type name 'XUartPs_'; did you mean 'XUartPs'?
+  XUartPs_
+  ^~~~~~~~
+  XUartPs
+../src/helloworld.c:343:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:344:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:30:42 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_uart':
+../src/helloworld.c:340:2: error: too few arguments to function 'printf'
+  printf()
+  ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:181:5: note: declared here
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+../src/helloworld.c:342:2: error: expected ';' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:343:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:30:46 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+../src/helloworld.c: In function 'setup_uart':
+../src/helloworld.c:340:2: error: too few arguments to function 'printf'
+  printf()
+  ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:181:5: note: declared here
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+../src/helloworld.c:342:2: error: expected ';' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:343:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:31:05 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147612	   4368	67117584	67269564	40273bc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:31:08 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:32:11 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:37:19 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147612	   4368	67117584	67269564	40273bc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:37:38 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:142:14: error: too many arguments to function 'receive_frame'
+      frame = receive_frame(&WIFI_uart, &USB_uart);
+              ^~~~~~~~~~~~~
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:89:13: note: declared here
+ SerialFrame receive_frame(XUartPs *port) {
+             ^~~~~~~~~~~~~
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:37:54 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:98:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:98:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:114:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147676	   4368	67117584	67269628	40273fc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:40:28 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:100:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:100:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:118:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147676	   4368	67117584	67269628	40273fc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:46:30 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:100:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:100:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:118:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: warning: unused variable 'hello' [-Wunused-variable]
+   char hello[20] = "Hello!";
+        ^~~~~
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147512	   4368	67117584	67269464	4027358	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:49:24 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:100:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:100:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:118:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147660	   4368	67117584	67269612	40273ec	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:49:52 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:101:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:101:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:120:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147660	   4368	67117584	67269612	40273ec	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:52:21 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:101:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:101:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:120:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147684	   4368	67117584	67269636	4027404	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+19:54:17 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:56:49 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:57:41 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:01:39 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:103:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:103:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:126:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147684	   4368	67117584	67269636	4027404	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+20:02:00 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:06:55 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:104:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:104:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:123:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147684	   4368	67117584	67269636	4027404	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+20:07:13 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:12:33 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:104:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:104:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:123:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147684	   4368	67117584	67269636	4027404	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+20:12:48 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:16:01 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:17:27 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:29:15 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:32:14 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:34:49 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:36:15 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:44:19 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:50:24 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:53:09 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:56:04 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:104:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:104:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:123:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147612	   4368	67117584	67269564	40273bc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+20:56:08 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:58:05 **** Auto Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Vision_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:63:0:
+../src/command.h: In function 'receive_frame':
+../src/command.h:104:9: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  sscanf(buffer, "%d", &(frame.count));
+         ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+In file included from ../src/helloworld.c:63:0:
+../src/command.h:104:19: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+  sscanf(buffer, "%d", &(frame.count));
+                  ~^   ~~~~~~~~~~~~~~
+                  %ld
+../src/command.h:123:10: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:185:5: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sscanf, (const char *__restrict, const char *__restrict, ...)
+     ^
+../src/helloworld.c: In function 'render':
+../src/helloworld.c:202:11: warning: passing argument 1 of 'transfer' makes integer from pointer without a cast [-Wint-conversion]
+  transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[current_layer]), BRAM_LAYER_1, sizeof(Layer));
+           ^
+../src/helloworld.c:88:6: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'Layer * {aka struct <anonymous> *}'
+ void transfer(UINTPTR source, UINTPTR dest, int length);
+      ^~~~~~~~
+In file included from ../src/command.h:11:0,
+                 from ../src/helloworld.c:63:
+At top level:
+../src/pixel_data.h:49:14: warning: 'pixel_blue' defined but not used [-Wunused-variable]
+ static Pixel pixel_blue = {0x0, 0x0, 0xFFFF};
+              ^~~~~~~~~~
+../src/pixel_data.h:48:14: warning: 'pixel_green' defined but not used [-Wunused-variable]
+ static Pixel pixel_green = {0x0, 0xFFFF, 0x0};
+              ^~~~~~~~~~~
+../src/pixel_data.h:47:14: warning: 'pixel_red' defined but not used [-Wunused-variable]
+ static Pixel pixel_red = {0xFFFF, 0x0, 0x0};
+              ^~~~~~~~~
+../src/pixel_data.h:46:14: warning: 'pixel_white' defined but not used [-Wunused-variable]
+ static Pixel pixel_white = {0xFFFF, 0xFFFF, 0xFFFF};
+              ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Vision.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Vision_bsp/ps7_cortexa9_0/lib -o "Vision.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Vision.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Vision.elf  |tee "Vision.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 147420	   4368	67117584	67269372	40272fc	Vision.elf
+'Finished building: Vision.elf.size'
+' '
+20:58:09 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:00:31 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:05:14 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:05:30 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:06:29 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:08:23 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:13:39 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:13:41 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:14:01 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:16:18 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:18:45 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:19:00 **** Incremental Build of configuration Debug for project Vision ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

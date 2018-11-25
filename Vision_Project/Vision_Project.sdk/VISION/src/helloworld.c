@@ -69,6 +69,7 @@ XAxiCdma axi_cdma;
 
 XUartPs_Config *Config;
 XUartPs USB_uart;
+XUartPs WIFI_uart;
 
 XGpio gpio;
 
@@ -130,18 +131,20 @@ int main()
 		if(count == 1)
 		{
 			SerialFrame frame;
+			printf("Received Command: %c\r\n", buffer[0]);
 
 			switch(buffer[0])
 			{
 				case CLEAR_FRAME :
 
 					break;
-				default:
 				case DRAW_FRAME :
-					frame = receive_frame(&USB_uart);
+					frame = receive_frame(&USB_uart, &USB_uart);
 					package_frame(frame);
 					free(frame.pixels);
 					break;
+				default:
+					printf("\t-Unknown Command\r\n");
 			}
 		}
 
@@ -315,6 +318,27 @@ long setup_uart() {
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
+
+	/*
+	Config = XUartPs_LookupConfig(XPAR_XUARTPS_1_DEVICE_ID);
+
+	if(NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XUartPs_CfgInitialize(&WIFI_uart, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	///heck hardware build.
+	Status = XUartPs_SelfTest(&WIFI_uart);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	*/
 
 	return XST_SUCCESS;
 }

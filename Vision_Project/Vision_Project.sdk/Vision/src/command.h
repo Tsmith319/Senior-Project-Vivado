@@ -11,10 +11,13 @@
 #include "pixel_data.h"
 #include "xgpio.h"
 
-#define CLEAR_FRAME 0x00
-#define DRAW_FRAME 0x01
+#define CLEAR_FRAME '0'
+#define DRAW_FRAME '1'
 
 #define BUFFER_SIZE 100
+
+#define PIXEL_COUNT_CHAR_LENGTH 6 //Plus Space = 6
+#define PIXEL_CHAR_LENGTH 28 //plus spaces = 28, 22 otherwise
 
 uint8_t buffer[BUFFER_SIZE];
 
@@ -83,16 +86,24 @@ SerialPixel packagePixel(int index) {
 }
 
 
-SerialFrame receive_frame(XUartPs *port) {
+SerialFrame receive_frame(XUartPs *port, XUartPs *passthrough) {
 	SerialFrame frame;
 	int byteCount = 0;
 
-	while(byteCount < 4)
+	while(byteCount < PIXEL_COUNT_CHAR_LENGTH)
 	{
-		byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, 4 - byteCount);
+		byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_COUNT_CHAR_LENGTH - byteCount);
 	}
+	//buffer[PIXEL_COUNT_CHAR_LENGTH] = '\0';
 
-	frame.count = package32(0);
+
+	//XUartPs_Send(passthrough, buffer, PIXEL_COUNT_CHAR_LENGTH);
+	//printf("%s\r\n", buffer);
+	//printf("\r\n");
+
+	sscanf(buffer, "%d", &(frame.count));
+
+	//frame.count = package32(0);
 
 	frame.pixels = calloc(frame.count, sizeof(SerialPixel));
 
@@ -100,12 +111,23 @@ SerialFrame receive_frame(XUartPs *port) {
 	{
 		byteCount = 0;
 
-		while(byteCount < sizeof(SerialPixel))
+		while(byteCount < PIXEL_CHAR_LENGTH)
 		{
-			byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, sizeof(SerialPixel) - byteCount);
+			byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_CHAR_LENGTH - byteCount);
 		}
+		//buffer[PIXEL_CHAR_LENGTH] = '\0';
+		//XUartPs_Send(passthrough, buffer, PIXEL_CHAR_LENGTH);
+		//printf("%s\r\n", buffer);
 
-		frame.pixels[i] = packagePixel(0);
+		int z, r, theta, red, green, blue;
+		sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+		frame.pixels[i].z = z;
+		frame.pixels[i].r = r;
+		frame.pixels[i].theta = theta;
+		frame.pixels[i].color.red = red;
+		frame.pixels[i].color.green = green;
+		frame.pixels[i].color.blue = blue;
+		//frame.pixels[i] = packagePixel(0);
 	}
 
 	printf("Received frame!\n\r");

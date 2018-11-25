@@ -7813,3 +7813,2529 @@ con
 ----------------End of Script----------------
 
 14:52:29 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+15:36:17 INFO  : Disconnected from the channel tcfchan#12.
+15:36:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:36:19 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+15:36:19 INFO  : 'jtag frequency' command is executed.
+15:36:19 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:36:19 INFO  : Context for 'APU' is selected.
+15:36:19 INFO  : System reset is completed.
+15:36:22 INFO  : 'after 3000' command is executed.
+15:36:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+15:36:25 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+15:36:25 INFO  : Context for 'APU' is selected.
+15:36:25 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+15:36:25 INFO  : 'configparams force-mem-access 1' command is executed.
+15:36:25 INFO  : Context for 'APU' is selected.
+15:36:25 INFO  : 'ps7_init' command is executed.
+15:36:25 INFO  : 'ps7_post_config' command is executed.
+15:36:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:36:26 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:36:26 INFO  : 'configparams force-mem-access 0' command is executed.
+15:36:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:36:26 INFO  : Memory regions updated for context APU
+15:36:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:36:26 INFO  : 'con' command is executed.
+15:36:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+15:36:26 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+15:38:35 INFO  : Disconnected from the channel tcfchan#13.
+15:38:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:38:37 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+15:38:37 INFO  : 'jtag frequency' command is executed.
+15:38:37 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:38:37 INFO  : Context for 'APU' is selected.
+15:38:37 INFO  : System reset is completed.
+15:38:40 INFO  : 'after 3000' command is executed.
+15:38:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+15:38:42 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+15:38:43 INFO  : Context for 'APU' is selected.
+15:38:43 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+15:38:43 INFO  : 'configparams force-mem-access 1' command is executed.
+15:38:43 INFO  : Context for 'APU' is selected.
+15:38:43 INFO  : 'ps7_init' command is executed.
+15:38:43 INFO  : 'ps7_post_config' command is executed.
+15:38:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:38:44 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:38:44 INFO  : 'configparams force-mem-access 0' command is executed.
+15:38:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:38:44 INFO  : Memory regions updated for context APU
+15:38:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:38:44 INFO  : 'con' command is executed.
+15:38:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+15:38:44 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+15:42:35 INFO  : Disconnected from the channel tcfchan#14.
+15:42:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:37 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+15:42:37 INFO  : 'jtag frequency' command is executed.
+15:42:37 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:42:37 INFO  : Context for 'APU' is selected.
+15:42:37 INFO  : System reset is completed.
+15:42:40 INFO  : 'after 3000' command is executed.
+15:42:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+15:42:42 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+15:42:42 INFO  : Context for 'APU' is selected.
+15:42:42 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+15:42:43 INFO  : 'configparams force-mem-access 1' command is executed.
+15:42:43 INFO  : Context for 'APU' is selected.
+15:42:43 INFO  : 'ps7_init' command is executed.
+15:42:43 INFO  : 'ps7_post_config' command is executed.
+15:42:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:44 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:42:44 INFO  : 'configparams force-mem-access 0' command is executed.
+15:42:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:42:44 INFO  : Memory regions updated for context APU
+15:42:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:44 INFO  : 'con' command is executed.
+15:42:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+15:42:44 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+15:43:47 INFO  : Disconnected from the channel tcfchan#15.
+15:43:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:48 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+15:43:48 INFO  : 'jtag frequency' command is executed.
+15:43:48 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:43:49 INFO  : Context for 'APU' is selected.
+15:43:49 INFO  : System reset is completed.
+15:43:52 INFO  : 'after 3000' command is executed.
+15:43:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+15:43:54 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+15:43:54 INFO  : Context for 'APU' is selected.
+15:43:54 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+15:43:54 INFO  : 'configparams force-mem-access 1' command is executed.
+15:43:54 INFO  : Context for 'APU' is selected.
+15:43:55 INFO  : 'ps7_init' command is executed.
+15:43:55 INFO  : 'ps7_post_config' command is executed.
+15:43:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:55 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:43:55 INFO  : 'configparams force-mem-access 0' command is executed.
+15:43:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:43:55 INFO  : Memory regions updated for context APU
+15:43:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:56 INFO  : 'con' command is executed.
+15:43:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+15:43:56 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+15:51:12 INFO  : Disconnected from the channel tcfchan#16.
+15:51:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:51:14 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+15:51:14 INFO  : 'jtag frequency' command is executed.
+15:51:14 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:51:14 INFO  : Context for 'APU' is selected.
+15:51:14 INFO  : System reset is completed.
+15:51:17 INFO  : 'after 3000' command is executed.
+15:51:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+15:51:19 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+15:51:19 INFO  : Context for 'APU' is selected.
+15:51:19 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+15:51:19 INFO  : 'configparams force-mem-access 1' command is executed.
+15:51:19 INFO  : Context for 'APU' is selected.
+15:51:20 INFO  : 'ps7_init' command is executed.
+15:51:20 INFO  : 'ps7_post_config' command is executed.
+15:51:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:20 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:51:20 INFO  : 'configparams force-mem-access 0' command is executed.
+15:51:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:51:21 INFO  : Memory regions updated for context APU
+15:51:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:21 INFO  : 'con' command is executed.
+15:51:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+15:51:21 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+16:35:55 INFO  : Disconnected from the channel tcfchan#17.
+16:35:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:35:56 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+16:35:56 INFO  : 'jtag frequency' command is executed.
+16:35:56 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:35:56 INFO  : Context for 'APU' is selected.
+16:35:57 INFO  : System reset is completed.
+16:36:00 INFO  : 'after 3000' command is executed.
+16:36:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+16:36:02 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+16:36:02 INFO  : Context for 'APU' is selected.
+16:36:02 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+16:36:02 INFO  : 'configparams force-mem-access 1' command is executed.
+16:36:02 INFO  : Context for 'APU' is selected.
+16:36:03 INFO  : 'ps7_init' command is executed.
+16:36:03 INFO  : 'ps7_post_config' command is executed.
+16:36:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:36:03 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:36:03 INFO  : 'configparams force-mem-access 0' command is executed.
+16:36:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:36:03 INFO  : Memory regions updated for context APU
+16:36:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:36:04 INFO  : 'con' command is executed.
+16:36:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+16:36:04 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+16:58:33 INFO  : Disconnected from the channel tcfchan#18.
+16:58:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:34 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+16:58:34 INFO  : 'jtag frequency' command is executed.
+16:58:34 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:58:34 INFO  : Context for 'APU' is selected.
+16:58:34 INFO  : System reset is completed.
+16:58:37 INFO  : 'after 3000' command is executed.
+16:58:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+16:58:40 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+16:58:40 INFO  : Context for 'APU' is selected.
+16:58:40 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+16:58:40 INFO  : 'configparams force-mem-access 1' command is executed.
+16:58:40 INFO  : Context for 'APU' is selected.
+16:58:41 INFO  : 'ps7_init' command is executed.
+16:58:41 INFO  : 'ps7_post_config' command is executed.
+16:58:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:58:41 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:58:41 INFO  : 'configparams force-mem-access 0' command is executed.
+16:58:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:58:41 INFO  : Memory regions updated for context APU
+16:58:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:58:41 INFO  : 'con' command is executed.
+16:58:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+16:58:41 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+16:59:09 INFO  : Disconnected from the channel tcfchan#19.
+16:59:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:11 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+16:59:11 INFO  : 'jtag frequency' command is executed.
+16:59:11 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:59:11 INFO  : Context for 'APU' is selected.
+16:59:11 INFO  : System reset is completed.
+16:59:14 INFO  : 'after 3000' command is executed.
+16:59:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+16:59:17 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+16:59:17 INFO  : Context for 'APU' is selected.
+16:59:17 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+16:59:17 INFO  : 'configparams force-mem-access 1' command is executed.
+16:59:17 INFO  : Context for 'APU' is selected.
+16:59:17 INFO  : 'ps7_init' command is executed.
+16:59:17 INFO  : 'ps7_post_config' command is executed.
+16:59:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:18 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:59:18 INFO  : 'configparams force-mem-access 0' command is executed.
+16:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:59:18 INFO  : Memory regions updated for context APU
+16:59:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:59:18 INFO  : 'con' command is executed.
+16:59:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+16:59:18 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+17:12:38 INFO  : Disconnected from the channel tcfchan#20.
+17:12:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:12:39 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+17:12:39 INFO  : 'jtag frequency' command is executed.
+17:12:39 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:12:39 INFO  : Context for 'APU' is selected.
+17:12:39 INFO  : System reset is completed.
+17:12:42 INFO  : 'after 3000' command is executed.
+17:12:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+17:12:45 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+17:12:45 INFO  : Context for 'APU' is selected.
+17:12:45 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+17:12:45 INFO  : 'configparams force-mem-access 1' command is executed.
+17:12:45 INFO  : Context for 'APU' is selected.
+17:12:46 INFO  : 'ps7_init' command is executed.
+17:12:46 INFO  : 'ps7_post_config' command is executed.
+17:12:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:12:46 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:12:46 INFO  : 'configparams force-mem-access 0' command is executed.
+17:12:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:12:46 INFO  : Memory regions updated for context APU
+17:12:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:12:46 INFO  : 'con' command is executed.
+17:12:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+17:12:46 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:27:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1543109179999,  Project:1543084404678
+18:27:20 INFO  : Project VISION_wrapper_hw_platform_0's source hardware specification located at C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:27:27 INFO  : Copied contents of C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper.hdf into \VISION_wrapper_hw_platform_0\system.hdf.
+18:27:32 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:27:39 INFO  : 
+18:27:40 INFO  : Updating hardware inferred compiler options for Vision.
+18:27:41 INFO  : Clearing existing target manager status.
+18:27:41 INFO  : Closing and re-opening the MSS file of ther project Vision_bsp
+18:34:41 INFO  : Disconnected from the channel tcfchan#21.
+18:34:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:34:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+18:35:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:35:04 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:35:04 INFO  : 'jtag frequency' command is executed.
+18:35:04 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:35:04 INFO  : Context for 'APU' is selected.
+18:35:04 INFO  : System reset is completed.
+18:35:07 INFO  : 'after 3000' command is executed.
+18:35:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:35:09 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:35:10 INFO  : Context for 'APU' is selected.
+18:35:10 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:35:10 INFO  : 'configparams force-mem-access 1' command is executed.
+18:35:10 INFO  : Context for 'APU' is selected.
+18:35:10 INFO  : 'ps7_init' command is executed.
+18:35:10 INFO  : 'ps7_post_config' command is executed.
+18:35:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:11 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:35:11 INFO  : 'configparams force-mem-access 0' command is executed.
+18:35:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:35:11 INFO  : Memory regions updated for context APU
+18:35:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:11 INFO  : 'con' command is executed.
+18:35:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:35:11 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:35:50 INFO  : Disconnected from the channel tcfchan#22.
+18:35:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:35:51 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:35:51 INFO  : 'jtag frequency' command is executed.
+18:35:51 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:35:51 INFO  : Context for 'APU' is selected.
+18:35:52 INFO  : System reset is completed.
+18:35:55 INFO  : 'after 3000' command is executed.
+18:35:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:35:57 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:35:57 INFO  : Context for 'APU' is selected.
+18:35:57 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:35:57 INFO  : 'configparams force-mem-access 1' command is executed.
+18:35:57 INFO  : Context for 'APU' is selected.
+18:35:58 INFO  : 'ps7_init' command is executed.
+18:35:58 INFO  : 'ps7_post_config' command is executed.
+18:35:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:58 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:35:58 INFO  : 'configparams force-mem-access 0' command is executed.
+18:35:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:35:58 INFO  : Memory regions updated for context APU
+18:35:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:59 INFO  : 'con' command is executed.
+18:35:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:35:59 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:36:48 INFO  : Disconnected from the channel tcfchan#23.
+18:36:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:36:49 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:36:49 INFO  : 'jtag frequency' command is executed.
+18:36:49 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:36:49 INFO  : Context for 'APU' is selected.
+18:36:49 INFO  : System reset is completed.
+18:36:52 INFO  : 'after 3000' command is executed.
+18:36:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:36:55 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:36:55 INFO  : Context for 'APU' is selected.
+18:36:55 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:36:55 INFO  : 'configparams force-mem-access 1' command is executed.
+18:36:55 INFO  : Context for 'APU' is selected.
+18:36:56 INFO  : 'ps7_init' command is executed.
+18:36:56 INFO  : 'ps7_post_config' command is executed.
+18:36:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:56 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:36:56 INFO  : 'configparams force-mem-access 0' command is executed.
+18:36:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:36:56 INFO  : Memory regions updated for context APU
+18:36:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:56 INFO  : 'con' command is executed.
+18:36:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:36:56 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:38:28 INFO  : Disconnected from the channel tcfchan#24.
+18:38:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:29 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:38:29 INFO  : 'jtag frequency' command is executed.
+18:38:29 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:38:29 INFO  : Context for 'APU' is selected.
+18:38:29 INFO  : System reset is completed.
+18:38:32 INFO  : 'after 3000' command is executed.
+18:38:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:38:35 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:38:35 INFO  : Context for 'APU' is selected.
+18:38:35 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:38:35 INFO  : 'configparams force-mem-access 1' command is executed.
+18:38:35 INFO  : Context for 'APU' is selected.
+18:38:36 INFO  : 'ps7_init' command is executed.
+18:38:36 INFO  : 'ps7_post_config' command is executed.
+18:38:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:36 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:38:36 INFO  : 'configparams force-mem-access 0' command is executed.
+18:38:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:38:36 INFO  : Memory regions updated for context APU
+18:38:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:36 INFO  : 'con' command is executed.
+18:38:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:38:36 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:40:08 INFO  : Disconnected from the channel tcfchan#25.
+18:40:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:40:10 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:40:10 INFO  : 'jtag frequency' command is executed.
+18:40:10 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:40:10 INFO  : Context for 'APU' is selected.
+18:40:10 INFO  : System reset is completed.
+18:40:13 INFO  : 'after 3000' command is executed.
+18:40:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:40:15 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:40:15 INFO  : Context for 'APU' is selected.
+18:40:15 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:40:15 INFO  : 'configparams force-mem-access 1' command is executed.
+18:40:16 INFO  : Context for 'APU' is selected.
+18:40:16 INFO  : 'ps7_init' command is executed.
+18:40:16 INFO  : 'ps7_post_config' command is executed.
+18:40:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:40:17 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:40:17 INFO  : 'configparams force-mem-access 0' command is executed.
+18:40:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:40:17 INFO  : Memory regions updated for context APU
+18:40:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:40:17 INFO  : 'con' command is executed.
+18:40:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:40:17 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:40:52 INFO  : Disconnected from the channel tcfchan#26.
+18:40:52 WARN  : channel "tcfchan#26" closed
+18:40:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:40:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:40:54 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:40:54 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:40:54 INFO  : 'jtag frequency' command is executed.
+18:40:54 INFO  : 'jtag frequency' command is executed.
+18:40:54 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:40:54 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:40:54 INFO  : Context for 'APU' is selected.
+18:40:54 INFO  : Context for 'APU' is selected.
+18:40:54 INFO  : System reset is completed.
+18:40:54 INFO  : System reset is completed.
+18:40:57 INFO  : 'after 3000' command is executed.
+18:41:00 INFO  : 'after 3000' command is executed.
+18:41:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:41:22 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:41:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:42:00 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:42:00 INFO  : 'jtag frequency' command is executed.
+18:42:00 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:42:00 INFO  : Context for 'APU' is selected.
+18:42:00 INFO  : System reset is completed.
+18:42:03 INFO  : 'after 3000' command is executed.
+18:42:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:42:24 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:42:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:42:26 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:42:26 INFO  : Context for 'APU' is selected.
+18:42:26 INFO  : Context for 'APU' is selected.
+18:42:26 INFO  : Context for 'APU' is selected.
+18:42:26 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:42:26 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:42:26 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:42:26 INFO  : 'configparams force-mem-access 1' command is executed.
+18:42:26 INFO  : 'configparams force-mem-access 1' command is executed.
+18:42:26 INFO  : 'configparams force-mem-access 1' command is executed.
+18:42:26 INFO  : Context for 'APU' is selected.
+18:42:26 INFO  : Context for 'APU' is selected.
+18:42:27 INFO  : Context for 'APU' is selected.
+18:42:27 INFO  : 'ps7_init' command is executed.
+18:42:28 INFO  : 'ps7_init' command is executed.
+18:42:28 INFO  : 'ps7_init' command is executed.
+18:42:28 INFO  : 'ps7_post_config' command is executed.
+18:42:28 INFO  : 'ps7_post_config' command is executed.
+18:42:28 INFO  : 'ps7_post_config' command is executed.
+18:42:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:29 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:42:29 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:42:29 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:42:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:42:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:42:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:42:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:42:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:42:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:42:30 INFO  : Memory regions updated for context APU
+18:42:30 INFO  : Memory regions updated for context APU
+18:42:30 INFO  : Memory regions updated for context APU
+18:42:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:30 INFO  : 'con' command is executed.
+18:42:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:42:30 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:42:30 ERROR : Already running
+18:42:30 ERROR : Already running
+18:42:30 INFO  : Disconnected from the channel tcfchan#27.
+18:42:38 WARN  : channel "tcfchan#27" closed
+18:42:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:42:40 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:42:40 INFO  : 'jtag frequency' command is executed.
+18:42:40 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:42:40 INFO  : Context for 'APU' is selected.
+18:42:40 INFO  : System reset is completed.
+18:42:43 INFO  : 'after 3000' command is executed.
+18:42:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:42:46 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:42:46 INFO  : Context for 'APU' is selected.
+18:42:46 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:42:46 INFO  : 'configparams force-mem-access 1' command is executed.
+18:42:46 INFO  : Context for 'APU' is selected.
+18:42:46 INFO  : 'ps7_init' command is executed.
+18:42:46 INFO  : 'ps7_post_config' command is executed.
+18:42:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:47 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:42:47 INFO  : 'configparams force-mem-access 0' command is executed.
+18:42:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:42:47 INFO  : Memory regions updated for context APU
+18:42:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:42:47 INFO  : 'con' command is executed.
+18:42:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:42:47 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:53:13 INFO  : Disconnected from the channel tcfchan#28.
+18:53:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+18:53:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+18:53:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:47 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:53:47 INFO  : 'jtag frequency' command is executed.
+18:53:47 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:53:47 INFO  : Context for 'APU' is selected.
+18:53:47 INFO  : System reset is completed.
+18:53:50 INFO  : 'after 3000' command is executed.
+18:53:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:53:53 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:53:53 INFO  : Context for 'APU' is selected.
+18:53:53 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:53:53 INFO  : 'configparams force-mem-access 1' command is executed.
+18:53:53 INFO  : Context for 'APU' is selected.
+18:53:54 INFO  : 'ps7_init' command is executed.
+18:53:54 INFO  : 'ps7_post_config' command is executed.
+18:53:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:54 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:53:54 INFO  : 'configparams force-mem-access 0' command is executed.
+18:53:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:53:54 INFO  : Memory regions updated for context APU
+18:53:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:55 INFO  : 'con' command is executed.
+18:53:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:53:55 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+18:58:14 INFO  : Disconnected from the channel tcfchan#29.
+18:58:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:15 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+18:58:15 INFO  : 'jtag frequency' command is executed.
+18:58:15 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:58:15 INFO  : Context for 'APU' is selected.
+18:58:15 INFO  : System reset is completed.
+18:58:18 INFO  : 'after 3000' command is executed.
+18:58:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+18:58:21 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+18:58:21 INFO  : Context for 'APU' is selected.
+18:58:21 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+18:58:21 INFO  : 'configparams force-mem-access 1' command is executed.
+18:58:21 INFO  : Context for 'APU' is selected.
+18:58:21 INFO  : 'ps7_init' command is executed.
+18:58:21 INFO  : 'ps7_post_config' command is executed.
+18:58:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:22 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:58:22 INFO  : 'configparams force-mem-access 0' command is executed.
+18:58:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:58:22 INFO  : Memory regions updated for context APU
+18:58:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:22 INFO  : 'con' command is executed.
+18:58:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+18:58:22 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:04:25 INFO  : Disconnected from the channel tcfchan#30.
+19:04:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:04:27 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:04:27 INFO  : 'jtag frequency' command is executed.
+19:04:27 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:04:27 INFO  : Context for 'APU' is selected.
+19:04:27 INFO  : System reset is completed.
+19:04:30 INFO  : 'after 3000' command is executed.
+19:04:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:04:32 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:04:32 INFO  : Context for 'APU' is selected.
+19:04:32 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:04:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:04:32 INFO  : Context for 'APU' is selected.
+19:04:33 INFO  : 'ps7_init' command is executed.
+19:04:33 INFO  : 'ps7_post_config' command is executed.
+19:04:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:33 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:04:33 INFO  : 'configparams force-mem-access 0' command is executed.
+19:04:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:04:33 INFO  : Memory regions updated for context APU
+19:04:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:34 INFO  : 'con' command is executed.
+19:04:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:04:34 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:30:24 INFO  : Disconnected from the channel tcfchan#31.
+19:30:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:30:26 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:30:26 INFO  : 'jtag frequency' command is executed.
+19:30:26 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:30:26 INFO  : Context for 'APU' is selected.
+19:30:26 INFO  : System reset is completed.
+19:30:29 INFO  : 'after 3000' command is executed.
+19:30:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:30:31 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:30:31 INFO  : Context for 'APU' is selected.
+19:30:32 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:30:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:30:32 INFO  : Context for 'APU' is selected.
+19:30:32 INFO  : 'ps7_init' command is executed.
+19:30:32 INFO  : 'ps7_post_config' command is executed.
+19:30:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:30:33 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:30:33 INFO  : 'configparams force-mem-access 0' command is executed.
+19:30:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:30:33 INFO  : Memory regions updated for context APU
+19:30:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:30:33 INFO  : 'con' command is executed.
+19:30:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:30:33 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:30:47 INFO  : Disconnected from the channel tcfchan#32.
+19:30:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:30:49 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:30:49 INFO  : 'jtag frequency' command is executed.
+19:30:49 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:30:49 INFO  : Context for 'APU' is selected.
+19:30:49 INFO  : System reset is completed.
+19:30:52 INFO  : 'after 3000' command is executed.
+19:30:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:30:54 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:30:54 INFO  : Context for 'APU' is selected.
+19:30:54 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:30:54 INFO  : 'configparams force-mem-access 1' command is executed.
+19:30:55 INFO  : Context for 'APU' is selected.
+19:30:55 INFO  : 'ps7_init' command is executed.
+19:30:55 INFO  : 'ps7_post_config' command is executed.
+19:30:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:30:56 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:30:56 INFO  : 'configparams force-mem-access 0' command is executed.
+19:30:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:30:56 INFO  : Memory regions updated for context APU
+19:30:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:30:56 INFO  : 'con' command is executed.
+19:30:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:30:56 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:31:09 INFO  : Disconnected from the channel tcfchan#33.
+19:31:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:10 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:31:10 INFO  : 'jtag frequency' command is executed.
+19:31:10 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:31:10 INFO  : Context for 'APU' is selected.
+19:31:11 INFO  : System reset is completed.
+19:31:14 INFO  : 'after 3000' command is executed.
+19:31:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:31:16 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:31:16 INFO  : Context for 'APU' is selected.
+19:31:16 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:31:16 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:16 INFO  : Context for 'APU' is selected.
+19:31:17 INFO  : 'ps7_init' command is executed.
+19:31:17 INFO  : 'ps7_post_config' command is executed.
+19:31:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:17 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:31:17 INFO  : 'configparams force-mem-access 0' command is executed.
+19:31:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:31:17 INFO  : Memory regions updated for context APU
+19:31:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:18 INFO  : 'con' command is executed.
+19:31:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:31:18 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:32:12 INFO  : Disconnected from the channel tcfchan#34.
+19:32:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:32:14 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:32:14 INFO  : 'jtag frequency' command is executed.
+19:32:14 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:32:14 INFO  : Context for 'APU' is selected.
+19:32:14 INFO  : System reset is completed.
+19:32:17 INFO  : 'after 3000' command is executed.
+19:32:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:32:19 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:32:19 INFO  : Context for 'APU' is selected.
+19:32:19 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:32:19 INFO  : 'configparams force-mem-access 1' command is executed.
+19:32:20 INFO  : Context for 'APU' is selected.
+19:32:20 INFO  : 'ps7_init' command is executed.
+19:32:20 INFO  : 'ps7_post_config' command is executed.
+19:32:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:32:21 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:32:21 INFO  : 'configparams force-mem-access 0' command is executed.
+19:32:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:32:21 INFO  : Memory regions updated for context APU
+19:32:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:32:21 INFO  : 'con' command is executed.
+19:32:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:32:21 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:46:32 INFO  : Disconnected from the channel tcfchan#35.
+19:46:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:46:33 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:46:33 INFO  : 'jtag frequency' command is executed.
+19:46:33 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:46:33 INFO  : Context for 'APU' is selected.
+19:46:33 INFO  : System reset is completed.
+19:46:36 INFO  : 'after 3000' command is executed.
+19:46:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:46:39 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:46:39 INFO  : Context for 'APU' is selected.
+19:46:39 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:46:39 INFO  : 'configparams force-mem-access 1' command is executed.
+19:46:39 INFO  : Context for 'APU' is selected.
+19:46:39 INFO  : 'ps7_init' command is executed.
+19:46:39 INFO  : 'ps7_post_config' command is executed.
+19:46:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:40 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:46:40 INFO  : 'configparams force-mem-access 0' command is executed.
+19:46:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:46:40 INFO  : Memory regions updated for context APU
+19:46:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:40 INFO  : 'con' command is executed.
+19:46:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:46:40 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:54:18 INFO  : Disconnected from the channel tcfchan#36.
+19:54:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:54:19 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:54:19 INFO  : 'jtag frequency' command is executed.
+19:54:19 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:54:19 INFO  : Context for 'APU' is selected.
+19:54:19 INFO  : System reset is completed.
+19:54:22 INFO  : 'after 3000' command is executed.
+19:54:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:54:25 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:54:25 INFO  : Context for 'APU' is selected.
+19:54:25 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:54:25 INFO  : 'configparams force-mem-access 1' command is executed.
+19:54:25 INFO  : Context for 'APU' is selected.
+19:54:26 INFO  : 'ps7_init' command is executed.
+19:54:26 INFO  : 'ps7_post_config' command is executed.
+19:54:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:54:26 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:54:26 INFO  : 'configparams force-mem-access 0' command is executed.
+19:54:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:54:26 INFO  : Memory regions updated for context APU
+19:54:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:54:26 INFO  : 'con' command is executed.
+19:54:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:54:26 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:56:49 INFO  : Disconnected from the channel tcfchan#37.
+19:56:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:56:51 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:56:51 INFO  : 'jtag frequency' command is executed.
+19:56:51 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:56:51 INFO  : Context for 'APU' is selected.
+19:56:51 INFO  : System reset is completed.
+19:56:54 INFO  : 'after 3000' command is executed.
+19:56:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:56:57 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:56:57 INFO  : Context for 'APU' is selected.
+19:56:57 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:56:57 INFO  : 'configparams force-mem-access 1' command is executed.
+19:56:57 INFO  : Context for 'APU' is selected.
+19:56:57 INFO  : 'ps7_init' command is executed.
+19:56:57 INFO  : 'ps7_post_config' command is executed.
+19:56:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:58 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:56:58 INFO  : 'configparams force-mem-access 0' command is executed.
+19:56:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:56:58 INFO  : Memory regions updated for context APU
+19:56:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:58 INFO  : 'con' command is executed.
+19:56:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:56:58 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+19:57:42 INFO  : Disconnected from the channel tcfchan#38.
+19:57:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:44 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+19:57:44 INFO  : 'jtag frequency' command is executed.
+19:57:44 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:57:44 INFO  : Context for 'APU' is selected.
+19:57:44 INFO  : System reset is completed.
+19:57:47 INFO  : 'after 3000' command is executed.
+19:57:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+19:57:49 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+19:57:49 INFO  : Context for 'APU' is selected.
+19:57:49 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+19:57:49 INFO  : 'configparams force-mem-access 1' command is executed.
+19:57:49 INFO  : Context for 'APU' is selected.
+19:57:50 INFO  : 'ps7_init' command is executed.
+19:57:50 INFO  : 'ps7_post_config' command is executed.
+19:57:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:57:50 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:57:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:57:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:57:50 INFO  : Memory regions updated for context APU
+19:57:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:57:51 INFO  : 'con' command is executed.
+19:57:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+19:57:51 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:02:01 INFO  : Disconnected from the channel tcfchan#39.
+20:02:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:02 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:02:02 INFO  : 'jtag frequency' command is executed.
+20:02:02 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:02:02 INFO  : Context for 'APU' is selected.
+20:02:02 INFO  : System reset is completed.
+20:02:05 INFO  : 'after 3000' command is executed.
+20:02:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:02:08 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:02:08 INFO  : Context for 'APU' is selected.
+20:02:08 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:02:08 INFO  : 'configparams force-mem-access 1' command is executed.
+20:02:08 INFO  : Context for 'APU' is selected.
+20:02:08 INFO  : 'ps7_init' command is executed.
+20:02:08 INFO  : 'ps7_post_config' command is executed.
+20:02:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:09 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:02:09 INFO  : 'configparams force-mem-access 0' command is executed.
+20:02:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:02:09 INFO  : Memory regions updated for context APU
+20:02:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:09 INFO  : 'con' command is executed.
+20:02:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:02:09 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:07:14 INFO  : Disconnected from the channel tcfchan#40.
+20:07:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:07:16 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:07:16 INFO  : 'jtag frequency' command is executed.
+20:07:16 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:07:16 INFO  : Context for 'APU' is selected.
+20:07:16 INFO  : System reset is completed.
+20:07:19 INFO  : 'after 3000' command is executed.
+20:07:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:07:21 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:07:21 INFO  : Context for 'APU' is selected.
+20:07:21 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:07:21 INFO  : 'configparams force-mem-access 1' command is executed.
+20:07:21 INFO  : Context for 'APU' is selected.
+20:07:22 INFO  : 'ps7_init' command is executed.
+20:07:22 INFO  : 'ps7_post_config' command is executed.
+20:07:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:07:22 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:07:22 INFO  : 'configparams force-mem-access 0' command is executed.
+20:07:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:07:22 INFO  : Memory regions updated for context APU
+20:07:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:07:23 INFO  : 'con' command is executed.
+20:07:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:07:23 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:12:49 INFO  : Disconnected from the channel tcfchan#41.
+20:12:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:12:50 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:12:50 INFO  : 'jtag frequency' command is executed.
+20:12:50 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:12:50 INFO  : Context for 'APU' is selected.
+20:12:51 INFO  : System reset is completed.
+20:12:54 INFO  : 'after 3000' command is executed.
+20:12:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:12:56 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:12:56 INFO  : Context for 'APU' is selected.
+20:12:56 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:12:56 INFO  : 'configparams force-mem-access 1' command is executed.
+20:12:56 INFO  : Context for 'APU' is selected.
+20:12:57 INFO  : 'ps7_init' command is executed.
+20:12:57 INFO  : 'ps7_post_config' command is executed.
+20:12:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:57 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:12:57 INFO  : 'configparams force-mem-access 0' command is executed.
+20:12:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:12:57 INFO  : Memory regions updated for context APU
+20:12:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:57 INFO  : 'con' command is executed.
+20:12:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:12:57 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:16:01 INFO  : Disconnected from the channel tcfchan#42.
+20:16:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:03 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:16:03 INFO  : 'jtag frequency' command is executed.
+20:16:03 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:16:03 INFO  : Context for 'APU' is selected.
+20:16:03 INFO  : System reset is completed.
+20:16:06 INFO  : 'after 3000' command is executed.
+20:16:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:16:09 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:16:09 INFO  : Context for 'APU' is selected.
+20:16:09 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:16:09 INFO  : 'configparams force-mem-access 1' command is executed.
+20:16:09 INFO  : Context for 'APU' is selected.
+20:16:09 INFO  : 'ps7_init' command is executed.
+20:16:09 INFO  : 'ps7_post_config' command is executed.
+20:16:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:16:10 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:16:10 INFO  : 'configparams force-mem-access 0' command is executed.
+20:16:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:16:10 INFO  : Memory regions updated for context APU
+20:16:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:16:10 INFO  : 'con' command is executed.
+20:16:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:16:10 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:17:28 INFO  : Disconnected from the channel tcfchan#43.
+20:17:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:30 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:17:30 INFO  : 'jtag frequency' command is executed.
+20:17:30 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:17:30 INFO  : Context for 'APU' is selected.
+20:17:30 INFO  : System reset is completed.
+20:17:33 INFO  : 'after 3000' command is executed.
+20:17:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:17:35 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:17:35 INFO  : Context for 'APU' is selected.
+20:17:35 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:17:35 INFO  : 'configparams force-mem-access 1' command is executed.
+20:17:35 INFO  : Context for 'APU' is selected.
+20:17:36 INFO  : 'ps7_init' command is executed.
+20:17:36 INFO  : 'ps7_post_config' command is executed.
+20:17:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:37 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:17:37 INFO  : 'configparams force-mem-access 0' command is executed.
+20:17:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:17:37 INFO  : Memory regions updated for context APU
+20:17:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:37 INFO  : 'con' command is executed.
+20:17:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:17:37 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:29:15 INFO  : Disconnected from the channel tcfchan#44.
+20:29:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:29:17 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:29:17 INFO  : 'jtag frequency' command is executed.
+20:29:17 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:29:17 INFO  : Context for 'APU' is selected.
+20:29:17 INFO  : System reset is completed.
+20:29:20 INFO  : 'after 3000' command is executed.
+20:29:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:29:22 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:29:23 INFO  : Context for 'APU' is selected.
+20:29:23 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:29:23 INFO  : 'configparams force-mem-access 1' command is executed.
+20:29:23 INFO  : Context for 'APU' is selected.
+20:29:23 INFO  : 'ps7_init' command is executed.
+20:29:23 INFO  : 'ps7_post_config' command is executed.
+20:29:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:24 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:29:24 INFO  : 'configparams force-mem-access 0' command is executed.
+20:29:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:29:24 INFO  : Memory regions updated for context APU
+20:29:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:24 INFO  : 'con' command is executed.
+20:29:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:29:24 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:32:14 INFO  : Disconnected from the channel tcfchan#45.
+20:32:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:16 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:32:16 INFO  : 'jtag frequency' command is executed.
+20:32:16 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:32:16 INFO  : Context for 'APU' is selected.
+20:32:16 INFO  : System reset is completed.
+20:32:19 INFO  : 'after 3000' command is executed.
+20:32:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:32:22 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:32:22 INFO  : Context for 'APU' is selected.
+20:32:22 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:32:22 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:22 INFO  : Context for 'APU' is selected.
+20:32:22 INFO  : 'ps7_init' command is executed.
+20:32:22 INFO  : 'ps7_post_config' command is executed.
+20:32:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:23 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:23 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:23 INFO  : Memory regions updated for context APU
+20:32:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:23 INFO  : 'con' command is executed.
+20:32:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:32:23 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:34:50 INFO  : Disconnected from the channel tcfchan#46.
+20:34:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:34:51 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:34:51 INFO  : 'jtag frequency' command is executed.
+20:34:51 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:34:51 INFO  : Context for 'APU' is selected.
+20:34:51 INFO  : System reset is completed.
+20:34:55 INFO  : 'after 3000' command is executed.
+20:34:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:34:57 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:34:57 INFO  : Context for 'APU' is selected.
+20:34:57 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:34:57 INFO  : 'configparams force-mem-access 1' command is executed.
+20:34:57 INFO  : Context for 'APU' is selected.
+20:34:58 INFO  : 'ps7_init' command is executed.
+20:34:58 INFO  : 'ps7_post_config' command is executed.
+20:34:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:34:58 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:34:58 INFO  : 'configparams force-mem-access 0' command is executed.
+20:34:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:34:58 INFO  : Memory regions updated for context APU
+20:34:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:34:59 INFO  : 'con' command is executed.
+20:34:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:34:59 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:36:15 INFO  : Disconnected from the channel tcfchan#47.
+20:36:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:17 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:36:17 INFO  : 'jtag frequency' command is executed.
+20:36:17 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:36:17 INFO  : Context for 'APU' is selected.
+20:36:17 INFO  : System reset is completed.
+20:36:20 INFO  : 'after 3000' command is executed.
+20:36:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:36:23 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:36:23 INFO  : Context for 'APU' is selected.
+20:36:23 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:36:23 INFO  : 'configparams force-mem-access 1' command is executed.
+20:36:23 INFO  : Context for 'APU' is selected.
+20:36:23 INFO  : 'ps7_init' command is executed.
+20:36:23 INFO  : 'ps7_post_config' command is executed.
+20:36:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:36:24 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:36:24 INFO  : 'configparams force-mem-access 0' command is executed.
+20:36:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:36:24 INFO  : Memory regions updated for context APU
+20:36:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:36:24 INFO  : 'con' command is executed.
+20:36:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:36:24 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:44:20 INFO  : Disconnected from the channel tcfchan#48.
+20:44:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:44:21 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:44:21 INFO  : 'jtag frequency' command is executed.
+20:44:22 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:44:22 INFO  : Context for 'APU' is selected.
+20:44:22 INFO  : System reset is completed.
+20:44:25 INFO  : 'after 3000' command is executed.
+20:44:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:44:27 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:44:27 INFO  : Context for 'APU' is selected.
+20:44:27 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:44:27 INFO  : 'configparams force-mem-access 1' command is executed.
+20:44:27 INFO  : Context for 'APU' is selected.
+20:44:28 INFO  : 'ps7_init' command is executed.
+20:44:28 INFO  : 'ps7_post_config' command is executed.
+20:44:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:44:28 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:44:28 INFO  : 'configparams force-mem-access 0' command is executed.
+20:44:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:44:29 INFO  : Memory regions updated for context APU
+20:44:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:44:29 INFO  : 'con' command is executed.
+20:44:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:44:29 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:50:24 INFO  : Disconnected from the channel tcfchan#49.
+20:50:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:50:26 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:50:26 INFO  : 'jtag frequency' command is executed.
+20:50:26 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:50:26 INFO  : Context for 'APU' is selected.
+20:50:26 INFO  : System reset is completed.
+20:50:29 INFO  : 'after 3000' command is executed.
+20:50:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:50:31 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:50:31 INFO  : Context for 'APU' is selected.
+20:50:31 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:50:31 INFO  : 'configparams force-mem-access 1' command is executed.
+20:50:32 INFO  : Context for 'APU' is selected.
+20:50:32 INFO  : 'ps7_init' command is executed.
+20:50:32 INFO  : 'ps7_post_config' command is executed.
+20:50:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:50:33 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:50:33 INFO  : 'configparams force-mem-access 0' command is executed.
+20:50:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:50:33 INFO  : Memory regions updated for context APU
+20:50:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:50:33 INFO  : 'con' command is executed.
+20:50:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:50:33 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:53:10 INFO  : Disconnected from the channel tcfchan#50.
+20:53:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:53:11 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:53:11 INFO  : 'jtag frequency' command is executed.
+20:53:11 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:53:11 INFO  : Context for 'APU' is selected.
+20:53:11 INFO  : System reset is completed.
+20:53:14 INFO  : 'after 3000' command is executed.
+20:53:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:53:17 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:53:17 INFO  : Context for 'APU' is selected.
+20:53:17 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:53:17 INFO  : 'configparams force-mem-access 1' command is executed.
+20:53:17 INFO  : Context for 'APU' is selected.
+20:53:17 INFO  : 'ps7_init' command is executed.
+20:53:17 INFO  : 'ps7_post_config' command is executed.
+20:53:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:53:18 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:53:18 INFO  : 'configparams force-mem-access 0' command is executed.
+20:53:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:53:18 INFO  : Memory regions updated for context APU
+20:53:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:53:18 INFO  : 'con' command is executed.
+20:53:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:53:18 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:56:08 INFO  : Disconnected from the channel tcfchan#51.
+20:56:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:10 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:56:10 INFO  : 'jtag frequency' command is executed.
+20:56:10 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:56:10 INFO  : Context for 'APU' is selected.
+20:56:10 INFO  : System reset is completed.
+20:56:13 INFO  : 'after 3000' command is executed.
+20:56:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:56:16 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:56:16 INFO  : Context for 'APU' is selected.
+20:56:16 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:56:16 INFO  : 'configparams force-mem-access 1' command is executed.
+20:56:16 INFO  : Context for 'APU' is selected.
+20:56:16 INFO  : 'ps7_init' command is executed.
+20:56:16 INFO  : 'ps7_post_config' command is executed.
+20:56:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:56:17 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:56:17 INFO  : 'configparams force-mem-access 0' command is executed.
+20:56:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:56:17 INFO  : Memory regions updated for context APU
+20:56:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:56:17 INFO  : 'con' command is executed.
+20:56:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:56:17 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+20:58:09 INFO  : Disconnected from the channel tcfchan#52.
+20:58:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:58:11 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+20:58:11 INFO  : 'jtag frequency' command is executed.
+20:58:11 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:58:11 INFO  : Context for 'APU' is selected.
+20:58:11 INFO  : System reset is completed.
+20:58:14 INFO  : 'after 3000' command is executed.
+20:58:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+20:58:17 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+20:58:17 INFO  : Context for 'APU' is selected.
+20:58:17 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+20:58:17 INFO  : 'configparams force-mem-access 1' command is executed.
+20:58:17 INFO  : Context for 'APU' is selected.
+20:58:17 INFO  : 'ps7_init' command is executed.
+20:58:17 INFO  : 'ps7_post_config' command is executed.
+20:58:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:58:18 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:58:18 INFO  : 'configparams force-mem-access 0' command is executed.
+20:58:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:58:18 INFO  : Memory regions updated for context APU
+20:58:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:58:18 INFO  : 'con' command is executed.
+20:58:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+20:58:18 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:00:32 INFO  : Disconnected from the channel tcfchan#53.
+21:00:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:00:33 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:00:33 INFO  : 'jtag frequency' command is executed.
+21:00:33 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:00:33 INFO  : Context for 'APU' is selected.
+21:00:33 INFO  : System reset is completed.
+21:00:36 INFO  : 'after 3000' command is executed.
+21:00:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:00:39 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:00:39 INFO  : Context for 'APU' is selected.
+21:00:39 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:00:39 INFO  : 'configparams force-mem-access 1' command is executed.
+21:00:39 INFO  : Context for 'APU' is selected.
+21:00:39 INFO  : 'ps7_init' command is executed.
+21:00:39 INFO  : 'ps7_post_config' command is executed.
+21:00:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:00:40 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:00:40 INFO  : 'configparams force-mem-access 0' command is executed.
+21:00:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:00:40 INFO  : Memory regions updated for context APU
+21:00:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:00:40 INFO  : 'con' command is executed.
+21:00:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:00:40 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:05:15 INFO  : Disconnected from the channel tcfchan#54.
+21:05:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:05:16 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:05:16 INFO  : 'jtag frequency' command is executed.
+21:05:16 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:05:16 INFO  : Context for 'APU' is selected.
+21:05:16 INFO  : System reset is completed.
+21:05:19 INFO  : 'after 3000' command is executed.
+21:05:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:05:22 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:05:22 INFO  : Context for 'APU' is selected.
+21:05:22 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:05:22 INFO  : 'configparams force-mem-access 1' command is executed.
+21:05:22 INFO  : Context for 'APU' is selected.
+21:05:23 INFO  : 'ps7_init' command is executed.
+21:05:23 INFO  : 'ps7_post_config' command is executed.
+21:05:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:23 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:05:23 INFO  : 'configparams force-mem-access 0' command is executed.
+21:05:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:05:23 INFO  : Memory regions updated for context APU
+21:05:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:23 INFO  : 'con' command is executed.
+21:05:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:05:23 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:05:31 INFO  : Disconnected from the channel tcfchan#55.
+21:05:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:05:33 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:05:33 INFO  : 'jtag frequency' command is executed.
+21:05:33 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:05:33 INFO  : Context for 'APU' is selected.
+21:05:33 INFO  : System reset is completed.
+21:05:36 INFO  : 'after 3000' command is executed.
+21:05:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:05:38 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:05:38 INFO  : Context for 'APU' is selected.
+21:05:38 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:05:38 INFO  : 'configparams force-mem-access 1' command is executed.
+21:05:38 INFO  : Context for 'APU' is selected.
+21:05:39 INFO  : 'ps7_init' command is executed.
+21:05:39 INFO  : 'ps7_post_config' command is executed.
+21:05:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:40 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:05:40 INFO  : 'configparams force-mem-access 0' command is executed.
+21:05:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:05:40 INFO  : Memory regions updated for context APU
+21:05:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:40 INFO  : 'con' command is executed.
+21:05:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:05:40 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:06:30 INFO  : Disconnected from the channel tcfchan#56.
+21:06:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:06:31 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:06:31 INFO  : 'jtag frequency' command is executed.
+21:06:31 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:06:31 INFO  : Context for 'APU' is selected.
+21:06:31 INFO  : System reset is completed.
+21:06:34 INFO  : 'after 3000' command is executed.
+21:06:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:06:37 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:06:37 INFO  : Context for 'APU' is selected.
+21:06:37 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:06:37 INFO  : 'configparams force-mem-access 1' command is executed.
+21:06:37 INFO  : Context for 'APU' is selected.
+21:06:37 INFO  : 'ps7_init' command is executed.
+21:06:37 INFO  : 'ps7_post_config' command is executed.
+21:06:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:06:38 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:06:38 INFO  : 'configparams force-mem-access 0' command is executed.
+21:06:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:06:38 INFO  : Memory regions updated for context APU
+21:06:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:06:38 INFO  : 'con' command is executed.
+21:06:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:06:38 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:08:24 INFO  : Disconnected from the channel tcfchan#57.
+21:08:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:08:25 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:08:25 INFO  : 'jtag frequency' command is executed.
+21:08:25 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:08:25 INFO  : Context for 'APU' is selected.
+21:08:25 INFO  : System reset is completed.
+21:08:28 INFO  : 'after 3000' command is executed.
+21:08:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:08:31 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:08:31 INFO  : Context for 'APU' is selected.
+21:08:31 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:08:31 INFO  : 'configparams force-mem-access 1' command is executed.
+21:08:31 INFO  : Context for 'APU' is selected.
+21:08:32 INFO  : 'ps7_init' command is executed.
+21:08:32 INFO  : 'ps7_post_config' command is executed.
+21:08:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:08:32 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:08:32 INFO  : 'configparams force-mem-access 0' command is executed.
+21:08:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:08:32 INFO  : Memory regions updated for context APU
+21:08:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:08:32 INFO  : 'con' command is executed.
+21:08:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:08:32 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:13:40 INFO  : Disconnected from the channel tcfchan#58.
+21:13:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:42 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:13:42 INFO  : 'jtag frequency' command is executed.
+21:13:42 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:13:42 INFO  : Context for 'APU' is selected.
+21:13:42 INFO  : System reset is completed.
+21:13:45 INFO  : 'after 3000' command is executed.
+21:13:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:48 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:13:48 INFO  : 'jtag frequency' command is executed.
+21:13:48 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:13:48 INFO  : Context for 'APU' is selected.
+21:13:49 INFO  : System reset is completed.
+21:13:52 INFO  : 'after 3000' command is executed.
+21:13:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:13:57 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:13:57 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+1. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+1. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+21:13:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+21:13:57 INFO  : Context for 'APU' is selected.
+21:13:57 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:13:57 INFO  : 'configparams force-mem-access 1' command is executed.
+21:13:57 INFO  : Context for 'APU' is selected.
+21:13:58 INFO  : 'ps7_init' command is executed.
+21:13:58 INFO  : 'ps7_post_config' command is executed.
+21:13:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:58 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:13:58 INFO  : 'configparams force-mem-access 0' command is executed.
+21:13:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:13:58 INFO  : Memory regions updated for context APU
+21:13:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:59 INFO  : 'con' command is executed.
+21:13:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:13:59 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:14:02 INFO  : Disconnected from the channel tcfchan#59.
+21:14:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:14:03 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:14:03 INFO  : 'jtag frequency' command is executed.
+21:14:03 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:14:04 INFO  : Context for 'APU' is selected.
+21:14:04 INFO  : System reset is completed.
+21:14:07 INFO  : 'after 3000' command is executed.
+21:14:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:14:09 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:14:09 INFO  : Context for 'APU' is selected.
+21:14:09 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:14:09 INFO  : 'configparams force-mem-access 1' command is executed.
+21:14:09 INFO  : Context for 'APU' is selected.
+21:14:10 INFO  : 'ps7_init' command is executed.
+21:14:10 INFO  : 'ps7_post_config' command is executed.
+21:14:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:10 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:14:10 INFO  : 'configparams force-mem-access 0' command is executed.
+21:14:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:14:10 INFO  : Memory regions updated for context APU
+21:14:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:11 INFO  : 'con' command is executed.
+21:14:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:14:11 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:16:19 INFO  : Disconnected from the channel tcfchan#60.
+21:16:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:20 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:16:20 INFO  : 'jtag frequency' command is executed.
+21:16:20 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:16:20 INFO  : Context for 'APU' is selected.
+21:16:20 INFO  : System reset is completed.
+21:16:23 INFO  : 'after 3000' command is executed.
+21:16:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:16:26 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:16:26 INFO  : Context for 'APU' is selected.
+21:16:26 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:16:26 INFO  : 'configparams force-mem-access 1' command is executed.
+21:16:26 INFO  : Context for 'APU' is selected.
+21:16:27 INFO  : 'ps7_init' command is executed.
+21:16:27 INFO  : 'ps7_post_config' command is executed.
+21:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:27 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:16:27 INFO  : 'configparams force-mem-access 0' command is executed.
+21:16:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:16:27 INFO  : Memory regions updated for context APU
+21:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:27 INFO  : 'con' command is executed.
+21:16:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:16:27 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:18:46 INFO  : Disconnected from the channel tcfchan#61.
+21:18:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:18:48 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:18:48 INFO  : 'jtag frequency' command is executed.
+21:18:48 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:18:48 INFO  : Context for 'APU' is selected.
+21:18:48 INFO  : System reset is completed.
+21:18:51 INFO  : 'after 3000' command is executed.
+21:18:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:18:53 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:18:54 INFO  : Context for 'APU' is selected.
+21:18:54 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:18:54 INFO  : 'configparams force-mem-access 1' command is executed.
+21:18:54 INFO  : Context for 'APU' is selected.
+21:18:54 INFO  : 'ps7_init' command is executed.
+21:18:54 INFO  : 'ps7_post_config' command is executed.
+21:18:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:18:55 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:18:55 INFO  : 'configparams force-mem-access 0' command is executed.
+21:18:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:18:55 INFO  : Memory regions updated for context APU
+21:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:18:55 INFO  : 'con' command is executed.
+21:18:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:18:55 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'
+21:19:01 INFO  : Disconnected from the channel tcfchan#62.
+21:19:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:19:03 INFO  : Jtag cable 'Digilent Arty Z7 003017A703B2A' is selected.
+21:19:03 INFO  : 'jtag frequency' command is executed.
+21:19:03 INFO  : Sourcing of 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:19:03 INFO  : Context for 'APU' is selected.
+21:19:03 INFO  : System reset is completed.
+21:19:06 INFO  : 'after 3000' command is executed.
+21:19:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1' command is executed.
+21:19:08 INFO  : FPGA configured successfully with bitstream "C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit"
+21:19:08 INFO  : Context for 'APU' is selected.
+21:19:08 INFO  : Hardware design information is loaded from 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf'.
+21:19:08 INFO  : 'configparams force-mem-access 1' command is executed.
+21:19:08 INFO  : Context for 'APU' is selected.
+21:19:09 INFO  : 'ps7_init' command is executed.
+21:19:09 INFO  : 'ps7_post_config' command is executed.
+21:19:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:19:09 INFO  : The application 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:19:09 INFO  : 'configparams force-mem-access 0' command is executed.
+21:19:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A" && level==0} -index 1
+fpga -file C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/VISION_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+loadhw -hw C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/VISION_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+dow C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.sdk/Vision/Debug/Vision.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:19:09 INFO  : Memory regions updated for context APU
+21:19:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:19:10 INFO  : 'con' command is executed.
+21:19:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A703B2A"} -index 0
+con
+----------------End of Script----------------
+
+21:19:10 INFO  : Launch script is exported to file 'C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_vision.elf_on_local.tcl'

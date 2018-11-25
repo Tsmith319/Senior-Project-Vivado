@@ -1,0 +1,160 @@
+/*
+ * command.h
+ *
+ *  Created on: Nov 17, 2018
+ *      Author: TaySm
+ */
+
+#ifndef SRC_COMMAND_H_
+#define SRC_COMMAND_H_
+
+#include "pixel_data.h"
+#include "xgpio.h"
+
+#define CLEAR_FRAME '0'
+#define DRAW_FRAME '1'
+
+#define BUFFER_SIZE 100
+
+#define PIXEL_COUNT_CHAR_LENGTH 6 //Plus Space = 6
+#define PIXEL_CHAR_LENGTH 28 //plus spaces = 28, 22 otherwise
+
+uint8_t buffer[BUFFER_SIZE];
+
+typedef struct {
+	uint8_t z;
+	uint8_t r;
+	uint16_t theta;
+	Pixel color;
+} SerialPixel;
+
+typedef struct {
+	uint32_t count;
+	SerialPixel *pixels;
+} SerialFrame;
+
+
+
+uint32_t package32(int index)
+{
+	uint32_t value = 0;
+
+	value |= buffer[index] << 24;
+	value |= buffer[index + 1] << 16;
+	value |= buffer[index + 2] << 8;
+	value |= buffer[index + 3] << 0;
+
+	return value;
+}
+
+uint16_t package16(int index)
+{
+	uint16_t value = 0;
+
+	value |= buffer[index] << 8;
+	value |= buffer[index + 1] << 0;
+
+	return value;
+}
+
+uint8_t package8(int index)
+{
+	return buffer[index];
+}
+
+SerialPixel packagePixel(int index) {
+	SerialPixel pixel;
+
+	pixel.z = package8(index);
+	index += sizeof(char);
+
+	pixel.r = package8(index);
+	index += sizeof(char);
+
+	pixel.theta = package16(index);
+	index += sizeof(uint16_t);
+
+	pixel.color.red = package16(index);
+	index += sizeof(uint16_t);
+
+	pixel.color.green = package16(index);
+	index += sizeof(uint16_t);
+
+	pixel.color.blue = package16(index);
+
+	return pixel;
+}
+
+
+SerialFrame receive_frame(XUartPs *port, XUartPs *passthrough) {
+	SerialFrame frame;
+	int byteCount = 0;
+
+	while(byteCount < PIXEL_COUNT_CHAR_LENGTH)
+	{
+		int count = XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_COUNT_CHAR_LENGTH - byteCount);
+		XUartPs_Send(passthrough, buffer + byteCount, count);
+		byteCount += count;
+	}
+
+
+	printf("\r\n");
+
+	sscanf(buffer, "%d", &(frame.count));
+
+	//frame.count = package32(0);
+
+	frame.pixels = calloc(frame.count, sizeof(SerialPixel));
+
+	for(int i = 0; i < frame.count; i++)
+	{
+		byteCount = 0;
+
+		while(byteCount < PIXEL_CHAR_LENGTH)
+		{
+
+			int count = XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_CHAR_LENGTH - byteCount);
+
+			XUartPs_Send(passthrough, buffer + byteCount, count);
+
+			byteCount += count;
+		}
+
+		printf("\r\n");
+
+		int z, r, theta, red, green, blue;
+		sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);
+		frame.pixels[i].z = z;
+		frame.pixels[i].r = r;
+		frame.pixels[i].theta = theta;
+		frame.pixels[i].color.red = red;
+		frame.pixels[i].color.green = green;
+		frame.pixels[i].color.blue = blue;
+		//frame.pixels[i] = packagePixel(0);
+	}
+
+	printf("Received frame!\n\r");
+	return frame;
+}
+
+
+void package_frame(SerialFrame frame)
+{
+	memset(frame_buffer[nextFrameToWrite], 0, sizeof(Frame));
+
+	for(int i = 0; i < frame.count; i++)
+	{
+		SerialPixel current = frame.pixels[i];
+		Layer* current_layer = &(frame_buffer[nextFrameToWrite]->sections[current.theta].layers[current.z]);
+		write_PixelData(getPixelOffset(current.r), current.color, current_layer);
+	}
+
+	if(nextFrameToWrite == 9)
+		nextFrameToWrite = 0;
+	else
+		nextFrameToWrite++;
+}
+
+
+
+#endif /* SRC_COMMAND_H_ */

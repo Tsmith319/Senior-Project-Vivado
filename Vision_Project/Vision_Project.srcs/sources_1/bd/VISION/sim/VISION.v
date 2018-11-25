@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Nov 23 12:07:45 2018
+//Date        : Sat Nov 24 17:54:13 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
@@ -32,6 +32,8 @@ module VISION
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    UART1_RX_0,
+    UART1_TX_0,
     gpio2_io_i_0,
     gsclk_0_0,
     latch_0_0,
@@ -58,12 +60,15 @@ module VISION
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  input UART1_RX_0;
+  output UART1_TX_0;
   input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
   output latch_0_0;
   output sclk_0_0;
   output sout_0_0;
 
+  wire UART1_RX_0_1;
   wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
@@ -281,6 +286,7 @@ module VISION
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
+  wire processing_system7_0_UART1_TX;
   wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
   wire [0:0]ps7_0_axi_periph_M00_AXI_ARVALID;
@@ -320,6 +326,8 @@ module VISION
   wire [2:0]xlslice_0_Dout;
   wire [0:0]xlslice_1_Dout;
 
+  assign UART1_RX_0_1 = UART1_RX_0;
+  assign UART1_TX_0 = processing_system7_0_UART1_TX;
   assign gpio2_io_i_0_1 = gpio2_io_i_0[0];
   assign gsclk_0_0 = driver_block_design_0_gsclk_0;
   assign latch_0_0 = driver_block_design_0_latch_0;
@@ -763,6 +771,8 @@ module VISION
         .S_AXI_HP0_WRISSUECAP1_EN(1'b0),
         .S_AXI_HP0_WSTRB(axi_smc_M00_AXI_WSTRB),
         .S_AXI_HP0_WVALID(axi_smc_M00_AXI_WVALID),
+        .UART1_RX(UART1_RX_0_1),
+        .UART1_TX(processing_system7_0_UART1_TX),
         .USB0_VBUS_PWRFAULT(1'b0));
   VISION_ps7_0_axi_periph_0 ps7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),

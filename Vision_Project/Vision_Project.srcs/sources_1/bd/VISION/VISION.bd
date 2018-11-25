@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x8994DEA8A0EBC9E5" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="VISION" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x8F3A0AC40C22AACD" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="VISION" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -190,6 +190,18 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>UART1_TX_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>UART1_RX_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -209,6 +221,8 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_DDR_RAM_HIGHADDR">0x1FFFFFFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_BASEADDR">0xE0000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_HIGHADDR">0xE0000FFF</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_BASEADDR">0xE0001000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_HIGHADDR">0xE0001FFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_GPIO_BASEADDR">0xE000A000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_GPIO_HIGHADDR">0xE000AFFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_ENET0_BASEADDR">0xE000B000</spirit:configurableElementValue>
@@ -352,7 +366,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_SPI0">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_SPI1">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_UART0">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_UART1">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_UART1">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_MODEM_UART0">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_MODEM_UART1">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_TTC0">0</spirit:configurableElementValue>
@@ -389,6 +403,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_CORESIGHT">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_EMIO_SRAM_INT">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_BAUD_RATE">115200</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_BAUD_RATE">115200</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_4K_TIMER">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_M_AXI_GP0_ID_WIDTH">12</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_M_AXI_GP0_ENABLE_STATIC_REMAP">0</spirit:configurableElementValue>
@@ -416,7 +431,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_SPI0">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_SPI1">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_UART0">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_EN_UART1">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_EN_UART1">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_MODEM_UART0">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_MODEM_UART1">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_TTC0">0</spirit:configurableElementValue>
@@ -447,6 +462,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_P2F_ENET0_INTR">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_P2F_SDIO0_INTR">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_P2F_UART0_INTR">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_P2F_UART1_INTR">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_IRQ_F2P_INTR">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_IRQ_F2P_MODE">DIRECT</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_CORE0_FIQ_INTR">0</spirit:configurableElementValue>
@@ -500,7 +516,9 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_UART0_IO">MIO 14 .. 15</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_GRP_FULL_ENABLE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_UART1_IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UART1_GRP_FULL_ENABLE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_SPI0_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_SPI1_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USB0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
@@ -1014,6 +1032,16 @@
         <spirit:name>axi_gpio_0_ip2intc_irpt</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="ip2intc_irpt"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>processing_system7_0_UART1_TX</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="UART1_TX"/>
+        <spirit:externalPortReference spirit:portRef="UART1_TX_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>UART1_RX_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="UART1_RX_0"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="UART1_RX"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

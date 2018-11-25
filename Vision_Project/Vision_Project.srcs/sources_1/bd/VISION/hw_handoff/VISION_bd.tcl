@@ -160,6 +160,8 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set UART1_RX_0 [ create_bd_port -dir I UART1_RX_0 ]
+  set UART1_TX_0 [ create_bd_port -dir O UART1_TX_0 ]
   set gpio2_io_i_0 [ create_bd_port -dir I -from 0 -to 0 gpio2_io_i_0 ]
   set gsclk_0_0 [ create_bd_port -dir O gsclk_0_0 ]
   set latch_0_0 [ create_bd_port -dir O latch_0_0 ]
@@ -357,7 +359,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_EMIO_TTC0 {0} \
    CONFIG.PCW_EN_EMIO_TTC1 {0} \
    CONFIG.PCW_EN_EMIO_UART0 {0} \
-   CONFIG.PCW_EN_EMIO_UART1 {0} \
+   CONFIG.PCW_EN_EMIO_UART1 {1} \
    CONFIG.PCW_EN_EMIO_WDT {0} \
    CONFIG.PCW_EN_EMIO_WP_SDIO0 {0} \
    CONFIG.PCW_EN_EMIO_WP_SDIO1 {0} \
@@ -385,7 +387,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_TTC0 {0} \
    CONFIG.PCW_EN_TTC1 {0} \
    CONFIG.PCW_EN_UART0 {1} \
-   CONFIG.PCW_EN_UART1 {0} \
+   CONFIG.PCW_EN_UART1 {1} \
    CONFIG.PCW_EN_USB0 {1} \
    CONFIG.PCW_EN_USB1 {0} \
    CONFIG.PCW_EN_WDT {0} \
@@ -415,6 +417,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
    CONFIG.PCW_GPIO_BASEADDR {0xE000A000} \
    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {0} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_IO {<Select>} \
    CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {64} \
    CONFIG.PCW_GPIO_HIGHADDR {0xE000AFFF} \
    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
@@ -604,11 +607,11 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 1.8V} \
    CONFIG.PCW_MIO_47_PULLUP {enabled} \
    CONFIG.PCW_MIO_47_SLEW {slow} \
-   CONFIG.PCW_MIO_48_DIRECTION {inout} \
+   CONFIG.PCW_MIO_48_DIRECTION {out} \
    CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 1.8V} \
    CONFIG.PCW_MIO_48_PULLUP {enabled} \
    CONFIG.PCW_MIO_48_SLEW {slow} \
-   CONFIG.PCW_MIO_49_DIRECTION {inout} \
+   CONFIG.PCW_MIO_49_DIRECTION {in} \
    CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 1.8V} \
    CONFIG.PCW_MIO_49_PULLUP {enabled} \
    CONFIG.PCW_MIO_49_SLEW {slow} \
@@ -862,7 +865,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_UART1_BAUD_RATE {115200} \
    CONFIG.PCW_UART1_GRP_FULL_ENABLE {0} \
    CONFIG.PCW_UART1_HIGHADDR {0xE0001FFF} \
-   CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} \
+   CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
+   CONFIG.PCW_UART1_UART1_IO {EMIO} \
    CONFIG.PCW_UART_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} \
    CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} \
@@ -1034,6 +1038,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
+  connect_bd_net -net UART1_RX_0_1 [get_bd_ports UART1_RX_0] [get_bd_pins processing_system7_0/UART1_RX]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din]
   connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net driver_block_design_0_gsclk_0 [get_bd_ports gsclk_0_0] [get_bd_pins driver_block_design_0/gsclk_0]
@@ -1044,6 +1049,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_cdma_0/m_axi_aclk] [get_bd_pins axi_cdma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins driver_block_design_0/clk_0] [get_bd_pins processing_system7_0/FCLK_CLK1]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
+  connect_bd_net -net processing_system7_0_UART1_TX [get_bd_ports UART1_TX_0] [get_bd_pins processing_system7_0/UART1_TX]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn] [get_bd_pins axi_cdma_0/s_axi_lite_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_reset [get_bd_pins driver_block_design_0/reset_0] [get_bd_pins rst_ps7_0_100M/peripheral_reset]
