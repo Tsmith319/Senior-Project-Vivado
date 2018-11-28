@@ -1004,6 +1004,23 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_BRAM_CNT {12.5} \
+   CONFIG.C_DATA_DEPTH {32768} \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_PROBE0_TYPE {0} \
+   CONFIG.C_PROBE1_TYPE {0} \
+   CONFIG.C_PROBE2_TYPE {0} \
+   CONFIG.C_PROBE3_TYPE {0} \
+   CONFIG.C_PROBE3_WIDTH {11} \
+   CONFIG.C_PROBE4_WIDTH {1} \
+   CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL} \
+   CONFIG.C_TRIGIN_EN {false} \
+ ] $system_ila_0
+
   # Create instance: xlslice_0, and set properties
   set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
   set_property -dict [ list \
@@ -1022,6 +1039,15 @@ proc create_root_design { parentCell } {
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_1
 
+  # Create instance: xlslice_2, and set properties
+  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {2} \
+   CONFIG.DIN_TO {2} \
+   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_2
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins driver_block_design_0_bram/BRAM_PORTB]
   connect_bd_intf_net -intf_net axi_bram_ctrl_1_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_1/BRAM_PORTA] [get_bd_intf_pins driver_block_design_0_bram_0/BRAM_PORTB]
@@ -1039,12 +1065,25 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net UART1_RX_0_1 [get_bd_ports UART1_RX_0] [get_bd_pins processing_system7_0/UART1_RX]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din]
   connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
-  connect_bd_net -net driver_block_design_0_gsclk_0 [get_bd_ports gsclk_0_0] [get_bd_pins driver_block_design_0/gsclk_0]
-  connect_bd_net -net driver_block_design_0_latch_0 [get_bd_ports latch_0_0] [get_bd_pins driver_block_design_0/latch_0]
-  connect_bd_net -net driver_block_design_0_sclk_0 [get_bd_ports sclk_0_0] [get_bd_pins driver_block_design_0/sclk_0]
-  connect_bd_net -net driver_block_design_0_sout_0 [get_bd_ports sout_0_0] [get_bd_pins driver_block_design_0/sout_0]
+  connect_bd_net -net bitnum_0 [get_bd_pins driver_block_design_0/bitnum_0] [get_bd_pins system_ila_0/probe3]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets bitnum_0]
+  connect_bd_net -net driver_block_design_0_gsclk_0 [get_bd_ports gsclk_0_0] [get_bd_pins driver_block_design_0/gsclk_0] [get_bd_pins system_ila_0/probe1]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets driver_block_design_0_gsclk_0]
+  connect_bd_net -net driver_block_design_0_latch_0 [get_bd_ports latch_0_0] [get_bd_pins driver_block_design_0/latch_0] [get_bd_pins system_ila_0/probe0]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets driver_block_design_0_latch_0]
+  connect_bd_net -net driver_block_design_0_sclk_0 [get_bd_ports sclk_0_0] [get_bd_pins driver_block_design_0/sclk_0] [get_bd_pins system_ila_0/clk]
+  connect_bd_net -net driver_block_design_0_sout_0 [get_bd_ports sout_0_0] [get_bd_pins driver_block_design_0/sout_0] [get_bd_pins system_ila_0/probe2]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets driver_block_design_0_sout_0]
   connect_bd_net -net gpio2_io_i_0_1 [get_bd_ports gpio2_io_i_0] [get_bd_pins axi_gpio_0/gpio2_io_i]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_cdma_0/m_axi_aclk] [get_bd_pins axi_cdma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins driver_block_design_0/clk_0] [get_bd_pins processing_system7_0/FCLK_CLK1]

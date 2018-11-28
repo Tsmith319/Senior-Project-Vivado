@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1543108855">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1543377491">
   <File Type="PA-TCL" Name="VISION_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="VISION_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="VISION_wrapper_reports.tcl"/>
@@ -60,4 +60,6 @@
   <BlockFileSet Type="BlockSrcs" Name="VISION_driver_block_design_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="VISION_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="VISION_xlslice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="VISION_system_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="VISION_xlslice_2_0"/>
 </GenRun>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov 24 18:22:02 2018
+| Date         : Tue Nov 27 21:02:12 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VISION_wrapper_utilization_synth.rpt -pb VISION_wrapper_utilization_synth.pb
 | Design       : VISION_wrapper
@@ -157,9 +157,11 @@ Table of Contents
 +---------------------------------------+------+
 |                Ref Name               | Used |
 +---------------------------------------+------+
+| VISION_xlslice_2_0                    |    1 |
 | VISION_xlslice_1_0                    |    1 |
 | VISION_xlslice_0_0                    |    1 |
 | VISION_xbar_0                         |    1 |
+| VISION_system_ila_0_0                 |    1 |
 | VISION_rst_ps7_0_100M_0               |    1 |
 | VISION_processing_system7_0_0         |    1 |
 | VISION_driver_block_design_0_bram_0_0 |    1 |

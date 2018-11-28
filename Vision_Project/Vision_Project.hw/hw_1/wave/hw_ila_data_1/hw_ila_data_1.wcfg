@@ -9,42 +9,31 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="46906667fs"></ZoomStartTime>
-      <ZoomEndTime time="123306668fs"></ZoomEndTime>
-      <Cursor1Time time="59640000fs"></Cursor1Time>
+      <ZoomStartTime time="16393127fs"></ZoomStartTime>
+      <ZoomEndTime time="16397713fs"></ZoomEndTime>
+      <Cursor1Time time="16383000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="297"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="VISION_i/system_ila_0/inst/probe0_1" type="array">
+   <wvobject fp_name="VISION_i/system_ila_0/inst/probe0_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe0_1[2:0]</obj_property>
-      <obj_property name="ObjectShortName">probe0_1[2:0]</obj_property>
-      <obj_property name="label">axi_gpio_0_gpio_io_o</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe0_1</obj_property>
+      <obj_property name="ObjectShortName">probe0_1</obj_property>
+      <obj_property name="label">driver_block_design_0_sclk_0</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="VISION_i/system_ila_0/inst/probe1_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe1_1</obj_property>
       <obj_property name="ObjectShortName">probe1_1</obj_property>
-      <obj_property name="label">axi_gpio_0_gpio2_io_o</obj_property>
+      <obj_property name="label">driver_block_design_0_latch_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="VISION_i/system_ila_0/inst/probe8_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe8_1[10:0]</obj_property>
-      <obj_property name="ObjectShortName">probe8_1[10:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="label">bitnum_0</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -52,7 +41,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe2_1</obj_property>
       <obj_property name="ObjectShortName">probe2_1</obj_property>
-      <obj_property name="label">driver_block_design_0_sclk_0</obj_property>
+      <obj_property name="label">driver_block_design_0_gsclk_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -61,34 +50,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe3_1</obj_property>
       <obj_property name="ObjectShortName">probe3_1</obj_property>
-      <obj_property name="label">driver_block_design_0_latch_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="VISION_i/system_ila_0/inst/probe4_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe4_1</obj_property>
-      <obj_property name="ObjectShortName">probe4_1</obj_property>
-      <obj_property name="label">driver_block_design_0_gsclk_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="VISION_i/system_ila_0/inst/probe5_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe5_1</obj_property>
-      <obj_property name="ObjectShortName">probe5_1</obj_property>
       <obj_property name="label">driver_block_design_0_sout_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="VISION_i/system_ila_0/inst/probe6_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">VISION_i/system_ila_0/inst/probe6_1</obj_property>
-      <obj_property name="ObjectShortName">probe6_1</obj_property>
-      <obj_property name="label">rst_ps7_0_100M_peripheral_aresetn</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

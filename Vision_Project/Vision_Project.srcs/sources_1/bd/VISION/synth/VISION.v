@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 24 17:54:13 2018
+//Date        : Tue Nov 27 20:57:45 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
+(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
 module VISION
    (DDR_addr,
     DDR_ba,
@@ -209,6 +209,7 @@ module VISION
   wire axi_smc_M02_AXI_WREADY;
   wire [3:0]axi_smc_M02_AXI_WSTRB;
   wire axi_smc_M02_AXI_WVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [10:0]bitnum_0;
   wire [31:0]driver_block_design_0_data_in_0_ADDR;
   wire driver_block_design_0_data_in_0_CLK;
   wire [31:0]driver_block_design_0_data_in_0_DOUT;
@@ -219,10 +220,10 @@ module VISION
   wire [31:0]driver_block_design_0_data_in_1_DOUT;
   wire driver_block_design_0_data_in_1_EN;
   wire driver_block_design_0_data_in_1_RST;
-  wire driver_block_design_0_gsclk_0;
-  wire driver_block_design_0_latch_0;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_gsclk_0;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_latch_0;
   wire driver_block_design_0_sclk_0;
-  wire driver_block_design_0_sout_0;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire driver_block_design_0_sout_0;
   wire [0:0]gpio2_io_i_0_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -620,6 +621,7 @@ module VISION
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   VISION_driver_block_design_0_0 driver_block_design_0
        (.GPIO_IN(xlslice_0_Dout),
+        .bitnum_0(bitnum_0),
         .clk_0(processing_system7_0_FCLK_CLK1),
         .data_in_0_addr(driver_block_design_0_data_in_0_ADDR),
         .data_in_0_clk(driver_block_design_0_data_in_0_CLK),
@@ -863,12 +865,20 @@ module VISION
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  VISION_system_ila_0_0 system_ila_0
+       (.clk(driver_block_design_0_sclk_0),
+        .probe0(driver_block_design_0_latch_0),
+        .probe1(driver_block_design_0_gsclk_0),
+        .probe2(driver_block_design_0_sout_0),
+        .probe3(bitnum_0));
   VISION_xlslice_0_0 xlslice_0
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(xlslice_0_Dout));
   VISION_xlslice_1_0 xlslice_1
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(xlslice_1_Dout));
+  VISION_xlslice_2_0 xlslice_2
+       (.Din(axi_gpio_0_gpio_io_o));
 endmodule
 
 module VISION_ps7_0_axi_periph_0

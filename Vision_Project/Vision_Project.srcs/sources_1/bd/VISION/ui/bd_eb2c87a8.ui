@@ -12,50 +12,53 @@ preplace port sclk_0_0 -pg 1 -y -1050 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y -50 -defaultsOSRD
 preplace port latch_0_0 -pg 1 -y -1070 -defaultsOSRD
 preplace portBus gpio2_io_i_0 -pg 1 -y -200 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 3 -y -1210 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 3 -y -1110 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -y 100 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -y -1220 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 3 -y -1120 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 3 -y -1020 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -y 140 -defaultsOSRD
 preplace inst axi_cdma_0 -pg 1 -lvl 1 -y -170 -defaultsOSRD
 preplace inst driver_block_design_0_bram -pg 1 -lvl 5 -y -1130 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 2 -y -220 -defaultsOSRD
 preplace inst driver_block_design_0 -pg 1 -lvl 4 -y -920 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -y -110 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -y -830 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -y -70 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y -740 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -y 160 -defaultsOSRD
 preplace inst axi_bram_ctrl_1 -pg 1 -lvl 4 -y -600 -defaultsOSRD
 preplace inst driver_block_design_0_bram_0 -pg 1 -lvl 5 -y -1010 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 60 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 2 4 NJ -40 N -40 1710 190 2070
-preplace netloc axi_smc_M02_AXI 1 3 3 1100J -510 NJ -510 2050
-preplace netloc axi_smc_M01_AXI 1 3 3 1090J -520 NJ -520 2060
-preplace netloc axi_cdma_0_M_AXI 1 1 4 300J -340 NJ -340 N -340 1720
-preplace netloc xlslice_1_Dout 1 3 1 1070
-preplace netloc processing_system7_0_UART1_TX 1 2 4 NJ 20 NJ 20 1680J 200 2090J
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 1720J
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 3 810J -60 1060 -190 N
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 -10 -260 290J -110 790J -50 1080 -50 1670
-preplace netloc driver_block_design_0_data_in_0 1 4 1 1680J
-preplace netloc axi_smc_M00_AXI 1 1 5 320 260 NJ 260 NJ 260 NJ 260 2030
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 810 140 N
-preplace netloc driver_block_design_0_data_in_1 1 4 1 1700J
-preplace netloc gpio2_io_i_0_1 1 0 3 -40J -280 310J -120 790
-preplace netloc driver_block_design_0_sout_0 1 4 2 1710J -1200 2030J
-preplace netloc ps7_0_axi_periph_M01_AXI 1 1 5 320 -320 NJ -320 NJ -320 NJ -320 2030
-preplace netloc rst_ps7_0_100M_peripheral_reset 1 3 2 1100 -1040 1650
-preplace netloc axi_gpio_0_gpio_io_o 1 2 1 780
-preplace netloc processing_system7_0_FIXED_IO 1 2 4 NJ -20 N -20 1700 180 2080
-preplace netloc axi_gpio_0_ip2intc_irpt 1 1 2 300 -100 780
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -20 -270 280 230 790 100 1070 -60 1730
-preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 4 1 1730
-preplace netloc ps7_0_axi_periph_M00_AXI 1 0 6 -30 -330 NJ -330 NJ -330 NJ -330 NJ -330 2040
-preplace netloc processing_system7_0_FCLK_CLK1 1 2 2 800 -930 N
-preplace netloc driver_block_design_0_latch_0 1 4 2 1690J -1210 2040J
-preplace netloc driver_block_design_0_sclk_0 1 4 2 1670J -1230 2050J
-preplace netloc UART1_RX_0_1 1 0 3 NJ 40 270J 220 780
-preplace netloc xlslice_0_Dout 1 3 1 1090
-preplace netloc driver_block_design_0_gsclk_0 1 4 2 1660J -1220 2060J
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 4 1 1660
-levelinfo -pg 1 -60 140 550 960 1480 1880 2110 -top -1420 -bot 370
+preplace netloc processing_system7_0_DDR 1 2 4 NJ -40 N -40 1680 220 2100
+preplace netloc bitnum_0 1 4 1 1680
+preplace netloc axi_smc_M02_AXI 1 3 3 1250J 280 NJ 280 2060
+preplace netloc axi_smc_M01_AXI 1 3 3 1240J 260 NJ 260 2050
+preplace netloc axi_cdma_0_M_AXI 1 1 4 300J -320 NJ -320 N -320 1690
+preplace netloc xlslice_1_Dout 1 3 1 1210
+preplace netloc processing_system7_0_UART1_TX 1 2 4 NJ 20 NJ 20 1660J 240 2120J
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 1670J
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 3 830J -60 1210 -150 N
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 -20 -260 290J -110 810J -50 1230 -50 1720
+preplace netloc driver_block_design_0_data_in_0 1 4 1 1660J
+preplace netloc axi_smc_M00_AXI 1 1 5 340 270 NJ 270 NJ 270 NJ 270 2070
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 830 140 N
+preplace netloc driver_block_design_0_data_in_1 1 4 1 1680J
+preplace netloc gpio2_io_i_0_1 1 0 3 -40J -280 310J -120 810
+preplace netloc driver_block_design_0_sout_0 1 4 2 1720J -1200 2050J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 5 320 300 NJ 300 NJ 300 NJ 300 2080
+preplace netloc rst_ps7_0_100M_peripheral_reset 1 3 2 1250 -1040 1650
+preplace netloc axi_gpio_0_gpio_io_o 1 2 1 800
+preplace netloc processing_system7_0_FIXED_IO 1 2 4 NJ -20 N -20 1670 230 2110
+preplace netloc axi_gpio_0_ip2intc_irpt 1 1 2 330 -100 800
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -30 -270 280 230 810 100 1220 -60 1730
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 4 1 1690
+preplace netloc ps7_0_axi_periph_M00_AXI 1 0 6 -10 290 NJ 290 NJ 290 NJ 290 NJ 290 2090
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 2 820 -930 N
+preplace netloc driver_block_design_0_latch_0 1 4 2 1730J -1210 2060J
+preplace netloc driver_block_design_0_sclk_0 1 4 2 1710J -1230 2090J
+preplace netloc UART1_RX_0_1 1 0 3 NJ 40 270J 220 800
+preplace netloc xlslice_0_Dout 1 3 1 1240
+preplace netloc driver_block_design_0_gsclk_0 1 4 2 1700J -1220 2120J
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 4 1 1700
+levelinfo -pg 1 -60 140 570 1110 1480 1900 2140 -top -1420 -bot 370
 ",
 }
 {
