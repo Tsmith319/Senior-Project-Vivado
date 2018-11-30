@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:sout_module:1.0
-// IP Revision: 4
+// IP Revision: 7
 
 `timescale 1ns/1ps
 
@@ -56,6 +56,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module driver_block_design_sout_module_1_0 (
   clk,
+  sclk,
   bit_num,
   buf_num,
   pass_through_bit,
@@ -72,6 +73,7 @@ module driver_block_design_sout_module_1_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+input wire sclk;
 input wire [10 : 0] bit_num;
 input wire [1 : 0] buf_num;
 input wire pass_through_bit;
@@ -95,6 +97,7 @@ output wire b_rst;
 
   sout_module inst (
     .clk(clk),
+    .sclk(sclk),
     .bit_num(bit_num),
     .buf_num(buf_num),
     .pass_through_bit(pass_through_bit),

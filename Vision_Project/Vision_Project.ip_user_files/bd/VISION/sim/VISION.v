@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov 17 14:34:44 2018
+//Date        : Thu Nov 29 21:06:45 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION.bd
 //Design      : VISION
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_bram_cntlr_cnt=4,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
+(* CORE_GENERATION_INFO = "VISION,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=VISION,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=6,da_bram_cntlr_cnt=6,da_clkrst_cnt=10,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "VISION.hwdef" *) 
 module VISION
    (DDR_addr,
     DDR_ba,
@@ -32,10 +32,14 @@ module VISION
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    UART1_RX_0,
+    UART1_TX_0,
+    gpio2_io_i_0,
     gsclk_0_0,
     latch_0_0,
     sclk_0_0,
-    sout_0_0);
+    sout_0_0,
+    sout_1_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -57,11 +61,16 @@ module VISION
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  input UART1_RX_0;
+  output UART1_TX_0;
+  input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
   output latch_0_0;
   output sclk_0_0;
   output sout_0_0;
+  output sout_1_0;
 
+  wire UART1_RX_0_1;
   wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
@@ -76,6 +85,13 @@ module VISION
   wire axi_bram_ctrl_1_BRAM_PORTA_EN;
   wire axi_bram_ctrl_1_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_1_BRAM_PORTA_WE;
+  wire [12:0]axi_bram_ctrl_2_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_2_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_2_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_2_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_2_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_2_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_2_BRAM_PORTA_WE;
   wire [31:0]axi_cdma_0_M_AXI_ARADDR;
   wire [1:0]axi_cdma_0_M_AXI_ARBURST;
   wire [3:0]axi_cdma_0_M_AXI_ARCACHE;
@@ -105,8 +121,8 @@ module VISION
   wire axi_cdma_0_M_AXI_WREADY;
   wire [3:0]axi_cdma_0_M_AXI_WSTRB;
   wire axi_cdma_0_M_AXI_WVALID;
-  wire [0:0]axi_gpio_0_gpio2_io_o;
-  wire [2:0]axi_gpio_0_gpio_io_o;
+  wire [3:0]axi_gpio_0_gpio_io_o;
+  wire axi_gpio_0_ip2intc_irpt;
   wire [31:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -202,6 +218,37 @@ module VISION
   wire axi_smc_M02_AXI_WREADY;
   wire [3:0]axi_smc_M02_AXI_WSTRB;
   wire axi_smc_M02_AXI_WVALID;
+  wire [12:0]axi_smc_M03_AXI_ARADDR;
+  wire [1:0]axi_smc_M03_AXI_ARBURST;
+  wire [3:0]axi_smc_M03_AXI_ARCACHE;
+  wire [7:0]axi_smc_M03_AXI_ARLEN;
+  wire [0:0]axi_smc_M03_AXI_ARLOCK;
+  wire [2:0]axi_smc_M03_AXI_ARPROT;
+  wire axi_smc_M03_AXI_ARREADY;
+  wire [2:0]axi_smc_M03_AXI_ARSIZE;
+  wire axi_smc_M03_AXI_ARVALID;
+  wire [12:0]axi_smc_M03_AXI_AWADDR;
+  wire [1:0]axi_smc_M03_AXI_AWBURST;
+  wire [3:0]axi_smc_M03_AXI_AWCACHE;
+  wire [7:0]axi_smc_M03_AXI_AWLEN;
+  wire [0:0]axi_smc_M03_AXI_AWLOCK;
+  wire [2:0]axi_smc_M03_AXI_AWPROT;
+  wire axi_smc_M03_AXI_AWREADY;
+  wire [2:0]axi_smc_M03_AXI_AWSIZE;
+  wire axi_smc_M03_AXI_AWVALID;
+  wire axi_smc_M03_AXI_BREADY;
+  wire [1:0]axi_smc_M03_AXI_BRESP;
+  wire axi_smc_M03_AXI_BVALID;
+  wire [31:0]axi_smc_M03_AXI_RDATA;
+  wire axi_smc_M03_AXI_RLAST;
+  wire axi_smc_M03_AXI_RREADY;
+  wire [1:0]axi_smc_M03_AXI_RRESP;
+  wire axi_smc_M03_AXI_RVALID;
+  wire [31:0]axi_smc_M03_AXI_WDATA;
+  wire axi_smc_M03_AXI_WLAST;
+  wire axi_smc_M03_AXI_WREADY;
+  wire [3:0]axi_smc_M03_AXI_WSTRB;
+  wire axi_smc_M03_AXI_WVALID;
   wire [31:0]driver_block_design_0_data_in_0_ADDR;
   wire driver_block_design_0_data_in_0_CLK;
   wire [31:0]driver_block_design_0_data_in_0_DOUT;
@@ -212,10 +259,17 @@ module VISION
   wire [31:0]driver_block_design_0_data_in_1_DOUT;
   wire driver_block_design_0_data_in_1_EN;
   wire driver_block_design_0_data_in_1_RST;
+  wire [31:0]driver_block_design_0_data_in_2_ADDR;
+  wire driver_block_design_0_data_in_2_CLK;
+  wire [31:0]driver_block_design_0_data_in_2_DOUT;
+  wire driver_block_design_0_data_in_2_EN;
+  wire driver_block_design_0_data_in_2_RST;
   wire driver_block_design_0_gsclk_0;
   wire driver_block_design_0_latch_0;
   wire driver_block_design_0_sclk_0;
   wire driver_block_design_0_sout_0;
+  wire driver_block_design_0_sout_1;
+  wire [0:0]gpio2_io_i_0_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -278,6 +332,7 @@ module VISION
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
+  wire processing_system7_0_UART1_TX;
   wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
   wire [0:0]ps7_0_axi_periph_M00_AXI_ARVALID;
@@ -314,11 +369,17 @@ module VISION
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_reset;
+  wire [2:0]xlslice_0_Dout;
+  wire [0:0]xlslice_1_Dout;
 
+  assign UART1_RX_0_1 = UART1_RX_0;
+  assign UART1_TX_0 = processing_system7_0_UART1_TX;
+  assign gpio2_io_i_0_1 = gpio2_io_i_0[0];
   assign gsclk_0_0 = driver_block_design_0_gsclk_0;
   assign latch_0_0 = driver_block_design_0_latch_0;
   assign sclk_0_0 = driver_block_design_0_sclk_0;
   assign sout_0_0 = driver_block_design_0_sout_0;
+  assign sout_1_0 = driver_block_design_0_sout_1;
   VISION_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
@@ -401,6 +462,47 @@ module VISION
         .s_axi_wready(axi_smc_M02_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
+  VISION_axi_bram_ctrl_1_0 axi_bram_ctrl_2
+       (.bram_addr_a(axi_bram_ctrl_2_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_2_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_2_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_2_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_2_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_2_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_2_BRAM_PORTA_DIN),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M03_AXI_ARADDR),
+        .s_axi_arburst(axi_smc_M03_AXI_ARBURST),
+        .s_axi_arcache(axi_smc_M03_AXI_ARCACHE),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arlen(axi_smc_M03_AXI_ARLEN),
+        .s_axi_arlock(axi_smc_M03_AXI_ARLOCK),
+        .s_axi_arprot(axi_smc_M03_AXI_ARPROT),
+        .s_axi_arready(axi_smc_M03_AXI_ARREADY),
+        .s_axi_arsize(axi_smc_M03_AXI_ARSIZE),
+        .s_axi_arvalid(axi_smc_M03_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M03_AXI_AWADDR),
+        .s_axi_awburst(axi_smc_M03_AXI_AWBURST),
+        .s_axi_awcache(axi_smc_M03_AXI_AWCACHE),
+        .s_axi_awlen(axi_smc_M03_AXI_AWLEN),
+        .s_axi_awlock(axi_smc_M03_AXI_AWLOCK),
+        .s_axi_awprot(axi_smc_M03_AXI_AWPROT),
+        .s_axi_awready(axi_smc_M03_AXI_AWREADY),
+        .s_axi_awsize(axi_smc_M03_AXI_AWSIZE),
+        .s_axi_awvalid(axi_smc_M03_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M03_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M03_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M03_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M03_AXI_RDATA),
+        .s_axi_rlast(axi_smc_M03_AXI_RLAST),
+        .s_axi_rready(axi_smc_M03_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M03_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M03_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M03_AXI_WDATA),
+        .s_axi_wlast(axi_smc_M03_AXI_WLAST),
+        .s_axi_wready(axi_smc_M03_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M03_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M03_AXI_WVALID));
   VISION_axi_cdma_0_0 axi_cdma_0
        (.m_axi_aclk(processing_system7_0_FCLK_CLK0),
         .m_axi_araddr(axi_cdma_0_M_AXI_ARADDR),
@@ -451,8 +553,9 @@ module VISION
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
   VISION_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+       (.gpio2_io_i(gpio2_io_i_0_1),
         .gpio_io_o(axi_gpio_0_gpio_io_o),
+        .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -568,6 +671,37 @@ module VISION
         .M02_AXI_wready(axi_smc_M02_AXI_WREADY),
         .M02_AXI_wstrb(axi_smc_M02_AXI_WSTRB),
         .M02_AXI_wvalid(axi_smc_M02_AXI_WVALID),
+        .M03_AXI_araddr(axi_smc_M03_AXI_ARADDR),
+        .M03_AXI_arburst(axi_smc_M03_AXI_ARBURST),
+        .M03_AXI_arcache(axi_smc_M03_AXI_ARCACHE),
+        .M03_AXI_arlen(axi_smc_M03_AXI_ARLEN),
+        .M03_AXI_arlock(axi_smc_M03_AXI_ARLOCK),
+        .M03_AXI_arprot(axi_smc_M03_AXI_ARPROT),
+        .M03_AXI_arready(axi_smc_M03_AXI_ARREADY),
+        .M03_AXI_arsize(axi_smc_M03_AXI_ARSIZE),
+        .M03_AXI_arvalid(axi_smc_M03_AXI_ARVALID),
+        .M03_AXI_awaddr(axi_smc_M03_AXI_AWADDR),
+        .M03_AXI_awburst(axi_smc_M03_AXI_AWBURST),
+        .M03_AXI_awcache(axi_smc_M03_AXI_AWCACHE),
+        .M03_AXI_awlen(axi_smc_M03_AXI_AWLEN),
+        .M03_AXI_awlock(axi_smc_M03_AXI_AWLOCK),
+        .M03_AXI_awprot(axi_smc_M03_AXI_AWPROT),
+        .M03_AXI_awready(axi_smc_M03_AXI_AWREADY),
+        .M03_AXI_awsize(axi_smc_M03_AXI_AWSIZE),
+        .M03_AXI_awvalid(axi_smc_M03_AXI_AWVALID),
+        .M03_AXI_bready(axi_smc_M03_AXI_BREADY),
+        .M03_AXI_bresp(axi_smc_M03_AXI_BRESP),
+        .M03_AXI_bvalid(axi_smc_M03_AXI_BVALID),
+        .M03_AXI_rdata(axi_smc_M03_AXI_RDATA),
+        .M03_AXI_rlast(axi_smc_M03_AXI_RLAST),
+        .M03_AXI_rready(axi_smc_M03_AXI_RREADY),
+        .M03_AXI_rresp(axi_smc_M03_AXI_RRESP),
+        .M03_AXI_rvalid(axi_smc_M03_AXI_RVALID),
+        .M03_AXI_wdata(axi_smc_M03_AXI_WDATA),
+        .M03_AXI_wlast(axi_smc_M03_AXI_WLAST),
+        .M03_AXI_wready(axi_smc_M03_AXI_WREADY),
+        .M03_AXI_wstrb(axi_smc_M03_AXI_WSTRB),
+        .M03_AXI_wvalid(axi_smc_M03_AXI_WVALID),
         .S00_AXI_araddr(axi_cdma_0_M_AXI_ARADDR),
         .S00_AXI_arburst(axi_cdma_0_M_AXI_ARBURST),
         .S00_AXI_arcache(axi_cdma_0_M_AXI_ARCACHE),
@@ -604,7 +738,7 @@ module VISION
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   VISION_driver_block_design_0_0 driver_block_design_0
-       (.GPIO_IN(axi_gpio_0_gpio_io_o),
+       (.GPIO_IN(xlslice_0_Dout),
         .clk_0(processing_system7_0_FCLK_CLK1),
         .data_in_0_addr(driver_block_design_0_data_in_0_ADDR),
         .data_in_0_clk(driver_block_design_0_data_in_0_CLK),
@@ -616,12 +750,18 @@ module VISION
         .data_in_1_dout(driver_block_design_0_data_in_1_DOUT),
         .data_in_1_en(driver_block_design_0_data_in_1_EN),
         .data_in_1_rst(driver_block_design_0_data_in_1_RST),
-        .enable_0(axi_gpio_0_gpio2_io_o),
+        .data_in_2_addr(driver_block_design_0_data_in_2_ADDR),
+        .data_in_2_clk(driver_block_design_0_data_in_2_CLK),
+        .data_in_2_dout(driver_block_design_0_data_in_2_DOUT),
+        .data_in_2_en(driver_block_design_0_data_in_2_EN),
+        .data_in_2_rst(driver_block_design_0_data_in_2_RST),
+        .enable_0(xlslice_1_Dout),
         .gsclk_0(driver_block_design_0_gsclk_0),
         .latch_0(driver_block_design_0_latch_0),
         .reset_0(rst_ps7_0_100M_peripheral_reset),
         .sclk_0(driver_block_design_0_sclk_0),
-        .sout_0(driver_block_design_0_sout_0));
+        .sout_0(driver_block_design_0_sout_0),
+        .sout_1(driver_block_design_0_sout_1));
   VISION_driver_block_design_0_bram_0 driver_block_design_0_bram
        (.addra(driver_block_design_0_data_in_0_ADDR),
         .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
@@ -652,6 +792,21 @@ module VISION
         .rstb(axi_bram_ctrl_1_BRAM_PORTA_RST),
         .wea({1'b0,1'b0,1'b0,1'b0}),
         .web(axi_bram_ctrl_1_BRAM_PORTA_WE));
+  VISION_driver_block_design_0_bram_1_0 driver_block_design_0_bram_1
+       (.addra(driver_block_design_0_data_in_2_ADDR),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_2_BRAM_PORTA_ADDR}),
+        .clka(driver_block_design_0_data_in_2_CLK),
+        .clkb(axi_bram_ctrl_2_BRAM_PORTA_CLK),
+        .dina({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
+        .dinb(axi_bram_ctrl_2_BRAM_PORTA_DIN),
+        .douta(driver_block_design_0_data_in_2_DOUT),
+        .doutb(axi_bram_ctrl_2_BRAM_PORTA_DOUT),
+        .ena(driver_block_design_0_data_in_2_EN),
+        .enb(axi_bram_ctrl_2_BRAM_PORTA_EN),
+        .rsta(driver_block_design_0_data_in_2_RST),
+        .rstb(axi_bram_ctrl_2_BRAM_PORTA_RST),
+        .wea({1'b0,1'b0,1'b0,1'b0}),
+        .web(axi_bram_ctrl_2_BRAM_PORTA_WE));
   VISION_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -673,6 +828,7 @@ module VISION
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_CLK1(processing_system7_0_FCLK_CLK1),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
+        .IRQ_F2P(axi_gpio_0_ip2intc_irpt),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -755,6 +911,8 @@ module VISION
         .S_AXI_HP0_WRISSUECAP1_EN(1'b0),
         .S_AXI_HP0_WSTRB(axi_smc_M00_AXI_WSTRB),
         .S_AXI_HP0_WVALID(axi_smc_M00_AXI_WVALID),
+        .UART1_RX(UART1_RX_0_1),
+        .UART1_TX(processing_system7_0_UART1_TX),
         .USB0_VBUS_PWRFAULT(1'b0));
   VISION_ps7_0_axi_periph_0 ps7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),
@@ -845,6 +1003,12 @@ module VISION
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .peripheral_reset(rst_ps7_0_100M_peripheral_reset),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  VISION_xlslice_0_0 xlslice_0
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_0_Dout));
+  VISION_xlslice_1_0 xlslice_1
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_1_Dout));
 endmodule
 
 module VISION_ps7_0_axi_periph_0

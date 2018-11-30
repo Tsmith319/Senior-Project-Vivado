@@ -124,8 +124,8 @@ void write_PixelData(int offset, Pixel currPixel, Layer* currLayer)
 {
 	int calculatedOffset = 3*offset;
 
-	if(offset == 0)
-		currPixel.blue &= 0x7FFF;
+//	if(offset == 0)
+//		currPixel.blue &= 0x7FFF;
 
 	write_SixteenBits(calculatedOffset, currPixel.blue, currLayer);
 	write_SixteenBits(calculatedOffset+1, currPixel.green, currLayer);

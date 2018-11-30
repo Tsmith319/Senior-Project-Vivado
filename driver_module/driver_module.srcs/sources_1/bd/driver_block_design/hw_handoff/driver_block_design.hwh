@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 17 14:33:30 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 29 22:19:28 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:arty-z7-20:part0:1.0" DEVICE="7z020" NAME="driver_block_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -14,17 +14,13 @@
     <PORT DIR="I" LEFT="31" NAME="data_in_1_dout" RIGHT="0" SIGIS="undef"/>
     <PORT CLKFREQUENCY="100000000" DIR="O" NAME="data_in_1_clk" SIGIS="clk"/>
     <PORT DIR="O" LEFT="31" NAME="data_in_1_addr" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="10" NAME="bitnum_0" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_bit_num">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mean_machine_module_0" PORT="bit_num"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk_0" SIGIS="clk" SIGNAME="External_Ports_clk_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="interrupt_0" PORT="clk"/>
         <CONNECTION INSTANCE="mean_machine_module_0" PORT="clk"/>
         <CONNECTION INSTANCE="sout_module_0" PORT="clk"/>
         <CONNECTION INSTANCE="sout_module_1" PORT="clk"/>
+        <CONNECTION INSTANCE="sout_module_2" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="External_Ports_enable_0">
@@ -38,6 +34,7 @@
         <CONNECTION INSTANCE="interrupt_0" PORT="reset"/>
         <CONNECTION INSTANCE="sout_module_0" PORT="reset"/>
         <CONNECTION INSTANCE="sout_module_1" PORT="reset"/>
+        <CONNECTION INSTANCE="sout_module_2" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="gsclk_0" SIGIS="undef" SIGNAME="mean_machine_module_0_gsclk">
@@ -63,6 +60,31 @@
     <PORT DIR="I" LEFT="2" NAME="GPIO_IN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPIO_IN">
       <CONNECTIONS>
         <CONNECTION INSTANCE="interrupt_0" PORT="GPIO_IN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sout_1" SIGIS="undef" SIGNAME="sout_module_2_sout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sout_module_2" PORT="sout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="data_in_2_en" SIGIS="undef"/>
+    <PORT DIR="O" NAME="data_in_2_rst" SIGIS="rst"/>
+    <PORT DIR="I" LEFT="31" NAME="data_in_2_dout" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="data_in_2_clk" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="31" NAME="data_in_2_addr" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="gsclk_1" SIGIS="undef" SIGNAME="mean_machine_module_0_gsclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mean_machine_module_0" PORT="gsclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sclk_1" SIGIS="undef" SIGNAME="mean_machine_module_0_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mean_machine_module_0" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="latch_1" SIGIS="undef" SIGNAME="mean_machine_module_0_latch">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mean_machine_module_0" PORT="latch"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -94,6 +116,20 @@
         <PORTMAP LOGICAL="DOUT" PHYSICAL="data_in_1_dout"/>
         <PORTMAP LOGICAL="CLK" PHYSICAL="data_in_1_clk"/>
         <PORTMAP LOGICAL="ADDR" PHYSICAL="data_in_1_addr"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="sout_module_2_data_in" NAME="data_in_2" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="EN" PHYSICAL="data_in_2_en"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="data_in_2_rst"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="data_in_2_dout"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="data_in_2_clk"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="data_in_2_addr"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -180,33 +216,41 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="sout_module_0" PORT="latch_select"/>
             <CONNECTION INSTANCE="sout_module_1" PORT="latch_select"/>
+            <CONNECTION INSTANCE="sout_module_2" PORT="latch_select"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="10" NAME="bit_num" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_bit_num">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="bitnum_0"/>
             <CONNECTION INSTANCE="sout_module_0" PORT="bit_num"/>
             <CONNECTION INSTANCE="sout_module_1" PORT="bit_num"/>
+            <CONNECTION INSTANCE="sout_module_2" PORT="bit_num"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="gsclk" SIGIS="undef" SIGNAME="mean_machine_module_0_gsclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="gsclk_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="gsclk_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="sclk" SIGIS="undef" SIGNAME="mean_machine_module_0_sclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="sclk_0"/>
+            <CONNECTION INSTANCE="sout_module_0" PORT="sclk"/>
+            <CONNECTION INSTANCE="sout_module_1" PORT="sclk"/>
+            <CONNECTION INSTANCE="sout_module_2" PORT="sclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sclk_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="latch" SIGIS="undef" SIGNAME="mean_machine_module_0_latch">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="latch_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="latch_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="buf_select" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_buf_select">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sout_module_1" PORT="buf_num"/>
+            <CONNECTION INSTANCE="sout_module_2" PORT="buf_num"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="ready" SIGIS="undef" SIGNAME="mean_machine_module_0_ready">
@@ -232,6 +276,11 @@
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sclk" SIGIS="undef" SIGNAME="mean_machine_module_0_sclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="sclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="10" NAME="bit_num" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_bit_num">
@@ -262,6 +311,7 @@
         <PORT DIR="O" NAME="sout" SIGIS="undef" SIGNAME="sout_module_0_sout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sout_module_1" PORT="pass_through_bit"/>
+            <CONNECTION INSTANCE="sout_module_2" PORT="pass_through_bit"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="b_clk" SIGIS="clk"/>
@@ -297,6 +347,11 @@
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sclk" SIGIS="undef" SIGNAME="mean_machine_module_0_sclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="sclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="10" NAME="bit_num" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_bit_num">
@@ -337,6 +392,76 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="sout_module_1_data_in" NAME="data_in" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EN" PHYSICAL="b_en"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="b_rst"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="b_d_out"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="b_clk"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="b_addr"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/sout_module_2" HWVERSION="1.0" INSTANCE="sout_module_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sout_module" VLNV="xilinx.com:user:sout_module:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="driver_block_design_sout_module_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sclk" SIGIS="undef" SIGNAME="mean_machine_module_0_sclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="sclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="bit_num" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_bit_num">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="bit_num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="buf_num" RIGHT="0" SIGIS="undef" SIGNAME="mean_machine_module_0_buf_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="buf_select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pass_through_bit" SIGIS="undef" SIGNAME="sout_module_0_sout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sout_module_0" PORT="sout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="latch_select" SIGIS="undef" SIGNAME="mean_machine_module_0_latch_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mean_machine_module_0" PORT="latch_select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sout" SIGIS="undef" SIGNAME="sout_module_2_sout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sout_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="b_clk" SIGIS="clk"/>
+        <PORT DIR="O" LEFT="31" NAME="b_addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="b_d_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="b_en" SIGIS="undef"/>
+        <PORT DIR="O" NAME="b_rst" SIGIS="rst"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="sout_module_2_data_in" NAME="data_in" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>

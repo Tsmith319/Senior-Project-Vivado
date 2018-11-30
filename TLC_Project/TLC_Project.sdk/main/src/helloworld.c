@@ -57,7 +57,7 @@
 
 int main()
 {
-    init_platform();
+     init_platform();
 
     print("Hello World\n\r");
 

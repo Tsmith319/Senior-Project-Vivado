@@ -19,6 +19,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==driver_block_de
 # IP: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==driver_block_design_interrupt_0_0 || ORIG_REF_NAME==driver_block_design_interrupt_0_0} -quiet] -quiet
 
+# IP: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_sout_module_1_1/driver_block_design_sout_module_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==driver_block_design_sout_module_1_1 || ORIG_REF_NAME==driver_block_design_sout_module_1_1} -quiet] -quiet
+
 # XDC: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'VISION_driver_block_design_0_0'. Do not add the DONT_TOUCH constraint.
 set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
@@ -40,6 +43,9 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==driver_block_design_interrupt_0_0 || ORIG_REF_NAME==driver_block_design_interrupt_0_0} -quiet] -quiet
+
+# IP: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_sout_module_1_1/driver_block_design_sout_module_1_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==driver_block_design_sout_module_1_1 || ORIG_REF_NAME==driver_block_design_sout_module_1_1} -quiet] -quiet
 
 # XDC: c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_0/src/driver_block_design_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'VISION_driver_block_design_0_0'. Do not add the DONT_TOUCH constraint.

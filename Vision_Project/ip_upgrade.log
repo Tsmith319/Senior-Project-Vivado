@@ -1,6 +1,221 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 22:19:54 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'VISION_driver_block_design_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'gsclk_1'
+
+-Upgrade has added port 'latch_1'
+
+-Upgrade has added port 'sclk_1'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 21:04:10 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 20:55:22 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'VISION_driver_block_design_0_0'.
+
+
+-Upgrade has added interface 'data_in_2' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'VISION_driver_block_design_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'bitnum_0'
+
+-Upgrade has added port 'data_in_2_addr'
+
+-Upgrade has added port 'data_in_2_clk'
+
+-Upgrade has added port 'data_in_2_dout'
+
+-Upgrade has added port 'data_in_2_en'
+
+-Upgrade has added port 'data_in_2_rst'
+
+-Upgrade has added port 'sout_1'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 16:18:28 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 15:59:58 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 15:54:13 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 12:49:55 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov 29 12:01:06 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 | Date         : Sat Nov 17 14:34:11 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

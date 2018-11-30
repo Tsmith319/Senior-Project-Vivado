@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -42,10 +43,17 @@ add_files C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sou
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_cdma_0_0/VISION_axi_cdma_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_cdma_0_0/VISION_axi_cdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_10/bd_a547_s00a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_16/bd_a547_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_23/bd_a547_m01s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_30/bd_a547_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_37/bd_a547_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_38/bd_a547_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_39/bd_a547_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_40/bd_a547_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_41/bd_a547_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_42/bd_a547_m03bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_31/bd_a547_m02arn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_32/bd_a547_m02rn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_33/bd_a547_m02awn_0_ooc.xdc]
@@ -73,7 +81,6 @@ set_property used_in_implementation false [get_files -all c:/github/Senior-Proje
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_6/bd_a547_bsw_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0_ooc.xdc]
@@ -86,12 +93,8 @@ set_property used_in_implementation false [get_files -all c:/github/Senior-Proje
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_0/VISION_axi_bram_ctrl_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_1/VISION_axi_bram_ctrl_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_xbar_0/VISION_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/VISION_system_ila_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/ip/ip_0/bd_30ff_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_system_ila_0_0/bd_0/bd_30ff_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_0/VISION_driver_block_design_0_bram_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/VISION_ooc.xdc]
 

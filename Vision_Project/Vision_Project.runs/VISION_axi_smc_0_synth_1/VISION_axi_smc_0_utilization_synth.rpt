@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov 10 11:05:20 2018
+| Date         : Thu Nov 29 21:14:04 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VISION_axi_smc_0_utilization_synth.rpt -pb VISION_axi_smc_0_utilization_synth.pb
 | Design       : VISION_axi_smc_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 5226 |     0 |     53200 |  9.82 |
-|   LUT as Logic             | 3628 |     0 |     53200 |  6.82 |
-|   LUT as Memory            | 1598 |     0 |     17400 |  9.18 |
-|     LUT as Distributed RAM | 1522 |     0 |           |       |
-|     LUT as Shift Register  |   76 |     0 |           |       |
-| Slice Registers            | 7165 |     0 |    106400 |  6.73 |
-|   Register as Flip Flop    | 7165 |     0 |    106400 |  6.73 |
+| Slice LUTs*                | 6494 |     0 |     53200 | 12.21 |
+|   LUT as Logic             | 4481 |     0 |     53200 |  8.42 |
+|   LUT as Memory            | 2013 |     0 |     17400 | 11.57 |
+|     LUT as Distributed RAM | 1920 |     0 |           |       |
+|     LUT as Shift Register  |   93 |     0 |           |       |
+| Slice Registers            | 8834 |     0 |    106400 |  8.30 |
+|   Register as Flip Flop    | 8834 |     0 |    106400 |  8.30 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 236   |          Yes |         Set |            - |
-| 6929  |          Yes |       Reset |            - |
+| 259   |          Yes |         Set |            - |
+| 8575  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,17 +148,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 6929 |        Flop & Latch |
-| RAMD32   | 2272 |  Distributed Memory |
-| LUT2     | 1443 |                 LUT |
-| LUT3     | 1129 |                 LUT |
-| LUT6     |  913 |                 LUT |
-| LUT5     |  804 |                 LUT |
-| RAMS32   |  750 |  Distributed Memory |
-| LUT4     |  640 |                 LUT |
-| FDSE     |  236 |        Flop & Latch |
-| LUT1     |  222 |                 LUT |
-| SRLC32E  |   75 |  Distributed Memory |
+| FDRE     | 8575 |        Flop & Latch |
+| RAMD32   | 2866 |  Distributed Memory |
+| LUT2     | 1909 |                 LUT |
+| LUT3     | 1429 |                 LUT |
+| LUT6     | 1219 |                 LUT |
+| RAMS32   |  946 |  Distributed Memory |
+| LUT5     |  812 |                 LUT |
+| LUT4     |  782 |                 LUT |
+| LUT1     |  278 |                 LUT |
+| FDSE     |  259 |        Flop & Latch |
+| SRLC32E  |   92 |  Distributed Memory |
 | CARRY4   |   20 |          CarryLogic |
 | SRL16E   |    1 |  Distributed Memory |
 +----------+------+---------------------+

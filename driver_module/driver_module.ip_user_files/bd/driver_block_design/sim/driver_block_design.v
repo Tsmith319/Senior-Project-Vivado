@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Nov 11 13:54:47 2018
-//Host        : MSI970-Station running 64-bit major release  (build 9200)
+//Date        : Thu Nov 29 15:57:52 2018
+//Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target driver_block_design.bd
 //Design      : driver_block_design
 //Purpose     : IP block netlist
@@ -12,6 +12,7 @@
 (* CORE_GENERATION_INFO = "driver_block_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=driver_block_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "driver_block_design.hwdef" *) 
 module driver_block_design
    (GPIO_IN,
+    bitnum_0,
     clk_0,
     data_in_0_addr,
     data_in_0_clk,
@@ -30,6 +31,7 @@ module driver_block_design
     sclk_0,
     sout_0);
   input [2:0]GPIO_IN;
+  output [10:0]bitnum_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, ASSOCIATED_RESET reset_0, CLK_DOMAIN driver_block_design_clk_0, FREQ_HZ 50000000, PHASE 0.000" *) input clk_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32" *) output [31:0]data_in_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 CLK" *) output data_in_0_clk;
@@ -77,6 +79,7 @@ module driver_block_design
   wire [1:0]xlconstant_0_dout;
 
   assign GPIO_IN_1 = GPIO_IN[2:0];
+  assign bitnum_0[10:0] = mean_machine_module_0_bit_num;
   assign clk_0_1 = clk_0;
   assign data_in_0_addr[31:0] = sout_module_0_data_in_ADDR;
   assign data_in_0_clk = sout_module_0_data_in_CLK;
@@ -128,6 +131,7 @@ module driver_block_design
         .latch_select(mean_machine_module_0_latch_select),
         .pass_through_bit(xlconstant_0_dout[0]),
         .reset(reset_0_1),
+        .sclk(mean_machine_module_0_sclk),
         .sout(sout_module_0_sout));
   driver_block_design_sout_module_1_0 sout_module_1
        (.b_addr(sout_module_1_data_in_ADDR),
@@ -141,6 +145,7 @@ module driver_block_design
         .latch_select(mean_machine_module_0_latch_select),
         .pass_through_bit(sout_module_0_sout),
         .reset(reset_0_1),
+        .sclk(mean_machine_module_0_sclk),
         .sout(sout_module_1_sout));
   driver_block_design_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));

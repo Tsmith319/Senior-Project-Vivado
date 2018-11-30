@@ -158,23 +158,27 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set data_in_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:bram_rtl:1.0 data_in_0 ]
   set data_in_1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:bram_rtl:1.0 data_in_1 ]
+  set data_in_2 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:bram_rtl:1.0 data_in_2 ]
 
   # Create ports
   set GPIO_IN [ create_bd_port -dir I -from 2 -to 0 GPIO_IN ]
-  set bitnum_0 [ create_bd_port -dir O -from 10 -to 0 bitnum_0 ]
   set clk_0 [ create_bd_port -dir I -type clk clk_0 ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {50000000} \
  ] $clk_0
   set enable_0 [ create_bd_port -dir I enable_0 ]
   set gsclk_0 [ create_bd_port -dir O gsclk_0 ]
+  set gsclk_1 [ create_bd_port -dir O gsclk_1 ]
   set latch_0 [ create_bd_port -dir O latch_0 ]
+  set latch_1 [ create_bd_port -dir O latch_1 ]
   set reset_0 [ create_bd_port -dir I -type rst reset_0 ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $reset_0
   set sclk_0 [ create_bd_port -dir O sclk_0 ]
+  set sclk_1 [ create_bd_port -dir O sclk_1 ]
   set sout_0 [ create_bd_port -dir O sout_0 ]
+  set sout_1 [ create_bd_port -dir O sout_1 ]
 
   # Create instance: interrupt_0, and set properties
   set interrupt_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:interrupt:1.0 interrupt_0 ]
@@ -188,6 +192,9 @@ proc create_root_design { parentCell } {
   # Create instance: sout_module_1, and set properties
   set sout_module_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:sout_module:1.0 sout_module_1 ]
 
+  # Create instance: sout_module_2, and set properties
+  set sout_module_2 [ create_bd_cell -type ip -vlnv xilinx.com:user:sout_module:1.0 sout_module_2 ]
+
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
   set_property -dict [ list \
@@ -197,24 +204,26 @@ proc create_root_design { parentCell } {
   # Create interface connections
   connect_bd_intf_net -intf_net sout_module_0_data_in [get_bd_intf_ports data_in_0] [get_bd_intf_pins sout_module_0/data_in]
   connect_bd_intf_net -intf_net sout_module_1_data_in [get_bd_intf_ports data_in_1] [get_bd_intf_pins sout_module_1/data_in]
+  connect_bd_intf_net -intf_net sout_module_2_data_in [get_bd_intf_ports data_in_2] [get_bd_intf_pins sout_module_2/data_in]
 
   # Create port connections
   connect_bd_net -net GPIO_IN_1 [get_bd_ports GPIO_IN] [get_bd_pins interrupt_0/GPIO_IN]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins interrupt_0/clk] [get_bd_pins mean_machine_module_0/clk] [get_bd_pins sout_module_0/clk] [get_bd_pins sout_module_1/clk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins interrupt_0/clk] [get_bd_pins mean_machine_module_0/clk] [get_bd_pins sout_module_0/clk] [get_bd_pins sout_module_1/clk] [get_bd_pins sout_module_2/clk]
   connect_bd_net -net enable_0_1 [get_bd_ports enable_0] [get_bd_pins mean_machine_module_0/enable]
   connect_bd_net -net interrupt_0_buf_select [get_bd_pins interrupt_0/buf_select] [get_bd_pins mean_machine_module_0/buf_selected]
   connect_bd_net -net interrupt_0_next_section [get_bd_pins interrupt_0/next_section] [get_bd_pins mean_machine_module_0/next_section]
   connect_bd_net -net interrupt_0_setup [get_bd_pins interrupt_0/setup] [get_bd_pins mean_machine_module_0/setup]
-  connect_bd_net -net mean_machine_module_0_bit_num [get_bd_ports bitnum_0] [get_bd_pins mean_machine_module_0/bit_num] [get_bd_pins sout_module_0/bit_num] [get_bd_pins sout_module_1/bit_num]
-  connect_bd_net -net mean_machine_module_0_buf_select [get_bd_pins mean_machine_module_0/buf_select] [get_bd_pins sout_module_1/buf_num]
-  connect_bd_net -net mean_machine_module_0_gsclk [get_bd_ports gsclk_0] [get_bd_pins mean_machine_module_0/gsclk]
-  connect_bd_net -net mean_machine_module_0_latch [get_bd_ports latch_0] [get_bd_pins mean_machine_module_0/latch]
-  connect_bd_net -net mean_machine_module_0_latch_select [get_bd_pins mean_machine_module_0/latch_select] [get_bd_pins sout_module_0/latch_select] [get_bd_pins sout_module_1/latch_select]
+  connect_bd_net -net mean_machine_module_0_bit_num [get_bd_pins mean_machine_module_0/bit_num] [get_bd_pins sout_module_0/bit_num] [get_bd_pins sout_module_1/bit_num] [get_bd_pins sout_module_2/bit_num]
+  connect_bd_net -net mean_machine_module_0_buf_select [get_bd_pins mean_machine_module_0/buf_select] [get_bd_pins sout_module_1/buf_num] [get_bd_pins sout_module_2/buf_num]
+  connect_bd_net -net mean_machine_module_0_gsclk [get_bd_ports gsclk_0] [get_bd_ports gsclk_1] [get_bd_pins mean_machine_module_0/gsclk]
+  connect_bd_net -net mean_machine_module_0_latch [get_bd_ports latch_0] [get_bd_ports latch_1] [get_bd_pins mean_machine_module_0/latch]
+  connect_bd_net -net mean_machine_module_0_latch_select [get_bd_pins mean_machine_module_0/latch_select] [get_bd_pins sout_module_0/latch_select] [get_bd_pins sout_module_1/latch_select] [get_bd_pins sout_module_2/latch_select]
   connect_bd_net -net mean_machine_module_0_ready [get_bd_pins interrupt_0/ready] [get_bd_pins mean_machine_module_0/ready]
-  connect_bd_net -net mean_machine_module_0_sclk [get_bd_ports sclk_0] [get_bd_pins mean_machine_module_0/sclk]
-  connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins interrupt_0/reset] [get_bd_pins mean_machine_module_0/reset] [get_bd_pins sout_module_0/reset] [get_bd_pins sout_module_1/reset]
-  connect_bd_net -net sout_module_0_sout [get_bd_pins sout_module_0/sout] [get_bd_pins sout_module_1/pass_through_bit]
+  connect_bd_net -net mean_machine_module_0_sclk [get_bd_ports sclk_0] [get_bd_ports sclk_1] [get_bd_pins mean_machine_module_0/sclk] [get_bd_pins sout_module_0/sclk] [get_bd_pins sout_module_1/sclk] [get_bd_pins sout_module_2/sclk]
+  connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins interrupt_0/reset] [get_bd_pins mean_machine_module_0/reset] [get_bd_pins sout_module_0/reset] [get_bd_pins sout_module_1/reset] [get_bd_pins sout_module_2/reset]
+  connect_bd_net -net sout_module_0_sout [get_bd_pins sout_module_0/sout] [get_bd_pins sout_module_1/pass_through_bit] [get_bd_pins sout_module_2/pass_through_bit]
   connect_bd_net -net sout_module_1_sout [get_bd_ports sout_0] [get_bd_pins sout_module_1/sout]
+  connect_bd_net -net sout_module_2_sout [get_bd_ports sout_1] [get_bd_pins sout_module_2/sout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins sout_module_0/buf_num] [get_bd_pins sout_module_0/pass_through_bit] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments

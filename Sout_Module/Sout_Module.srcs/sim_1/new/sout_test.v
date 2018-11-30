@@ -51,9 +51,9 @@ module sout_test(
             for(integer i = 1535;i >= 0; i=i-1) begin
              #5
              clk = 1;
+             bit_num = i;
              #5
              clk = 0;
-             bit_num = i;
             end 
         end
         #5;

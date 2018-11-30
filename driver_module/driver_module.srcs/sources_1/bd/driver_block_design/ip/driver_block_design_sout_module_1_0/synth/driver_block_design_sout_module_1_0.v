@@ -48,15 +48,16 @@
 
 
 // IP VLNV: xilinx.com:user:sout_module:1.0
-// IP Revision: 4
+// IP Revision: 7
 
 (* X_CORE_INFO = "sout_module,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "driver_block_design_sout_module_1_0,sout_module,{}" *)
-(* CORE_GENERATION_INFO = "driver_block_design_sout_module_1_0,sout_module,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sout_module,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "driver_block_design_sout_module_1_0,sout_module,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=sout_module,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module driver_block_design_sout_module_1_0 (
   clk,
+  sclk,
   bit_num,
   buf_num,
   pass_through_bit,
@@ -73,6 +74,7 @@ module driver_block_design_sout_module_1_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN driver_block_design_clk_0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+input wire sclk;
 input wire [10 : 0] bit_num;
 input wire [1 : 0] buf_num;
 input wire pass_through_bit;
@@ -96,6 +98,7 @@ output wire b_rst;
 
   sout_module inst (
     .clk(clk),
+    .sclk(sclk),
     .bit_num(bit_num),
     .buf_num(buf_num),
     .pass_through_bit(pass_through_bit),

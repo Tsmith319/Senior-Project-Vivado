@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Nov 27 20:57:45 2018
+//Date        : Thu Nov 29 22:23:30 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION_wrapper.bd
 //Design      : VISION_wrapper
@@ -35,9 +35,13 @@ module VISION_wrapper
     UART1_TX_0,
     gpio2_io_i_0,
     gsclk_0_0,
+    gsclk_1_0,
     latch_0_0,
+    latch_1_0,
     sclk_0_0,
-    sout_0_0);
+    sclk_1_0,
+    sout_0_0,
+    sout_1_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -63,9 +67,13 @@ module VISION_wrapper
   output UART1_TX_0;
   input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
+  output gsclk_1_0;
   output latch_0_0;
+  output latch_1_0;
   output sclk_0_0;
+  output sclk_1_0;
   output sout_0_0;
+  output sout_1_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -92,9 +100,13 @@ module VISION_wrapper
   wire UART1_TX_0;
   wire [0:0]gpio2_io_i_0;
   wire gsclk_0_0;
+  wire gsclk_1_0;
   wire latch_0_0;
+  wire latch_1_0;
   wire sclk_0_0;
+  wire sclk_1_0;
   wire sout_0_0;
+  wire sout_1_0;
 
   VISION VISION_i
        (.DDR_addr(DDR_addr),
@@ -122,7 +134,11 @@ module VISION_wrapper
         .UART1_TX_0(UART1_TX_0),
         .gpio2_io_i_0(gpio2_io_i_0),
         .gsclk_0_0(gsclk_0_0),
+        .gsclk_1_0(gsclk_1_0),
         .latch_0_0(latch_0_0),
+        .latch_1_0(latch_1_0),
         .sclk_0_0(sclk_0_0),
-        .sout_0_0(sout_0_0));
+        .sclk_1_0(sclk_1_0),
+        .sout_0_0(sout_0_0),
+        .sout_1_0(sout_1_0));
 endmodule

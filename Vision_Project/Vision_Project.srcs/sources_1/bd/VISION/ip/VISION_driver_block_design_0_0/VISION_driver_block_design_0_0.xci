@@ -15,6 +15,8 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DATA_IN_0.READ_WRITE_MODE"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DATA_IN_1.MASTER_TYPE">OTHER</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DATA_IN_1.READ_WRITE_MODE"/>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DATA_IN_2.MASTER_TYPE">OTHER</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DATA_IN_2.READ_WRITE_MODE"/>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">VISION_driver_block_design_0_0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">zynq</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD">digilentinc.com:arty-z7-20:part0:1.0</spirit:configurableElementValue>

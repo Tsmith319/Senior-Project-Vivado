@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="driver_block_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1542490411"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1542490411"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1542490411"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1542490411"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1543555168"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1543555168"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1543555168"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1543555168"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\driver_block_design_mean_machine_module_0_0\driver_block_design_mean_machine_module_0_0.xci" Type="IP">
         <Instance HierarchyPath="mean_machine_module_0"/>
@@ -56,6 +56,14 @@
       <File Name="sim\driver_block_design.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_1_1\driver_block_design_sout_module_1_1.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="driver_block_design_ooc.xdc" Type="XDC">

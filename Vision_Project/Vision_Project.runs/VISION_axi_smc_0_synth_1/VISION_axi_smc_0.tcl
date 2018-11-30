@@ -26,53 +26,59 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/wt [current_project]
-set_property parent.project_path C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.xpr [current_project]
+set_property webtalk.parent_dir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/wt [current_project]
+set_property parent.project_path C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/ip_repo
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/INTERRUPT_DRIVER
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new
-  c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new
+  c:/github/Senior-Project-Vivado/ip_repo
+  c:/github/Senior-Project-Vivado/INTERRUPT_DRIVER
+  c:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new
+  c:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new
 } [current_project]
-set_property ip_output_repo c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/ip [current_project]
+set_property ip_output_repo c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_10/bd_a547_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_16/bd_a547_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_23/bd_a547_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_30/bd_a547_m02s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_31/bd_a547_m02arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_32/bd_a547_m02rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_33/bd_a547_m02awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_34/bd_a547_m02wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_35/bd_a547_m02bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_24/bd_a547_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_25/bd_a547_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_26/bd_a547_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_27/bd_a547_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_28/bd_a547_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_17/bd_a547_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_18/bd_a547_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_19/bd_a547_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_20/bd_a547_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_21/bd_a547_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_11/bd_a547_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_12/bd_a547_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_13/bd_a547_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_14/bd_a547_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_15/bd_a547_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_2/bd_a547_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_3/bd_a547_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_4/bd_a547_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_5/bd_a547_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_6/bd_a547_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/ooc.xdc]
+read_ip -quiet C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.xci
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_10/bd_a547_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_16/bd_a547_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_23/bd_a547_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_30/bd_a547_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_37/bd_a547_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_38/bd_a547_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_39/bd_a547_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_40/bd_a547_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_41/bd_a547_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_42/bd_a547_m03bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_31/bd_a547_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_32/bd_a547_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_33/bd_a547_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_34/bd_a547_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_35/bd_a547_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_24/bd_a547_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_25/bd_a547_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_26/bd_a547_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_27/bd_a547_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_28/bd_a547_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_17/bd_a547_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_18/bd_a547_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_19/bd_a547_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_20/bd_a547_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_21/bd_a547_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_11/bd_a547_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_12/bd_a547_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_13/bd_a547_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_14/bd_a547_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_15/bd_a547_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_2/bd_a547_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_3/bd_a547_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_4/bd_a547_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_5/bd_a547_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_6/bd_a547_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/bd_0/ip/ip_1/bd_a547_psr_aclk_0.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -86,7 +92,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 0
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1 -new_name VISION_axi_smc_0 -ip [get_ips VISION_axi_smc_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1 -new_name VISION_axi_smc_0 -ip [get_ips VISION_axi_smc_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -127,32 +133,32 @@ write_checkpoint -force -noxdef VISION_axi_smc_0.dcp
 create_report "VISION_axi_smc_0_synth_1_synth_report_utilization_0" "report_utilization -file VISION_axi_smc_0_utilization_synth.rpt -pb VISION_axi_smc_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0.dcp c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.dcp
+  file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0.dcp C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v
+  write_verilog -force -mode synth_stub C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.v
+  write_verilog -force -mode funcsim C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -162,47 +168,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0.dcp c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.dcp
+  file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0.dcp C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_stub.v c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v
+  file rename -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_stub.v C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_stub.vhdl c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl
+  file rename -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_stub.vhdl C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_sim_netlist.v c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.v
+  file rename -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_sim_netlist.v C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_sim_netlist.vhdl c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.vhdl
+  file rename -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/VISION_axi_smc_0_synth_1/VISION_axi_smc_0_sim_netlist.vhdl C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0]} {
+if {[file isdir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0]} {
   catch { 
-    file copy -force c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0
+    file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.v C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0
   }
 }
 
-if {[file isdir C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0]} {
+if {[file isdir C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0]} {
   catch { 
-    file copy -force c:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl C:/Users/TaySm/OneDrive/Documents/GitHub/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0
+    file copy -force C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_smc_0/VISION_axi_smc_0_stub.vhdl C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.ip_user_files/ip/VISION_axi_smc_0
   }
 }
 file delete __synthesis_is_running__

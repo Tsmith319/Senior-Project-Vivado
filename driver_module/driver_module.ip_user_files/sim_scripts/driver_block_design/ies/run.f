@@ -1,7 +1,7 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/driver_block_design/ipshared/65d9/mean_machine_module.v" \
   "../../../bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/sim/driver_block_design_mean_machine_module_0_0.v" \
-  "../../../bd/driver_block_design/ipshared/9a03/sout_module.v" \
+  "../../../bd/driver_block_design/ipshared/0c16/sout_module.v" \
   "../../../bd/driver_block_design/ip/driver_block_design_sout_module_0_0/sim/driver_block_design_sout_module_0_0.v" \
   "../../../bd/driver_block_design/ip/driver_block_design_sout_module_1_0/sim/driver_block_design_sout_module_1_0.v" \
 -endlib

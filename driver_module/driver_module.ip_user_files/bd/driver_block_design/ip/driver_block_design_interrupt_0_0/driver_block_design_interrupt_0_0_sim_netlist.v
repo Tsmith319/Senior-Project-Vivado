@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Sun Nov 11 12:33:45 2018
 // Host        : MSI970-Station running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top driver_block_design_interrupt_0_0 -prefix
+//               driver_block_design_interrupt_0_0_ driver_block_design_interrupt_0_0_sim_netlist.v
 // Design      : driver_block_design_interrupt_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -48,7 +48,6 @@ module driver_block_design_interrupt_0_0
         .setup(setup));
 endmodule
 
-(* ORIG_REF_NAME = "interrupt" *) 
 module driver_block_design_interrupt_0_0_interrupt
    (setup,
     next_section,

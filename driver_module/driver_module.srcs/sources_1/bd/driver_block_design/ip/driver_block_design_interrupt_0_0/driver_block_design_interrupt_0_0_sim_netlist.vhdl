@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Sun Nov 11 12:33:45 2018
 -- Host        : MSI970-Station running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/github/Senior-Project-Vivado/driver_module/driver_module.srcs/sources_1/bd/driver_block_design/ip/driver_block_design_interrupt_0_0/driver_block_design_interrupt_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top driver_block_design_interrupt_0_0 -prefix
+--               driver_block_design_interrupt_0_0_ driver_block_design_interrupt_0_0_sim_netlist.vhdl
 -- Design      : driver_block_design_interrupt_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity driver_block_design_interrupt_0_0_interrupt is
     clk : in STD_LOGIC;
     reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of driver_block_design_interrupt_0_0_interrupt : entity is "interrupt";
 end driver_block_design_interrupt_0_0_interrupt;
 
 architecture STRUCTURE of driver_block_design_interrupt_0_0_interrupt is

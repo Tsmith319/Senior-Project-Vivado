@@ -10,7 +10,7 @@ vmap xlconstant_v1_1_5 activehdl/xlconstant_v1_1_5
 vlog -work xil_defaultlib  -v2k5 \
 "../../../bd/driver_block_design/ipshared/65d9/mean_machine_module.v" \
 "../../../bd/driver_block_design/ip/driver_block_design_mean_machine_module_0_0/sim/driver_block_design_mean_machine_module_0_0.v" \
-"../../../bd/driver_block_design/ipshared/9a03/sout_module.v" \
+"../../../bd/driver_block_design/ipshared/0c16/sout_module.v" \
 "../../../bd/driver_block_design/ip/driver_block_design_sout_module_0_0/sim/driver_block_design_sout_module_0_0.v" \
 "../../../bd/driver_block_design/ip/driver_block_design_sout_module_1_0/sim/driver_block_design_sout_module_1_0.v" \
 

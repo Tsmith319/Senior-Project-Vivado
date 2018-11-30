@@ -4,5 +4,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/Sou
 INFO: [VRFC 10-311] analyzing module sout_test
 WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sim_1/new/sout_test.v:51]
 WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sim_1/new/sout_test.v:48]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1543377492">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1543555439">
   <File Type="BITSTR-BMM" Name="VISION_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="VISION_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="VISION_wrapper_timing_summary_init.rpt"/>
@@ -125,9 +125,7 @@
   <BlockFileSet Type="BlockSrcs" Name="VISION_axi_cdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="VISION_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="VISION_driver_block_design_0_bram_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="VISION_driver_block_design_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="VISION_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="VISION_xlslice_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="VISION_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="VISION_xlslice_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="VISION_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="VISION_driver_block_design_0_0"/>
 </GenRun>

@@ -56,7 +56,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module VISION_driver_block_design_0_0 (
   GPIO_IN,
-  bitnum_0,
   clk_0,
   data_in_0_addr,
   data_in_0_clk,
@@ -68,16 +67,24 @@ module VISION_driver_block_design_0_0 (
   data_in_1_dout,
   data_in_1_en,
   data_in_1_rst,
+  data_in_2_addr,
+  data_in_2_clk,
+  data_in_2_dout,
+  data_in_2_en,
+  data_in_2_rst,
   enable_0,
   gsclk_0,
+  gsclk_1,
   latch_0,
+  latch_1,
   reset_0,
   sclk_0,
-  sout_0
+  sclk_1,
+  sout_0,
+  sout_1
 );
 
 input wire [2 : 0] GPIO_IN;
-output wire [10 : 0] bitnum_0;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, FREQ_HZ 50000000, PHASE 0.000, ASSOCIATED_RESET reset_0, CLK_DOMAIN VISION_processing_system7_0_0_FCLK_CLK1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *)
 input wire clk_0;
@@ -103,18 +110,32 @@ output wire data_in_1_en;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_1 RST" *)
 output wire data_in_1_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 ADDR" *)
+output wire [31 : 0] data_in_2_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 CLK" *)
+output wire data_in_2_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 DOUT" *)
+input wire [31 : 0] data_in_2_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 EN" *)
+output wire data_in_2_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 RST" *)
+output wire data_in_2_rst;
 input wire enable_0;
 output wire gsclk_0;
+output wire gsclk_1;
 output wire latch_0;
+output wire latch_1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *)
 input wire reset_0;
 output wire sclk_0;
+output wire sclk_1;
 output wire sout_0;
+output wire sout_1;
 
   driver_block_design inst (
     .GPIO_IN(GPIO_IN),
-    .bitnum_0(bitnum_0),
     .clk_0(clk_0),
     .data_in_0_addr(data_in_0_addr),
     .data_in_0_clk(data_in_0_clk),
@@ -126,11 +147,20 @@ output wire sout_0;
     .data_in_1_dout(data_in_1_dout),
     .data_in_1_en(data_in_1_en),
     .data_in_1_rst(data_in_1_rst),
+    .data_in_2_addr(data_in_2_addr),
+    .data_in_2_clk(data_in_2_clk),
+    .data_in_2_dout(data_in_2_dout),
+    .data_in_2_en(data_in_2_en),
+    .data_in_2_rst(data_in_2_rst),
     .enable_0(enable_0),
     .gsclk_0(gsclk_0),
+    .gsclk_1(gsclk_1),
     .latch_0(latch_0),
+    .latch_1(latch_1),
     .reset_0(reset_0),
     .sclk_0(sclk_0),
-    .sout_0(sout_0)
+    .sclk_1(sclk_1),
+    .sout_0(sout_0),
+    .sout_1(sout_1)
   );
 endmodule
