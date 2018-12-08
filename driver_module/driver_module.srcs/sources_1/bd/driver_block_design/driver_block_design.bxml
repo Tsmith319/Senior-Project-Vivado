@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="driver_block_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1543555168"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1543555168"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1543555168"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1543555168"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1543987569"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1543987569"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1543987569"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1543987569"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\driver_block_design_mean_machine_module_0_0\driver_block_design_mean_machine_module_0_0.xci" Type="IP">
         <Instance HierarchyPath="mean_machine_module_0"/>
@@ -60,6 +60,70 @@
       </File>
       <File Name="ip\driver_block_design_sout_module_1_1\driver_block_design_sout_module_1_1.xci" Type="IP">
         <Instance HierarchyPath="sout_module_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_2_0\driver_block_design_sout_module_2_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_3_0\driver_block_design_sout_module_3_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_4"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_3_1\driver_block_design_sout_module_3_1.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_5"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_3_2\driver_block_design_sout_module_3_2.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_6"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_4_0\driver_block_design_sout_module_4_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_7"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_5_0\driver_block_design_sout_module_5_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_8"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_6_0\driver_block_design_sout_module_6_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_9"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\driver_block_design_sout_module_9_0\driver_block_design_sout_module_9_0.xci" Type="IP">
+        <Instance HierarchyPath="sout_module_10"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

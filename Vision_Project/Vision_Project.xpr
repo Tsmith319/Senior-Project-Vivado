@@ -43,13 +43,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="14"/>
-    <Option Name="WTModelSimExportSim" Val="14"/>
-    <Option Name="WTQuestaExportSim" Val="14"/>
-    <Option Name="WTIesExportSim" Val="14"/>
-    <Option Name="WTVcsExportSim" Val="14"/>
-    <Option Name="WTRivieraExportSim" Val="14"/>
-    <Option Name="WTActivehdlExportSim" Val="14"/>
+    <Option Name="WTXSimExportSim" Val="15"/>
+    <Option Name="WTModelSimExportSim" Val="15"/>
+    <Option Name="WTQuestaExportSim" Val="15"/>
+    <Option Name="WTIesExportSim" Val="15"/>
+    <Option Name="WTVcsExportSim" Val="15"/>
+    <Option Name="WTRivieraExportSim" Val="15"/>
+    <Option Name="WTActivehdlExportSim" Val="15"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -70,11 +70,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="VISION_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_cdma_0_0/VISION_axi_cdma_0_0.xci">
+          <Proxy FileSetName="VISION_axi_cdma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_smc_0/VISION_axi_smc_0.xci">
           <Proxy FileSetName="VISION_axi_smc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_rst_ps7_0_100M_0/VISION_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="VISION_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_0/VISION_driver_block_design_0_0.xci">
           <Proxy FileSetName="VISION_driver_block_design_0_0"/>
@@ -82,29 +85,26 @@
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_gpio_0_0/VISION_axi_gpio_0_0.xci">
           <Proxy FileSetName="VISION_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_cdma_0_0/VISION_axi_cdma_0_0.xci">
-          <Proxy FileSetName="VISION_axi_cdma_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0_0/VISION_driver_block_design_0_bram_0_0.xci">
+          <Proxy FileSetName="VISION_driver_block_design_0_bram_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0/VISION_driver_block_design_0_bram_0.xci">
           <Proxy FileSetName="VISION_driver_block_design_0_bram_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_driver_block_design_0_bram_0_0/VISION_driver_block_design_0_bram_0_0.xci">
-          <Proxy FileSetName="VISION_driver_block_design_0_bram_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0.xci">
+          <Proxy FileSetName="VISION_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_0/VISION_axi_bram_ctrl_0_0.xci">
           <Proxy FileSetName="VISION_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_processing_system7_0_0/VISION_processing_system7_0_0.xci">
-          <Proxy FileSetName="VISION_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_1/VISION_axi_bram_ctrl_0_1.xci">
-          <Proxy FileSetName="VISION_axi_bram_ctrl_0_1"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xlslice_0_0/VISION_xlslice_0_0.xci">
+          <Proxy FileSetName="VISION_xlslice_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xlslice_1_0/VISION_xlslice_1_0.xci">
           <Proxy FileSetName="VISION_xlslice_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xlslice_0_0/VISION_xlslice_0_0.xci">
-          <Proxy FileSetName="VISION_xlslice_0_0"/>
+        <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_axi_bram_ctrl_0_1/VISION_axi_bram_ctrl_0_1.xci">
+          <Proxy FileSetName="VISION_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="VISION.bd" FileRelPathName="ip/VISION_xbar_0/VISION_xbar_0.xci">
           <Proxy FileSetName="VISION_xbar_0"/>
@@ -355,9 +355,7 @@
     </Run>
     <Run Id="VISION_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="VISION_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="VISION_processing_system7_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/VISION_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -366,9 +364,7 @@
     </Run>
     <Run Id="VISION_driver_block_design_0_0_synth_1" Type="Ft3:Synth" SrcSet="VISION_driver_block_design_0_0" Part="xc7z020clg400-1" ConstrsSet="VISION_driver_block_design_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/VISION_driver_block_design_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -570,9 +566,7 @@
     </Run>
     <Run Id="VISION_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="VISION_processing_system7_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="VISION_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -588,9 +582,7 @@
     </Run>
     <Run Id="VISION_driver_block_design_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="VISION_driver_block_design_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="VISION_driver_block_design_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -1,6 +1,203 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Dec  4 22:27:07 2018
+| Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'VISION_driver_block_design_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of VISION_driver_block_design_0_0 (xilinx.com:user:driver_block_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'VISION_driver_block_design_0_0'.
+
+
+-Upgrade has added interface 'data_in_10' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_3' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_4' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_5' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_6' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_7' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_8' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'data_in_9' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'VISION_driver_block_design_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'data_in_10_addr'
+
+-Upgrade has added port 'data_in_10_clk'
+
+-Upgrade has added port 'data_in_10_dout'
+
+-Upgrade has added port 'data_in_10_en'
+
+-Upgrade has added port 'data_in_10_rst'
+
+-Upgrade has added port 'data_in_3_addr'
+
+-Upgrade has added port 'data_in_3_clk'
+
+-Upgrade has added port 'data_in_3_dout'
+
+-Upgrade has added port 'data_in_3_en'
+
+-Upgrade has added port 'data_in_3_rst'
+
+-Upgrade has added port 'data_in_4_addr'
+
+-Upgrade has added port 'data_in_4_clk'
+
+-Upgrade has added port 'data_in_4_dout'
+
+-Upgrade has added port 'data_in_4_en'
+
+-Upgrade has added port 'data_in_4_rst'
+
+-Upgrade has added port 'data_in_5_addr'
+
+-Upgrade has added port 'data_in_5_clk'
+
+-Upgrade has added port 'data_in_5_dout'
+
+-Upgrade has added port 'data_in_5_en'
+
+-Upgrade has added port 'data_in_5_rst'
+
+-Upgrade has added port 'data_in_6_addr'
+
+-Upgrade has added port 'data_in_6_clk'
+
+-Upgrade has added port 'data_in_6_dout'
+
+-Upgrade has added port 'data_in_6_en'
+
+-Upgrade has added port 'data_in_6_rst'
+
+-Upgrade has added port 'data_in_7_addr'
+
+-Upgrade has added port 'data_in_7_clk'
+
+-Upgrade has added port 'data_in_7_dout'
+
+-Upgrade has added port 'data_in_7_en'
+
+-Upgrade has added port 'data_in_7_rst'
+
+-Upgrade has added port 'data_in_8_addr'
+
+-Upgrade has added port 'data_in_8_clk'
+
+-Upgrade has added port 'data_in_8_dout'
+
+-Upgrade has added port 'data_in_8_en'
+
+-Upgrade has added port 'data_in_8_rst'
+
+-Upgrade has added port 'data_in_9_addr'
+
+-Upgrade has added port 'data_in_9_clk'
+
+-Upgrade has added port 'data_in_9_dout'
+
+-Upgrade has added port 'data_in_9_en'
+
+-Upgrade has added port 'data_in_9_rst'
+
+-Upgrade has added port 'gsclk_2'
+
+-Upgrade has added port 'gsclk_3'
+
+-Upgrade has added port 'gsclk_4'
+
+-Upgrade has added port 'gsclk_5'
+
+-Upgrade has added port 'gsclk_6'
+
+-Upgrade has added port 'gsclk_7'
+
+-Upgrade has added port 'gsclk_8'
+
+-Upgrade has added port 'gsclk_9'
+
+-Upgrade has added port 'latch_2'
+
+-Upgrade has added port 'latch_3'
+
+-Upgrade has added port 'latch_4'
+
+-Upgrade has added port 'latch_5'
+
+-Upgrade has added port 'latch_6'
+
+-Upgrade has added port 'latch_7'
+
+-Upgrade has added port 'latch_8'
+
+-Upgrade has added port 'latch_9'
+
+-Upgrade has added port 'sclk_2'
+
+-Upgrade has added port 'sclk_3'
+
+-Upgrade has added port 'sclk_4'
+
+-Upgrade has added port 'sclk_5'
+
+-Upgrade has added port 'sclk_6'
+
+-Upgrade has added port 'sclk_7'
+
+-Upgrade has added port 'sclk_8'
+
+-Upgrade has added port 'sclk_9'
+
+-Upgrade has added port 'sout_2'
+
+-Upgrade has added port 'sout_3'
+
+-Upgrade has added port 'sout_4'
+
+-Upgrade has added port 'sout_5'
+
+-Upgrade has added port 'sout_6'
+
+-Upgrade has added port 'sout_7'
+
+-Upgrade has added port 'sout_8'
+
+-Upgrade has added port 'sout_9'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 | Date         : Thu Nov 29 22:19:54 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

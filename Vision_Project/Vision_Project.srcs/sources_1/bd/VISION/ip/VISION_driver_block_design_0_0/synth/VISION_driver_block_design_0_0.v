@@ -63,6 +63,11 @@ module VISION_driver_block_design_0_0 (
   data_in_0_dout,
   data_in_0_en,
   data_in_0_rst,
+  data_in_10_addr,
+  data_in_10_clk,
+  data_in_10_dout,
+  data_in_10_en,
+  data_in_10_rst,
   data_in_1_addr,
   data_in_1_clk,
   data_in_1_dout,
@@ -73,16 +78,83 @@ module VISION_driver_block_design_0_0 (
   data_in_2_dout,
   data_in_2_en,
   data_in_2_rst,
+  data_in_3_addr,
+  data_in_3_clk,
+  data_in_3_dout,
+  data_in_3_en,
+  data_in_3_rst,
+  data_in_4_addr,
+  data_in_4_clk,
+  data_in_4_dout,
+  data_in_4_en,
+  data_in_4_rst,
+  data_in_5_addr,
+  data_in_5_clk,
+  data_in_5_dout,
+  data_in_5_en,
+  data_in_5_rst,
+  data_in_6_addr,
+  data_in_6_clk,
+  data_in_6_dout,
+  data_in_6_en,
+  data_in_6_rst,
+  data_in_7_addr,
+  data_in_7_clk,
+  data_in_7_dout,
+  data_in_7_en,
+  data_in_7_rst,
+  data_in_8_addr,
+  data_in_8_clk,
+  data_in_8_dout,
+  data_in_8_en,
+  data_in_8_rst,
+  data_in_9_addr,
+  data_in_9_clk,
+  data_in_9_dout,
+  data_in_9_en,
+  data_in_9_rst,
   enable_0,
   gsclk_0,
   gsclk_1,
+  gsclk_2,
+  gsclk_3,
+  gsclk_4,
+  gsclk_5,
+  gsclk_6,
+  gsclk_7,
+  gsclk_8,
+  gsclk_9,
   latch_0,
   latch_1,
+  latch_2,
+  latch_3,
+  latch_4,
+  latch_5,
+  latch_6,
+  latch_7,
+  latch_8,
+  latch_9,
   reset_0,
   sclk_0,
   sclk_1,
+  sclk_2,
+  sclk_3,
+  sclk_4,
+  sclk_5,
+  sclk_6,
+  sclk_7,
+  sclk_8,
+  sclk_9,
   sout_0,
-  sout_1
+  sout_1,
+  sout_2,
+  sout_3,
+  sout_4,
+  sout_5,
+  sout_6,
+  sout_7,
+  sout_8,
+  sout_9
 );
 
 input wire [2 : 0] GPIO_IN;
@@ -100,6 +172,17 @@ output wire data_in_0_en;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_0, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_0 RST" *)
 output wire data_in_0_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_10 ADDR" *)
+output wire [31 : 0] data_in_10_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_10 CLK" *)
+output wire data_in_10_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_10 DOUT" *)
+input wire [31 : 0] data_in_10_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_10 EN" *)
+output wire data_in_10_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_10, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_10 RST" *)
+output wire data_in_10_rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_1 ADDR" *)
 output wire [31 : 0] data_in_1_addr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_1 CLK" *)
@@ -122,18 +205,127 @@ output wire data_in_2_en;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_2 RST" *)
 output wire data_in_2_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_3 ADDR" *)
+output wire [31 : 0] data_in_3_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_3 CLK" *)
+output wire data_in_3_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_3 DOUT" *)
+input wire [31 : 0] data_in_3_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_3 EN" *)
+output wire data_in_3_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_3, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_3 RST" *)
+output wire data_in_3_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_4 ADDR" *)
+output wire [31 : 0] data_in_4_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_4 CLK" *)
+output wire data_in_4_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_4 DOUT" *)
+input wire [31 : 0] data_in_4_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_4 EN" *)
+output wire data_in_4_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_4, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_4 RST" *)
+output wire data_in_4_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_5 ADDR" *)
+output wire [31 : 0] data_in_5_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_5 CLK" *)
+output wire data_in_5_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_5 DOUT" *)
+input wire [31 : 0] data_in_5_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_5 EN" *)
+output wire data_in_5_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_5, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_5 RST" *)
+output wire data_in_5_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_6 ADDR" *)
+output wire [31 : 0] data_in_6_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_6 CLK" *)
+output wire data_in_6_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_6 DOUT" *)
+input wire [31 : 0] data_in_6_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_6 EN" *)
+output wire data_in_6_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_6, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_6 RST" *)
+output wire data_in_6_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_7 ADDR" *)
+output wire [31 : 0] data_in_7_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_7 CLK" *)
+output wire data_in_7_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_7 DOUT" *)
+input wire [31 : 0] data_in_7_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_7 EN" *)
+output wire data_in_7_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_7, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_7 RST" *)
+output wire data_in_7_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_8 ADDR" *)
+output wire [31 : 0] data_in_8_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_8 CLK" *)
+output wire data_in_8_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_8 DOUT" *)
+input wire [31 : 0] data_in_8_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_8 EN" *)
+output wire data_in_8_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_8, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_8 RST" *)
+output wire data_in_8_rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_9 ADDR" *)
+output wire [31 : 0] data_in_9_addr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_9 CLK" *)
+output wire data_in_9_clk;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_9 DOUT" *)
+input wire [31 : 0] data_in_9_dout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_9 EN" *)
+output wire data_in_9_en;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_in_9, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 data_in_9 RST" *)
+output wire data_in_9_rst;
 input wire enable_0;
 output wire gsclk_0;
 output wire gsclk_1;
+output wire gsclk_2;
+output wire gsclk_3;
+output wire gsclk_4;
+output wire gsclk_5;
+output wire gsclk_6;
+output wire gsclk_7;
+output wire gsclk_8;
+output wire gsclk_9;
 output wire latch_0;
 output wire latch_1;
+output wire latch_2;
+output wire latch_3;
+output wire latch_4;
+output wire latch_5;
+output wire latch_6;
+output wire latch_7;
+output wire latch_8;
+output wire latch_9;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *)
 input wire reset_0;
 output wire sclk_0;
 output wire sclk_1;
+output wire sclk_2;
+output wire sclk_3;
+output wire sclk_4;
+output wire sclk_5;
+output wire sclk_6;
+output wire sclk_7;
+output wire sclk_8;
+output wire sclk_9;
 output wire sout_0;
 output wire sout_1;
+output wire sout_2;
+output wire sout_3;
+output wire sout_4;
+output wire sout_5;
+output wire sout_6;
+output wire sout_7;
+output wire sout_8;
+output wire sout_9;
 
   driver_block_design inst (
     .GPIO_IN(GPIO_IN),
@@ -143,6 +335,11 @@ output wire sout_1;
     .data_in_0_dout(data_in_0_dout),
     .data_in_0_en(data_in_0_en),
     .data_in_0_rst(data_in_0_rst),
+    .data_in_10_addr(data_in_10_addr),
+    .data_in_10_clk(data_in_10_clk),
+    .data_in_10_dout(data_in_10_dout),
+    .data_in_10_en(data_in_10_en),
+    .data_in_10_rst(data_in_10_rst),
     .data_in_1_addr(data_in_1_addr),
     .data_in_1_clk(data_in_1_clk),
     .data_in_1_dout(data_in_1_dout),
@@ -153,15 +350,82 @@ output wire sout_1;
     .data_in_2_dout(data_in_2_dout),
     .data_in_2_en(data_in_2_en),
     .data_in_2_rst(data_in_2_rst),
+    .data_in_3_addr(data_in_3_addr),
+    .data_in_3_clk(data_in_3_clk),
+    .data_in_3_dout(data_in_3_dout),
+    .data_in_3_en(data_in_3_en),
+    .data_in_3_rst(data_in_3_rst),
+    .data_in_4_addr(data_in_4_addr),
+    .data_in_4_clk(data_in_4_clk),
+    .data_in_4_dout(data_in_4_dout),
+    .data_in_4_en(data_in_4_en),
+    .data_in_4_rst(data_in_4_rst),
+    .data_in_5_addr(data_in_5_addr),
+    .data_in_5_clk(data_in_5_clk),
+    .data_in_5_dout(data_in_5_dout),
+    .data_in_5_en(data_in_5_en),
+    .data_in_5_rst(data_in_5_rst),
+    .data_in_6_addr(data_in_6_addr),
+    .data_in_6_clk(data_in_6_clk),
+    .data_in_6_dout(data_in_6_dout),
+    .data_in_6_en(data_in_6_en),
+    .data_in_6_rst(data_in_6_rst),
+    .data_in_7_addr(data_in_7_addr),
+    .data_in_7_clk(data_in_7_clk),
+    .data_in_7_dout(data_in_7_dout),
+    .data_in_7_en(data_in_7_en),
+    .data_in_7_rst(data_in_7_rst),
+    .data_in_8_addr(data_in_8_addr),
+    .data_in_8_clk(data_in_8_clk),
+    .data_in_8_dout(data_in_8_dout),
+    .data_in_8_en(data_in_8_en),
+    .data_in_8_rst(data_in_8_rst),
+    .data_in_9_addr(data_in_9_addr),
+    .data_in_9_clk(data_in_9_clk),
+    .data_in_9_dout(data_in_9_dout),
+    .data_in_9_en(data_in_9_en),
+    .data_in_9_rst(data_in_9_rst),
     .enable_0(enable_0),
     .gsclk_0(gsclk_0),
     .gsclk_1(gsclk_1),
+    .gsclk_2(gsclk_2),
+    .gsclk_3(gsclk_3),
+    .gsclk_4(gsclk_4),
+    .gsclk_5(gsclk_5),
+    .gsclk_6(gsclk_6),
+    .gsclk_7(gsclk_7),
+    .gsclk_8(gsclk_8),
+    .gsclk_9(gsclk_9),
     .latch_0(latch_0),
     .latch_1(latch_1),
+    .latch_2(latch_2),
+    .latch_3(latch_3),
+    .latch_4(latch_4),
+    .latch_5(latch_5),
+    .latch_6(latch_6),
+    .latch_7(latch_7),
+    .latch_8(latch_8),
+    .latch_9(latch_9),
     .reset_0(reset_0),
     .sclk_0(sclk_0),
     .sclk_1(sclk_1),
+    .sclk_2(sclk_2),
+    .sclk_3(sclk_3),
+    .sclk_4(sclk_4),
+    .sclk_5(sclk_5),
+    .sclk_6(sclk_6),
+    .sclk_7(sclk_7),
+    .sclk_8(sclk_8),
+    .sclk_9(sclk_9),
     .sout_0(sout_0),
-    .sout_1(sout_1)
+    .sout_1(sout_1),
+    .sout_2(sout_2),
+    .sout_3(sout_3),
+    .sout_4(sout_4),
+    .sout_5(sout_5),
+    .sout_6(sout_6),
+    .sout_7(sout_7),
+    .sout_8(sout_8),
+    .sout_9(sout_9)
   );
 endmodule

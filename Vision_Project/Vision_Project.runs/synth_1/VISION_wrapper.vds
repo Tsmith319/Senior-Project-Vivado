@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Nov 29 22:24:53 2018
-# Process ID: 21044
+# Start of session at: Thu Dec  6 20:33:03 2018
+# Process ID: 13688
 # Current directory: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1
 # Command line: vivado.exe -log VISION_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VISION_wrapper.tcl
 # Log file: C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/VISION_wrapper.vds
@@ -16,68 +16,108 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Viva
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/mean_machine/mean_machine.srcs/sources_1/new'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/github/Senior-Project-Vivado/Sout_Module/Sout_Module.srcs/sources_1/new'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 330.945 ; gain = 70.027
+add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 348.297 ; gain = 87.988
 Command: synth_design -top VISION_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4508 
+INFO: Helper process launched with PID 18364 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 441.422 ; gain = 103.555
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 464.609 ; gain = 107.590
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'VISION_wrapper' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hdl/VISION_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'VISION' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:13]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_0' (1#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_1' (2#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_1_0' (3#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_cdma_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_cdma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_cdma_0_0' (4#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_cdma_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_cdma_0' of module 'VISION_axi_cdma_0_0' requires 50 connections, but only 48 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:518]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_gpio_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_gpio_0_0' (5#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_axi_smc_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_smc_0' (6#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_axi_smc_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_smc' of module 'VISION_axi_smc_0' requires 167 connections, but only 161 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:590]
-INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_0' (7#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_0' (8#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'driver_block_design_0_bram' of module 'VISION_driver_block_design_0_bram_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:780]
-INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_0_0' (9#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_0' of module 'VISION_driver_block_design_0_bram_0_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:795]
-INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_1_0' (10#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_1' of module 'VISION_driver_block_design_0_bram_1_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:810]
-INFO: [Synth 8-6157] synthesizing module 'VISION_processing_system7_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_processing_system7_0_0' (11#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'VISION_processing_system7_0_0' requires 114 connections, but only 106 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:825]
-INFO: [Synth 8-6157] synthesizing module 'VISION_ps7_0_axi_periph_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1029]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_2CDE11' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1580]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_2CDE11' (12#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1580]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1A368YC' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1705]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1A368YC' (13#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1705]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HR4HXW' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1837]
-INFO: [Synth 8-6157] synthesizing module 'VISION_auto_pc_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_auto_pc_0' (14#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HR4HXW' (15#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1837]
-INFO: [Synth 8-6157] synthesizing module 'VISION_xbar_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_xbar_0' (16#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xbar_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'xbar' of module 'VISION_xbar_0' requires 40 connections, but only 38 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1539]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_ps7_0_axi_periph_0' (17#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1029]
-INFO: [Synth 8-6157] synthesizing module 'VISION_rst_ps7_0_100M_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_rst_ps7_0_100M_0' (18#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'VISION_rst_ps7_0_100M_0' requires 10 connections, but only 8 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1012]
-INFO: [Synth 8-6157] synthesizing module 'VISION_xlslice_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xlslice_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_xlslice_0_0' (19#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xlslice_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'VISION_xlslice_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xlslice_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_xlslice_1_0' (20#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-21044-DESKTOP-PTNOPEH/realtime/VISION_xlslice_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'VISION' (21#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'VISION_wrapper' (22#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hdl/VISION_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_0' (1#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_1' (2#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_2_2' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_2_2' (3#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_1_0' (4#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_2_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_2_0' (5#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_2' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_2' (6#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_1_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_1_1' (7#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_2_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_2_1' (8#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_2_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_3_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_3_0' (9#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_0_3' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_0_3' (10#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_bram_ctrl_1_2' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_bram_ctrl_1_2' (11#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_bram_ctrl_1_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_cdma_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_cdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_cdma_0_0' (12#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_cdma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_cdma_0' of module 'VISION_axi_cdma_0_0' requires 50 connections, but only 48 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1314]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_gpio_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_gpio_0_0' (13#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_axi_smc_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_axi_smc_0' (14#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_axi_smc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_smc' of module 'VISION_axi_smc_0' requires 431 connections, but only 409 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1386]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_0' (15#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_0' (16#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram' of module 'VISION_driver_block_design_0_bram_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1896]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_0_0' (17#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_0' of module 'VISION_driver_block_design_0_bram_0_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1911]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_1_0' (18#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_1' of module 'VISION_driver_block_design_0_bram_1_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1926]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_1_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_1_1' (19#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_2' of module 'VISION_driver_block_design_0_bram_1_1' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1941]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_1_2' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_1_2' (20#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_1_2_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_3' of module 'VISION_driver_block_design_0_bram_1_2' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1956]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_2_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_2_0' (21#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_2_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_4' of module 'VISION_driver_block_design_0_bram_2_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1971]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_3_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_3_0' (22#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_3_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_5' of module 'VISION_driver_block_design_0_bram_3_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:1986]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_2_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_2_1' (23#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_2_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_6' of module 'VISION_driver_block_design_0_bram_2_1' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2001]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_3_1' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_3_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_3_1' (24#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_3_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_7' of module 'VISION_driver_block_design_0_bram_3_1' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2016]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_4_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_4_0' (25#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_4_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_8' of module 'VISION_driver_block_design_0_bram_4_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2031]
+INFO: [Synth 8-6157] synthesizing module 'VISION_driver_block_design_0_bram_5_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_driver_block_design_0_bram_5_0' (26#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_driver_block_design_0_bram_5_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'driver_block_design_0_bram_9' of module 'VISION_driver_block_design_0_bram_5_0' requires 16 connections, but only 14 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2046]
+INFO: [Synth 8-6157] synthesizing module 'VISION_processing_system7_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_processing_system7_0_0' (27#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'VISION_processing_system7_0_0' requires 114 connections, but only 105 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2061]
+INFO: [Synth 8-6157] synthesizing module 'VISION_ps7_0_axi_periph_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2264]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_2CDE11' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_2CDE11' (28#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2815]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1A368YC' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2940]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1A368YC' (29#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2940]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HR4HXW' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:3072]
+INFO: [Synth 8-6157] synthesizing module 'VISION_auto_pc_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_auto_pc_0' (30#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HR4HXW' (31#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:3072]
+INFO: [Synth 8-6157] synthesizing module 'VISION_xbar_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_xbar_0' (32#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'VISION_xbar_0' requires 40 connections, but only 38 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2774]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_ps7_0_axi_periph_0' (33#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2264]
+INFO: [Synth 8-6157] synthesizing module 'VISION_rst_ps7_0_100M_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_rst_ps7_0_100M_0' (34#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'VISION_rst_ps7_0_100M_0' requires 10 connections, but only 8 given [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:2247]
+INFO: [Synth 8-6157] synthesizing module 'VISION_xlslice_0_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xlslice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_xlslice_0_0' (35#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xlslice_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VISION_xlslice_1_0' [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xlslice_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_xlslice_1_0' (36#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/.Xil/Vivado-13688-DESKTOP-PTNOPEH/realtime/VISION_xlslice_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'VISION' (37#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/synth/VISION.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'VISION_wrapper' (38#1) [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/hdl/VISION_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_HR4HXW has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_HR4HXW has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_1A368YC has unconnected port M_ACLK
@@ -89,7 +129,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_2CDE11 has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_2CDE11 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_2CDE11 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 496.934 ; gain = 159.066
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 520.930 ; gain = 163.910
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -102,10 +142,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 496.934 ; gain = 159.066
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 520.930 ; gain = 163.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 496.934 ; gain = 159.066
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 520.930 ; gain = 163.910
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -142,6 +182,38 @@ Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.
 Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_0/VISION_driver_block_design_0_bram_1_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_1'
 Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_2'
 Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_2'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_0/VISION_axi_bram_ctrl_2_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_3'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_0/VISION_axi_bram_ctrl_2_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_3'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_1/VISION_driver_block_design_0_bram_1_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_2'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_1/VISION_driver_block_design_0_bram_1_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_2'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_2/VISION_driver_block_design_0_bram_1_2/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_3'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_1_2/VISION_driver_block_design_0_bram_1_2/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_3'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_2_0/VISION_driver_block_design_0_bram_2_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_4'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_2_0/VISION_driver_block_design_0_bram_2_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_4'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_3_0/VISION_driver_block_design_0_bram_3_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_5'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_3_0/VISION_driver_block_design_0_bram_3_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_5'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_2_1/VISION_driver_block_design_0_bram_2_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_6'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_2_1/VISION_driver_block_design_0_bram_2_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_6'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_3_1/VISION_driver_block_design_0_bram_3_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_7'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_3_1/VISION_driver_block_design_0_bram_3_1/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_7'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_4_0/VISION_driver_block_design_0_bram_4_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_8'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_4_0/VISION_driver_block_design_0_bram_4_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_8'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_5_0/VISION_driver_block_design_0_bram_5_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_9'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_driver_block_design_0_bram_5_0/VISION_driver_block_design_0_bram_5_0/VISION_driver_block_design_0_bram_0_in_context.xdc] for cell 'VISION_i/driver_block_design_0_bram_9'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_2/VISION_axi_bram_ctrl_0_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_4'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_2/VISION_axi_bram_ctrl_0_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_4'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_1/VISION_axi_bram_ctrl_1_1/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_5'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_1/VISION_axi_bram_ctrl_1_1/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_5'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_1/VISION_axi_bram_ctrl_2_1/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_6'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_1/VISION_axi_bram_ctrl_2_1/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_6'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_3_0/VISION_axi_bram_ctrl_3_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_7'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_3_0/VISION_axi_bram_ctrl_3_0/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_7'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_3/VISION_axi_bram_ctrl_0_3/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_8'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_0_3/VISION_axi_bram_ctrl_0_3/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_8'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_2/VISION_axi_bram_ctrl_1_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_9'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_1_2/VISION_axi_bram_ctrl_1_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_9'
+Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_2/VISION_axi_bram_ctrl_2_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_10'
+Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_axi_bram_ctrl_2_2/VISION_axi_bram_ctrl_2_2/VISION_axi_bram_ctrl_0_1_in_context.xdc] for cell 'VISION_i/axi_bram_ctrl_10'
 Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0/VISION_auto_pc_0_in_context.xdc] for cell 'VISION_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/sources_1/bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0/VISION_auto_pc_0_in_context.xdc] for cell 'VISION_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.srcs/constrs_1/new/arty_z7_constraints.xdc]
@@ -155,19 +227,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 837.816 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 876.516 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_0' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_1' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_2' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_3' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_4' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_5' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_6' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_7' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_8' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VISION_i/driver_block_design_0_bram_9' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 837.816 ; gain = 499.949
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 837.816 ; gain = 499.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -449,12 +529,28 @@ Applied set_property DONT_TOUCH = true for VISION_i/xlslice_0. (constraint file 
 Applied set_property DONT_TOUCH = true for VISION_i/xlslice_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/driver_block_design_0_bram_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for VISION_i/axi_bram_ctrl_10. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VISION_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 837.816 ; gain = 499.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 837.816 ; gain = 499.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -494,7 +590,7 @@ WARNING: [Synth 8-3331] design VISION_ps7_0_axi_periph_0 has unconnected port M0
 WARNING: [Synth 8-3331] design VISION_ps7_0_axi_periph_0 has unconnected port M01_ACLK
 WARNING: [Synth 8-3331] design VISION_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 837.816 ; gain = 499.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -508,20 +604,36 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/processing_system7_0/FCLK_CLK0' to pin 'VISION_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/processing_system7_0/FCLK_CLK1' to pin 'VISION_i/processing_system7_0/bbstub_FCLK_CLK1/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_0_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_0_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_10_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_10_clk/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_1_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_1_clk/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_2_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_2_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_3_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_3_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_4_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_4_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_5_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_5_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_6_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_6_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_7_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_7_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_8_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_8_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/driver_block_design_0/data_in_9_clk' to pin 'VISION_i/driver_block_design_0/bbstub_data_in_9_clk/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_0/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_0/bbstub_bram_clk_a/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_1/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_1/bbstub_bram_clk_a/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_2/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_2/bbstub_bram_clk_a/O'
-INFO: [Synth 8-5819] Moved 8 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_3/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_3/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_4/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_4/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_5/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_5/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_6/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_6/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_7/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_7/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_8/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_8/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_9/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_9/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'VISION_i/axi_bram_ctrl_10/bram_clk_a' to pin 'VISION_i/axi_bram_ctrl_10/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5819] Moved 24 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 845.551 ; gain = 507.684
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 845.922 ; gain = 508.055
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -533,7 +645,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -557,7 +669,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -570,7 +682,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -582,25 +694,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -614,18 +726,34 @@ Report BlackBoxes:
 |2     |VISION_auto_pc_0                      |         1|
 |3     |VISION_axi_bram_ctrl_0_0              |         1|
 |4     |VISION_axi_bram_ctrl_0_1              |         1|
-|5     |VISION_axi_bram_ctrl_1_0              |         1|
-|6     |VISION_axi_cdma_0_0                   |         1|
-|7     |VISION_axi_gpio_0_0                   |         1|
-|8     |VISION_axi_smc_0                      |         1|
-|9     |VISION_driver_block_design_0_0        |         1|
-|10    |VISION_driver_block_design_0_bram_0   |         1|
-|11    |VISION_driver_block_design_0_bram_0_0 |         1|
-|12    |VISION_driver_block_design_0_bram_1_0 |         1|
-|13    |VISION_processing_system7_0_0         |         1|
-|14    |VISION_rst_ps7_0_100M_0               |         1|
-|15    |VISION_xlslice_0_0                    |         1|
-|16    |VISION_xlslice_1_0                    |         1|
+|5     |VISION_axi_bram_ctrl_2_2              |         1|
+|6     |VISION_axi_bram_ctrl_1_0              |         1|
+|7     |VISION_axi_bram_ctrl_2_0              |         1|
+|8     |VISION_axi_bram_ctrl_0_2              |         1|
+|9     |VISION_axi_bram_ctrl_1_1              |         1|
+|10    |VISION_axi_bram_ctrl_2_1              |         1|
+|11    |VISION_axi_bram_ctrl_3_0              |         1|
+|12    |VISION_axi_bram_ctrl_0_3              |         1|
+|13    |VISION_axi_bram_ctrl_1_2              |         1|
+|14    |VISION_axi_cdma_0_0                   |         1|
+|15    |VISION_axi_gpio_0_0                   |         1|
+|16    |VISION_axi_smc_0                      |         1|
+|17    |VISION_driver_block_design_0_0        |         1|
+|18    |VISION_driver_block_design_0_bram_0   |         1|
+|19    |VISION_driver_block_design_0_bram_0_0 |         1|
+|20    |VISION_driver_block_design_0_bram_1_0 |         1|
+|21    |VISION_driver_block_design_0_bram_1_1 |         1|
+|22    |VISION_driver_block_design_0_bram_1_2 |         1|
+|23    |VISION_driver_block_design_0_bram_2_0 |         1|
+|24    |VISION_driver_block_design_0_bram_3_0 |         1|
+|25    |VISION_driver_block_design_0_bram_2_1 |         1|
+|26    |VISION_driver_block_design_0_bram_3_1 |         1|
+|27    |VISION_driver_block_design_0_bram_4_0 |         1|
+|28    |VISION_driver_block_design_0_bram_5_0 |         1|
+|29    |VISION_processing_system7_0_0         |         1|
+|30    |VISION_rst_ps7_0_100M_0               |         1|
+|31    |VISION_xlslice_0_0                    |         1|
+|32    |VISION_xlslice_1_0                    |         1|
 +------+--------------------------------------+----------+
 
 Report Cell Usage: 
@@ -635,38 +763,54 @@ Report Cell Usage:
 |1     |VISION_auto_pc_0                      |     1|
 |2     |VISION_axi_bram_ctrl_0_0              |     1|
 |3     |VISION_axi_bram_ctrl_0_1              |     1|
-|4     |VISION_axi_bram_ctrl_1_0              |     1|
-|5     |VISION_axi_cdma_0_0                   |     1|
-|6     |VISION_axi_gpio_0_0                   |     1|
-|7     |VISION_axi_smc_0                      |     1|
-|8     |VISION_driver_block_design_0_0        |     1|
-|9     |VISION_driver_block_design_0_bram_0   |     1|
-|10    |VISION_driver_block_design_0_bram_0_0 |     1|
-|11    |VISION_driver_block_design_0_bram_1_0 |     1|
-|12    |VISION_processing_system7_0_0         |     1|
-|13    |VISION_rst_ps7_0_100M_0               |     1|
-|14    |VISION_xbar_0                         |     1|
-|15    |VISION_xlslice_0_0                    |     1|
-|16    |VISION_xlslice_1_0                    |     1|
-|17    |IBUF                                  |     2|
-|18    |OBUF                                  |     9|
+|4     |VISION_axi_bram_ctrl_0_2              |     1|
+|5     |VISION_axi_bram_ctrl_0_3              |     1|
+|6     |VISION_axi_bram_ctrl_1_0              |     1|
+|7     |VISION_axi_bram_ctrl_1_1              |     1|
+|8     |VISION_axi_bram_ctrl_1_2              |     1|
+|9     |VISION_axi_bram_ctrl_2_0              |     1|
+|10    |VISION_axi_bram_ctrl_2_1              |     1|
+|11    |VISION_axi_bram_ctrl_2_2              |     1|
+|12    |VISION_axi_bram_ctrl_3_0              |     1|
+|13    |VISION_axi_cdma_0_0                   |     1|
+|14    |VISION_axi_gpio_0_0                   |     1|
+|15    |VISION_axi_smc_0                      |     1|
+|16    |VISION_driver_block_design_0_0        |     1|
+|17    |VISION_driver_block_design_0_bram_0   |     1|
+|18    |VISION_driver_block_design_0_bram_0_0 |     1|
+|19    |VISION_driver_block_design_0_bram_1_0 |     1|
+|20    |VISION_driver_block_design_0_bram_1_1 |     1|
+|21    |VISION_driver_block_design_0_bram_1_2 |     1|
+|22    |VISION_driver_block_design_0_bram_2_0 |     1|
+|23    |VISION_driver_block_design_0_bram_2_1 |     1|
+|24    |VISION_driver_block_design_0_bram_3_0 |     1|
+|25    |VISION_driver_block_design_0_bram_3_1 |     1|
+|26    |VISION_driver_block_design_0_bram_4_0 |     1|
+|27    |VISION_driver_block_design_0_bram_5_0 |     1|
+|28    |VISION_processing_system7_0_0         |     1|
+|29    |VISION_rst_ps7_0_100M_0               |     1|
+|30    |VISION_xbar_0                         |     1|
+|31    |VISION_xlslice_0_0                    |     1|
+|32    |VISION_xlslice_1_0                    |     1|
+|33    |IBUF                                  |     2|
+|34    |OBUF                                  |    40|
 +------+--------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------+------+
 |      |Instance             |Module                    |Cells |
 +------+---------------------+--------------------------+------+
-|1     |top                  |                          |  2205|
-|2     |  VISION_i           |VISION                    |  2194|
+|1     |top                  |                          |  4772|
+|2     |  VISION_i           |VISION                    |  4730|
 |3     |    ps7_0_axi_periph |VISION_ps7_0_axi_periph_0 |   440|
 |4     |      s00_couplers   |s00_couplers_imp_HR4HXW   |   177|
 +------+---------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.250 ; gain = 509.383
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 847.250 ; gain = 168.500
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 847.254 ; gain = 509.383
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 876.516 ; gain = 163.910
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 876.516 ; gain = 519.496
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -676,11 +820,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+119 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 871.336 ; gain = 540.391
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 891.797 ; gain = 543.500
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/github/Senior-Project-Vivado/Vision_Project/Vision_Project.runs/synth_1/VISION_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file VISION_wrapper_utilization_synth.rpt -pb VISION_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.048 . Memory (MB): peak = 871.664 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 29 22:25:46 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 892.117 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  6 20:34:32 2018...

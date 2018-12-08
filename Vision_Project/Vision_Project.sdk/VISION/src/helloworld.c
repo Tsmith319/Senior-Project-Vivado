@@ -81,7 +81,16 @@ int driverControl;
 #define BRAM_SETUP 0xC0000000
 #define BRAM_LAYER_1 0xC2000000
 #define BRAM_LAYER_2 0xC4000000
+#define BRAM_LAYER_3 0xC6000000
+#define BRAM_LAYER_4 0xC8000000
+#define BRAM_LAYER_5 0xCA000000
+#define BRAM_LAYER_6 0xCC000000
+#define BRAM_LAYER_7 0xCE000000
+#define BRAM_LAYER_8 0xD0000000
+#define BRAM_LAYER_9 0xD2000000
+#define BRAM_LAYER_10 0xD4000000
 
+static int offsets[10] = {0, 330+3, 300+3, 270+2, 240+2, 210+2, 180+2, 0, 0, 0};
 long setup_bram();
 long setup_uart();
 long setup_interrupts();
@@ -91,6 +100,7 @@ void next_section();
 void init_control();
 
 static int current_theta = 0;
+static uint32_t section_time = 0;
 
 int main()
 {
@@ -127,7 +137,7 @@ int main()
 	while(1)
 	{
 
-		int count = XUartPs_Recv(&USB_uart, (u8*)buffer, 1);
+		int count = XUartPs_Recv(&WIFI_uart, (u8*)buffer, 1);
 
 		if(count == 1)
 		{
@@ -140,7 +150,11 @@ int main()
 
 					break;
 				case DRAW_FRAME :
-					frame = receive_frame(&USB_uart, &USB_uart);
+					frame = receive_frame(&WIFI_uart, &USB_uart);
+					if(frame.count == 0)
+					{
+						break;
+					}
 					package_frame(frame);
 					free(frame.pixels);
 					break;
@@ -160,35 +174,98 @@ int main()
 void hallSensor(void *CallBackRef)
 {
 	//XGpio_InterruptDisable(&gpio, XGPIO_IR_CH2_MASK);
-	XScuTimer_Stop(&TimerInstance);
-	current_theta = 0;
-	static int count = 0;
+	static int rpm_setup_state = 0; //Current setup state
+	static int rpm_setup_counted = 0; //How many times rotated for first setup stage
+	static uint32_t last_count = 0; //Last recorded rotation speed
+	static uint32_t stable_count = 0; //Number of stable RPM reads in a row
+	uint32_t rotation_time; //Current rotation speed
+	uint32_t absolute;
+
 
 	if(0x1 & XGpio_DiscreteRead(&gpio, 2))
 	{
-		printf("Magnet Count: %d\n\r", count);
+		XScuTimer_Stop(&TimerInstance);
+
+		switch(rpm_setup_state)
+		{
+			case 0:
+				XScuTimer_LoadTimer(&TimerInstance, UINT32_MAX);
+				last_count = XScuTimer_GetCounterValue(&TimerInstance);
+				rpm_setup_counted++;
+
+				if(rpm_setup_counted == 75)
+					rpm_setup_state++;
+
+				break;
+			case 1:
+				rotation_time = UINT32_MAX - XScuTimer_GetCounterValue(&TimerInstance);
+				XScuTimer_LoadTimer(&TimerInstance, UINT32_MAX);
+
+
+
+				if(last_count >= rotation_time)
+					absolute = last_count - rotation_time;
+				else
+					absolute = rotation_time - last_count;
+
+				last_count = rotation_time;
+
+				if(absolute <= 162500000)//1000)
+					stable_count++;
+				else
+					stable_count = 0;
+
+				if(stable_count >= 10)
+					rpm_setup_state++;
+
+				break;
+
+			case 2:
+				XScuTimer_EnableInterrupt(&TimerInstance);
+				rpm_setup_state++;
+				section_time = (last_count)/360; //- 100; //Overestimate speed
+
+			case 3:
+				current_theta = 0;
+
+				//In future, only increment this on the full revolution
+				if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
+				{
+					if(currentFrame == 9)
+						currentFrame = 0;
+					else
+						currentFrame++;
+
+					currRotationCount++;
+				}
+
+				XScuTimer_LoadTimer(&TimerInstance, 301); //162500000); //CHANGE THIS TO SMALLER VALUE FOR IMMEDIATE RENDER
+
+		}
+
+
+		//XScuTimer_Stop(&TimerInstance);
+
+		static int count = 0;
+
+
+//		printf("Magnet Count: %d\n\r", count);
+//		printf("Timer Count: %d\n\r", rotation_time / 325000000);
+//		printf("Current setup state: %d\n\r", rpm_setup_state);
+//		printf("Current absolute: %d \t Stable count: %d\n\r", absolute, stable_count);
 		count++;
+
+		/*
+		 * Start the timer counter and then wait for it
+		 * to timeout a number of times.
+		 */
+		XScuTimer_Start(&TimerInstance);
+
 	}
-
-	//In future, only increment this on the full revolution
-	if(!((currentFrame == 9 && nextFrameToWrite == 0) || (currentFrame + 1 == nextFrameToWrite)))
-	{
-		if(currentFrame == 9)
-			currentFrame = 0;
-		else
-			currentFrame++;
-	}
-
-	XScuTimer_LoadTimer(&TimerInstance, 162500000);
-
-	/*
-	 * Start the timer counter and then wait for it
-	 * to timeout a number of times.
-	 */
-	XScuTimer_Start(&TimerInstance);
-
 
 	XGpio_InterruptClear(&gpio, XGPIO_IR_CH2_MASK);
+	//XGpio_InterruptEnable(&gpio, XGPIO_IR_CH2_MASK);
+
 }
 
 void render(void *CallBackRef)
@@ -201,7 +278,15 @@ void render(void *CallBackRef)
 	//		-Selecting proper buffer of BRAM
 	//		-Rotation timing??
 	transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[0]), BRAM_LAYER_1, sizeof(Layer));
-	transfer(&(frame_buffer[currentFrame]->sections[current_theta].layers[1]), BRAM_LAYER_2, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[1]) % 360].layers[1]), BRAM_LAYER_2, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[2]) % 360].layers[2]), BRAM_LAYER_3, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[3]) % 360].layers[3]), BRAM_LAYER_4, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[4]) % 360].layers[4]), BRAM_LAYER_5, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[5]) % 360].layers[5]), BRAM_LAYER_6, sizeof(Layer));
+	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[6]) % 360].layers[6]), BRAM_LAYER_7, sizeof(Layer));
+//	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[7]) % 360].layers[7]), BRAM_LAYER_8, sizeof(Layer));
+//	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[8]) % 360].layers[8]), BRAM_LAYER_9, sizeof(Layer));
+//	transfer(&(frame_buffer[currentFrame]->sections[(current_theta + offsets[9]) % 360].layers[9]), BRAM_LAYER_10, sizeof(Layer));
 	next_section();
 
 	if(current_theta == 359)
@@ -212,7 +297,7 @@ void render(void *CallBackRef)
 
 	XScuTimer_ClearInterruptStatus(&TimerInstance);
 
-	XScuTimer_LoadTimer(&TimerInstance, 162500000);
+	XScuTimer_LoadTimer(&TimerInstance, section_time);//30091*2); //162500000);
 
 	/*
 	 * Start the timer counter and then wait for it
@@ -321,7 +406,7 @@ long setup_uart() {
 		return XST_FAILURE;
 	}
 
-	/*
+
 	Config = XUartPs_LookupConfig(XPAR_XUARTPS_1_DEVICE_ID);
 
 	if(NULL == Config) {
@@ -334,13 +419,12 @@ long setup_uart() {
 	}
 
 
-	///heck hardware build.
+	//check hardware build.
 	Status = XUartPs_SelfTest(&WIFI_uart);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
-	*/
 
 	return XST_SUCCESS;
 }
@@ -437,7 +521,7 @@ long setup_interrupts() {
 	/*
 	 * Enable the timer interrupts for timer mode.
 	 */
-	XScuTimer_EnableInterrupt(&TimerInstance);
+	//XScuTimer_EnableInterrupt(&TimerInstance);
 
 	//Xil_ExceptionEnable();
 

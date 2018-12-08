@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = MCS
+the_ROM_image:
+{
+	[bootloader]C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\boot_loader\Debug\boot_loader.elf
+	C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\VISION_wrapper_hw_platform_0\VISION_wrapper.bit
+	C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\Vision\Debug\Vision.elf
+}

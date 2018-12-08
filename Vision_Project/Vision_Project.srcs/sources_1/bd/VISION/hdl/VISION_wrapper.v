@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Nov 29 22:23:30 2018
+//Date        : Thu Dec  6 20:32:04 2018
 //Host        : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 //Command     : generate_target VISION_wrapper.bd
 //Design      : VISION_wrapper
@@ -32,16 +32,47 @@ module VISION_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     UART1_RX_0,
-    UART1_TX_0,
     gpio2_io_i_0,
     gsclk_0_0,
     gsclk_1_0,
+    gsclk_2_0,
+    gsclk_3_0,
+    gsclk_4_0,
+    gsclk_5_0,
+    gsclk_6_0,
+    gsclk_7_0,
+    gsclk_8_0,
+    gsclk_9_0,
     latch_0_0,
     latch_1_0,
+    latch_2_0,
+    latch_3_0,
+    latch_4_0,
+    latch_5_0,
+    latch_6_0,
+    latch_7_0,
+    latch_8_0,
+    latch_9_0,
     sclk_0_0,
     sclk_1_0,
+    sclk_2_0,
+    sclk_3_0,
+    sclk_4_0,
+    sclk_5_0,
+    sclk_6_0,
+    sclk_7_0,
+    sclk_8_0,
+    sclk_9_0,
     sout_0_0,
-    sout_1_0);
+    sout_1_0,
+    sout_2_0,
+    sout_3_0,
+    sout_4_0,
+    sout_5_0,
+    sout_6_0,
+    sout_7_0,
+    sout_8_0,
+    sout_9_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -64,16 +95,47 @@ module VISION_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input UART1_RX_0;
-  output UART1_TX_0;
   input [0:0]gpio2_io_i_0;
   output gsclk_0_0;
   output gsclk_1_0;
+  output gsclk_2_0;
+  output gsclk_3_0;
+  output gsclk_4_0;
+  output gsclk_5_0;
+  output gsclk_6_0;
+  output gsclk_7_0;
+  output gsclk_8_0;
+  output gsclk_9_0;
   output latch_0_0;
   output latch_1_0;
+  output latch_2_0;
+  output latch_3_0;
+  output latch_4_0;
+  output latch_5_0;
+  output latch_6_0;
+  output latch_7_0;
+  output latch_8_0;
+  output latch_9_0;
   output sclk_0_0;
   output sclk_1_0;
+  output sclk_2_0;
+  output sclk_3_0;
+  output sclk_4_0;
+  output sclk_5_0;
+  output sclk_6_0;
+  output sclk_7_0;
+  output sclk_8_0;
+  output sclk_9_0;
   output sout_0_0;
   output sout_1_0;
+  output sout_2_0;
+  output sout_3_0;
+  output sout_4_0;
+  output sout_5_0;
+  output sout_6_0;
+  output sout_7_0;
+  output sout_8_0;
+  output sout_9_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -97,16 +159,47 @@ module VISION_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire UART1_RX_0;
-  wire UART1_TX_0;
   wire [0:0]gpio2_io_i_0;
   wire gsclk_0_0;
   wire gsclk_1_0;
+  wire gsclk_2_0;
+  wire gsclk_3_0;
+  wire gsclk_4_0;
+  wire gsclk_5_0;
+  wire gsclk_6_0;
+  wire gsclk_7_0;
+  wire gsclk_8_0;
+  wire gsclk_9_0;
   wire latch_0_0;
   wire latch_1_0;
+  wire latch_2_0;
+  wire latch_3_0;
+  wire latch_4_0;
+  wire latch_5_0;
+  wire latch_6_0;
+  wire latch_7_0;
+  wire latch_8_0;
+  wire latch_9_0;
   wire sclk_0_0;
   wire sclk_1_0;
+  wire sclk_2_0;
+  wire sclk_3_0;
+  wire sclk_4_0;
+  wire sclk_5_0;
+  wire sclk_6_0;
+  wire sclk_7_0;
+  wire sclk_8_0;
+  wire sclk_9_0;
   wire sout_0_0;
   wire sout_1_0;
+  wire sout_2_0;
+  wire sout_3_0;
+  wire sout_4_0;
+  wire sout_5_0;
+  wire sout_6_0;
+  wire sout_7_0;
+  wire sout_8_0;
+  wire sout_9_0;
 
   VISION VISION_i
        (.DDR_addr(DDR_addr),
@@ -131,14 +224,45 @@ module VISION_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .UART1_RX_0(UART1_RX_0),
-        .UART1_TX_0(UART1_TX_0),
         .gpio2_io_i_0(gpio2_io_i_0),
         .gsclk_0_0(gsclk_0_0),
         .gsclk_1_0(gsclk_1_0),
+        .gsclk_2_0(gsclk_2_0),
+        .gsclk_3_0(gsclk_3_0),
+        .gsclk_4_0(gsclk_4_0),
+        .gsclk_5_0(gsclk_5_0),
+        .gsclk_6_0(gsclk_6_0),
+        .gsclk_7_0(gsclk_7_0),
+        .gsclk_8_0(gsclk_8_0),
+        .gsclk_9_0(gsclk_9_0),
         .latch_0_0(latch_0_0),
         .latch_1_0(latch_1_0),
+        .latch_2_0(latch_2_0),
+        .latch_3_0(latch_3_0),
+        .latch_4_0(latch_4_0),
+        .latch_5_0(latch_5_0),
+        .latch_6_0(latch_6_0),
+        .latch_7_0(latch_7_0),
+        .latch_8_0(latch_8_0),
+        .latch_9_0(latch_9_0),
         .sclk_0_0(sclk_0_0),
         .sclk_1_0(sclk_1_0),
+        .sclk_2_0(sclk_2_0),
+        .sclk_3_0(sclk_3_0),
+        .sclk_4_0(sclk_4_0),
+        .sclk_5_0(sclk_5_0),
+        .sclk_6_0(sclk_6_0),
+        .sclk_7_0(sclk_7_0),
+        .sclk_8_0(sclk_8_0),
+        .sclk_9_0(sclk_9_0),
         .sout_0_0(sout_0_0),
-        .sout_1_0(sout_1_0));
+        .sout_1_0(sout_1_0),
+        .sout_2_0(sout_2_0),
+        .sout_3_0(sout_3_0),
+        .sout_4_0(sout_4_0),
+        .sout_5_0(sout_5_0),
+        .sout_6_0(sout_6_0),
+        .sout_7_0(sout_7_0),
+        .sout_8_0(sout_8_0),
+        .sout_9_0(sout_9_0));
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Nov 29 22:25:46 2018
+| Date         : Thu Dec  6 20:34:32 2018
 | Host         : DESKTOP-PTNOPEH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VISION_wrapper_utilization_synth.rpt -pb VISION_wrapper_utilization_synth.pb
 | Design       : VISION_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   11 |     0 |       125 |  8.80 |
+| Bonded IOB                  |   42 |     0 |       125 | 33.60 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,7 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    9 |                  IO |
+| OBUF     |   40 |                  IO |
 | IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
@@ -162,6 +162,14 @@ Table of Contents
 | VISION_xbar_0                         |    1 |
 | VISION_rst_ps7_0_100M_0               |    1 |
 | VISION_processing_system7_0_0         |    1 |
+| VISION_driver_block_design_0_bram_5_0 |    1 |
+| VISION_driver_block_design_0_bram_4_0 |    1 |
+| VISION_driver_block_design_0_bram_3_1 |    1 |
+| VISION_driver_block_design_0_bram_3_0 |    1 |
+| VISION_driver_block_design_0_bram_2_1 |    1 |
+| VISION_driver_block_design_0_bram_2_0 |    1 |
+| VISION_driver_block_design_0_bram_1_2 |    1 |
+| VISION_driver_block_design_0_bram_1_1 |    1 |
 | VISION_driver_block_design_0_bram_1_0 |    1 |
 | VISION_driver_block_design_0_bram_0_0 |    1 |
 | VISION_driver_block_design_0_bram_0   |    1 |
@@ -169,7 +177,15 @@ Table of Contents
 | VISION_axi_smc_0                      |    1 |
 | VISION_axi_gpio_0_0                   |    1 |
 | VISION_axi_cdma_0_0                   |    1 |
+| VISION_axi_bram_ctrl_3_0              |    1 |
+| VISION_axi_bram_ctrl_2_2              |    1 |
+| VISION_axi_bram_ctrl_2_1              |    1 |
+| VISION_axi_bram_ctrl_2_0              |    1 |
+| VISION_axi_bram_ctrl_1_2              |    1 |
+| VISION_axi_bram_ctrl_1_1              |    1 |
 | VISION_axi_bram_ctrl_1_0              |    1 |
+| VISION_axi_bram_ctrl_0_3              |    1 |
+| VISION_axi_bram_ctrl_0_2              |    1 |
 | VISION_axi_bram_ctrl_0_1              |    1 |
 | VISION_axi_bram_ctrl_0_0              |    1 |
 | VISION_auto_pc_0                      |    1 |

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="VISION_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\boot_loader\Debug\boot_loader.elf" key="VISION_wrapper_hw_platform_0-fsblFile"/>
+	<item value="C:\github\Senior-Project-Vivado\Vision_Project\Vision_Project.sdk\Vision\bootimage\BOOT.mcs" key="VISION_wrapper_hw_platform_0-imgFile"/>
+	<item value="qspi_single" key="VISION_wrapper_hw_platform_0-flashType"/>
+	<item value="Local" key="VISION_wrapper_hw_platform_0-target"/>
+	<item value="true" key="VISION_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="Auto Detect" key="VISION_wrapper_hw_platform_0-device"/>
+	<item value="" key="VISION_wrapper_hw_platform_0-offSet"/>
+	<item value="false" key="VISION_wrapper_hw_platform_0-blankCheck"/>
+</section>

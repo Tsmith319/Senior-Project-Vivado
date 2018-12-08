@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x4B9A3B34B8A6A5F1" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBCC36AACD64E65BE" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="driver_block_design" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -103,6 +103,358 @@
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>data_in_2</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_3</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_4</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_5</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_6</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_7</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_8</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_9</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>MEM_SIZE</spirit:name>
+            <spirit:value>8192</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_WIDTH</spirit:name>
+            <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MEM_ECC</spirit:name>
+            <spirit:value>NONE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MASTER_TYPE</spirit:name>
+            <spirit:value>OTHER</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>data_in_10</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="bram_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -265,13 +617,31 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>gsclk_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>sclk_0</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>sclk_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>latch_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_1</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -299,19 +669,193 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>gsclk_1</spirit:name>
+          <spirit:name>sout_2</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>sclk_1</spirit:name>
+          <spirit:name>sclk_2</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>latch_1</spirit:name>
+          <spirit:name>gsclk_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_4</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_5</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_6</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_7</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_8</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>latch_9</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_4</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_5</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_6</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_7</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_8</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>gsclk_9</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_4</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_5</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_6</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_7</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_8</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sclk_9</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_4</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_5</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_6</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_7</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_8</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sout_9</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -369,6 +913,62 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_1_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_2_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_3_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_5</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_3_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_6</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_3_2</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_7</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_4_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_8</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_5_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_9</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_6_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sout_module_10</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sout_module" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">driver_block_design_sout_module_9_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
@@ -378,6 +978,14 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="latch_select"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="latch_select"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="latch_select"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="latch_select"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_bit_num</spirit:name>
@@ -385,12 +993,28 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="bit_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="bit_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="bit_num"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sout_module_0_sout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="sout"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="pass_through_bit"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="pass_through_bit"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="pass_through_bit"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_0_1</spirit:name>
@@ -400,6 +1024,14 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>enable_0_1</spirit:name>
@@ -414,6 +1046,14 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_ready</spirit:name>
@@ -423,29 +1063,69 @@
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_gsclk</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="gsclk"/>
-        <spirit:externalPortReference spirit:portRef="gsclk_0"/>
         <spirit:externalPortReference spirit:portRef="gsclk_1"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_0"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_2"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_3"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_4"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_5"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_6"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_7"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_8"/>
+        <spirit:externalPortReference spirit:portRef="gsclk_9"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_sclk</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="sclk"/>
+        <spirit:externalPortReference spirit:portRef="sclk_1"/>
         <spirit:externalPortReference spirit:portRef="sclk_0"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_0" spirit:portRef="sclk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="sclk"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="sclk"/>
-        <spirit:externalPortReference spirit:portRef="sclk_1"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="sclk"/>
+        <spirit:externalPortReference spirit:portRef="sclk_2"/>
+        <spirit:externalPortReference spirit:portRef="sclk_3"/>
+        <spirit:externalPortReference spirit:portRef="sclk_4"/>
+        <spirit:externalPortReference spirit:portRef="sclk_5"/>
+        <spirit:externalPortReference spirit:portRef="sclk_6"/>
+        <spirit:externalPortReference spirit:portRef="sclk_7"/>
+        <spirit:externalPortReference spirit:portRef="sclk_8"/>
+        <spirit:externalPortReference spirit:portRef="sclk_9"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="sclk"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="sclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_latch</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="latch"/>
-        <spirit:externalPortReference spirit:portRef="latch_0"/>
         <spirit:externalPortReference spirit:portRef="latch_1"/>
+        <spirit:externalPortReference spirit:portRef="latch_0"/>
+        <spirit:externalPortReference spirit:portRef="latch_2"/>
+        <spirit:externalPortReference spirit:portRef="latch_3"/>
+        <spirit:externalPortReference spirit:portRef="latch_4"/>
+        <spirit:externalPortReference spirit:portRef="latch_5"/>
+        <spirit:externalPortReference spirit:portRef="latch_6"/>
+        <spirit:externalPortReference spirit:portRef="latch_7"/>
+        <spirit:externalPortReference spirit:portRef="latch_8"/>
+        <spirit:externalPortReference spirit:portRef="latch_9"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mean_machine_module_0_buf_select</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mean_machine_module_0" spirit:portRef="buf_select"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_1" spirit:portRef="buf_num"/>
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="buf_num"/>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="buf_num"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_0_dout</spirit:name>
@@ -483,6 +1163,46 @@
         <spirit:internalPortReference spirit:componentRef="sout_module_2" spirit:portRef="sout"/>
         <spirit:externalPortReference spirit:portRef="sout_1"/>
       </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_3_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_3" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_4_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_4" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_5_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_5" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_6_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_6" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_5"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_7_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_7" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_6"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_8_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_8" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_7"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_9_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_9" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_8"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sout_module_10_sout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sout_module_10" spirit:portRef="sout"/>
+        <spirit:externalPortReference spirit:portRef="sout_9"/>
+      </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
       <spirit:hierConnection spirit:interfaceRef="data_in_0/sout_module_0_data_in">
@@ -493,6 +1213,30 @@
       </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="data_in_2/sout_module_2_data_in">
         <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_2"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_3/sout_module_3_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_3"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_4/sout_module_4_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_4"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_5/sout_module_5_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_5"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_6/sout_module_6_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_6"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_7/sout_module_7_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_7"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_8/sout_module_8_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_8"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_9/sout_module_9_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_9"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="data_in_10/sout_module_10_data_in">
+        <spirit:activeInterface spirit:busRef="data_in" spirit:componentRef="sout_module_10"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>

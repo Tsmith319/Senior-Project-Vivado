@@ -16,10 +16,11 @@
 
 #define BUFFER_SIZE 100
 
-#define PIXEL_COUNT_CHAR_LENGTH 6 //Plus Space = 6
+#define PIXEL_COUNT_CHAR_LENGTH 7 //Plus Space = 6
 #define PIXEL_CHAR_LENGTH 28 //plus spaces = 28, 22 otherwise
 
 uint8_t buffer[BUFFER_SIZE];
+static int currRotationCount = 0;
 
 typedef struct {
 	uint8_t z;
@@ -89,16 +90,29 @@ SerialPixel packagePixel(int index) {
 SerialFrame receive_frame(XUartPs *port, XUartPs *passthrough) {
 	SerialFrame frame;
 	int byteCount = 0;
+	int timeout = 0;
+	int hallPrev = currRotationCount;
 
 	while(byteCount < PIXEL_COUNT_CHAR_LENGTH)
 	{
+		if(currRotationCount != hallPrev)
+		{
+			timeout++;
+		}
+
+		if(timeout >= 10)
+		{
+			frame.count = 0;
+			return frame;
+		}
 		byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_COUNT_CHAR_LENGTH - byteCount);
+		hallPrev = currRotationCount;
 	}
-	//buffer[PIXEL_COUNT_CHAR_LENGTH] = '\0';
+	buffer[PIXEL_COUNT_CHAR_LENGTH] = '\0';
 
 
 	//XUartPs_Send(passthrough, buffer, PIXEL_COUNT_CHAR_LENGTH);
-	//printf("%s\r\n", buffer);
+	printf("%s\r\n", buffer);
 	//printf("\r\n");
 
 	sscanf(buffer, "%d", &(frame.count));
@@ -110,14 +124,28 @@ SerialFrame receive_frame(XUartPs *port, XUartPs *passthrough) {
 	for(int i = 0; i < frame.count; i++)
 	{
 		byteCount = 0;
-
+		timeout = 0;
+		hallPrev = currRotationCount;
 		while(byteCount < PIXEL_CHAR_LENGTH)
 		{
+			if(currRotationCount != hallPrev)
+			{
+				timeout++;
+			}
+
+			if(timeout >= 10)
+			{
+				frame.count = 0;
+				free(frame.pixels);
+				return frame;
+			}
+
 			byteCount += XUartPs_Recv(port, (u8*)buffer + byteCount, PIXEL_CHAR_LENGTH - byteCount);
+			hallPrev = currRotationCount;
 		}
-		//buffer[PIXEL_CHAR_LENGTH] = '\0';
+		buffer[PIXEL_CHAR_LENGTH] = '\0';
 		//XUartPs_Send(passthrough, buffer, PIXEL_CHAR_LENGTH);
-		//printf("%s\r\n", buffer);
+		printf("%s\r\n", buffer);
 
 		int z, r, theta, red, green, blue;
 		sscanf(buffer, "%d %d %d %d %d %d", &z, &r, &theta, &red, &green, &blue);

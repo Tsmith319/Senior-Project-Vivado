@@ -54,6 +54,54 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_b
 # IP: bd/VISION/ip/VISION_axi_bram_ctrl_1_0/VISION_axi_bram_ctrl_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_1_0 || ORIG_REF_NAME==VISION_axi_bram_ctrl_1_0} -quiet] -quiet
 
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_2_0/VISION_axi_bram_ctrl_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_2_0 || ORIG_REF_NAME==VISION_axi_bram_ctrl_2_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_1_1/VISION_driver_block_design_0_bram_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_1_1 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_1_1} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_1_2/VISION_driver_block_design_0_bram_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_1_2 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_1_2} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_2_0/VISION_driver_block_design_0_bram_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_2_0 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_2_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_3_0/VISION_driver_block_design_0_bram_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_3_0 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_3_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_2_1/VISION_driver_block_design_0_bram_2_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_2_1 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_2_1} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_3_1/VISION_driver_block_design_0_bram_3_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_3_1 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_3_1} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_4_0/VISION_driver_block_design_0_bram_4_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_4_0 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_4_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_driver_block_design_0_bram_5_0/VISION_driver_block_design_0_bram_5_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_driver_block_design_0_bram_5_0 || ORIG_REF_NAME==VISION_driver_block_design_0_bram_5_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_0_2/VISION_axi_bram_ctrl_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_0_2 || ORIG_REF_NAME==VISION_axi_bram_ctrl_0_2} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_1_1/VISION_axi_bram_ctrl_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_1_1 || ORIG_REF_NAME==VISION_axi_bram_ctrl_1_1} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_2_1/VISION_axi_bram_ctrl_2_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_2_1 || ORIG_REF_NAME==VISION_axi_bram_ctrl_2_1} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_3_0/VISION_axi_bram_ctrl_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_3_0 || ORIG_REF_NAME==VISION_axi_bram_ctrl_3_0} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_0_3/VISION_axi_bram_ctrl_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_0_3 || ORIG_REF_NAME==VISION_axi_bram_ctrl_0_3} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_1_2/VISION_axi_bram_ctrl_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_1_2 || ORIG_REF_NAME==VISION_axi_bram_ctrl_1_2} -quiet] -quiet
+
+# IP: bd/VISION/ip/VISION_axi_bram_ctrl_2_2/VISION_axi_bram_ctrl_2_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_axi_bram_ctrl_2_2 || ORIG_REF_NAME==VISION_axi_bram_ctrl_2_2} -quiet] -quiet
+
 # IP: bd/VISION/ip/VISION_auto_pc_0/VISION_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==VISION_auto_pc_0 || ORIG_REF_NAME==VISION_auto_pc_0} -quiet] -quiet
 
